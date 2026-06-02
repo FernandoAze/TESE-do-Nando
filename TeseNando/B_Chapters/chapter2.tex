@@ -1,143 +1,125 @@
-\chapter{Revisão Bibliográfica} \label{chap:sota}
+\chapter{Literature Review} \label{chap:sota}
 
 \section*{}
+==============
 
 Neste capítulo é descrito o estado da arte e são
 apresentados trabalhos relacionados para mostrar o que existe no
 mesmo domínio e quais os problemas em aberto.
 Deve deixar claro que existe uma oportunidade de desenvolvimento que
-cobre alguma falha concreta .
+cobre alguma falha concreta.
 
 O capítulo deve também efetuar uma revisão tecnológica às principais
 ferramentas utilizáveis no âmbito do projeto, justificando futuras
 escolhas.
 
+==============
+
 \section{Introdução}
 
-Neste capítulo é ilustrada a utilização de macros \LaTeX\ para definir
-entradas no índice remissivo e são feitas diversas referências
-bibliográficas, usando-se texto de um artigo apresentado na Conferência 
-XATA2006~\cite{kn:MVL06-xata}.
+Music Information Retrieval (MIR) is the field of research that focuses on the
+development of algorithms and systems to analyze, retrieve, and organize music data.
+MIR bridges a wide range of disciplines, including: 
+musicology, signal processing, machine learning, and human-computer interaction. 
 
-Nos últimos tempos têm surgido diversas soluções, apresentadas por
-empresas do sector Automação de Sistemas para a disponibilização de
-sistemas \scadadms{} na \textit{Web}.
 
-Aliquam sollicitudin facilisis sapien. Mauris tincidunt tristique
-diam. Mauris sollicitudin pede at tellus varius volutpat. Integer vel
-leo. Nunc massa diam, egestas eu, venenatis at, porttitor ac,
-sapien. Sed magna elit, vulputate in, lacinia sed, lobortis ac,
-urna. Proin cursus massa id risus. Vestibulum libero. Curabitur
-venenatis augue. Mauris eu libero eget lectus tempus tempor. In
-tincidunt, justo in varius adipiscing, ipsum enim gravida massa, eget
-ornare ante lacus id est. Praesent vitae est ut elit convallis
-convallis. Aenean tincidunt, purus id consectetur volutpat, sem leo
-pulvinar libero, nec semper sem purus ultricies nibh \cite{kn:Fra94-thesis}. 
+==============
+CONTINUAR 
 
-Fusce risus mi, tristique eu, consectetuer id, auctor sed, elit. Donec
-laoreet. Duis consectetuer interdum libero. Etiam eu orci. In eu
-arcu. Fusce luctus diam eget lectus. Duis interdum lacus sed
-ligula. Proin vestibulum felis eget lacus. Vivamus vestibulum, tellus
-ut congue viverra, mauris lacus tempor turpis, eu congue nisi magna at
-dolor. Ut molestie vehicula libero. Praesent in neque sed risus tempus
-ornare. Donec hendrerit, erat eu semper aliquam, pede nulla dapibus
-risus, ut pretium orci pede et neque.
-Etiam eget tortor a metus convallis viverra. Quisque eget nisi sed
-orci facilisis interdum. Aliquam non felis. 
+@mullerFundamentalsMusicProcessing2015
+==============
 
-\section{Secção Exemplo}\label{sec:dialecto}
+\section{Visualization Types}\label{sec:dialecto}
 
-\emph{Scalable Vector Graphics}\index{SVG}\index{XML!SVG} é uma
-linguagem em formato XML que descreve gráficos de duas dimensões. 
-Este formato padronizado pela W3C (\emph{World Wide Web Consortium})
-é livre de patentes ou direitos de autor e está totalmente
-documentado, à semelhança de outros W3C
-standards~\cite{kn:svgdoc}.
 
-Sendo uma linguagem XML, o \svg{} herda uma série de vantagens: a
-possibilidade de transformar \svg{} usando técnicas como
-XSLT\index{XML!XSLT}, de embeber \svg{} em qualquer documento
-XML\index{XML} usando \textit{namespaces} ou até de  
-estilizar \svg{} recorrendo a CSS\index{CSS} (\emph{Cascade Style Sheets}). 
-De uma forma geral, pode dizer-se que \svg{}s interagem bem com as
-atuais tecnologias ligadas ao XML e à Web, tal como referido
-em~\cite{kn:svgibm,kn:svgw3c}.
+We can sum up all music related visualizations into three categories:
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec a
-eros. Phasellus non nulla non massa venenatis convallis. In
-porta. Mauris quis magna. Proin mauris eros, aliquet id, eleifend
-vitae, semper quis, erat. Aliquam id lectus non odio dignissim
-blandit. Vestibulum porttitor arcu ut ligula. Nunc quis
-erat. Curabitur ipsum tortor, ornare vitae, dapibus pretium, hendrerit
-sed, urna. Vestibulum ante ipsum primis in faucibus orci luctus et
-ultrices posuere cubilia Curae; Phasellus bibendum, nulla eget varius
-aliquam, tortor nulla sollicitudin quam, vel vestibulum nisl magna at
-sem. Aliquam velit sapien, ultrices viverra, tempus quis, ultrices at,
-dui. Aliquam sit amet justo. 
+    1- Sheet Music and Score Images
+    2- Symbolic Representations
+    3- Audio Representations
 
-Quisque tristique, metus eu iaculis
-sagittis, urna leo bibendum diam, a ultricies sem diam a augue. Mauris
-consectetuer, libero vel euismod tincidunt, nisi metus viverra ante,
-quis pretium sapien odio nec risus. Nunc semper auctor
-nulla\footnote{Exemplo de nota de rodapé.}. 
+\subsection{Sheet Music and Score Images}
 
-\subsection{Subsecção Exemplo} \label{batik} 
+Sheet music describes musical work using a formal language based on musical symbols and letters,
+thus, this kind of music representations always require  a level of music literacy from the 
+performing musician. Furthermore sheet music usally does not induce explicit information on how 
+a given piece should be performed, it is intened for the musician to have a certain 
+level of interpretation liberaty. This can include the variance of tempo, articulation and 
+dynamics amoung others.
 
-Batik é um conjunto de bibliotecas baseadas em \textit{Java} que
-permitem o uso de imagens \svg{} (visualização, geração ou
-manipulação) em aplicações ou \textit{applets}~\cite{kn:batik}.  
-O projeto Batik\index{Batik} destina-se a fornecer ao programador
-alguns módulos que permitem desenvolver soluções especificas usando
-\svg~\cite{kn:svgdoc}. 
+Sheet music also comes in a variety of forms that vary throughout History and cultures. 
+For our porpuses we are going to focus on the western standard of music notation. And still, within
+wester music, there can be vastly differnt forms of notation, however, most are based on a staff
+which sets five horizontal lines and four spaces, each representing a different musical pitch.
+Musical relevant symbols are put inside the staff to denote pitch, temporal and expressive indications. 
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc eu
-nulla. Pellentesque vitae nibh ultrices quam iaculis
-convallis. Aliquam purus eros, varius eget, volutpat sodales,
-imperdiet nec, lacus. Curabitur in elit sed sem rutrum posuere. Class
-aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos. Duis sem. Praesent ultricies odio vel
-sapien. Integer faucibus malesuada libero. Cras semper, dolor id
-ullamcorper varius, magna risus volutpat felis, id pellentesque nulla
-ante at erat. Integer sodales. 
+@mullerMusicRepresentations2015a
+\subsection{Symbolic Representations}
 
-Quisque sit amet odio. In at risus sit amet turpis interdum
-posuere. Maecenas iaculis vehicula sem. Ut leo arcu, malesuada vel,
-imperdiet id, dignissim a, purus. Duis eleifend, lectus non venenatis
-dignissim, risus libero imperdiet mi, nec gravida massa libero sed
-mauris. Nullam lobortis libero non sapien. Integer convallis iaculis
-erat. Morbi dictum. Ut ultrices pellentesque velit. Cras ac
-ante. Etiam in neque tincidunt lacus gravida vehicula. Proin et nisi. 
+Symbolic Representations are machine-readable formats where 
+musical events and expressions are explicitly encoded.
 
-\subsection{Subsecção Exemplo}
+These come in various formats, such as MIDI and MusicXML.
 
-Loren ipsum dolor sit amet, consectetuer adipiscing elit. 
-Praesent sit amet sem. Maecenas eleifend facilisis leo. Vestibulum et
-mi. Aliquam posuere, ante non tristique consectetuer, dui elit
-scelerisque augue, eu vehicula nibh nisi ac est. Suspendisse elementum
-sodales felis. Nullam laoreet fermentum urna. 
+Visualy we can identify two main applications for this category, 
+these include: Piano-Roll representations and digital score representations. 
 
-Loren ipsum dolor sit amet, consectetuer adipiscing elit. 
-Praesent sit amet sem. Maecenas eleifend facilisis leo. Vestibulum et
-mi. Aliquam posuere, ante non tristique consectetuer, dui elit
-scelerisque augue, eu vehicula nibh nisi ac est. Suspendisse elementum
-sodales felis. Nullam laoreet fermentum urna. 
+Historically piano-roll representations come from so-called \textbf{player pianos},
+these were self playing  pianos that became quite popular in the late 19th to early 20th century. 
+This was achieved by a pneumatic mechanism that would hit keys and pedal of the piano,
+through a continous roll of paper with perforations. The roll would move over a reading system 
+(known as a tracker bar) that would  trigger the musical actions accordingly. 
 
-Duis eget diam. In est justo, tristique in, lacinia vel, feugiat eget,
-quam. Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Fusce feugiat, elit ac placerat
-fermentum, augue nisl ultricies eros, id fringilla enim sapien eu
-felis. Vestibulum ante ipsum primis in faucibus orci luctus et
-ultrices posuere cubilia Curae; Sed dolor mi, porttitor quis,
-condimentum sed, luctus in. 
+This concept of a continuos and explicit representation of music performance would later prove usefull
+for digital applications. Such is the case for the Piano-Roll.
+
+The \textbf{Piano-Roll} is a stable on any DAW as a visual and interactive tool to write and edit musical events
+in the form of MIDI notes and atributes (such as velocity and other expressive controls).
+
+\textbf{MusicXML} refers to the XML-based language to transcribe score music into the digital domain. 
+There are multiple sub-varients of the MusicXML format for specific aplications, 
+however all share an XML based langue underneath. 
+
+MusicXML was developed to serve as a universal format for storing and sharing music scores
+across differnt music notation applications. Music notation digital editors then 
+employ proprietary variants of this format for addressing the program's specific charecteristics.
+In some cases these may not even be xml based, but MusicXML format can be considered the universal format.
+
+These include:
+    .mscz and .mscx - These are Musescore specific formats named MuseScore format and Uncompressed MuseScore format respectively. Both xml based.
+    .dora - "Dorico" specific format (non xml based)
+    .sib  - "Sibelius" proprietary format  of company Avid (also non xml based)
+    .mei  - The "Music Encoding Initiative" developed format for accademic and schollar research. XML based.
+
+\subsection{Audio Representations}
+Audio representations are graphs and/or plots that intend to represent sound. 
+These may not be for sctrictly representing music, the intent is to translat sound
+from the audible to the visual domain. 
+Audio is a term that refers to an acoustic sound that is turned into an electrical signal. Most audio
+representations, are thus digitaly generated through applying mathematical equations
+to the digitalized audio signal, such as the Fourier Transform. 
+
+We can infer at least 3 components in audio. These are, time, frequency and amplitude.
+ways of visualy represening these elements, not all audio representations try to describe the three. 
+
+Waveform - Is a the most comum and one of the simplest ways to represent audio.
+It consists of a single line on a graph that represents a given sound source, this 2d graph
+has amplitude as it's y-axis and time as it's x-axis. This representation does not provide data into frequency
+it only provides information for amplitude (how loud a sound is) and respective time data.
+
+For displaying the three sound components (time, amplitude and frequency/pitch) the graph needs
+to some how represnt three distict dimensions.  This can be done trhough developing a 3D graph 
+with axis for Amplitude, Time and Frequency. 
+
+The spectrogram achieves this by add by having on the y axis the frequency, time on the x-axis 
+and color as substitute for the third axis (amplitude), and in this way displaying 
+all three sound physical parameters in a single 2D visual plot. 
+
+@henriqueAcusticaMusical
+@jungUnifiedCrossmodalTranslation2026a; @mullerMusicRepresentations2015a
+\section{MIR Visualization Tools}\label{sec:dialecto}
+
+\section{Annotation and Evaluation Tasks in MIR}\label{sec:dialecto}
+
 
 \section{Resumo ou Conclusões}
-
-No final do capítulo deverá ser apresentado um resumo com as 
-principais conclusões que se podem tirar. 
-
-Vivamus non nunc nec risus tempor varius. Quisque bibendum mi at
-dolor. Aliquam consectetuer condimentum risus. Aliquam luctus pulvinar
-sem. Duis aliquam, urna et vulputate tristique, dui elit aliquet nibh,
-vel dignissim magna turpis id sapien. Duis commodo sem id
-quam. Phasellus dolor. Class aptent taciti sociosqu ad litora torquent
-per conubia nostra, per inceptos himenaeos. 

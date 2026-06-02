@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Thesis.aux
+A level-1 auxiliary file: A_FrontMatter/abstract.aux
+A level-1 auxiliary file: A_FrontMatter/acknowledgments.aux
+A level-1 auxiliary file: A_FrontMatter/quote.aux
+A level-1 auxiliary file: A_FrontMatter/abbreviations.aux
+A level-1 auxiliary file: B_Chapters/chapter1.aux
+A level-1 auxiliary file: B_Chapters/chapter2.aux
+A level-1 auxiliary file: B_Chapters/chapter3.aux
+A level-1 auxiliary file: B_Chapters/chapter4.aux
+A level-1 auxiliary file: B_Chapters/chapter5.aux
+The style file: alpha.bst
+I couldn't open auxiliary file c_Appendices/appendix1.aux
+---line 19 of file Thesis.aux
+ : \@input{c_Appendices/appendix1.aux
+ :                                   }
+I'm skipping whatever remains of this command
+Database file #1: E_Bibliography/bibliography.bib
+You've used 11 entries,
+            2543 wiz_defined-function locations,
+            635 strings with 6440 characters,
+and the built_in function-call counts, 3680 in all, are:
+= -- 362
+> -- 150
+< -- 10
++ -- 47
+- -- 46
+* -- 215
+:= -- 604
+add.period$ -- 34
+call.type$ -- 11
+change.case$ -- 61
+chr.to.int$ -- 10
+cite$ -- 11
+duplicate$ -- 153
+empty$ -- 289
+format.name$ -- 65
+if$ -- 769
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 58
+num.names$ -- 35
+pop$ -- 84
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 141
+stack$ -- 0
+substring$ -- 132
+swap$ -- 27
+text.length$ -- 10
+text.prefix$ -- 8
+top$ -- 0
+type$ -- 84
+warning$ -- 0
+while$ -- 31
+width$ -- 13
+write$ -- 141
+(There was 1 error message)
