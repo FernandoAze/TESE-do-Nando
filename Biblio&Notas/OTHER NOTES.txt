@@ -1,9 +1,30 @@
+To compile
+1. For quick:
+    pdflatex -interaction=batchmode Thesis
+    
+2. For full:
+    pdflatex Thesis && bibtex Thesis && pdflatex Thesis && pdflatex Thesis
+=========================
 Fundamentals of Music Processing
 DOI: 10.1007/978-3-319-21945-5
 
-
+=========================
 Visual Display and Retrieval of Music Information
+
 "Interestingly, a recent study[7] provides evidence of the importance of data visualization in music and
 shows that, in the context of crowdsourcing music annotations, "more complex audio scenes result in
 lower annotator agreement, and spectrogram visualizations are superior in producing higher quality
 annotations at lower cost of time and human labor.""
+=========================
+Paper fixe para Annotation 
+(o mesmo que é mencionado em cima)
+
+"Seeing Sound: Investigating the Effects of Visualizations and
+Complexity on Crowdsourced Audio Annotations"
+
+Teste que compara eficacia de waveform vs espetrograma para anotação
+=========================
+Fixe para dps comparar diferentes spectograms:
+
+https://maelfabien.github.io/machinelearning/Speech10/#linear-frequency-power-spectrogram
+=========================
