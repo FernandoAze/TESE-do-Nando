@@ -22,12 +22,7 @@ development of algorithms and systems to analyze, retrieve, and organize music d
 MIR bridges a wide range of disciplines, including: 
 musicology, signal processing, machine learning, and human-computer interaction. 
 
-
-==============
-CONTINUAR 
-
-@mullerFundamentalsMusicProcessing2015
-==============
+\cite{mullerFundamentalsMusicProcessing2015}
 
 \section{Visualization Types}\label{sec:dialecto}
 
@@ -42,18 +37,17 @@ We can sum up all music related visualizations into three categories:
 
 Sheet music describes musical work using a formal language based on musical symbols and letters,
 thus, this kind of music representations always require  a level of music literacy from the 
-performing musician. Furthermore sheet music usally does not induce explicit information on how 
-a given piece should be performed, it is intened for the musician to have a certain 
-level of interpretation liberaty. This can include the variance of tempo, articulation and 
-dynamics amoung others.
+performing musician. Furthermore sheet music usually does not induce explicit information on how 
+a given piece should be performed, it is intended for the musician to have a certain 
+level of interpretation liberty. This can include the variance of tempo, articulation and 
+dynamics among others.
 
 Sheet music also comes in a variety of forms that vary throughout History and cultures. 
-For our porpuses we are going to focus on the western standard of music notation. And still, within
-wester music, there can be vastly differnt forms of notation, however, most are based on a staff
+For our purposes we are going to focus on the western standard of music notation. And still, within
+western music, there can be vastly different forms of notation, however, most are based on a staff
 which sets five horizontal lines and four spaces, each representing a different musical pitch.
-Musical relevant symbols are put inside the staff to denote pitch, temporal and expressive indications. 
+Musical relevant symbols are put inside the staff to denote pitch, temporal and expressive indications. \cite{mullerMusicRepresentations2015a}
 
-@mullerMusicRepresentations2015a
 \subsection{Symbolic Representations}
 
 Symbolic Representations are machine-readable formats where 
@@ -73,7 +67,7 @@ through a continous roll of paper with perforations. The roll would move over a 
 This concept of a continuos and explicit representation of music performance would later prove usefull
 for digital applications. Such is the case for the Piano-Roll.
 
-The \textbf{Piano-Roll} is a stable on any DAW as a visual and interactive tool to write and edit musical events
+The \textbf{Piano-Roll} is a staple on any DAW as a visual and interactive tool to write and edit musical events
 in the form of MIDI notes and atributes (such as velocity and other expressive controls).
 
 \textbf{MusicXML} refers to the XML-based language to transcribe score music into the digital domain. 
@@ -93,11 +87,11 @@ These include:
     .mei  - The "Music Encoding Initiative" developed format for accademic and schollar research. XML based.
 
 \subsection{Audio Representations}
-Note: The figures in this chapter will follow the same music exerpt form Choping Op10 n3.
+Note: The figures in this chapter will follow the same music excerpt from Chopin Op10 n3.
 They were generated using the AudioVisualizers.py script, which is available in the appendix.
 
 Audio representations are graphs and/or plots that intend to represent sound. 
-These may not be for sctrictly representing music, the intent is to translate 
+These may not be for strictly representing music, the intent is to translate 
 sound from the audible to the visual domain. 
 Audio is a term that refers to an acoustic sound that is turned into an electrical signal. 
 Most audio representations, are thus digitaly generated through applying mathematical equations
@@ -106,18 +100,26 @@ to the audio signal, such as the Fourier Transform.
 We can infer at least 3 components that define a given audio. These are, time, frequency and amplitude/energy.
 An audio visualization will present explicit information of at least 2 of these.
 
-Waveforms a the most comum and one of the simplest ways to represent audio.
+Waveforms are the most common and one of the simplest ways to represent audio.
 It consists of a single line on a graph in a 2D graph where amplitude is the  y-axis and time is in the x-axis. 
 This representation does not provide frequency information, it only shows how amplitude of the audio changes through it's time.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/Waveform.png}
   \caption{Example of an audio waveform.}
   \label{fig:waveform}
 \end{figure}
 
-A spectral visualization refres to a graph with only frequency and amplitude/energy representation in a given time window.
+A spectral visualization or a spectrum, refers to a graph with only
+frequency and amplitude/energy representation in a given time window.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/Spectrum.png}
+  \caption{Example of audio Spectrum.}
+  \label{fig:waveform}
+\end{figure}
 
 For displaying the three sound components (time, amplitude and frequency/pitch) the graph needs
 to some how represnt three distict dimensions. 
@@ -130,22 +132,73 @@ Multiple weights and variances exist of the spectogram that have diferent applic
 The way frequencies are displayed in a given spectogram can help understanding audio better for certain situations. 
 There can be a wide variety of spectogram representations, that can vary in how it's contents are displayed.
 
-\textbf{Spectrogram Variants}
 The linear spectrogram is the most basic form of spectrogram, where frequencies are displayed in a linear scale.
 Meaning, frequencies are equally spaced on the y-axis. For music applications,
 this kind of representation tends to be less useful, as it does not reflect the way humans perceive sound.
-\begin{figure}[h]
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/SpectogramLinear.png}
-  \caption{Example of Linear spectrogram, content is a musical piece Chopin Op }
+  \caption{Example of Linear spectrogram.}
   \label{fig:spectrogram_linear}
 \end{figure}
 
+The logarithmic spectrogram displays frequencies in a logarithmic scale. 
+This mimics better the way humans perceive sound.
 
-\cite{khodzhaevPracticalGuideSpectrogram, valleVisualDisplayRetrieval, henriqueAcusticaMusical, jungUnifiedCrossmodalTranslation2026a, mullerMusicRepresentations2015a}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/SpectogramLog.png}
+  \caption{Example of Logarithmic spectrogram.}
+  \label{fig:spectrogram_log}
+\end{figure}
+
+The Mel spectrogram also displays frequencies taking into account the human hearing curve.
+The diference being, that log spectogram simply organizes frequencies logarithmically. 
+Whilst the Mel spectrogram organizes frequencies according to the Mel scale, 
+which is a perceptual scale of pitches judged by listeners to be equal in distance from one another.
+For music related applications this type of spectogram is much more useful, since we can more
+clearl distinguish in between musical pitches.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/SpectogramMel.png}
+  \caption{Example of Mel spectrogram.}
+  \label{fig:spectrogram_mel}
+\end{figure}
+
+A Constant-Q Transform (CQT) is closely related to a spectogram. The differnece being that,
+the CQT organizes its frequency content using geometrically spaced frequency bins.
+This is made in order to resemble the equal-tempered system, alo more comonly 
+regarded as a Piano-Roll like representation. \cite{valleVisualDisplayRetrieval, p. 3}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/SpectogramCQT.png}
+  \caption{Example of Mel spectrogram.}
+  \label{fig:spectrogram_mel}
+\end{figure}
+
+A differnt type of visualization but related to the CQT is the Chromagram.
+Whilst the CQT can destil the frequency spectrum into bins that correlate to individual notes,
+the chromogram takes this one step further summs up the frequency of each note. Citing Muller
+
+``...a pitch can be separated into two components, which are referred to as tone height and chroma. 
+The tone height refers to the octave number and the chroma to the respective pitch spelling attribute 
+contained in the set \{{C, C$\sharp$, D, . . . , B}\}.''
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{D_Figures/AudioVisualizations/Chromagram.png}
+  \caption{Example a Chromagram.}
+  \label{fig:Chromagram}
+\end{figure}
+
+\cite{mullerFundamentalsMusicProcessing2015, jungUnifiedCrossmodalTranslation2026a, khodzhaevPracticalGuideSpectrogram, valleVisualDisplayRetrieval}
+
 \section{MIR Visualization Tools}\label{sec:dialecto}
 
 \section{Annotation and Evaluation Tasks in MIR}\label{sec:dialecto}
 
 
-\section{Resumo ou Conclusões}
+\section{Summary}\label{sec:summary}

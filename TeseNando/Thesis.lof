@@ -2,7 +2,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Example of an audio waveform.}}{5}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of Linear spectrogram, content is a musical piece Chopin Op }}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of audio Spectrum.}}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of Linear spectrogram.}}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Logarithmic spectrogram.}}{7}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of Mel spectrogram.}}{8}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of Mel spectrogram.}}{8}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example a Chromagram.}}{9}{figure.caption.16}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

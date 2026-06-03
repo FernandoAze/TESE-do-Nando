@@ -53,6 +53,14 @@ def chronogram():
     plt.colorbar()
     plt.title('Chromagram')
     plt.savefig(f"{output_path}/Chronogram.png")
+def MFCC():
+    ##mau
+    mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
+    plt.figure(figsize=(12,8))
+    librosa.display.specshow(mfccs, x_axis='time')
+    plt.colorbar()
+    plt.title('MFCC')
+    plt.savefig(f"{output_path}/MFCC.png")
 def spectrum():
     S = np.abs(librosa.stft(y))
     S_dB = librosa.amplitude_to_db(S, ref=np.max)
@@ -71,10 +79,11 @@ def waveform():
     plt.savefig(f"{output_path}/Waveform.png")
 
 #Spectogram Visualizations:
-linearSpectogram()
-logSpectogram()
-melSpectogram()
-cqtSpectogram()
-chronogram()
-spectrum()
-waveform()
+# linearSpectogram()
+# logSpectogram()
+# melSpectogram()
+# cqtSpectogram()
+# chronogram()
+# spectrum()
+# waveform()
+# MFCC()

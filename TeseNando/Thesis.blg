@@ -7,6 +7,10 @@ A level-1 auxiliary file: A_FrontMatter/quote.aux
 A level-1 auxiliary file: A_FrontMatter/abbreviations.aux
 A level-1 auxiliary file: B_Chapters/chapter1.aux
 A level-1 auxiliary file: B_Chapters/chapter2.aux
+White space in argument---line 27 of file B_Chapters/chapter2.aux
+ : \citation{p.
+ :              3}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: B_Chapters/chapter3.aux
 A level-1 auxiliary file: B_Chapters/chapter4.aux
 A level-1 auxiliary file: B_Chapters/chapter5.aux
@@ -14,36 +18,35 @@ The style file: alpha.bst
 A level-1 auxiliary file: C_Appendices/appendix1.aux
 Database file #1: E_Bibliography/bibliography.bib
 Warning--I didn't find a database entry for "kn:Lip08"
-Warning--empty publisher in henriqueAcusticaMusical
-Warning--empty year in henriqueAcusticaMusical
 Warning--empty journal in jungUnifiedCrossmodalTranslation2026a
 Warning--empty year in jungUnifiedCrossmodalTranslation2026a
 Warning--empty journal in khodzhaevPracticalGuideSpectrogram
 Warning--empty year in khodzhaevPracticalGuideSpectrogram
+Warning--empty year in mullerFundamentalsMusicProcessing2015
 Warning--empty year in mullerMusicRepresentations2015a
 Warning--empty journal in valleVisualDisplayRetrieval
 Warning--empty year in valleVisualDisplayRetrieval
 You've used 5 entries,
             2543 wiz_defined-function locations,
-            596 strings with 5610 characters,
-and the built_in function-call counts, 1837 in all, are:
-= -- 162
+            594 strings with 5691 characters,
+and the built_in function-call counts, 1828 in all, are:
+= -- 161
 > -- 82
 < -- 5
-+ -- 28
++ -- 29
 - -- 27
-* -- 137
+* -- 133
 := -- 309
 add.period$ -- 13
 call.type$ -- 5
-change.case$ -- 31
-chr.to.int$ -- 5
-cite$ -- 14
+change.case$ -- 30
+chr.to.int$ -- 4
+cite$ -- 13
 duplicate$ -- 80
 empty$ -- 133
 format.name$ -- 35
-if$ -- 355
-int.to.chr$ -- 1
+if$ -- 354
+int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 7
 newline$ -- 27
@@ -52,7 +55,7 @@ pop$ -- 65
 preamble$ -- 1
 purify$ -- 37
 quote$ -- 0
-skip$ -- 41
+skip$ -- 40
 stack$ -- 0
 substring$ -- 86
 swap$ -- 7
@@ -60,8 +63,8 @@ text.length$ -- 5
 text.prefix$ -- 4
 top$ -- 0
 type$ -- 32
-warning$ -- 9
+warning$ -- 8
 while$ -- 16
 width$ -- 8
 write$ -- 55
-(There were 10 warnings)
+(There was 1 error message)

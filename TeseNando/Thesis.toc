@@ -10,21 +10,20 @@
 \contentsline {subsection}{\numberline {2.2.1}Sheet Music and Score Images}{3}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Symbolic Representations}{4}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Audio Representations}{5}{subsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.3.1}Spectrogram Variants}{6}{subsubsection.2.2.3.1}%
-\contentsline {section}{\numberline {2.3}MIR Visualization Tools}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Annotation and Evaluation Tasks in MIR}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Resumo ou Conclusões}{6}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Developed Solution}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Implementation}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Developed Iterations}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}How to Further Customize Visualizations}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Summary}{9}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusões e Trabalho Futuro}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Achievements}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Future Work}{11}{section.5.2}%
-\contentsline {chapter}{References}{13}{section*.14}%
-\contentsline {chapter}{\numberline {A}Loren Ipsum}{15}{appendix.A}%
-\contentsline {section}{\numberline {A.1}O que é o \emph {Loren Ipsum}?}{15}{section.A.1}%
-\contentsline {section}{\numberline {A.2}De onde Vem o Loren?}{15}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Porque se usa o Loren?}{16}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Onde se Podem Encontrar Exemplos?}{16}{section.A.4}%
+\contentsline {section}{\numberline {2.3}MIR Visualization Tools}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Annotation and Evaluation Tasks in MIR}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Summary}{9}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Developed Solution}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Implementation}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Developed Iterations}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}How to Further Customize Visualizations}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Summary}{13}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusões e Trabalho Futuro}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Achievements}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Work}{15}{section.5.2}%
+\contentsline {chapter}{References}{17}{section*.19}%
+\contentsline {chapter}{\numberline {A}Loren Ipsum}{19}{appendix.A}%
+\contentsline {section}{\numberline {A.1}O que é o \emph {Loren Ipsum}?}{19}{section.A.1}%
+\contentsline {section}{\numberline {A.2}De onde Vem o Loren?}{19}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Porque se usa o Loren?}{20}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Onde se Podem Encontrar Exemplos?}{20}{section.A.4}%

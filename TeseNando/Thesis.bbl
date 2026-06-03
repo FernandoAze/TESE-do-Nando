@@ -1,11 +1,6 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{JKL{\etalchar{+}}}
 
-\bibitem[Hen]{henriqueAcusticaMusical}
-Luís~L. Henrique.
-\newblock {\em Acústica {{Musical}}}.
-\newblock 3rd edition.
-
 \bibitem[JKL{\etalchar{+}}]{jungUnifiedCrossmodalTranslation2026a}
 Jongmin Jung, Dongmin Kim, Sihun Lee, Seola Cho, Hyungjoon Soh, Irmak Bukey,
   Chris Donahue, and Dasaem Jeong.
@@ -18,7 +13,13 @@ Zulfidin Khodzhaev.
 \newblock A {{Practical Guide}} to {{Spectrogram Analysis}} for {{Audio Signal
   Processing}}.
 
-\bibitem[Mü]{mullerMusicRepresentations2015a}
+\bibitem[Müa]{mullerFundamentalsMusicProcessing2015}
+Meinard Müller.
+\newblock {\em Fundamentals of {{Music Processing}}: {{Audio}}, {{Analysis}},
+  {{Algorithms}}, {{Applications}}}.
+\newblock Springer International Publishing.
+
+\bibitem[Müb]{mullerMusicRepresentations2015a}
 Meinard Müller.
 \newblock {\em Music {{Representations}}}, pages 1--37.
 \newblock Springer International Publishing.
