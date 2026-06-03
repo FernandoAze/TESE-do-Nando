@@ -86,35 +86,41 @@ employ proprietary variants of this format for addressing the program's specific
 In some cases these may not even be xml based, but MusicXML format can be considered the universal format.
 
 These include:
-    .mscz and .mscx - These are Musescore specific formats named MuseScore format and Uncompressed MuseScore format respectively. Both xml based.
+    .mscz and .mscx - These are Musescore specific formats named for "MuseScore Format" and 
+    "Uncompressed MuseScore" format respectively. Both xml based.
     .dora - "Dorico" specific format (non xml based)
     .sib  - "Sibelius" proprietary format  of company Avid (also non xml based)
     .mei  - The "Music Encoding Initiative" developed format for accademic and schollar research. XML based.
 
 \subsection{Audio Representations}
 Audio representations are graphs and/or plots that intend to represent sound. 
-These may not be for sctrictly representing music, the intent is to translat sound
-from the audible to the visual domain. 
-Audio is a term that refers to an acoustic sound that is turned into an electrical signal. Most audio
-representations, are thus digitaly generated through applying mathematical equations
-to the digitalized audio signal, such as the Fourier Transform. 
+These may not be for sctrictly representing music, the intent is to translate 
+sound from the audible to the visual domain. 
+Audio is a term that refers to an acoustic sound that is turned into an electrical signal. 
+Most audio representations, are thus digitaly generated through applying mathematical equations
+to the audio signal, such as the Fourier Transform. 
 
-We can infer at least 3 components in audio. These are, time, frequency and amplitude.
-ways of visualy represening these elements, not all audio representations try to describe the three. 
+We can infer at least 3 components that define a given audio. These are, time, frequency and amplitude/energy.
+An audio visualization will present explicit information of at least 2 of these.
 
-Waveform - Is a the most comum and one of the simplest ways to represent audio.
-It consists of a single line on a graph that represents a given sound source, this 2d graph
-has amplitude as it's y-axis and time as it's x-axis. This representation does not provide data into frequency
-it only provides information for amplitude (how loud a sound is) and respective time data.
+Waveforms a the most comum and one of the simplest ways to represent audio.
+It consists of a single line on a graph in a 2D graph where amplitude is the  y-axis and time is in the x-axis. 
+This representation does not provide frequency information, it only shows how amplitude of the audio changes through it's time.
+
+A spectral visualization refres to a graph with only frequency and amplitude/energy representation in a given time window.
 
 For displaying the three sound components (time, amplitude and frequency/pitch) the graph needs
-to some how represnt three distict dimensions.  This can be done trhough developing a 3D graph 
-with axis for Amplitude, Time and Frequency. 
+to some how represnt three distict dimensions. 
 
-The spectrogram achieves this by add by having on the y axis the frequency, time on the x-axis 
+The spectrogram achieves this by having on the y axis the frequency, time on the x-axis 
 and color as substitute for the third axis (amplitude), and in this way displaying 
-all three sound physical parameters in a single 2D visual plot. 
+all three parameters in a single 2D visual plot. 
+Multiple weights and variances exist of the spectogram that have diferent applications.
 
+The way frequencies are displayed in a given spectogram can help understanding audio better for certain situations. 
+A spectogram can show it's frequency linearly, logarithmically, weighted and/or normalized. 
+
+@khodzhaevPracticalGuideSpectrogram; @valleVisualDisplayRetrieval
 @henriqueAcusticaMusical
 @jungUnifiedCrossmodalTranslation2026a; @mullerMusicRepresentations2015a
 \section{MIR Visualization Tools}\label{sec:dialecto}
