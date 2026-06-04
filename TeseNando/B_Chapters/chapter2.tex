@@ -15,7 +15,7 @@ escolhas.
 
 ==============
 
-\section{Introdução}
+\section{Introduction}
 
 Music Information Retrieval (MIR) is the field of research that focuses on the
 development of algorithms and systems to analyze, retrieve, and organize music data.
@@ -43,7 +43,7 @@ level of interpretation liberty. This can include the variance of tempo, articul
 dynamics among others.
 
 Sheet music also comes in a variety of forms that vary throughout History and cultures. 
-For our purposes we are going to focus on the western standard of music notation. And still, within
+For our purposes we are going to focus on the western standard of music notation.Still, within
 western music, there can be vastly different forms of notation, however, most are based on a staff
 which sets five horizontal lines and four spaces, each representing a different musical pitch.
 Musical relevant symbols are put inside the staff to denote pitch, temporal and expressive indications. \cite{mullerMusicRepresentations2015a}
@@ -197,8 +197,86 @@ contained in the set \{{C, C$\sharp$, D, . . . , B}\}.''
 \cite{mullerFundamentalsMusicProcessing2015, jungUnifiedCrossmodalTranslation2026a, khodzhaevPracticalGuideSpectrogram, valleVisualDisplayRetrieval}
 
 \section{MIR Visualization Tools}\label{sec:dialecto}
+% What are the main tools for visualization of MIR tasks?
+% 	Sonic Visualizer, Audacity etc.
+% 	Librosa and Matplotlib. Modusa
+
+Within MIR we can identify two main ways for visualization of audio for MIR taks, these are
+either by using GUI based tools, or by using programming-based workflows.
+
+For GUI based tools two stand-out these being Audacity and especially Sonic Visualizer (SV). 
+Audacity is one of the most popular audio editors, it is designed for general audio related tasks 
+from audio editing, recording, processing and visualization. On the other hand,
+SV is program stricly designed for audio visualization and analysis. 
+Whilst Audacity the most "user friendly" and popular program, SV is meant for scientific and 
+specialized audio visualization tasks.
+
+Important to note that both softwares are free and open-source based. These are important features,
+since they allow for users to easealy acess them, but also for researchers and experts to modify them
+and thus, contribute to the development of SV and new SV-like tools.
+
+One such example is Piano Precision, a SV based GUI tool for visualizing score-alligned spectrograms.
+\begin{quotation}
+The Piano Precision UI is adapted from Sonic Visualiser, with an additional area displaying a score 
+(...) The interface is designed to help streamline the processes of loading a digital score and a 
+performance recording, editing and visualizing annotations (...), and exporting score-aware annotations.
+\end{quotation}
+\noindent --- \cite{@jiangPIANOPRECISIONADVANCING2025}
+Piano Precision builds on SV by focusing on visualization, evaluation and annotation of musical and audio data
+aligned with a given musical performance score. By doing this, data annotations can be mapped not only to a given audio
+(what SV was built on for), but also map annotations that are linked to a score. The authors note the usefulness of this tool
+for performance researchers, however, understandably it should prove a useful tool for other MIR research fields.
+% Devo continuar isto mas n sei para já o que escrever mais aqui....
+% Continuando...
+
+While modern GUI-based visualization tools may be powerful, they might not provide features that are required for 
+state-of-the-art research and development. MIR research often requires highly specialized visualizations tailored 
+to specific research questions that pre-built tools simply do not support. Understandably, the development of these 
+programs simply cannot keep up with the constantly evolving advancements in the field.
+
+That is why it is also quite common for researchers to develop programming-based methods for creating specialized visualizations.
+Researchers might need to integrate multiple data types (audio, scores, annotations, computational outputs) 
+in ways that GUI tools cannot replicate.
+
+Moreover, code-based workflows can be versioned, shared, and included in publications, ensuring reproducibility—
+an essential requirement for academic research.
+
+Another argument is that MIR is increasingly geared towards machine learning solutions and algorithms.
+The need to work with large music datasets and integrate machine learning applications for training,
+feature extraction, and related tasks explains the reliance on code-based visualization workflows.
+
+Furthermore, the fact that MIR is fundamentally a computational research field more broadly justifies this approach.
+
+Currently, Python is the go-to language for MIR visualization tasks. Key libraries such as 
+Librosa, Matplotlib, and Madmom, along with APIs such as Modusa and tools like Jupyter Notebooks, are common in MIR research.
+
+
+\section{SVG Usage in MIR}\label{sec:dialecto}
+% SVG defenition: a XML and vector based image format for two-dimensional graphics.
+% SVG advantages:
+%     • Easily editable.
+%     • Human readable
+%     • Resolution Independent
+%     • Great integration for browsers and web applications
+%     • Open standard. Meaning, the specification is freely and publicly available to anyone.
+% SVG file is at it’s core a plain text markup.
+% Most music formats are XML based so the integration with SVG format is facilitated. Verovio and ScoreWarp are examples of this correlation. 
+% Because of this (editable, open, resolution independent, etc.) SVG visualization formats are a reliable option for MIR applications
 
 \section{Annotation and Evaluation Tasks in MIR}\label{sec:dialecto}
 
+
+\section{Score usage and Allignment types}
+%Overview of Verovio and MEI score format
+%Explain what ScoreWarp is, why it is important and how it works.
+% Overview on different types of score allignment.
+% Types of Allignment: 
+%   Note-Level (ver ASAP, )
+%   Frame-Level
+%   Onset-level
+%   Beat-level
+%   Measure-level
+%   Section-level
+%   Offline and online allignemnts
 
 \section{Summary}\label{sec:summary}
