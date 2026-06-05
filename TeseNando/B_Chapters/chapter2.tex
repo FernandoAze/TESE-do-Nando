@@ -78,7 +78,7 @@ MusicXML was developed to serve as a universal format for storing and sharing mu
 across differnt music notation applications. Music notation digital editors then 
 employ proprietary variants of this format for addressing the program's specific charecteristics.
 In some cases these may not even be xml based, but MusicXML format can be considered the universal format.
-
+% Será que preciso mesmo de mencionar isto?
 These include:
     .mscz and .mscx - These are Musescore specific formats named for "MuseScore Format" and 
     "Uncompressed MuseScore" format respectively. Both xml based.
@@ -238,20 +238,26 @@ That is why it is also quite common for researchers to develop programming-based
 Researchers might need to integrate multiple data types (audio, scores, annotations, computational outputs) 
 in ways that GUI tools cannot replicate.
 
-Moreover, code-based workflows can be versioned, shared, and included in publications, ensuring reproducibility—
+Moreover, code-based workflows can be versioned, shared, and included in publications, ensuring reproducibility this is
 an essential requirement for academic research.
 
 Another argument is that MIR is increasingly geared towards machine learning solutions and algorithms.
 The need to work with large music datasets and integrate machine learning applications for training,
-feature extraction, and related tasks explains the reliance on code-based visualization workflows.
+feature extraction, and other related tasks, explains the reliance on code-based visualization workflows.
 
 Furthermore, the fact that MIR is fundamentally a computational research field more broadly justifies this approach.
 
 Currently, Python is the go-to language for MIR visualization tasks. Key libraries such as 
 Librosa, Matplotlib, and Madmom, along with APIs such as Modusa and tools like Jupyter Notebooks, are common in MIR research.
 
+Also, there has been a groing intrest in developing web-based MIR applications. Because of this the usage of HTML and JS based
+codebases might also be found. 
 
 \section{SVG Usage in MIR}\label{sec:dialecto}
+% Why is SVG used in MIR: 
+%     • Open Format
+%     • Vector based, meaning, great for graphs and plots bc infinite resolution!
+%     • Easely integrated with web-based solutions.
 % SVG defenition: a XML and vector based image format for two-dimensional graphics.
 % SVG advantages:
 %     • Easily editable.
@@ -266,17 +272,18 @@ Librosa, Matplotlib, and Madmom, along with APIs such as Modusa and tools like J
 \section{Annotation and Evaluation Tasks in MIR}\label{sec:dialecto}
 
 
-\section{Score usage and Allignment types}
+\section{Score usage and the Allignment task}
 %Overview of Verovio and MEI score format
 %Explain what ScoreWarp is, why it is important and how it works.
-% Overview on different types of score allignment.
-% Types of Allignment: 
+%Overview on different types of score allignment.
+%Types of Allignment: 
 %   Note-Level (ver ASAP, )
 %   Frame-Level
 %   Onset-level
 %   Beat-level
 %   Measure-level
 %   Section-level
-%   Offline and online allignemnts
+%   Offline and online allignemnts 
+%   DTW hDTW and HMM
 
 \section{Summary}\label{sec:summary}
