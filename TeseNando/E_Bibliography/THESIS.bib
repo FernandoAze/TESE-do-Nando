@@ -1,3 +1,91 @@
+@inproceedings{agrawalStructureAwareAudiotoScoreAlignment2021,
+  title = {Structure-{{Aware Audio-to-Score Alignment Using Progressively Dilated Convolutional Neural Networks}}},
+  booktitle = {{{ICASSP}} 2021 - 2021 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
+  author = {Agrawal, Ruchit and Wolff, Daniel and Dixon, Simon},
+  date = {2021-06-06},
+  pages = {571--575},
+  publisher = {IEEE},
+  location = {Toronto, ON, Canada},
+  doi = {10.1109/ICASSP39728.2021.9414049},
+  url = {https://ieeexplore.ieee.org/document/9414049/},
+  urldate = {2026-06-07},
+  abstract = {The identification of structural differences between a music performance and the score is a challenging yet integral step of audioto-score alignment, an important subtask of music information retrieval. We present a novel method to detect such differences between the score and performance for a given piece of music using progressively dilated convolutional neural networks. Our method incorporates varying dilation rates at different layers to capture both short-term and long-term context, and can be employed successfully in the presence of limited annotated data. We conduct experiments on audio recordings of real performances that differ structurally from the score, and our results demonstrate that our models outperform standard methods for structure-aware audio-to-score alignment.},
+  eventtitle = {{{ICASSP}} 2021 - 2021 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
+  isbn = {978-1-7281-7605-5},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/F6I5WKGK/Agrawal et al. - 2021 - Structure-Aware Audio-to-Score Alignment Using Progressively Dilated Convolutional Neural Networks.pdf}
+}
+
+@online{bukeyJustLabelRepeats2024,
+  title = {Just {{Label}} the {{Repeats}} for {{In-The-Wild Audio-to-Score Alignment}}},
+  author = {Bukey, Irmak and Feffer, Michael and Donahue, Chris},
+  date = {2024-11-11},
+  eprint = {2411.07428},
+  eprinttype = {arXiv},
+  eprintclass = {cs.SD},
+  doi = {10.48550/arXiv.2411.07428},
+  url = {http://arxiv.org/abs/2411.07428},
+  urldate = {2026-06-07},
+  abstract = {We propose an efficient workflow for high-quality offline alignment of in-the-wild performance audio and corresponding sheet music scans (images). 1 Recent work on audio-to-score alignment extends dynamic time warping (DTW) to be theoretically able to handle jumps in sheet music induced by repeat signs—this method requires no human annotations, but we show that it often yields low-quality alignments. As an alternative, we propose a workflow and interface that allows users to quickly annotate jumps (by clicking on repeat signs), requiring a small amount of human supervision but yielding much higher quality alignments on average. Additionally, we refine audio and score feature representations to improve alignment quality by: (1) integrating measure detection into the score feature representation, and (2) using raw onset prediction probabilities from a music transcription model instead of piano roll. We propose an evaluation protocol for audioto-score alignment that computes the distance between the estimated and ground truth alignment in units of measures. Under this evaluation, we find that our proposed jump annotation workflow and improved feature representations together improve alignment accuracy by 150\% relative to prior work (33\% → 82\%).},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Computer Science - Multimedia,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {/home/macacomalandro/Zotero/storage/VVQZMDKL/Bukey et al. - 2024 - Just Label the Repeats for In-The-Wild Audio-to-Score Alignment.pdf}
+}
+
+@article{carabias-ortiAUDIOSCOREALIGNMENTa,
+  title = {{{AN AUDIO TO SCORE ALIGNMENT FRAMEWORK USING SPECTRAL FACTORIZATION AND DYNAMIC TIME WARPING}}},
+  author = {Carabias-Orti, J J and Rodriguez-Serrano, F J and Vera-Candeas, P and Ruiz-Reyes, N},
+  abstract = {In this paper, we present an audio to score alignment framework based on spectral factorization and online Dynamic Time Warping (DTW). The proposed framework has two separated stages: preprocessing and alignment. In the first stage, we use Non-negative Matrix Factorization (NMF) to learn spectral patterns (i.e. basis functions) associated to each combination of concurrent notes in the score. In the second stage, a low latency signal decomposition method with fixed spectral patterns per combination of notes is used over the magnitude spectrogram of the input signal resulting in a divergence matrix that can be interpreted as the cost of the matching for each combination of notes at each frame. Finally, a Dynamic Time Warping (DTW) approach has been used to find the path with the minimum cost and then determine the relation between the performance and the musical score times. Our framework have been evaluated using a dataset of baroque-era pieces and compared to other systems, yielding solid results and performance.},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/UJ9488RB/Carabias-Orti et al. - AN AUDIO TO SCORE ALIGNMENT FRAMEWORK USING SPECTRAL FACTORIZATION AND DYNAMIC TIME WARPING.pdf}
+}
+
+@inproceedings{changRUMAARepeatAwareUnified2025,
+  title = {{{RUMAA}}: {{Repeat-Aware Unified Music Audio Analysis}} for {{Score-Performance Alignment}}, {{Transcription}}, and {{Mistake Detection}}},
+  shorttitle = {{{RUMAA}}},
+  booktitle = {2025 {{IEEE Workshop}} on {{Applications}} of {{Signal Processing}} to {{Audio}} and {{Acoustics}} ({{WASPAA}})},
+  author = {Chang, Sungkyun and Dixon, Simon and Benetos, Emmanouil},
+  date = {2025-10-12},
+  pages = {1--5},
+  publisher = {IEEE},
+  location = {Tahoe City, CA, USA},
+  doi = {10.1109/WASPAA66052.2025.11230990},
+  url = {https://ieeexplore.ieee.org/document/11230990/},
+  urldate = {2026-06-07},
+  abstract = {This study introduces RUMAA, a transformer-based framework for music performance analysis that unifies score-to-performance alignment, score-informed transcription, and mistake detection in a near end-to-end manner. Unlike prior methods addressing these tasks separately, RUMAA integrates them using pre-trained score and audio encoders and a novel tri-stream decoder capturing task interdependencies through proxy tasks. It aligns human-readable MusicXML scores with repeat symbols to full-length performance audio, overcoming traditional MIDIbased methods that rely on manually unfolded score-MIDI data with pre-specified repeat structures. RUMAA matches state-of-the-art alignment methods on non-repeated scores and outperforms them on scores with repeats in a public piano music dataset, while also delivering promising transcription and mistake detection results.},
+  eventtitle = {2025 {{IEEE Workshop}} on {{Applications}} of {{Signal Processing}} to {{Audio}} and {{Acoustics}} ({{WASPAA}})},
+  isbn = {979-8-3315-3745-6},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/J5SN3IR7/Chang et al. - 2025 - RUMAA Repeat-Aware Unified Music Audio Analysis for Score-Performance Alignment, Transcription, and.pdf}
+}
+
+@article{duanSoundprismOnlineSystem2011,
+  title = {Soundprism: {{An Online System}} for {{Score-Informed Source Separation}} of {{Music Audio}}},
+  shorttitle = {Soundprism},
+  author = {Duan, Zhiyao and Pardo, Bryan},
+  date = {2011-10},
+  journaltitle = {IEEE Journal of Selected Topics in Signal Processing},
+  shortjournal = {IEEE J. Sel. Top. Signal Process.},
+  volume = {5},
+  number = {6},
+  pages = {1205--1215},
+  issn = {1932-4553, 1941-0484},
+  doi = {10.1109/JSTSP.2011.2159701},
+  url = {http://ieeexplore.ieee.org/document/5887382/},
+  urldate = {2026-06-07},
+  abstract = {Soundprism, as proposed in this paper, is a computer system that separates single-channel polyphonic music audio played by harmonic sources into source signals in an online fashion. It uses a musical score to guide the separation process. To the best of our knowledge, this is the first online system that addresses score-informed music source separation that can be made into a real-time system.},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/P5SZAMYT/Duan and Pardo - 2011 - Soundprism An Online System for Score-Informed Source Separation of Music Audio.pdf}
+}
+
+@article{goeblLetsScoreWarpAgain2025a,
+  title = {Let’s Do the {{ScoreWarp}} Again! {{Shifting}} Notes to Performance Timelines},
+  author = {Goebl, Werner},
+  date = {2025},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/HHTMCNLH/Goebl - 2025 - Let’s do the ScoreWarp again! Shifting notes to performance timelines.pdf}
+}
+
 @book{henriqueAcusticaMusical,
   title = {Acústica {{Musical}}},
   author = {Henrique, Luís L.},
@@ -48,6 +136,14 @@
   url = {https://music-encoding.org/about/}
 }
 
+@article{mironAUDIOTOSCOREALIGNMENTNOTE,
+  title = {{{AUDIO-TO-SCORE ALIGNMENT AT NOTE LEVEL FOR ORCHESTRAL RECORDINGS}}},
+  author = {Miron, Marius and Carabias-Orti, Julio Jose and Janer, Jordi},
+  abstract = {In this paper we propose an offline method for refining audio-to-score alignment at the note level in the context of orchestral recordings. State-of-the-art score alignment systems estimate note onsets with a low time resolution, and without detecting note offsets. For applications such as score-informed source separation we need a precise alignment at note level. Thus, we propose a novel method that refines alignment by determining the note onsets and offsets in complex orchestral mixtures by combining audio and image processing techniques. First, we introduce a note-wise pitch salience function that weighs the harmonic contribution according to the notes present in the score. Second, we perform image binarization and blob detection based on connectivity rules. Then, we pick the best combination of blobs, using dynamic programming. We finally obtain onset and offset times from the boundaries of the most salient blob. We evaluate our method on a dataset of Bach chorales, showing that the proposed approach can accurately estimate note onsets and offsets.},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/EFTTPE6E/Miron et al. - AUDIO-TO-SCORE ALIGNMENT AT NOTE LEVEL FOR ORCHESTRAL RECORDINGS.pdf}
+}
+
 @book{mullerFundamentalsMusicProcessing2015,
   title = {Fundamentals of {{Music Processing}}: {{Audio}}, {{Analysis}}, {{Algorithms}}, {{Applications}}},
   shorttitle = {Fundamentals of {{Music Processing}}},
@@ -78,6 +174,23 @@
   isbn = {978-3-319-21944-8 978-3-319-21945-5},
   langid = {english},
   file = {/home/macacomalandro/Zotero/storage/RBMY7M7U/Müller - 2015 - Music Representations.pdf}
+}
+
+@article{peterAutomaticNoteLevelScoretoPerformance2023,
+  title = {Automatic {{Note-Level Score-to-Performance Alignments}} in the {{ASAP Dataset}}},
+  author = {Peter, Silvan David and Cancino-Chacón, Carlos Eduardo and Foscarin, Francesco and McLeod, Andrew Philip and Henkel, Florian and Karystinaios, Emmanouil and Widmer, Gerhard},
+  date = {2023-06-26},
+  journaltitle = {Transactions of the International Society for Music Information Retrieval},
+  volume = {6},
+  number = {1},
+  pages = {27--42},
+  issn = {2514-3298},
+  doi = {10.5334/tismir.149},
+  url = {http://transactions.ismir.net/articles/10.5334/tismir.149/},
+  urldate = {2026-06-07},
+  abstract = {Several MIR applications require fine-grained note alignments between MIDI performances and their musical scores for training and evaluation. However, large and high-quality datasets with this kind of data are not available, and their manual creation is a very time-consuming task that can only be performed by field experts. In this paper, we evaluate state-of-the-art automatic note alignment models applied to dataset generation. We increase the accuracy and reliability of the produced alignments with models that flexibly leverage existing annotations such as beat or measure alignments. We thoroughly evaluate these segment-constrained models and use the best to create note alignments for the ASAP dataset, a large dataset of solo piano MIDI performances beat-aligned to MusicXML scores. The resulting note alignments are manually checked and publicly available at: https://github.com/CPJKU/ asap-dataset. The contributions of this paper are four-fold: (1) we extend the ASAP dataset with reliable note alignments, thus creating (n)ASAP, the largest available fully note-aligned dataset, comprising more than 7 M annotated notes and close to 100 hours of music; (2) we design, evaluate, and publish segment-constrained models for note alignments that flexibly leverage existing annotations and significantly outperform automatic models; (3) we design, evaluate, and publish unconstrained automatic models for note alignment that produce results on par with the state of the art; (4) we introduce Parangonada, a web-interface for visualizing and correcting alignment annotations.},
+  langid = {english},
+  file = {/home/macacomalandro/Zotero/storage/VR5MFF2H/Peter et al. - 2023 - Automatic Note-Level Score-to-Performance Alignments in the ASAP Dataset.pdf}
 }
 
 @article{pintoShiftIfYoua,

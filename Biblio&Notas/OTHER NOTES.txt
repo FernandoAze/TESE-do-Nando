@@ -1,9 +1,10 @@
-To compile
-1. For quick:
-    pdflatex -interaction=batchmode Thesis
-    
-2. For full:
-    pdflatex Thesis && bibtex Thesis && pdflatex Thesis && pdflatex Thesis
+To compile:
+"""
+    pdflatex Thesis
+    bibtex Thesis
+    pdflatex Thesis
+    pdflatex Thesis
+"""
 =========================
 Fundamentals of Music Processing
 DOI: 10.1007/978-3-319-21945-5
@@ -28,3 +29,15 @@ Fixe para dps comparar diferentes spectograms:
 
 https://maelfabien.github.io/machinelearning/Speech10/#linear-frequency-power-spectrogram
 =========================
+verovio-reference-book.pdf
+
+One advantage of SVG rendering over other formats (e.g., images or PDF) is that SVG is rendered natively in all modern web-browsers. Because it is in XML, it also has the advantage that it is well suited to interaction in the browser, since every graphic is an XML element that is easy addressable in the DOM. With Verovio, we also have the advantage that the SVG is organized in such a way that the MEI structure is preserved as much as possible.
+
+=========================
+verovio-reference-book.pdf
+
+Several design features of the Verovio library make it highly suitable for interactive music notation applications. It is a software library that can run in a wide range of environments (and not a full software application) and it is light and fast. The JavaScript version of Verovio is particularly promising because it provides a fast in-browser music MEI typesetting engine that can easily be integrated into web-based applications. This setup makes it possible to design ground-breaking web applications where the MEI encoding is rendered on the fly. In such designs we can rethink the interface and avoid mimicking page output. We can instead adjust the layout dynamically to the screen of the device employed by the user. The layout can be calculated to fill the size of the screen, or interactively changed according to a zoom level adjusted by the user. This opens up new responsive web-interfaces to be designed and developed based on dynamic music notation reflow. This works particularly well with SVG, especially since it is now supported by all modern web browsers. However innovative the dynamic layout of music notation may be, it remains a very basic interaction. Verovio aims to go further and to produce a graphic output that can then be the foundation for more complex interactions.
+
+Because SVG is XML, it has an advantage over raster image formats in that every graphical element is addressable. This feature makes it intrinsically well suited for interaction, and this is also true for music notation. In a web environment, the addressability can be used for highlighting graphical elements such as notes or any other music symbols. One additional characteristic of SVG is that its XML tree can be structured as desired, and an innovative design feature of Verovio was to go further in the structuring of the output by leveraging this characteristic. Since Verovio implements the MEI structure internally, this key feature of SVG made it possible to preserve the MEI structure in the design of the SVG output in Verovio. Preserving the MEI structure in the SVG output is a considerable overhead in the rendering process but makes it a unique feature of Verovio.
+
+As a result, Verovio output in SVG is not the end of a unidirectional rendering process. Quite on the contrary, it should instead be seen as an intermediate layer standing between the MEI encoding and its rendering that can act as the cornerstone for a bi-directional interaction: from the encoding to the notation, but also from the notation to the encoding through the user interface.

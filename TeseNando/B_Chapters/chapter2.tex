@@ -28,13 +28,13 @@ Symbolic Representations are machine-readable formats where musical events and e
 
 Visually we can identify two main applications for this category, these include: piano-roll representations and digital score representations. 
 
-Historically piano-roll representations come from so-called \textbf{player pianos}, these were self playing  pianos that became quite popular in the late 19th to early 20th century. This was achieved by a pneumatic mechanism that would hit keys and pedal of the piano, through a continuous roll of paper with perforations. The roll would move over a reading system (known as a tracker bar) that would  trigger the musical actions accordingly. 
+Historically piano-roll representations come from so-called \textbf{player pianos}, these were self playing  pianos that became quite popular in the late 19th to early 20th century. This was achieved by a pneumatic mechanism that would hit keys and pedal of the piano, through a continuous" roll of paper with perforations. The roll would move over a reading system (known as a tracker bar) that would  trigger the musical actions accordingly. 
 
 This concept of a continuos and explicit representation of music performance would later prove useful for digital applications. Such is the case for the Piano-Roll.
 
 The \textbf{Piano-Roll} is a staple on any DAW as a visual and interactive tool to write and edit musical events in the form of MIDI notes and attributes (such as velocity and other expressive controls).
 
-\textbf{MusicXML} refers to the XML-based language to transcribe score music into the digital domain. There are multiple sub-variants of the MusicXML format for specific applications, however all share an XML based langue underneath. 
+\textbf{MusicXML} refers to the XML-based language to transcribe score music into the digital domain. There are multiple sub-variants of the MusicXML format for specific applications, however all share an XML based language underneath. 
 
 MusicXML was developed to serve as a universal format for storing and sharing music scores across different music notation applications. Music notation digital editors then employ proprietary variants of this format for addressing the program's specific characteristics. In some cases these may not even be xml based, but MusicXML format can be considered the universal format.
 % Será que preciso mesmo de mencionar isto?
@@ -149,20 +149,20 @@ While the CQT can distill the frequency spectrum into bins that correlate to ind
 \cite{mullerFundamentalsMusicProcessing2015, jungUnifiedCrossmodalTranslation2026a, khodzhaevPracticalGuideSpectrogram, valleVisualDisplayRetrieval}
 
 \section{MIR Visualization Tools}\label{sec:dialecto}
-Within MIR we can identify two main ways for visualization of audio for MIR taks, these are either by using GUI based tools, or by using programming-based workflows.
+Within MIR we can identify two main ways for visualization of audio for MIR tasks, these are either by using GUI based tools, or by using programming-based workflows.
 
-For GUI based tools two stand-out these being Audacity and especially Sonic Visualizer (SV). Audacity is one of the most popular audio editors, it is designed for general audio related tasks from audio editing, recording, processing and visualization. On the other hand, SV is program stricly designed for audio visualization and analysis. Whilst Audacity the most "user friendly" and popular program, SV is meant for scientific and specialized audio visualization tasks.
+For GUI based tools two stand-out these being Audacity and especially Sonic Visualizer (SV). Audacity is one of the most popular audio editors, it is designed for general audio related tasks from audio editing, recording, processing and visualization. On the other hand, SV is program strictly designed for audio visualization and analysis. Whilst Audacity the most "user friendly" and popular program, SV is meant for scientific and specialized audio visualization tasks.
 
-Important to note that both softwares are free and open-source based. These are important features, since they allow for users to easealy acess them, but also for researchers and experts to modify them and thus, contribute to the development of SV and new SV-like tools.
+Important to note that both softwares are free and open-source based. These are important features, since they allow for users to easily access them, but also for researchers and experts to modify them and thus, contribute to the development of SV and new SV-like tools.
 
-One such example is Piano Precision, an SV based GUI tool for visualizing score-alligned spectrograms.
+One such example is Piano Precision, an SV based GUI tool for visualizing score-aligned spectrograms.
 
 \begin{quotation}
-The Piano Precision UI is adapted from Sonic Visualiser, with an additional area displaying a score (...) The interface is designed to help streamline the processes of loading a digital score and a performance recording, editing and visualizing annotations (...), and exporting score-aware annotations.
+The Piano Precision UI is adapted from Sonic Visualizer, with an additional area displaying a score (...) The interface is designed to help streamline the processes of loading a digital score and a performance recording, editing and visualizing annotations (...), and exporting score-aware annotations.
 \end{quotation}
 \noindent --- \cite{@jiangPIANOPRECISIONADVANCING2025}
 
-Piano Precision builds on SV by focusing on visualization, evaluation and annotation of musical and audio data aligned with a given musical performance score. By doing this, data annotations can be mapped not only to a given audio (what SV was built on for), but also map annotations that are linked to a score. The authors note the usefulness of this tool for performance researchers, however, understandably it should prove a useful tool for other MIR research fields.
+Piano Precision \citep{@jiangPIANOPRECISIONADVANCING2025} builds on SV by focusing on visualization, evaluation and annotation of musical and audio data aligned with a given musical performance score. By doing this, data annotations can be mapped not only to a given audio (what SV was built on for), but also map annotations that are linked to a score. The authors note the usefulness of this tool for performance researchers, however, understandably it should prove a useful tool for other MIR research fields. 
 % Devo continuar isto mas n sei para já o que escrever mais aqui....
 
 While modern GUI-based visualization tools may be powerful, they might not provide features that are required for state-of-the-art research and development. MIR research often requires highly specialized visualizations tailored to specific research questions that pre-built tools simply do not support. Understandably, the development of these programs simply cannot keep up with the constantly evolving advancements in the field.
@@ -177,14 +177,16 @@ Furthermore, the fact that MIR is fundamentally a computational research field m
 
 Currently, Python is the go-to language for MIR visualization tasks. Key libraries such as Librosa, Matplotlib, and Madmom, along with APIs such as Modusa and tools like Jupyter Notebooks, are common in MIR research.
 
-Also, there has been a groing intrest in developing web-based MIR applications. Because of this the usage of HTML and JS based codebases might also be found. 
+Also, there has been a growing interest in developing web-based MIR applications. Because of this the usage of HTML and JS based codebases might also be found. 
 
-\section{SVG Usage in MIR}\label{sec:dialecto}
+% EU NAO SEI SE VALE A PENA DEDICAR UM SEGMENTO SO PARA SVG... ja menciono antes quando falo de Verovio/Mei.
+% Também vou ter de voltar a falar na parte pratica.
+% \section{SVG Usage in MIR}\label{sec:dialecto}
 % Why is SVG used in MIR: 
 %     • Open Format
 %     • Vector based, meaning, great for graphs and plots bc infinite resolution!
-%     • Easely integrated with web-based solutions.
-% SVG defenition: a XML and vector based image format for two-dimensional graphics.
+%     • Easily integrated with web-based solutions.
+% SVG definition: a XML and vector based image format for two-dimensional graphics.
 % SVG advantages:
 %     • Easily editable.
 %     • Human readable
@@ -195,21 +197,42 @@ Also, there has been a groing intrest in developing web-based MIR applications. 
 % Most music formats are XML based so the integration with SVG format is facilitated. Verovio and ScoreWarp are examples of this correlation. 
 % Because of this (editable, open, resolution independent, etc.) SVG visualization formats are a reliable option for MIR applications
 
-\section{Annotation and Evaluation Tasks in MIR}\label{sec:dialecto}
+% \section{Annotation and Evaluation Tasks in MIR}\label{sec:dialecto}
 
-
-\section{Score usage and Allignment types}
+\section{Audio-to-Score Alignment}
 % 1-Digital Score Encodings: MEI and Verovio (passei para Symbolic Representation)
-
 % 2-Score-Performance Alignment: Task definition and MIR utility
-
 % 3-Usage Categorization: Algorithmic infrastructure vs. visual analysis
+The task of Audio-to-Score Alignment (score matching or score alignment) consists of ``synchronizing an audio recording of a musical piece with the corresponding symbolic score'' \citep{carabias-ortiAUDIOSCOREALIGNMENTa}. There are multiple applications for such a feature, from automatic score following for music performance or for guided listening, to interactive navigation between audio and score (useful for ex. audio editors) to MIR research and development. 
 
-% 4-Alignment Taxonomy: Offline/online; note, onset, measure, and segment granularities
+% 4-Alignment Taxonomy: Offline/online; note, onset, measure, and segment 
+There are two modes of alignment: offline alignment and online alignment. Offline alignment, consists of accessing a musical recording and performing the alignment afterwards, this can be useful for tasks such as musical analysis and audio editing. Online alignment (also known as also known as score following), processes the data in real-time while the audio signal is being received, this is useful for tasks like autonomous accompaniment of the score while a performance is occurring. Offline alignment is able to use the full length of the recording in order to determining the optimal alignment, this is because it can ``look into the future'' in order to establish the optimal matching. Because of this, Online alignment can't provide the same level of detail unless some deliberate latency is introduced into the system thus, online modes need to take into account precision trade-offs.  
 
-% 5-Algorithmic Frameworks: DTW, hDTW, HMM, and structure-aware methods
+Besides online and offline modes of score matching, the alignment in itself can be done to various levels of the performance or score these include:
+  Note-Level
+  Beat-level
+  Segment 
+
+\textbf{Note-level} alignments are score matching processes that aim to synchronize at the individual note level. At it's core, note-level alignments are systems based on note and onset/offset detection and linking. In MIR literature it can be also referred as ``fine-grained alignment'' due to the level of precision that these methods require. Contemporary Audio-to-Score MIR research focuses on this type of alignment not only because of the precision element but also because it can retrieve data that is relevant for other MIR fields and tasks. However, pure note-level alignments might falter if the performance deviates from the score i.e. if the performer skips, repeats or adds notes and sections of the score. That's why some score matching solutions try to employ, on top of fine-grained alignments, other methods. The previously mentioned PP software is an example that employs this kind of alignment, a score is presented where it highlights the note/chord that is currently being played in the recording. \cite{@jiangPIANOPRECISIONADVANCING2025} 
+
+\textbf{Beat-Level} alignments aim to follow along beat and/or measures dictated in the score, and then linking them to the performance. Early score aligners (ex.\citet{@duanSoundprismOnlineSystem2011}) would rely on such methods. Today, score alignment solutions, although mostly are note-level types, still combine Beat-Level alignment layers within their algorithms. A good example of this comes from \citet{peterAutomaticNoteLevelScoretoPerformance2023}, in it the authors improved on other alignment models, one strategy employed was adding analysis of ``alignments at both the beat and the bar level''. The beat level alignment would serve as ``anchor points'' in order to prevent ``cascading errors, as misalignments will not propagate beyond the next anchor point'', they noted that this improved results of automatic alignments.
+
+\textbf{Segment} type alignments, map broad portions of performance audio to corresponding visual blocks in the score. This type of score matching is mostly made manually, it is common to see it in follow-along videos to help viewers listen to the music while visualizing the score. This type of alignment is considered ``weak but musically meaningful'' \citep{jungUnifiedCrossmodalTranslation2026a} since segments can be deliberately chosen i.e. to better show melodic or harmonic structure. 
+
+% Opá, eu quero despachar isto... será que vale a pena eu explicar os metodos algoritmicos também? A minha tese é focada na visualização....
+% 5-Algorithmic Frameworks: DTW, hDTW, HMM, NWTW, Structure-aware (RUMAA)
 
 % 6-The Warped Score (ScoreWarp): Mechanism, semantic index, and thesis integration
-
+ScoreWarp is a relevant visual score alignment tool for this thesis. It presents a score that is tied to a physical time axis where, each element of the score is ``physically shifted so that their location linearly coincides with the physical time of their sounding''\citep{@goeblLetsScoreWarpAgain2025a}. ScoreWarp takes advantage of the MEI format and Verovio in order to automatically shift the position of musical elements, while maintaining the semantic integrity of the original score. In the next chapter we are going to explore this tool more in depth, since it ended being one of the backbones for the develop project for this thesis. 
 
 \section{Summary}\label{sec:summary}
+% Claude escreveu isto por mim... TENHO DE REVER!!!!
+This chapter provided a comprehensive overview of Music Information Retrieval (MIR) visualization techniques and tools, establishing the foundation for understanding audio-to-score alignment. 
+
+We began by categorizing music visualizations into three main types: traditional sheet music representations, symbolic machine-readable formats, and audio-based representations. The discussion of symbolic representations highlighted the critical importance of the MEI format and Verovio, which together enable rich, semantically meaningful digital score encodings that preserve both musical structure and metadata. This connection between MEI's machine-readable encoding and Verovio's interactive SVG rendering proved essential for understanding modern score visualization workflows.
+
+We then examined the contemporary landscape of MIR visualization tools, distinguishing between GUI-based solutions such as Sonic Visualizer and Piano Precision, which provide user-friendly interfaces for audio analysis, and code-based workflows that afford researchers greater flexibility to develop specialized visualizations tailored to specific research questions. Python-based approaches using libraries like Librosa and Matplotlib have become the de facto standard for academic MIR work, particularly due to their integration with machine learning pipelines and reproducibility requirements.
+
+Finally, we introduced the core task of this thesis: Audio-to-Score Alignment. This process synchronizes musical performances with their corresponding symbolic scores. ScoreWarp emerged as a particularly relevant example, demonstrating how MEI and Verovio can be leveraged to create visually warped scores that maintain semantic integrity while aligning with performance time.
+
+These foundations establish the conceptual and technical backdrop for the practical work presented in subsequent chapters.
