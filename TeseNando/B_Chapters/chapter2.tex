@@ -28,7 +28,7 @@ Symbolic Representations are machine-readable formats where musical events and e
 
 Visually we can identify two main applications for this category, these include: piano-roll representations and digital score representations. 
 
-Historically piano-roll representations come from so-called \textbf{player pianos}, these were self playing  pianos that became quite popular in the late 19th to early 20th century. This was achieved by a pneumatic mechanism that would hit keys and pedal of the piano, through a continuous" roll of paper with perforations. The roll would move over a reading system (known as a tracker bar) that would  trigger the musical actions accordingly. 
+Historically piano-roll representations come from so-called ``player pianos'', these were self playing pianos that became quite popular in the late 19th to early 20th century. This was achieved by a mechanism that would hit keys of the piano through a continuous roll of paper with perforations. The roll would move over a reading system (known as a tracker bar) that would  trigger the musical actions accordingly. 
 
 This concept of a continuos and explicit representation of music performance would later prove useful for digital applications. Such is the case for the Piano-Roll.
 
@@ -60,7 +60,7 @@ Verovio is a comprehensive open-source library designed to serve as a native typ
 
 As a result, Verovio output in SVG is not the end of a unidirectional rendering process. Quite on the contrary, it should instead be seen as an intermediate layer standing between the MEI encoding and its rendering that can act as the cornerstone for a bi-directional interaction: from the encoding to the notation, but also from the notation to the encoding through the user interface.''\cite{@repertoireinternationaldessourcesmusicalesVerovioReferenceBook2021}
 
-To further demonstrate the usefulness of the MEI and Verovio, I'll present next a quote from the article relative to Piano Precision (PP) a GUI program that we are going to explore more in depth in the Score-Alignment section:
+To further demonstrate the usefulness of the MEI and Verovio, I'll present next a quote from the article relative to Piano Precision (PP) a GUI software for audio-to-score visualization, we will explore this tool further in the next section.
 
 ``Technically, what makes MEI especially useful is that it can be rendered to graphical SVG output while retaining its semantically meaningful XML hierarchy and unique identifiers for every score element (e.g., ties, notes). Piano Precision renders the scores into SVG output using Verovio, an open-source toolkit for visualizing MEI data. This makes it easy to locate interesting objects in a score and, e.g., highlight them in the rendering. The result is interactive images in which users can flip pages, zoom in and out of a score, and click on elements in a score to jump to their playback positions.''
 \cite{jiangPIANOPRECISIONADVANCING2025}
@@ -155,15 +155,12 @@ For GUI based tools two stand-out these being Audacity and especially Sonic Visu
 
 Important to note that both softwares are free and open-source based. These are important features, since they allow for users to easily access them, but also for researchers and experts to modify them and thus, contribute to the development of SV and new SV-like tools.
 
-One such example is Piano Precision, an SV based GUI tool for visualizing score-aligned spectrograms.
+One such example is Piano Precision, a SV based GUI tool for visualizing score-aligned spectrograms.
 
 \begin{quotation}
 The Piano Precision UI is adapted from Sonic Visualizer, with an additional area displaying a score (...) The interface is designed to help streamline the processes of loading a digital score and a performance recording, editing and visualizing annotations (...), and exporting score-aware annotations.
 \end{quotation}
 \noindent --- \cite{@jiangPIANOPRECISIONADVANCING2025}
-
-Piano Precision \citep{@jiangPIANOPRECISIONADVANCING2025} builds on SV by focusing on visualization, evaluation and annotation of musical and audio data aligned with a given musical performance score. By doing this, data annotations can be mapped not only to a given audio (what SV was built on for), but also map annotations that are linked to a score. The authors note the usefulness of this tool for performance researchers, however, understandably it should prove a useful tool for other MIR research fields. 
-% Devo continuar isto mas n sei para já o que escrever mais aqui....
 
 While modern GUI-based visualization tools may be powerful, they might not provide features that are required for state-of-the-art research and development. MIR research often requires highly specialized visualizations tailored to specific research questions that pre-built tools simply do not support. Understandably, the development of these programs simply cannot keep up with the constantly evolving advancements in the field.
 
@@ -177,7 +174,6 @@ Furthermore, the fact that MIR is fundamentally a computational research field m
 
 Currently, Python is the go-to language for MIR visualization tasks. Key libraries such as Librosa, Matplotlib, and Madmom, along with APIs such as Modusa and tools like Jupyter Notebooks, are common in MIR research.
 
-Also, there has been a growing interest in developing web-based MIR applications. Because of this the usage of HTML and JS based codebases might also be found. 
 
 % EU NAO SEI SE VALE A PENA DEDICAR UM SEGMENTO SO PARA SVG... ja menciono antes quando falo de Verovio/Mei.
 % Também vou ter de voltar a falar na parte pratica.
@@ -213,26 +209,27 @@ Besides online and offline modes of score matching, the alignment in itself can 
   Beat-level
   Segment 
 
-\textbf{Note-level} alignments are score matching processes that aim to synchronize at the individual note level. At it's core, note-level alignments are systems based on note and onset/offset detection and linking. In MIR literature it can be also referred as ``fine-grained alignment'' due to the level of precision that these methods require. Contemporary Audio-to-Score MIR research focuses on this type of alignment not only because of the precision element but also because it can retrieve data that is relevant for other MIR fields and tasks. However, pure note-level alignments might falter if the performance deviates from the score i.e. if the performer skips, repeats or adds notes and sections of the score. That's why some score matching solutions try to employ, on top of fine-grained alignments, other methods. The previously mentioned PP software is an example that employs this kind of alignment, a score is presented where it highlights the note/chord that is currently being played in the recording. \cite{@jiangPIANOPRECISIONADVANCING2025} 
+\textbf{Note-level} alignments are score matching processes that aim to synchronize at the individual note level. At it's core, note-level alignments are systems based on note and onset/offset detection and linking. In MIR literature it can be also referred as ``fine-grained alignment'' due to the level of precision that these methods require. Contemporary Audio-to-Score MIR research focuses on this type of alignment not only because of the precision element but also because it can retrieve data that is relevant for other MIR fields and tasks. However, pure note-level alignments might falter if the performance deviates from the score i.e. if the performer skips, repeats or adds notes and sections of the score. That's why some score matching solutions try to employ, on top of fine-grained alignments, other methods.
+
+Piano Precision (PP) software provides a note-level score aligned visualization. While a recording is playing PP shows the current playback position via highlighting the element being played in the score note by note. This enables annotations to be mapped to both the audio and individual score elements simultaneously. The authors note the usefulness of this tool for performance researchers. \citep{jiangPIANOPRECISIONADVANCING2025} 
 
 \textbf{Beat-Level} alignments aim to follow along beat and/or measures dictated in the score, and then linking them to the performance. Early score aligners (ex.\citet{@duanSoundprismOnlineSystem2011}) would rely on such methods. Today, score alignment solutions, although mostly are note-level types, still combine Beat-Level alignment layers within their algorithms. A good example of this comes from \citet{peterAutomaticNoteLevelScoretoPerformance2023}, in it the authors improved on other alignment models, one strategy employed was adding analysis of ``alignments at both the beat and the bar level''. The beat level alignment would serve as ``anchor points'' in order to prevent ``cascading errors, as misalignments will not propagate beyond the next anchor point'', they noted that this improved results of automatic alignments.
 
 \textbf{Segment} type alignments, map broad portions of performance audio to corresponding visual blocks in the score. This type of score matching is mostly made manually, it is common to see it in follow-along videos to help viewers listen to the music while visualizing the score. This type of alignment is considered ``weak but musically meaningful'' \citep{jungUnifiedCrossmodalTranslation2026a} since segments can be deliberately chosen i.e. to better show melodic or harmonic structure. 
 
-% Opá, eu quero despachar isto... será que vale a pena eu explicar os metodos algoritmicos também? A minha tese é focada na visualização....
+% Será que vale a pena eu explicar os tipos de algoritmicos também? A minha tese é focada na visualização....
 % 5-Algorithmic Frameworks: DTW, hDTW, HMM, NWTW, Structure-aware (RUMAA)
 
 % 6-The Warped Score (ScoreWarp): Mechanism, semantic index, and thesis integration
-ScoreWarp is a relevant visual score alignment tool for this thesis. It presents a score that is tied to a physical time axis where, each element of the score is ``physically shifted so that their location linearly coincides with the physical time of their sounding''\citep{@goeblLetsScoreWarpAgain2025a}. ScoreWarp takes advantage of the MEI format and Verovio in order to automatically shift the position of musical elements, while maintaining the semantic integrity of the original score. In the next chapter we are going to explore this tool more in depth, since it ended being one of the backbones for the develop project for this thesis. 
+ScoreWarp is a relevant visual score alignment tool for this thesis. It presents a score that is tied to a physical time axis where, each element of the score is ``physically shifted so that their location linearly coincides with the physical time of their sounding''\citep{@goeblLetsScoreWarpAgain2025a}. ScoreWarp takes advantage of the MEI format and Verovio in order to automatically shift the position of musical elements, while maintaining the semantic integrity of the original score. In the next chapter we are going to explore this tool more in depth, since it became one of the key tools for the development of the project for this thesis. 
 
 \section{Summary}\label{sec:summary}
-% Claude escreveu isto por mim... TENHO DE REVER!!!!
 This chapter provided a comprehensive overview of Music Information Retrieval (MIR) visualization techniques and tools, establishing the foundation for understanding audio-to-score alignment. 
 
-We began by categorizing music visualizations into three main types: traditional sheet music representations, symbolic machine-readable formats, and audio-based representations. The discussion of symbolic representations highlighted the critical importance of the MEI format and Verovio, which together enable rich, semantically meaningful digital score encodings that preserve both musical structure and metadata. This connection between MEI's machine-readable encoding and Verovio's interactive SVG rendering proved essential for understanding modern score visualization workflows.
+We began by categorizing music visualizations into three main types: traditional sheet music representations, symbolic machine-readable formats, and audio-based representations. With this we established the importance of the MEI and Verovio as well as the usage of the SVG visual format in this context.
 
 We then examined the contemporary landscape of MIR visualization tools, distinguishing between GUI-based solutions such as Sonic Visualizer and Piano Precision, which provide user-friendly interfaces for audio analysis, and code-based workflows that afford researchers greater flexibility to develop specialized visualizations tailored to specific research questions. Python-based approaches using libraries like Librosa and Matplotlib have become the de facto standard for academic MIR work, particularly due to their integration with machine learning pipelines and reproducibility requirements.
 
-Finally, we introduced the core task of this thesis: Audio-to-Score Alignment. This process synchronizes musical performances with their corresponding symbolic scores. ScoreWarp emerged as a particularly relevant example, demonstrating how MEI and Verovio can be leveraged to create visually warped scores that maintain semantic integrity while aligning with performance time.
+Finally, we introduced the core task of this thesis: Audio-to-Score Alignment. This process synchronizes musical performances with their corresponding symbolic scores. ScoreWarp emerged as a particularly relevant tool, demonstrating how MEI and Verovio can be leveraged to create visually warped scores that maintain semantic integrity while aligning with performance time.
 
 These foundations establish the conceptual and technical backdrop for the practical work presented in subsequent chapters.
