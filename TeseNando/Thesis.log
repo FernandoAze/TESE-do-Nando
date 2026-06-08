@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  3 JUN 2026 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  8 JUN 2026 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,12 +429,6 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Label `fig:waveform' multiply defined.
 
 
-LaTeX Warning: Label `fig:spectrogram_mel' multiply defined.
-
-
-LaTeX Warning: Label `sec:dialecto' multiply defined.
-
-
 LaTeX Warning: Label `sec:dialecto' multiply defined.
 
 ) (./B_Chapters/chapter3.aux) (./B_Chapters/chapter4.aux)
@@ -531,7 +525,7 @@ Package hyperref Info: Link coloring ON on input line 86.
 \c@lstlisting=\count304
  (./A_FrontMatter/cover.tex)
 \@crestbox=\box60
-<D_Figures/uporto-feup.pdf, id=132, 338.26375pt x 126.4725pt>
+<D_Figures/uporto-feup.pdf, id=116, 338.26375pt x 126.4725pt>
 File: D_Figures/uporto-feup.pdf Graphic file (type pdf)
 <use D_Figures/uporto-feup.pdf>
 Package pdftex.def Info: D_Figures/uporto-feup.pdf  used on input line 96.
@@ -550,36 +544,34 @@ st/fonts/enc/dvips/base/8r.enc} <./D_Figures/uporto-feup.pdf>] [-2
 \openout2 = `A_FrontMatter/abstract.aux'.
 
 
-(./A_FrontMatter/abstract.tex [1
+(./A_FrontMatter/abstract.tex) [1
 
 
-] [2
-
-]) [3]
+]
 \openout2 = `A_FrontMatter/acknowledgments.aux'.
 
- (./A_FrontMatter/acknowledgments.tex [4
+ (./A_FrontMatter/acknowledgments.tex
+[2
 
 
 
 
-]) [5]
+]) [3]
 \openout2 = `A_FrontMatter/quote.aux'.
 
- (./A_FrontMatter/quote.tex [6
+
+No file A_FrontMatter/quote.tex.
+[4
 
 
 
-
-]) [7] [8
 
 
 
 ] (./Thesis.toc
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
  3.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
@@ -616,32 +608,45 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \tf@toc=\write4
 \openout4 = `Thesis.toc'.
 
- [9
+ [5
 
-] [10
+] [6
 
 ]
 (./Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [11
+ [7
 
-] [12
+] [8
 
 ] (./Thesis.lot)
 \tf@lot=\write6
 \openout6 = `Thesis.lot'.
 
- [13
+ [9
 
 ]
 \openout2 = `A_FrontMatter/abbreviations.aux'.
 
- (./A_FrontMatter/abbreviations.tex [14
+ (./A_FrontMatter/abbreviations.tex
+[10
 
 
-]) [15] [16
+]
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.10 MEI      &
+                Music Encoding Initiative\\
+? 
+
+Overfull \hbox (52.56546pt too wide) in paragraph at lines 5--16
+[]  
+ []
+
+) [11] [12
 
 
 
@@ -650,12 +655,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
  (./B_Chapters/chapter1.tex
 Chapter 1.
-
-Overfull \hbox (10.0213pt too wide) in paragraph at lines 28--30
-\T1/ptm/m/n/10.95 Apresenta a mo-ti-vação e enu-mera os ob-je-tivos do tra-balh
-o ter-mi-nando com um re-sumo das metodolo-
- []
-
 ) [1
 
 
@@ -669,107 +668,136 @@ o ter-mi-nando com um re-sumo das metodolo-
 
 ]
 Chapter 2.
-[3]
-Underfull \vbox (badness 5787) has occurred while \output is active []
 
- [4]
-<D_Figures/AudioVisualizations/Waveform.png, id=301, 867.24pt x 578.16pt>
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+ [3]
+
+LaTeX Warning: Citation `@MEI-Website' on page 4 undefined on input line 51.
+
+[4]
+
+LaTeX Warning: Citation `@repertoireinternationaldessourcesmusicalesVerovioRefe
+renceBook2021' on page 5 undefined on input line 61.
+
+[5]
+<D_Figures/AudioVisualizations/Waveform.png, id=266, 867.24pt x 578.16pt>
 File: D_Figures/AudioVisualizations/Waveform.png Graphic file (type png)
 <use D_Figures/AudioVisualizations/Waveform.png>
 Package pdftex.def Info: D_Figures/AudioVisualizations/Waveform.png  used on in
-put line 109.
+put line 79.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<D_Figures/AudioVisualizations/Spectrum.png, id=303, 867.24pt x 578.16pt>
+<D_Figures/AudioVisualizations/Spectrum.png, id=268, 867.24pt x 578.16pt>
 File: D_Figures/AudioVisualizations/Spectrum.png Graphic file (type png)
 <use D_Figures/AudioVisualizations/Spectrum.png>
 Package pdftex.def Info: D_Figures/AudioVisualizations/Spectrum.png  used on in
-put line 119.
+put line 88.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./D_Figures/AudioVisualizations/Waveform.png>]
-<D_Figures/AudioVisualizations/SpectogramLinear.png, id=310, 867.24pt x 578.16p
+ [6 <./D_Figures/AudioVisualizations/Waveform.png>]
+<D_Figures/AudioVisualizations/SpectogramLinear.png, id=274, 867.24pt x 578.16p
 t>
 File: D_Figures/AudioVisualizations/SpectogramLinear.png Graphic file (type png
 )
 <use D_Figures/AudioVisualizations/SpectogramLinear.png>
 Package pdftex.def Info: D_Figures/AudioVisualizations/SpectogramLinear.png  us
-ed on input line 141.
+ed on input line 103.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <./D_Figures/AudioVisualizations/Spectrum.png>]
-<D_Figures/AudioVisualizations/SpectogramLog.png, id=316, 867.24pt x 578.16pt>
+ [7 <./D_Figures/AudioVisualizations/Spectrum.png>]
+<D_Figures/AudioVisualizations/SpectogramLog.png, id=280, 867.24pt x 578.16pt>
 File: D_Figures/AudioVisualizations/SpectogramLog.png Graphic file (type png)
 <use D_Figures/AudioVisualizations/SpectogramLog.png>
 Package pdftex.def Info: D_Figures/AudioVisualizations/SpectogramLog.png  used 
-on input line 151.
+on input line 112.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<D_Figures/AudioVisualizations/SpectogramMel.png, id=317, 867.24pt x 578.16pt>
+<D_Figures/AudioVisualizations/SpectogramMel.png, id=281, 867.24pt x 578.16pt>
 File: D_Figures/AudioVisualizations/SpectogramMel.png Graphic file (type png)
 <use D_Figures/AudioVisualizations/SpectogramMel.png>
 Package pdftex.def Info: D_Figures/AudioVisualizations/SpectogramMel.png  used 
-on input line 165.
+on input line 121.
+(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
+ [8 <./D_Figures/AudioVisualizations/SpectogramLinear.png> <./D_Figures/AudioVi
+sualizations/SpectogramLog.png>]
+
+LaTeX Warning: Citation `p. 3' on page 9 undefined on input line 131.
+
+<D_Figures/AudioVisualizations/SpectogramCQT.png, id=290, 867.24pt x 578.16pt>
+File: D_Figures/AudioVisualizations/SpectogramCQT.png Graphic file (type png)
+<use D_Figures/AudioVisualizations/SpectogramCQT.png>
+Package pdftex.def Info: D_Figures/AudioVisualizations/SpectogramCQT.png  used 
+on input line 135.
+(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./D_Figures/AudioVisualizations/SpectogramMel.png>]
+<D_Figures/AudioVisualizations/Chromagram.png, id=300, 867.24pt x 578.16pt>
+File: D_Figures/AudioVisualizations/Chromagram.png Graphic file (type png)
+<use D_Figures/AudioVisualizations/Chromagram.png>
+Package pdftex.def Info: D_Figures/AudioVisualizations/Chromagram.png  used on 
+input line 144.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
 
 Underfull \vbox (badness 1661) has occurred while \output is active []
 
- [7 <./D_Figures/AudioVisualizations/SpectogramLinear.png> <./D_Figures/AudioVi
-sualizations/SpectogramLog.png>]
+ [10 <./D_Figures/AudioVisualizations/SpectogramCQT.png> <./D_Figures/AudioVisu
+alizations/Chromagram.png>]
 
-LaTeX Warning: Citation `p. 3' on page 8 undefined on input line 173.
+LaTeX Warning: Citation `@jiangPIANOPRECISIONADVANCING2025' on page 11 undefine
+d on input line 163.
 
-<D_Figures/AudioVisualizations/SpectogramCQT.png, id=325, 867.24pt x 578.16pt>
-File: D_Figures/AudioVisualizations/SpectogramCQT.png Graphic file (type png)
-<use D_Figures/AudioVisualizations/SpectogramCQT.png>
-Package pdftex.def Info: D_Figures/AudioVisualizations/SpectogramCQT.png  used 
-on input line 177.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
 
-Underfull \vbox (badness 3343) has occurred while \output is active []
+Overfull \hbox (7.46996pt too wide) in paragraph at lines 202--203
+\T1/ptm/m/n/10.95 niz-ing an au-dio record-ing of a mu-si-cal piece with the co
+r-re-spond-ing sym-bolic score'' [[]][].
+ []
 
- [8 <./D_Figures/AudioVisualizations/SpectogramMel.png> <./D_Figures/AudioVisua
-lizations/SpectogramCQT.png>]
-<D_Figures/AudioVisualizations/Chromagram.png, id=333, 867.24pt x 578.16pt>
-File: D_Figures/AudioVisualizations/Chromagram.png Graphic file (type png)
-<use D_Figures/AudioVisualizations/Chromagram.png>
-Package pdftex.def Info: D_Figures/AudioVisualizations/Chromagram.png  used on 
-input line 192.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-) [9 <./D_Figures/AudioVisualizations/Chromagram.png>]
+[11]
+
+LaTeX Warning: Citation `@duanSoundprismOnlineSystem2011' on page 12 undefined 
+on input line 216.
+
+[12]
+
+LaTeX Warning: Citation `@goeblLetsScoreWarpAgain2025a' on page 13 undefined on
+ input line 224.
+
+) [13]
 \openout2 = `B_Chapters/chapter3.aux'.
 
-
-(./B_Chapters/chapter3.tex [10
+ (./B_Chapters/chapter3.tex [14
 
 
 
 
 ]
 Chapter 3.
-) [11]
+) [15]
 \openout2 = `B_Chapters/chapter4.aux'.
 
- (./B_Chapters/chapter4.tex [12
+ (./B_Chapters/chapter4.tex [16
 
 
 
 
 ]
 Chapter 4.
-) [13]
+) [17]
 \openout2 = `B_Chapters/chapter5.aux'.
 
- (./B_Chapters/chapter5.tex [14
+ (./B_Chapters/chapter5.tex [18
 
 
 
 
 ]
 Chapter 5.
-) [15]) (./E_Bibliography/_list.tex [16
+) [19]) (./E_Bibliography/_list.tex [20
 
 
 
@@ -778,20 +806,17 @@ Chapter 5.
 \openout7 = `Thesis.brf'.
 
 ))
-(./C_Appendices/_list.tex [17
+(./C_Appendices/_list.tex [21
 
 ]
 \openout2 = `C_Appendices/appendix1.aux'.
 
- (./C_Appendices/appendix1.tex [18
+ (./C_Appendices/appendix1.tex [22
 
 
 ]
 Appendix A.
-
-LaTeX Warning: Citation `kn:Lip08' on page 19 undefined on input line 17.
-
-[19]) [20]) (./Thesis.aux (./A_FrontMatter/abstract.aux)
+) [23]) (./Thesis.aux (./A_FrontMatter/abstract.aux)
 (./A_FrontMatter/acknowledgments.aux) (./A_FrontMatter/quote.aux)
 (./A_FrontMatter/abbreviations.aux) (./B_Chapters/chapter1.aux)
 (./B_Chapters/chapter2.aux) (./B_Chapters/chapter3.aux)
@@ -809,28 +834,27 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D938045571519BCBFE4F04700FA30E53;5408.
+(rerunfilecheck)             Checksum: ECE2CD3772D6C7D5D097D74226BE1D2E;4373.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 34FCB64E30B339611FE1288F0EEBC36D;454.
+(rerunfilecheck)             Checksum: 30ED0802C210B34F639227111A96BDC9;1230.
  ) 
 Here is how much of TeX's memory you used:
- 14562 strings out of 474222
- 240729 string characters out of 5748734
- 1933975 words of memory out of 5000000
- 36417 multiletter control sequences out of 15000+600000
- 624017 words of font info for 96 fonts, out of 8000000 for 9000
+ 14581 strings out of 474222
+ 242180 string characters out of 5748734
+ 1932975 words of memory out of 5000000
+ 36447 multiletter control sequences out of 15000+600000
+ 615694 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,378b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,1157b,703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis.pdf (40 pages, 921415 bytes).
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on Thesis.pdf (39 pages, 910957 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

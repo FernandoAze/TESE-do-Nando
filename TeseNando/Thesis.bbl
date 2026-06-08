@@ -1,5 +1,15 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{JKL{\etalchar{+}}}
+\begin{thebibliography}{CORSVCRR}
+
+\bibitem[CORSVCRR]{carabias-ortiAUDIOSCOREALIGNMENTa}
+J~J Carabias-Orti, F~J Rodriguez-Serrano, P~Vera-Candeas, and N~Ruiz-Reyes.
+\newblock {{AN AUDIO TO SCORE ALIGNMENT FRAMEWORK USING SPECTRAL FACTORIZATION
+  AND DYNAMIC TIME WARPING}}.
+
+\bibitem[JG]{jiangPIANOPRECISIONADVANCING2025}
+Yucong Jiang and Werner Goebl.
+\newblock {{PIANO PRECISION}}: {{ADVANCING MUSIC PERFORMANCE ANALYSIS BY
+  INTEGRATING USER-CORRECTABLE AUDIO-TO-SCORE ALIGNMENT}}.
 
 \bibitem[JKL{\etalchar{+}}]{jungUnifiedCrossmodalTranslation2026a}
 Jongmin Jung, Dongmin Kim, Sihun Lee, Seola Cho, Hyungjoon Soh, Irmak Bukey,
@@ -23,6 +33,14 @@ Meinard Müller.
 Meinard Müller.
 \newblock {\em Music {{Representations}}}, pages 1--37.
 \newblock Springer International Publishing.
+
+\bibitem[PCCF{\etalchar{+}}]{peterAutomaticNoteLevelScoretoPerformance2023}
+Silvan~David Peter, Carlos~Eduardo Cancino-Chacón, Francesco Foscarin,
+  Andrew~Philip McLeod, Florian Henkel, Emmanouil Karystinaios, and Gerhard
+  Widmer.
+\newblock Automatic {{Note-Level Score-to-Performance Alignments}} in the
+  {{ASAP Dataset}}.
+\newblock 6(1):27--42.
 
 \bibitem[Val]{valleVisualDisplayRetrieval}
 Rafael Valle.

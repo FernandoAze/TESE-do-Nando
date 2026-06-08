@@ -1,3 +1,12 @@
+MIR não pode estar no titulo, devo descrever mais concreto tipo "Time Related" ou score alignment.
+
+Agora focar na parte do projeto. 
+
+Na motivação, 
+Reaproveitar a motivação, origial para contextualizar a motivação atual.
+
+=========================
+
 To compile:
 """
     pdflatex Thesis
@@ -41,3 +50,5 @@ Several design features of the Verovio library make it highly suitable for inter
 Because SVG is XML, it has an advantage over raster image formats in that every graphical element is addressable. This feature makes it intrinsically well suited for interaction, and this is also true for music notation. In a web environment, the addressability can be used for highlighting graphical elements such as notes or any other music symbols. One additional characteristic of SVG is that its XML tree can be structured as desired, and an innovative design feature of Verovio was to go further in the structuring of the output by leveraging this characteristic. Since Verovio implements the MEI structure internally, this key feature of SVG made it possible to preserve the MEI structure in the design of the SVG output in Verovio. Preserving the MEI structure in the SVG output is a considerable overhead in the rendering process but makes it a unique feature of Verovio.
 
 As a result, Verovio output in SVG is not the end of a unidirectional rendering process. Quite on the contrary, it should instead be seen as an intermediate layer standing between the MEI encoding and its rendering that can act as the cornerstone for a bi-directional interaction: from the encoding to the notation, but also from the notation to the encoding through the user interface.
+
+======================

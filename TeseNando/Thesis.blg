@@ -7,7 +7,7 @@ A level-1 auxiliary file: A_FrontMatter/quote.aux
 A level-1 auxiliary file: A_FrontMatter/abbreviations.aux
 A level-1 auxiliary file: B_Chapters/chapter1.aux
 A level-1 auxiliary file: B_Chapters/chapter2.aux
-White space in argument---line 27 of file B_Chapters/chapter2.aux
+White space in argument---line 34 of file B_Chapters/chapter2.aux
  : \citation{p.
  :              3}
 I'm skipping whatever remains of this command
@@ -17,54 +17,64 @@ A level-1 auxiliary file: B_Chapters/chapter5.aux
 The style file: alpha.bst
 A level-1 auxiliary file: C_Appendices/appendix1.aux
 Database file #1: E_Bibliography/bibliography.bib
-Warning--I didn't find a database entry for "kn:Lip08"
+Warning--I didn't find a database entry for "@MEI-Website"
+Warning--I didn't find a database entry for "@repertoireinternationaldessourcesmusicalesVerovioReferenceBook2021"
+Warning--I didn't find a database entry for "@jiangPIANOPRECISIONADVANCING2025"
+Warning--I didn't find a database entry for "@duanSoundprismOnlineSystem2011"
+Warning--I didn't find a database entry for "@goeblLetsScoreWarpAgain2025a"
+Warning--empty journal in carabias-ortiAUDIOSCOREALIGNMENTa
+Warning--empty year in carabias-ortiAUDIOSCOREALIGNMENTa
+Warning--empty journal in jiangPIANOPRECISIONADVANCING2025
+Warning--empty year in jiangPIANOPRECISIONADVANCING2025
 Warning--empty journal in jungUnifiedCrossmodalTranslation2026a
 Warning--empty year in jungUnifiedCrossmodalTranslation2026a
 Warning--empty journal in khodzhaevPracticalGuideSpectrogram
 Warning--empty year in khodzhaevPracticalGuideSpectrogram
 Warning--empty year in mullerFundamentalsMusicProcessing2015
 Warning--empty year in mullerMusicRepresentations2015a
+Warning--empty journal in peterAutomaticNoteLevelScoretoPerformance2023
+Warning--empty year in peterAutomaticNoteLevelScoretoPerformance2023
 Warning--empty journal in valleVisualDisplayRetrieval
 Warning--empty year in valleVisualDisplayRetrieval
-You've used 5 entries,
+You've used 8 entries,
             2543 wiz_defined-function locations,
-            594 strings with 5691 characters,
-and the built_in function-call counts, 1828 in all, are:
-= -- 161
-> -- 82
+            616 strings with 6826 characters,
+and the built_in function-call counts, 3098 in all, are:
+= -- 275
+> -- 177
 < -- 5
-+ -- 29
-- -- 27
-* -- 133
-:= -- 309
-add.period$ -- 13
-call.type$ -- 5
-change.case$ -- 30
-chr.to.int$ -- 4
-cite$ -- 13
-duplicate$ -- 80
-empty$ -- 133
-format.name$ -- 35
-if$ -- 354
++ -- 64
+- -- 62
+* -- 244
+:= -- 532
+add.period$ -- 20
+call.type$ -- 8
+change.case$ -- 55
+chr.to.int$ -- 7
+cite$ -- 22
+duplicate$ -- 120
+empty$ -- 201
+format.name$ -- 72
+if$ -- 588
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 7
-newline$ -- 27
-num.names$ -- 15
-pop$ -- 65
+missing$ -- 10
+newline$ -- 40
+num.names$ -- 24
+pop$ -- 103
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 65
 quote$ -- 0
-skip$ -- 40
+skip$ -- 67
 stack$ -- 0
-substring$ -- 86
+substring$ -- 126
 swap$ -- 7
 text.length$ -- 5
 text.prefix$ -- 4
 top$ -- 0
-type$ -- 32
-warning$ -- 8
-while$ -- 16
-width$ -- 8
-write$ -- 55
+type$ -- 56
+warning$ -- 14
+while$ -- 27
+width$ -- 11
+write$ -- 84
 (There was 1 error message)
