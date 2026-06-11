@@ -10,7 +10,7 @@ INITIAL THESIS PROPOSITION
  6. Open Source Impact: Contribute to the research community through GitHub repositories and libraries, potentially integrating with existing frameworks like Gradio or Hugging Face, and target publication at conferences like Intelligent User Interfaces (IUI), ACM Multimedia or International Society for Music Information Retrieval (ISMIR).
 
  ## Innovative Aspects
- 1. Enhanced Annotation Experience: Move beyond traditional desktop-bound annotation workflows by creating an integrated system that actively engages users in semi-automatic annotation processes, leveraging modern technologies for improved collaboration and accessibility. 
+ 1. Enhanced Annotation Experience: Move beyond traditional desktop-bound annotation workflows by creating an integrated system that actively engages users in semi-automatic annotation processes, leveraging modern technologies for improved collaboration and accessibility.
  2. Intelligent Visual Feedback: Develop interactive interfaces where signal processing techniques (e.g. tempo grid alignment, onset detection) and ML model outputs (e.g. beat activation functions) are dynamically visualized alongside user annotations, providing immediate visual correlation and conflict detection.
  3. Bidirectional Learning: Create a system where user expertise refines ML models in real-time while ML predictions inform and accelerate user annotation decisions, establishing an effective human-machine collaboration workflow. 
  4. Cold-Start Mitigation: Implement streamlined workflows for annotating challenging musical excerpts, using SSL techniques to bootstrap model performance from minimal initial annotations.
