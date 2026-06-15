@@ -1,20 +1,17 @@
 \chapter{Literature Review} \label{chap:sota}
 \section{Introduction}
 
-Music Information Retrieval (MIR) is the field of research that focuses on the
-development of algorithms and systems to analyze, retrieve, and organize music data.
-MIR bridges a wide range of disciplines, including: 
-musicology, signal processing, machine learning, and human-computer interaction. 
-
+Music Information Retrieval (MIR) is the field of research that focuses on the development of algorithms and systems to analyze, retrieve, and organize music data. MIR bridges a wide range of disciplines, including: musicology, signal processing, machine learning, and human-computer interaction. 
 \cite{mullerFundamentalsMusicProcessing2015}
 
 \section{Visualization Types}\label{sec:dialecto}
 
 We can sum up all music related visualizations into three categories:
-
-    1- Sheet Music and Score Images
-    2- Symbolic Representations
-    3- Audio Representations
+\begin{enumerate}
+    \item Sheet Music and Score Images
+    \item Symbolic Representations
+    \item Audio Representations
+\end{enumerate}
 
 \subsection{Sheet Music and Score Images}
 
@@ -38,13 +35,13 @@ The \textbf{Piano-Roll} is a staple on any DAW as a visual and interactive tool 
 
 MusicXML was developed to serve as a universal format for storing and sharing music scores across different music notation applications. Music notation digital editors then employ proprietary variants of this format for addressing the program's specific characteristics. In some cases these may not even be xml based, but MusicXML format can be considered the universal format.
 % Será que preciso mesmo de mencionar isto?
-These include:
-    .mscz and .mscx - These are Musescore specific formats named for "MuseScore Format" and 
-    "Uncompressed MuseScore" format respectively. Both xml based.
-    .dora - "Dorico" specific format (non xml based)
-    .sib  - "Sibelius" proprietary format  of company Avid (also non xml based)
-    .mei  - The "Music Encoding Initiative" (MEI). XML based.
-    Among others.
+These include, among others:
+\begin{itemize}
+    \item \textbf{.mscz and .mscx}: These are Musescore specific formats named for "MuseScore Format" and  "Uncompressed MuseScore" format respectively. Both xml based.
+    \item \textbf{.dora} - "Dorico" specific format (non xml based)
+    \item \textbf{.sib}  - "Sibelius" proprietary format  of company Avid (also non xml based)
+    \item \textbf{.mei}  - The "Music Encoding Initiative" (MEI). XML based.
+\end{itemize}
 
 The .mei format is the one that is essential for this thesis and the most useful for MIR purposes. MEI stands for both the XML-based score format in itself (.mei), and the community that develops it. Citing from the MEI website's introduction:
 
@@ -71,7 +68,7 @@ Audio representations are graphs and/or plots that intend to represent sound. Th
 
 We can infer at least 3 components that define a given audio. These are, time, frequency and amplitude/energy. An audio visualization will present explicit information of at least 2 of these.
 
-Waveforms are the most common and one of the simplest ways to represent audio. It consists of a single line on a graph in a 2D graph where amplitude is the  y-axis and time is in the x-axis. This representation does not provide frequency information, it only shows how amplitude of the audio changes through it's time.
+Waveforms are the most common and one of the simplest ways to represent audio. It consists of a single line on a graph in a 2D graph where amplitude is the y-axis and time is in the x-axis. This representation does not provide frequency information, it only shows how amplitude of the audio changes through it's time.
 
 \begin{figure}[H]
   \centering
@@ -80,7 +77,7 @@ Waveforms are the most common and one of the simplest ways to represent audio. I
   \label{fig:waveform}
 \end{figure}
 
-A spectral visualization or a spectrum, refers to a graph with only frequency and amplitude/energy representation in a given time window.
+A spectral visualization, or a spectrum, refers to a graph with only frequency and amplitude/energy representation in a given time window.
 
 \begin{figure}[H]
   \centering
@@ -89,9 +86,7 @@ A spectral visualization or a spectrum, refers to a graph with only frequency an
   \label{fig:waveform}
 \end{figure}
 
-For displaying the three sound components (time, amplitude and frequency/pitch) the graph needs to some how represent three distinct dimensions. 
-
-The spectrogram achieves this by having on the y axis the frequency, time on the x-axis and color as substitute for the third axis (amplitude), and in this way displaying all three parameters in a single 2D visual plot. Multiple weights and variances exist of the spectrogram that have different applications.
+For displaying the three sound components the plot needs to represent three distinct dimensions. The spectrogram achieves this by having on the y axis the frequency, time on the x-axis and color as substitute for the third axis (amplitude), and in this way displaying all three parameters in a single 2D visual plot. There are multiple weights and variances of the spectrogram that have different applications.
 
 The way frequencies are displayed in a given spectrogram can help understanding audio better for certain situations. There can be a wide variety of spectrogram representations, that can vary in how it's contents are displayed.
 
@@ -152,7 +147,7 @@ Within MIR we can identify two main ways for visualization of audio for MIR task
 
 For GUI based tools two stand-out, these being Audacity and especially Sonic Visualizer (SV). Audacity is one of the most popular audio editors; it is designed for general audio related tasks from audio editing, recording, processing, and visualization. On the other hand, SV is a strictly designed program for audio visualization and analysis. Whilst Audacity the most "user friendly" and popular program, SV is meant for scientific and specialized audio visualization tasks.
 
-Important to note that both softwares are free and open-source based. These are important features, since they allow for users to easily access them, but also for researchers and experts to modify them and thus, contribute to the development of SV and new SV-like tools.
+Important to note that both software solutions are free and open-source based. These are important features, since they allow for users to easily access them, but also for researchers and experts to modify them and thus, contribute to the development of SV and new SV-like tools.
 
 One such example is Piano Precision, a SV based GUI tool for visualizing score-aligned spectrograms.
 
@@ -170,7 +165,6 @@ Another argument is that MIR is increasingly geared towards machine learning sol
 Furthermore, the fact that MIR is fundamentally a computational research field more broadly justifies this approach.
 
 Currently, Python is the go-to language for MIR visualization tasks. Key libraries such as Librosa, Matplotlib, and Madmom, along with APIs such as Modusa and tools like Jupyter Notebooks, are common in MIR research.
-
 
 % EU NAO SEI SE VALE A PENA DEDICAR UM SEGMENTO SO PARA SVG... ja menciono antes quando falo de Verovio/Mei.
 % Também vou ter de voltar a falar na parte pratica.
@@ -210,7 +204,7 @@ Besides online and offline modes of score matching, the alignment in itself can 
 
 Piano Precision (PP) software provides a note-level score aligned visualization. While a recording is playing PP shows the current playback position via highlighting the element being played in the score note by note. This enables annotations to be mapped to both the audio and individual score elements simultaneously. The authors note the usefulness of this tool for performance researchers. \citep{jiangPIANOPRECISIONADVANCING2025} 
 
-\textbf{Beat-Level} alignments aim to follow along beat and/or measures dictated in the score, and then linking them to the performance. Early score aligners (ex.\citet{duanSoundprismOnlineSystem2011}) would rely on such methods. Today, score alignment solutions, although mostly are note-level types, still combine Beat-Level alignment layers within their algorithms. A good example of this comes from \citet{peterAutomaticNoteLevelScoretoPerformance2023}, in it the authors improved on other alignment models, one strategy employed was adding analysis of ``alignments at both the beat and the bar level''. The beat level alignment would serve as ``anchor points'' in order to prevent ``cascading errors, as misalignments will not propagate beyond the next anchor point'', they noted that this improved results of automatic alignments.
+\textbf{Beat-Level} alignments aim to follow along beat and/or measures dictated in the score, and then linking them to the performance. Early score aligners (ex.\citet{duanSoundprismOnlineSystem2011}) would rely on such methods. Today, score alignment solutions, although mostly are note-level types, still combine Beat-Level alignment layers within their algorithms. A good example of this comes from \citet{peterAutomaticNoteLevelScoretoPerformance2023}, in it the authors improved on other alignment models, one strategy employed was adding analysis of ``alignments at both the beat and the bar level''. The beat level alignment would serve as ``anchor points'' in order to prevent ``cascading errors, as misalignment will not propagate beyond the next anchor point'', they noted that this improved results of automatic alignments.
 
 \textbf{Segment} type alignments, map broad portions of performance audio to corresponding visual blocks in the score. This type of score matching is mostly made manually, it is common to see it in follow-along videos to help viewers listen to the music while visualizing the score. This type of alignment is considered ``weak but musically meaningful'' \citep{jungUnifiedCrossmodalTranslation2026a} since segments can be deliberately chosen i.e. to better show melodic or harmonic structure. 
 
