@@ -15,11 +15,20 @@
 %%          latexmk -pdf tese.tex
 %%========================================
 
+%%========================================
+\includeonly{B_Chapters/chapter4}
+%%========================================
+
 \documentclass[11pt,a4paper,twoside,openright]{report}
 
 %% For iso-8859-1 (latin1), comment next line and uncomment the second line
 \usepackage[utf8]{inputenc}
 %\usepackage[latin1]{inputenc}
+\usepackage{newunicodechar}
+
+\usepackage[T1]{fontenc}
+\usepackage{pmboxdraw}
+\usepackage{fvextra}
 
 %% English version
 
@@ -77,7 +86,8 @@
 
 %%----------------------------------------
 %% TIP: if you want to define more macros, use an external file to keep them
-\include{mymacros}
+% \include{mymacros}
+\input{mymacros} %Original é o acima, mas tava a dar um aviso. O claude disse para por o \input, e assim fiz. Eu não uso macros nem acho que vá usar. 
 %%----------------------------------------
 
 %%========================================
@@ -113,8 +123,8 @@
 %% Body
 %%----------------------------------------
 \StartBody
-
-\input{B_Chapters/_list} 
+% \input{B_Chapters/_list} % ORIGINALLLLLLL
+\include{B_Chapters/_list} 
 
 %%----------------------------------------
 %% Final materials
