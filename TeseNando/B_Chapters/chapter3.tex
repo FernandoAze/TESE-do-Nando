@@ -11,8 +11,6 @@
 % System Architecture: Python based tool, that employs a modular and Object Oriented architecture for generating the visualizations.
 
 % Choices made and why
-\section{MIRVisualScore}
-MIRVisualScore is intended to be a Python OO tool for visualizing recorded performances synchronized with the corresponding music score in a time-aligned manner.
 
 \section{Developed Iterations}
 This thesis started with the proposed title ``Interactive Musical Beat Annotation GUI''. The initial thesis proposition was to evaluate modern GUI software solutions used for beat annotation (BA) (such as  SV), and build upon them with a focus in beat annotation practices.
@@ -30,43 +28,48 @@ The motivation from this proposal came from mostly two identified flaws in this 
 Summarizing, the thesis came from a focus in BT, BA and interactive GUIs to, in the end, focusing on a purely MIR visualization problem. Next we will present different iterations the development phase undertook. This should contextualize the change in scope and motivation of the thesis.
 
 \subsection{BeatMapJS}
-\textbf{Date}: from 10/2025 until 02/2026
-\textbf{Goal}: Create a GUI application for BA.
-\textbf{Motivation}: To experiment and explore: interactive BA features, libraries and frameworks. While focusing on a web-based solution (as described in the first goal).
-\textbf{Tools Used}: JS/HTML, BeatThis, Wavesurfer.JS
-\textbf{Developed Features}: Interactive Spectogram, Web-based interface in JS/HTML, Beat This! Integration, Beat Annotation basic tools, Region Annotation, Table for editing tempo annotations and descriptions, Ability to import/export beat annotations to .txt.  
-\textbf{Conclusion}: Although the program was functional it was abandoned for the following reasons:  It provided no significant enough innovative BA features besides the integration of BeatThis algorithm. No python based library was produced as the backbone of the project.
-\textbf{Takeaways}:
+Developed from October 2025 until February 2026, BeatMapJS was our first attempt to create a GUI application for beat annotation. Our goal was to experiment and explore interactive BA features, libraries and frameworks while focusing on a web-based solution. Using JS/HTML, BeatThis, and Wavesurfer.JS, we successfully built an interactive spectrogram with a web-based interface that integrated the BeatThis algorithm. The application included beat annotation basic tools, region annotation capabilities, a table for editing tempo annotations and descriptions, and the ability to import and export beat annotations to .txt files (compatible with SV).
+
+Although the program was functional, it was ultimately abandoned. The main reason was that it provided no significant innovative BA features beyond BeatThis integration, and critically, no Python-based library was produced as the backbone of the project, which was an important goal for ensuring the work could be reused by the community.
 
 \subsection{MEI-Basic-Edit}
-\textbf{Date}: from 02/2025 until 03/2026
-\textbf{Goal}: Create a GUI ecosystem where users can manually adjust score elements, while presenting a audio visualization layer at the same time.
-\textbf{Motivation}: We identified a clear innovative BA feature, the integration of Audio-To-Score Alignment. Our hypothesis being that such a feature would greatly benefit not only annotation but also evaluation tasks. The main motivation behind this small project was to learn and explore MEI/Verovio frameworks and ScoreWarp.
-\textbf{Tools}: JS/HTML, Verovio, MEI score format, SVG
-\textbf{Developed Features}: Users could upload a recording and it's score in mei format. A static spectrogram would be generated with the score presented in horizontal manner below it. By hitting individual elements of the score, users could move them horizontally, the idea being, users could manually align the score to the audio-visual. This worked by generating a SVG where the score and the spectrogram would be generated to, the users by hitting score elements would be therefore, be interacting with the SVG file in itself. Besides this, the GUI also had an integrated XML text editor meant for interacting with the score directly in the SVG's code.
-\textbf{Conclusion}: This experiment demonstrated the complexity of creating an interactive score, not only from the UI/UX point of view, but also the technical difficulty involved. At the same time, it gave crucial insight on how Verovio and MEI function, as well as how the SVG is structured. 
+Running from February until March 2026, this project aimed to create a GUI ecosystem where users could manually adjust score elements while simultaneously viewing an audio visualization layer. We had identified an innovative BA feature, Audio-To-Score Alignment, and hypothesized it would greatly benefit both beat annotation and evaluation tasks. The project served as a learning opportunity to explore MEI and Verovio frameworks along with ScoreWarp.
+
+Implemented in JS/HTML using Verovio, MEI score format, and SVG, the application allowed users to upload a recording and its corresponding MEI score file. A static spectrogram would be generated with the score displayed horizontally below it. Users could interact with individual score elements by clicking and dragging them horizontally to manually align the score with the audio-visual representation. The system worked by rendering both the score and spectrogram into an SVG, allowing direct interaction with the SVG file. The GUI also included an integrated XML text editor for direct manipulation of the SVG score code.
+
+This experiment revealed significant complexity in creating interactive scores—both from UI/UX and technical perspectives. However, it provided invaluable insights into how Verovio and MEI function, as well as SVG structure, knowledge that would prove essential for the developed end solution. The project was ultimately abandoned as it did not produce a reusable Python library and the interaction design was functional enough to justify further development in this direction. 
 
 \subsection{BeatPrecision, a PP fork}
-\textbf{Date}: 03/2025
-\textbf{Goal}: Build on PP and SV frameworks to create a BA GUI tool. 
-\textbf{Motivation}: PP already has an embedded score alignment feature while also providing all of SV functionality. It seemed that by adding a few BA focused improvements, a relevant BA GUI tool could be developed.
-\textbf{Tools}: Qt/C++ and BeatThis.
-\textbf{Developed Features}: BeatThis integration, and automatic score follow along in horizontal manner to coincide with the audio-visualizations of spectrograms.
-\textbf{Conclusion}: Although functional, the complexity of SV/PP codebase was difficult to manage. Long compiling times and the complexity of the codebase made it so iterations of this project got increasingly difficult to implement and manage.
-Another key takeaway from this iteration was the need to distinguish the problems of interaction and visualization for BA. It became clear that we could not tackle both at the same time, either the thesis would focus on the interaction or the visualization aspect. We chose the latter because we saw a clear gap where this thesis could actually benefit the community more significantly. 
+In March 2025, we explored building on the PP and SV frameworks to create a BA GUI tool. The rationale was straightforward: PP already provided an embedded score alignment feature and all SV functionality, so adding a few BA-focused improvements seemed like a viable path to developing a relevant annotation tool. Using Qt/C++, we integrated BeatThis and implemented automatic score follow-along in a horizontal manner to synchronize with SV's spectrogram and audio-visualizations.
+
+While functional, the project revealed significant challenges. The SV/PP codebase proved complex and difficult to manage. Long compile times and the sheer size of the codebase made each iteration increasingly challenging to implement, manage and debug. More importantly, this iteration taught us a critical lesson: we needed to distinguish between the interaction and visualization problems in BA. We realized we could not tackle both simultaneously and would need to choose a direction. Recognizing a clear gap in the field, we opted to focus on the visualization aspect, as we saw greater potential for the thesis to benefit the community in this area. 
 
 \subsection{Score-Alignment.py}
-\textbf{Date}: 03/2025
-\textbf{Goal}: Create a python based visualization tool with a score aligned to a spectrogram. 
-\textbf{Motivation}: Focus on the score-alignment in python. Explore modusa's framework functionality.
-\textbf{Tools}: Python, Modusa, matplotlib. 
-\textbf{Developed Features}:Interactive spectrogram.
-\textbf{Conclusion}: This project was dropped rather quickly. Implementing an interactive spectrogram (with zoom, pan, a working timeline and a playback cursor) was difficult, in the end a clunky interactive spectrogram was developed, but the project was dropped do to implementation. 
+By the end of March 2025, we shifted our focus to creating a Python-based visualization tool with score-aligned spectrograms. Our motivation was to concentrate on score alignment in a Python based environment, while exploring the Modusa framework's capabilities. Using Python, Modusa, and matplotlib, we built an interactive spectrogram.
+
+However, this project was abandoned relatively quickly. Implementing a truly interactive and fluid spectrogram (with zoom, pan, timeline, and playback cursor) proved significantly more challenging than anticipated. While we managed to develop a functional interactive spectrogram, its implementation was clunky and unsatisfactory, leading us to discontinue the project in favor of other approaches. 
 
 \subsection{Score-Alignment.js}
-\textbf{Date}: 04/2026
-\textbf{Goal}: Redo the last codebase, now in JS/HTML. 
-\textbf{Motivation}: Build on MEI-Basic-Edi and the initial BeatMapJS to create an audio-to-score alignment with a spectrogram visualization. 
-\textbf{Tools}: JS/HTML, Verovio/MEI, Wavesurfer.js.
-\textbf{Developed Features}: Display of MEI score in horizontal fashion with spectrogram. Time stamps (meant to be Beat Annotations) could be directly stored in the MEI file through the <when> function. Notes in the score would get highlighted when overed, selected and associated with a timestamp.
-\textbf{Conclusion}: Not fully functional but it was working. The project was left because of a refocus on developing a strictly visualization tool purely in python with a emphasis on an OO approach that could be reusable by the community.  It was only after this iteration that MIRVisualScore would start to be developed.
+In April 2026, we attempted to recreate the last iteration, this time implementing it in JS/HTML. Building on the experience from MEI-Basic-Edit and the initial BeatMapJS project, we aimed to create a comprehensive audio-to-score alignment with spectrogram visualization. Leveraging JS/HTML, Verovio/MEI, and Wavesurfer.js, we developed a system that displayed MEI scores horizontally alongside spectrograms. Timestamps—intended to represent beat annotations—could be directly stored in the MEI file using the \texttt{<when>} function, and notes in the score would highlight when hovered over, selected, or associated with a timestamp.
+
+While not fully functional, the application showed promise. However, we made a deliberate decision to shift direction once again. We recognized the need to develop a strictly visualization tool purely in Python with an emphasis on an Object-Oriented approach that could be reused and extended by the community. This pivotal decision marked the beginning of MIRVisualScore development.
+
+\section{MIRVisualScore}
+It was only after April 2026 that MIRVisualScore started being actually developed. MIRVisualScore is intended to be a Python OO tool for visualizing recorded performances synchronized with the corresponding music score in a time-aligned manner. This tool allows for custom made visualizations of audio recordings where visual elements are treated as independent layers that can be copied, moved and combined in order to develop custom virtualizations. 
+
+The project bases itself in librosa and matplotlib to generate audio-visualizations and data plots. The score used for the symbolic representation layer is rendered through ScoreWarp. The end result is an SVG file that overlays the audio-visualization, data layers and score.
+
+Since this thesis started with a focus on beat annotation, we developed the tool with a beat visualization use case in mind. However, we think that the developed program could be useful to be integrated for other MIR purposes, beat annotation and visualization were just our starting points. By itself the codebase also does not have any user interaction provided, we focused on the visualization aspect, yet the way it was programed, integration of into a GUI or even a web-based solution is viable. 
+
+The codebase integrates BeatThis the as-of-now SOTA BT algorithm. Through it's implementation we demonstrate how a given BT can be integrated to our system in order to produce data visualizations of it's inner workings.  
+
+As of now MIRVisualScore requires 4 files:
+\begin{itemize}
+    \item An \textbf{audio file} (in .wav format) that contains the recording of the performance.
+    \item A \textbf{SVG} file with the rendered ScoreWarp score.
+    \item The \textbf{maps.json} file with the onsets and @xml.id of their respective musical elements. This file is also a requirement to generate the aligned score by ScoreWarp. 
+    \item A .npz file with the Beat Tracked data. 
+
+\end{itemize}
+
+Our main goal is that, this codebase may be easily integrated into other relevant projects to generate visualizations. Hence why we developed it as a Python Based 00 tool that is based on commonly used MIR libraries such as librosa and matplotlib. This way, community integration and development is eased. 

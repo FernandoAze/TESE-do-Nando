@@ -1,0 +1,198 @@
+\chapter{Implementation}\label{chap:chap4}
+% This chapter presents the detailed implementation of MIRVisualScore, a modular Python-based visualization tool for music information retrieval. 
+% Focus on design decisions, technical architecture, and practical usage.
+
+\section{System Architecture and Design}
+
+% High-level overview of MIRVisualScore's modular architecture
+% Explain design philosophy: Layer-based composition pattern and Key design principles (modularity, extensibility, reusability)
+% Explain the core abstraction: Layer class
+% - Motivation for layer-based design
+% Benefits: easy to compose, add new visualizations, maintain code
+% - Show the base Layer class and its interface (load_data(), draw())
+% - Explain how layers communicate through shared_data
+% - Benefits for extensibility
+% Present a system diagram showing component relationships
+
+\section{Technology Stack and Dependencies}
+
+% Subsection: Python and Core Libraries
+% Describe versions and justification
+
+% - Python 3.12.3+ (why this version)
+% - Key dependencies and their purposes:
+%   * matplotlib: visualization rendering
+%   * numpy: numerical operations
+%   * librosa or similar: audio processing
+%   * Verovio or MEI tools: score parsing
+%   * ScoreWarp: score-to-audio alignment
+% - Why these technologies were chosen vs alternatives
+% - Dependency management and requirements.txt
+
+
+%?????????????
+% \section{Core Modules}
+% Brief description of the main porpuse 
+% Beat_Layers
+% Spectrogram_Layer
+% visualization_system
+% warp_score
+%?????????????
+
+\subsection{Data Loading and File Management}
+
+% What file types are supported
+% How data is loaded and cached
+% Error handling for missing/invalid files
+% File paths and input/output directory structure
+
+% Describe LoadFiles class
+% - Supported input formats: MEI scores, audio files (WAV, MP3), beat analysis files (NPZ)
+% - Output formats and directory structure
+% - File validation and error handling
+
+
+\subsection{Visualization System Core}
+% Visualizer class is the main orchestrator.
+%
+% Describe the Visualizer class in detail
+% - Main entry point for creating visualizations
+% - Layer composition and rendering pipeline: add_layer(), draw(), show()
+%   - Methods for rendering: draw(), show()
+% - Output generation: PNG and SVG export methods
+% Data sharing between layers via shared_data dictionary.
+% Matplotlib figure configuration
+% - Configuration options: figsize, DPI, colors 
+
+\subsection{Spectrogram Layer}
+
+% Describe spectrogram computation and visualization
+% - Audio loading and processing
+% - Integration with audio timeline for synchronization
+% Customization options for spectrogram display
+% - STFT parameters (window size, hop length, etc.)
+% - Frequency scale options (linear, mel, log)
+% - Colormap selection and intensity normalization
+% - Time-frequency resolution trade-offs
+
+% Subsection 4.3.4: Beat Detection and Visualization (Beat_Layers.py)
+% - Integration with BeatThis algorithm
+% - Beat probability visualization
+% - Onset detection and display
+% - Temporal alignment with spectrogram and score
+% - Customization: beat marker styles, colors, transparency
+
+\subsection{Beat Detection and Visualization Layers}
+
+% Describe beat tracking integration
+% - BeatThis algorithm integration
+% - Beat probability curves
+% - Onset detection visualization
+% - Beat confidence and annotation features
+% - Performance considerations for real-time vs batch processing
+
+\subsection{Score Alignment and Warping}
+
+% Describe score-audio synchronization
+% - Score file formats (MEI) and parsing
+% - Onset detection for score notes (via MAPS JSON)
+% - Score warping algorithm: ScoreWarp integration
+% - Handling score timing variations
+% - Visual representation of aligned score
+
+\section{Data Pipeline and Processing Flow}
+
+% Describe the full workflow
+% - Input files: audio, scores, beat analyses
+% - Processing stages: load → analyze → compose → render → export
+% - Shared data dictionary structure
+% - Synchronization mechanism between layers: establishing common time references
+% - Output generation pipeline
+
+\section{How to Use MIRVisualScore}
+
+% Subsection: Installation and Setup
+% - Virtual environment creation
+% - Dependency installation
+% - Verification steps
+
+% How to get the required files:
+% 1) How to get the Aligned Score
+% 2) How to get/generate the MAPS file
+%       Autogenerate Maps file  and Maps file structure
+% 3) How to get .npz
+
+% Creating a basic visualization (explain example.py)
+%   - Loading Audio
+%   - Adding multiple layers (onsets, beats, downbeats etc)
+%   - Adding the Score
+
+\subsection{Installation and Setup}
+
+% Step-by-step setup guide
+
+% Subsection: Basic Usage Example
+% - Simple "hello world" visualization example
+% - Loading audio file
+% - Adding spectrogram layer
+% - Exporting result
+
+\subsection{Basic Usage Example}
+
+% TODO: Provide minimal working example with code
+
+% Subsection: Advanced Examples
+% - Combining multiple layers (spectrogram + beats + score)
+% - Using different customization options
+% - Working with different audio formats and scores
+
+\subsection{Advanced Usage Examples}
+
+% Provide examples of real-world use cases
+
+
+\section{How to Further Customize Visualizations}
+
+% Subsection: Creating Custom Layers
+
+
+\subsection{Creating Custom Visualization Layers}
+
+% Guide for extending MIRVisualScore with custom layers
+
+% Subsection: Styling and Customization
+% - Color palettes and colormaps
+% - Figure layout customization
+% - Font sizes and labels
+% - Axis ranges and scales
+
+\subsection{Styling and Aesthetic Customization}
+
+% Describe customization options for appearance
+
+% Subsection: Integration with External Libraries
+% - Combining with other MIR tools
+% - Output processing pipelines
+% - Web deployment considerations
+
+\subsection{Integration and Interoperability}
+
+%  Discuss how to integrate with other systems
+
+\section{Implementation Challenges and Design Decisions}
+
+% Discuss challenges in:
+% - Key technical challenges encountered during development
+%      Audio-score synchronization.
+%       ???????
+
+\section{Summary}
+
+% TODO: Summarize key aspects of the implementation
+% - Modular architecture enables extensibility
+% - Layer-based design provides flexibility
+% - Integration of multiple visualization types
+% - Balance between ease-of-use and advanced customization
+% - Contribution to MIR research tools
+
+
