@@ -1,0 +1,20 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[40] biber:340> INFO - === Wed Jun 17, 2026, 00:22:31
+[50] Biber.pm:419> INFO - Reading 'main.bcf'
+[78] Biber.pm:979> INFO - Found 11 citekeys in bib section 0
+[84] Biber.pm:4419> INFO - Processing section 0
+[90] Biber.pm:4610> INFO - Looking for bibtex file 'backmatter/bibliography.bib' for section 0
+[92] bibtex.pm:1713> INFO - LaTeX decoding ...
+[103] bibtex.pm:1519> INFO - Found BibTeX data source 'backmatter/bibliography.bib'
+[150] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[150] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[150] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[151] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[158] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[160] bbl.pm:763> INFO - Output to main.bbl
+[160] Biber.pm:131> WARN - ISBN '978-3-319-21944-8 978-3-319-21945-5' in entry 'mullerFundamentalsMusicProcessing2015' is invalid - run biber with '--validate_datamodel' for details.
+[160] Biber.pm:131> WARN - ISBN '978-3-319-21944-8 978-3-319-21945-5' in entry 'mullerMusicRepresentations2015a' is invalid - run biber with '--validate_datamodel' for details.
+[160] Biber.pm:131> WARN - I didn't find a database entry for 'p. 3' (section 0)
+[160] Biber.pm:131> WARN - I didn't find a database entry for 'kn:Lip08' (section 0)
+[160] Biber.pm:133> INFO - WARNINGS: 4

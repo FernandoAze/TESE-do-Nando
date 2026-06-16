@@ -1,0 +1,396 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{MEI-Website}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to {{MEI}}}
+      \verb{urlraw}
+      \verb https://music-encoding.org/about/
+      \endverb
+      \verb{url}
+      \verb https://music-encoding.org/about/
+      \endverb
+    \endentry
+    \entry{jiangPIANOPRECISIONADVANCING2025}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d0dc604fad148ce5c5003d123633f019}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yucong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0bc0a73ab186a0dc5df2c36b3255f24c}{%
+           family={Goebl},
+           familyi={G\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f7f7b92819279faccade6dbe281e9ae}
+      \strng{fullhash}{8f7f7b92819279faccade6dbe281e9ae}
+      \strng{bibnamehash}{8f7f7b92819279faccade6dbe281e9ae}
+      \strng{authorbibnamehash}{8f7f7b92819279faccade6dbe281e9ae}
+      \strng{authornamehash}{8f7f7b92819279faccade6dbe281e9ae}
+      \strng{authorfullhash}{8f7f7b92819279faccade6dbe281e9ae}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Audio-to-score alignment is a core task in MIR, but its application to music performance analysis is underexplored and it has not been developed for prospective users. Moreover, there have been very few user studies to shed light on the software needs of performance researchers. To help fill this gap, we present an open-source software application with a graphical UI that integrates audio-to-score alignment, designed to facilitate performance analysis. Working with Vamp plugins, this tool can also serve as a suitable platform for developing and comparing new alignment algorithms. In addition, in this paper we offer a use-case example of this tool comparing multiple performances of the same piece. We have also evaluated this tool with 15 prospective real-world users and received highly positive responses. Our user study suggests that tools like this can help bridge disciplinary divides between MIR and performance research.}
+      \field{langid}{english}
+      \field{title}{{{PIANO PRECISION}}: {{ADVANCING MUSIC PERFORMANCE ANALYSIS BY INTEGRATING USER-CORRECTABLE AUDIO-TO-SCORE ALIGNMENT}}}
+      \field{year}{2025}
+      \field{dateera}{ce}
+    \endentry
+    \entry{jungUnifiedCrossmodalTranslation2026a}{article}{}
+      \name{author}{8}{}{%
+        {{hash=7a8d3e6277921bb223a1c67d0b43b127}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Jongmin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d47bbd46534219b1bd5d4061cd6b9f94}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Dongmin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c900179285dc184719d0cc04e0d1c8b5}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Sihun},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2f71c06e3974214d066d5c977db55a9f}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Seola},
+           giveni={S\bibinitperiod}}}%
+        {{hash=93209533026ae630d9a4c954cf358bd9}{%
+           family={Soh},
+           familyi={S\bibinitperiod},
+           given={Hyungjoon},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bf39b5bdb436df09380db0882f0824d1}{%
+           family={Bukey},
+           familyi={B\bibinitperiod},
+           given={Irmak},
+           giveni={I\bibinitperiod}}}%
+        {{hash=a53bb69fcb99ecc1daaa649ffe82ca5c}{%
+           family={Donahue},
+           familyi={D\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ef49ff05b4ba392562c64a1ad13cbafb}{%
+           family={Jeong},
+           familyi={J\bibinitperiod},
+           given={Dasaem},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c955331afeac3607b22c8409c3e0470}
+      \strng{fullhash}{afda52432c3f00deb5cf7df776877519}
+      \strng{bibnamehash}{0c955331afeac3607b22c8409c3e0470}
+      \strng{authorbibnamehash}{0c955331afeac3607b22c8409c3e0470}
+      \strng{authornamehash}{0c955331afeac3607b22c8409c3e0470}
+      \strng{authorfullhash}{afda52432c3f00deb5cf7df776877519}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Music exists in various modalities, such as score images, symbolic scores, MIDI, and audio. Translations between each modality are established as core tasks of music information retrieval, such as automatic music transcription (audio-to-MIDI) and optical music recognition (score image to symbolic score). However, most past work on multimodal translation trains specialized models on individual translation tasks. In this paper, we propose a unified approach, where we train a general-purpose model on many translation tasks simultaneously. Two key factors make this unified approach viable: a new large-scale dataset and the tokenization of each modality. Firstly, we propose a new dataset that consists of more than 1,300 hours of paired audio-score image data collected from YouTube videos, which is an order of magnitude larger than any existing music modal translation datasets. Secondly, our unified tokenization framework discretizes score images, audio, MIDI, and MusicXML into a sequence of tokens, enabling a single encoder–decoder Transformer to tackle multiple cross-modal translation as one coherent sequence-to-sequence task. Experimental results confirm that our unified multitask model improves upon singletask baselines in several key areas, notably reducing the symbol error rate for optical music recognition from 24.58\% to a state-of-the-art 13.67\%, while similarly substantial improvements are observed across the other translation tasks. Notably, our approach achieves the first successful score-image-conditioned audio generation, marking a significant breakthrough in crossmodal music generation.}
+      \field{eprintclass}{cs.SD}
+      \field{eprinttype}{arXiv}
+      \field{issn}{2998-4173}
+      \field{journaltitle}{IEEE Transactions on Audio, Speech and Language Processing}
+      \field{langid}{english}
+      \field{shortjournal}{IEEE Trans. Audio, Speech Lang. Process.}
+      \field{title}{Unified {{Cross-modal Translation}} of {{Score Images}}, {{Symbolic Music}}, and {{Performance Audio}}}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{34}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1876\bibrangedash 1891}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/TASLPRO.2025.3648794
+      \endverb
+      \verb{eprint}
+      \verb 2505.12863
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2505.12863
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2505.12863
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
+    \endentry
+    \entry{khodzhaevPracticalGuideSpectrogram}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ac8cb2aeb17605106bbd9e2c70764a01}{%
+           family={Khodzhaev},
+           familyi={K\bibinitperiod},
+           given={Zulfidin},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac8cb2aeb17605106bbd9e2c70764a01}
+      \strng{fullhash}{ac8cb2aeb17605106bbd9e2c70764a01}
+      \strng{bibnamehash}{ac8cb2aeb17605106bbd9e2c70764a01}
+      \strng{authorbibnamehash}{ac8cb2aeb17605106bbd9e2c70764a01}
+      \strng{authornamehash}{ac8cb2aeb17605106bbd9e2c70764a01}
+      \strng{authorfullhash}{ac8cb2aeb17605106bbd9e2c70764a01}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The paper summarizes spectrogram and gives practical application of spectrogram in signal processing. For analysis, finger-snapping is recorded with a sampling rate of 441000 Hz and 96000 Hz. The effects of the number of segments on the Power Spectral Density (PSD) and spectrogram are analyzed and visualized.}
+      \field{langid}{english}
+      \field{title}{A {{Practical Guide}} to {{Spectrogram Analysis}} for {{Audio Signal Processing}}}
+    \endentry
+    \entry{mullerFundamentalsMusicProcessing2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=80b6d841b668c1c8aa2744a675afd39e}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Meinard},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{fullhash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{bibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{authorbibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{authornamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{authorfullhash}{80b6d841b668c1c8aa2744a675afd39e}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-3-319-21944-8 978-3-319-21945-5}
+      \field{langid}{english}
+      \field{shorttitle}{Fundamentals of {{Music Processing}}}
+      \field{title}{Fundamentals of {{Music Processing}}: {{Audio}}, {{Analysis}}, {{Algorithms}}, {{Applications}}}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-319-21945-5
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-319-21945-5
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-319-21945-5
+      \endverb
+    \endentry
+    \entry{mullerMusicRepresentations2015a}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=80b6d841b668c1c8aa2744a675afd39e}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Meinard},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{bookauthor}{1}{}{%
+        {{hash=80b6d841b668c1c8aa2744a675afd39e}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Meinard},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{fullhash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{bibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{authorbibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{authornamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{authorfullhash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{bookauthorbibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{bookauthornamehash}{80b6d841b668c1c8aa2744a675afd39e}
+      \strng{bookauthorfullhash}{80b6d841b668c1c8aa2744a675afd39e}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Fundamentals of {{Music Processing}}}
+      \field{isbn}{978-3-319-21944-8 978-3-319-21945-5}
+      \field{langid}{english}
+      \field{title}{Music {{Representations}}}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1007/978-3-319-21945-5_1
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-319-21945-5_1
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-319-21945-5_1
+      \endverb
+    \endentry
+    \entry{peterAutomaticNoteLevelScoretoPerformance2023}{article}{}
+      \name{author}{7}{}{%
+        {{hash=135466a0992c3c0b66ad5949808ca977}{%
+           family={Peter},
+           familyi={P\bibinitperiod},
+           given={Silvan\bibnamedelima David},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=91656d0fba6f88951699ffe59916bbf5}{%
+           family={Cancino-Chacón},
+           familyi={C\bibinithyphendelim C\bibinitperiod},
+           given={Carlos\bibnamedelima Eduardo},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ec6820c032aa807100377aba17e7741c}{%
+           family={Foscarin},
+           familyi={F\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f4be95ecf47436e500986dea6557436d}{%
+           family={McLeod},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima Philip},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=96e68a858b2ba555a7b3ffe7f9c59451}{%
+           family={Henkel},
+           familyi={H\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=854ce6505c6a1eb19111dda7a6c6af04}{%
+           family={Karystinaios},
+           familyi={K\bibinitperiod},
+           given={Emmanouil},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8296a6d278bcf9dc9f972c25929ae2d0}{%
+           family={Widmer},
+           familyi={W\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a2858e41a02b5dd6d916640a47ffb0c}
+      \strng{fullhash}{f8f0af73393282eb2143faa1ee6136da}
+      \strng{bibnamehash}{4a2858e41a02b5dd6d916640a47ffb0c}
+      \strng{authorbibnamehash}{4a2858e41a02b5dd6d916640a47ffb0c}
+      \strng{authornamehash}{4a2858e41a02b5dd6d916640a47ffb0c}
+      \strng{authorfullhash}{f8f0af73393282eb2143faa1ee6136da}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Several MIR applications require fine-grained note alignments between MIDI performances and their musical scores for training and evaluation. However, large and high-quality datasets with this kind of data are not available, and their manual creation is a very time-consuming task that can only be performed by field experts. In this paper, we evaluate state-of-the-art automatic note alignment models applied to dataset generation. We increase the accuracy and reliability of the produced alignments with models that flexibly leverage existing annotations such as beat or measure alignments. We thoroughly evaluate these segment-constrained models and use the best to create note alignments for the ASAP dataset, a large dataset of solo piano MIDI performances beat-aligned to MusicXML scores. The resulting note alignments are manually checked and publicly available at: https://github.com/CPJKU/ asap-dataset. The contributions of this paper are four-fold: (1) we extend the ASAP dataset with reliable note alignments, thus creating (n)ASAP, the largest available fully note-aligned dataset, comprising more than 7 M annotated notes and close to 100 hours of music; (2) we design, evaluate, and publish segment-constrained models for note alignments that flexibly leverage existing annotations and significantly outperform automatic models; (3) we design, evaluate, and publish unconstrained automatic models for note alignment that produce results on par with the state of the art; (4) we introduce Parangonada, a web-interface for visualizing and correcting alignment annotations.}
+      \field{day}{26}
+      \field{issn}{2514-3298}
+      \field{journaltitle}{Transactions of the International Society for Music Information Retrieval}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{1}
+      \field{title}{Automatic {{Note-Level Score-to-Performance Alignments}} in the {{ASAP Dataset}}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{6}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{27\bibrangedash 42}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.5334/tismir.149
+      \endverb
+      \verb{urlraw}
+      \verb http://transactions.ismir.net/articles/10.5334/tismir.149/
+      \endverb
+      \verb{url}
+      \verb http://transactions.ismir.net/articles/10.5334/tismir.149/
+      \endverb
+    \endentry
+    \entry{valleVisualDisplayRetrieval}{article}{}
+      \name{author}{1}{}{%
+        {{hash=49e6a9a8496bdeefdeab7fbd48325913}{%
+           family={Valle},
+           familyi={V\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{49e6a9a8496bdeefdeab7fbd48325913}
+      \strng{fullhash}{49e6a9a8496bdeefdeab7fbd48325913}
+      \strng{bibnamehash}{49e6a9a8496bdeefdeab7fbd48325913}
+      \strng{authorbibnamehash}{49e6a9a8496bdeefdeab7fbd48325913}
+      \strng{authornamehash}{49e6a9a8496bdeefdeab7fbd48325913}
+      \strng{authorfullhash}{49e6a9a8496bdeefdeab7fbd48325913}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper describes computational methods for the visual display and analysis of music information. We provide a concise description of software, music descriptors and data visualization techniques commonly used in music information retrieval. Finally, we provide use cases where the described software, descriptors and visualizations are showcased.}
+      \field{langid}{english}
+      \field{title}{Visual {{Display}} and {{Retrieval}} of {{Music Information}}}
+    \endentry
+    \entry{yamamotoHumanintheLoopAdaptationInteractive2021}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=a690500d2dadb4625dbba01ad6149823}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{a690500d2dadb4625dbba01ad6149823}
+      \strng{fullhash}{a690500d2dadb4625dbba01ad6149823}
+      \strng{bibnamehash}{a690500d2dadb4625dbba01ad6149823}
+      \strng{authorbibnamehash}{a690500d2dadb4625dbba01ad6149823}
+      \strng{authornamehash}{a690500d2dadb4625dbba01ad6149823}
+      \strng{authorfullhash}{a690500d2dadb4625dbba01ad6149823}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd {{International Society}} for {{Music Information Retrieval Conference}} ({{ISMIR}})}
+      \field{title}{Human-in-the-{{Loop Adaptation}} for {{Interactive Musical Beat Tracking}}}
+      \field{year}{2021}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+  \missing{kn:Lip08}
+  \missing{p. 3}
+\endrefsection
+\endinput
+
