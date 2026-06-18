@@ -2364,6 +2364,18 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">backmatter/bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">mullerFundamentalsMusicProcessing2015</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">mullerMusicRepresentations2015a</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">MEI-Website</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">mullerFundamentalsMusicProcessing2015</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">valleVisualDisplayRetrieval</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">mullerFundamentalsMusicProcessing2015</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">jungUnifiedCrossmodalTranslation2026a</bcf:citekey>
+    <bcf:citekey order="6" intorder="3">khodzhaevPracticalGuideSpectrogram</bcf:citekey>
+    <bcf:citekey order="6" intorder="4">valleVisualDisplayRetrieval</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">jiangPIANOPRECISIONADVANCING2025</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">jiangPIANOPRECISIONADVANCING2025</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">peterAutomaticNoteLevelScoretoPerformance2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

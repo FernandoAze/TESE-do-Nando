@@ -11,7 +11,6 @@
 % System Architecture: Python based tool, that employs a modular and Object Oriented architecture for generating the visualizations.
 
 % Choices made and why
-\section{Introduction}
 
 \section{Developed Iterations}
 This thesis started with the proposed title ``Interactive Musical Beat Annotation GUI''. The initial thesis proposition was to evaluate modern GUI software solutions used for beat annotation (BA) (such as  SV), and build upon them with a focus in beat annotation practices.
@@ -24,7 +23,7 @@ The proposed goals included:
     \item Publish the developed work as an Open Source Python library/framework. The purpose being, to contribute to MIR research community for further development and  integration with other existing frameworks.
 \end{enumerate}
 
-The motivation from this proposal came from mostly two identified flaws in this topic: The first is that, although the performance of beat tracking algorithms has been improving significantly in recent years, they mostly rely on deep learning based approaches. The issue with this, is that in order for these systems to be trained they need increasingly large and more complex datasets that, although not always directly (\citet{peterAutomaticNoteLevelScoretoPerformance2023}), need to some extent human made and/or verified beat annotations. The second one is related to human made beat annotation methods, that for the most part, still is a extensive and time consuming task. Besides that, although SV is a powerful tool, it presents a clear gap for beat annotation, where the integration of newer SOTA BT algorithms is difficult and there have been little to no new added features that improve BA task significantly. %\cite{yamamotoHumanintheLoopAdaptationInteractive2021}
+The motivation from this proposal came from mostly two identified flaws in this topic: The first is that, although the performance of beat tracking algorithms has been improving significantly in recent years, they mostly rely on deep learning based approaches. The issue with this, is that in order for these systems to be trained they need increasingly large and more complex datasets that, although not always directly (\citet{peterAutomaticNoteLevelScoretoPerformance2023}), need to some extent human made and/or verified beat annotations. The second one is related to human made beat annotation methods, that for the most part, still is a extensive and time consuming task. Besides that, although SV is a powerful tool, it presents a clear gap for beat annotation, where the integration of newer SOTA BT algorithms is difficult and there have been little to no new added features that improve BA task significantly.\cite{yamamotoHumanintheLoopAdaptationInteractive2021}
 
 Summarizing, the thesis came from a focus in BT, BA and interactive GUIs to, in the end, focusing on a purely MIR visualization problem. Next we will present different iterations the development phase undertook. This should contextualize the change in scope and motivation of the thesis.
 
@@ -68,35 +67,18 @@ While not fully functional, the application showed promise. However, we made a d
 
 % Extensibility
 % Why the codebase was designed for future integration.
-\subsection{Problem Definition}
-% Problem framing for the final solution.
-Since this thesis started with a focus on beat annotation, we developed the tool with a beat visualization use case in mind. However, we think that the developed program could be useful to be integrated for other MIR purposes, beat annotation and visualization were just our starting points. By itself the codebase also does not have any user interaction provided, we focused on the visualization task. Yet, the codebase was designed with future development/integration in mind. A GUI or a web-based solution being examples of possible future iterations or projects using LayerIt. 
-
-\subsection{Proposed Solution}
-% What LayerIt is and what it provides.
 It was only mid April 2026 that LayerIt started being developed and is the project that is the focus of this thesis. LayerIt, is intended to be a Python OO tool for visualizing recorded performances synchronized with the corresponding music score in a time-aligned manner. This tool allows for custom made visualizations of audio recordings where visual elements are treated as independent layers that can be copied, moved and combined in order to develop custom visualizations. 
 
-\subsection{LayerIt Overview}
-% Core implementation overview.
 The project bases itself in librosa and matplotlib to generate audio-visualizations and data plots. The score used for the symbolic representation layer is rendered through ScoreWarp. The end result is an SVG file that overlays the audio-visualization, data layers and score.
 
-% BeatThis integration.TALVEZ ESTE N FAZ SENTIDO TAR NESTE CHAP. a razao pela qual BT foi integrado é pq serve de exmplo para visualização de um algoritmo de BT, podia ser outro qualquer, simplesmente foi o BT pq é o sota logo o melhor exemplo, mas podia ser outro qualquer.
+Since this thesis started with a focus on beat annotation, we developed the tool with a beat visualization use case in mind. However, we think that the developed program could be useful to be integrated for other MIR purposes, beat annotation and visualization were just our starting points. By itself the codebase also does not have any user interaction provided, we focused on the visualization task. Yet, the codebase was designed with future development/integration in mind. A GUI or a web-based solution being examples of possible future iterations or projects using LayerIt. 
+
 The codebase integrates BeatThis the as-of-now SOTA BT algorithm. Through it's implementation we demonstrate how a given BT model can be integrated to our system in order to produce beat data visualizations.  
 
-\subsection{Choices Made and Why}
-% SVG as the visualization backend.
 LayerIt relies on matplotlib for audio and data representations where, the SVG format is the end visual format. The reason, stems from the fact that Verovio (and subsequently ScoreWarp) render the score in SVG, and because matplotlib does provide seamless integration of SVG charts, it is more reliable to export matplotlib visuals into a SVG framework, then the other way around.
 
-% Vector output and rasterization trade-off.
 The SVG format, is a vector-based one, therefore, data that can be mathematically represented in cartesian plots (i.e., X/Y graphs) can be exported without losing resolution. This is the case for most of MIR algorithmic data visualizations i.e., continuous curves and time based annotations. However, some data types, cant be presented in this way noticeably, heatmap-based plots like spectrograms. For interaction proposes these usually are rendered in real-time, allowing for seamless navigation (i.e., zooming and panning). This is not possible since SVG is an inherently static format, therefore plots like these need to be rasterized before being integrated into the SVG. To circumvent this, we employed a way to render plots as PNG's as well. This trade-off means that cartesian data and the score can be zoomed in infinitely while always preserving the highest level of fidelity and accuracy. On the other hand rasterized layers are bound to lose quality with zooming while, at the same time, also requiring heavier processing and memory usage. 
 
-% SVG as an editable intermediate format.
-That being said, because SVG is a text markup format, it can be easily accessed and modified, allowing it to be and intermediate format that can bridge different codebases independently of their base language (i.e., Python, JS, C++ etc...). This also serves as a crucial value argument for this choice, this being, the development and integration of LayerIt into future MIR applications.
+That being said, because SVG is a text markup format, it can be easily accessed and modified, allowing it to be and intermediate format that can bridge different codebases independently of their base language (i.e., Python, JS, C++ etc...). This also serves as a crucial value argument for this choice, this being, the development and integration of LayerIt into future MIR applications. 
 
 Our main goal is that, this codebase may be easily integrated into other relevant projects to generate visualizations. Hence why we developed it as a Python Based 00 tool that is based on commonly used MIR libraries such as librosa and matplotlib. This way, community integration and development is eased. 
-
-\section{Chapter Summary}
-SHIT AI TEXTO A REESCREVER
-In this chapter, we presented the different iterations that the development phase of this thesis undertook. This should contextualize the change in scope and motivation of the thesis. We then presented LayerIt, the core project of this thesis, providing an overview of its purpose, scope, architecture and design choices. One of the main arguments of this thesis is that LayerIt also provides a framework that can support modern MIR visualizations, while offering an architecture designed for future integration with other MIR applications.
-
-Next we will explore LayerIt in more depth, providing a detailed overview of the codebase architecture and how the visualizations are generated. We will also explore how to use the codebase to generate custom visualizations, and how to integrate it with other tools and workflows.

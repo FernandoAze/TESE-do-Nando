@@ -1,10 +1,10 @@
 \chapter{Implementation}\label{chap:chap4}
 % Tenho de prv dar um reframe a isto pq "by building a visualization example from the ground up" é o que está a acontecer...
-In this chapter, we will explore the inner workings of MIRVisualScore through the lens of practical code examples and patterns drawn from this project's example scripts. We provide simplified code snippets to show architectural patterns, and workflows that demonstrate how the codebase is structured, how its components function, and how it is intended to be used in practice. We will progress through the essential topics: setting up the required dependencies, understanding and obtaining the required input files, examining how the layer-based visualization system works, and finally, exploring how to compose multiple data layers into aligned score visualizations. Through this approach, readers should gain a clear understanding of the project's core components and workflows, enabling them to adapt and extend the codebase for their own applications.
+In this chapter, we will explore the inner workings of LayerIt through the lens of practical code examples and patterns drawn from this project's example scripts. We provide simplified code snippets to show architectural patterns, and workflows that demonstrate how the codebase is structured, how its components function, and how it is intended to be used in practice. We will progress through the essential topics: setting up the required dependencies, understanding and obtaining the required input files, examining how the layer-based visualization system works, and finally, exploring how to compose multiple data layers into aligned score visualizations. Through this approach, readers should gain a clear understanding of the project's core components and workflows, enabling them to adapt and extend the codebase for their own applications.
 
 \section{Dependencies and Setup}
 % DEMASIADO LOW LEVEL
-The depandancies and requirements and how to install them are laid out in the README.md of the codebase. Yet, we will go a bit more in depth in this section. MIRVisualScore as of now, runs using python 3.12.3, using other updated python environments might work, but this was the version used during the writing of this thesis. Using other python versions might cause conflicts with the rest of the codebase. For simplicity, we will run the codebase as if we were running it on a Linux machine, for running other operating systems, simply follow along as the README.md specifies. 
+The depandancies and requirements and how to install them are laid out in the README.md of the codebase. Yet, we will go a bit more in depth in this section. LayerIt as of now, runs using python 3.12.3, using other updated python environments might work, but this was the version used during the writing of this thesis. Using other python versions might cause conflicts with the rest of the codebase. For simplicity, we will run the codebase as if we were running it on a Linux machine, for running other operating systems, simply follow along as the README.md specifies. 
 
 % DEMASIADO LOW LEVEL
 \noindent We advise running this codebase with a virtual environment to avoid affecting other projects and repositories you might be working on your system.
@@ -50,7 +50,7 @@ The MAPS file, describes the onsets of the performance and links them to each co
 
 The first is the one described in \citet{goeblLetsScoreWarpAgain2025a}, using the MIDI-to-MIDI matching algorithm by \citet{nakamuraPERFORMANCEERRORDETECTION}. However,  this method requires , along side with the .mei score, the performance in midi format. Using examples from the asap dataset \citep{peterAutomaticNoteLevelScoretoPerformance2023} will facilitate this process but if a midi performance is not possible to obtain then the maps file needs to be generated independently.
 
-The MAPS file is at it's core a .json file, and for the purposes of the current MIRVisualScore version, it needs to provide the score's and performance onset data in the following manner:
+The MAPS file is at it's core a .json file, and for the purposes of the current LayerIt version, it needs to provide the score's and performance onset data in the following manner:
 
 \begin{verbatim}
 {
@@ -68,7 +68,7 @@ The MAPS file is at it's core a .json file, and for the purposes of the current 
     \item ``\textit{obs\_num}'' acts as a simple counter for each detected onset. 
 \end{itemize} 
 
-\noindent MIRVisualScore relies on MAPS in two complementary ways: directly for onset visualization, and indirectly through ScoreWarp, which requires MAPS to generate the warped score aligned with the timeline SVG element which constitutes the alignment reference for all overlaid data.
+\noindent LayerIt relies on MAPS in two complementary ways: directly for onset visualization, and indirectly through ScoreWarp, which requires MAPS to generate the warped score aligned with the timeline SVG element which constitutes the alignment reference for all overlaid data.
 
 \noindent ScoreWarp performs best when MAPS contains dense onset annotations across the full performance. However, it can still align scores when annotations are sparse by interpolating between available onset and their @xml.id anchor points. In practice, this allows different precision levels (i.e., downbeats, phrase boundaries, or measure-level anchors), trading annotation effort for alignment precision. Even minimal anchors (first and last onset) may be usable for short performances or segments, but intermediate alignment becomes less reliable due to interpolation error.
 
