@@ -9,39 +9,25 @@
 % System Architecture: Python based tool, that employs a modular and Object Oriented architecture for generating the visualizations.
 
 % Choices made and why
-\section{Introduction}
-This chapter is dedicated to presenting and contextualizing the problem we chose to tackle and the subsequent solution we developed to address it. We'll lay out the different iterations we passed through, since each provided insights that led to the core conclusions and value proposition of the thesis.
+% \section{Introduction}
+This chapter is dedicated to presenting and contextualizing the problem we chose to tackle and the subsequent solution we developed to address it. %We'll lay out the different iterations we passed through, since each provided insights that led to the core conclusions and value proposition of the thesis.
 
 The chapter begins by laying out the core problem and a brief presentation of the solution developed. After that, we'll present chronologically, the different project iterations we passed through, covering their motivations, achievements, why they were dropped and conclusions taken. Understanding where we came from provides essential context not only for this thesis, but also for understanding the core purpose and value statement of LayerIt.
 
-Finally we'll close this chapter by presenting LayerIt: a Python-based OO tool for generating custom visualizations with time-aligned elements. We'll also lay out core choices and design principles that define LayerIt and justify its value to the broader MIR community.
+Finally we'll close this chapter by presenting LayerIt: a Python-based OO tool for generating custom time-aligned visualizations of audio, music and algorithmic data. We'll also lay out core choices and design principles that define LayerIt and justify its value to the broader MIR community.
 
-\section{The Problem and it's Solution}
-\subsection{Problem Definition}
-%Texto do Claude mas até acho que está okish, tipo um  6/10
-% Modern Music Information Retrieval (MIR) tools face a fundamental challenge in visualization: while individual components exist for audio analysis (e.g. librosa and matplotlib), score representation (i.e., Verovio, ScoreWarp), and algorithmic development (BeatThis and other SOTA methods), there is no unified framework capable of aligning these heterogeneous data sources within a same timeline. Existing tools like SV, despite their power and widespread adoption, struggle to incorporate newer algorithmic developments. The codebase complexity and entrenched design patterns make experimentation with visual representations and integration of novel algorithms increasingly difficult, creating a bottleneck between SOTA algorithm development and effective visualization.
-
-% Problem 1: Gap between GUI tools and programming-based workflows.
-We identified a crucial gap between modern MIR GUI tools (i.e., SV) and programming-based workflows. SV although being a widespread and powerfull tool, it falters with features for including many of contemporary MIR developments. Because of this, MIR researchers depend on personal developed solutions to visualize their work. 
-
-%Problem 2: Specific visualization of Score alligned data. 
-MIR reshearchers often have to produce visualizations that have a acompaning score, these ar mostly produced via manualy croped and manipulated image formats scores that are made especificily  for that. LayerIt intends to facilitate in this process, providing tools that are combined into a single codebase framework.  
+\section{The Problem and our Solution}
+% Problem 1: SV and Gap between GUI tools and programming-based workflows.
+We identified a crucial gap between modern MIR GUI tools (i.e., SV) and programming-based workflows. SV, although being a widespread and a powerful tool, it falters regarding features for including many of contemporary MIR developments, besides this, SV's comprehensive and complex C++ codebase is difficult to manage and develop into. Because of this, MIR researchers depend on personal developed solutions to visualize their work. These can range from pure code-based solutions to other various creative methods:
+\begin{itemize}
+    \item For code-based solutions, these might use a combination of different libraries and frameworks such as matplotlib, librosa, madmom and modusa to name a few. These can achieve interesting results but do require a certain level of programming knowledge and expertise to be developed effectively. 
+    \item Other researchers may rely on slicing, cropping, combining and drawing visual elements manually. From SVGs, PNGs to digitalized PDFs there is no one unified and established framework in the MIR community for producing meaningful time-aligned visualizations. 
+\end{itemize}
+% Problem 2: Score-To-Audio Alignment usage in MIR research.
+An example of visualizations that usually are made using the latter method, are those that require an accompanying symbolic music representation (i.e., musical score). These ar mostly produced via manually cropping and manipulating scores in image formats, this can be a time consuming task. LayerIt intends to facilitate this process by providing tools that allow for alining scores with the required data and audio visualization layers.  
 
 % Problem 3: Towards developing time aligned music data visualization (talvez titulo para a tese?)
-Our proposed solution also intends to be integrated into future developments. 
-
-%Texto do Claude
-% Furthermore, the problem of music annotation and analysis is often conflated with the problem of interactive user interfaces. Many existing tools attempt to solve both simultaneously, resulting in complex systems that serve neither purpose optimally. These are fundamentally separate concerns—visualization of aligned data sources and user interaction mechanisms—though they are interconnected. Addressing visualization as a distinct, independent problem creates the opportunity to build modular, extensible systems that can be integrated with diverse interaction paradigms later.
-
-%Texto do Claude
-% This thesis addresses a specific gap: the absence of a Python-based, object-oriented visualization framework that can integrate established MIR libraries with SOTA components to generate time-aligned, multi-layer visualizations of recorded performances alongside their corresponding music scores. This capability is essential for two interconnected but distinct use cases: annotation tasks (extracting musical data through human or machine-assisted methods) and evaluation tasks (systematically comparing and assessing algorithmic outputs). LayerIt is developed as a solution to this problem, providing researchers with a composable, extensible framework that removes visualization as a barrier to MIR research and algorithm development.
-% \subsection{Our Solution - LayerIt!}
-%Opa tou demasiado cansado, isto é do Claude, opa tá tipo um 4/10 mas eu quero deixar aqui qualquer coisa...
-LayerIt addresses the fragmentation problem by providing a unified Python-based object-oriented framework that integrates established MIR libraries—librosa and matplotlib for audio visualization, ScoreWarp for score rendering—with contemporary algorithms such as BeatThis into a composable system. Unlike legacy tools constrained by historical architectural decisions, LayerIt's design enables straightforward incorporation of new SOTA algorithms and custom data visualizations without the bottleneck that prevents tools like Sonic Visualizer from adopting newer methods. By operating in Python, the framework aligns with the de-facto language of MIR research, facilitating community integration and extension.
-
-Critically, LayerIt deliberately decouples visualization from interaction, focusing exclusively on generating time-aligned SVG output. This separation addresses the architectural problem where attempting to solve both visualization and interaction simultaneously creates unnecessary complexity. By outputting to SVG—a format preserved by both matplotlib and ScoreWarp—LayerIt creates a language-agnostic intermediate representation that is both technically sound (preserving vector fidelity for algorithmic data while rasterizing spectrograms) and pragmatically extensible, enabling integration with diverse future systems.
-
-Regarding annotation and evaluation tasks, LayerIt establishes a reusable baseline rather than a complete solution. For annotation, which inherently requires user interaction, LayerIt provides a visualization foundation that can be integrated with specialized interaction layers built by the community. For evaluation, LayerIt already offers more immediate value by enabling visual comparison of algorithmic outputs and annotations through its aligned feature display, though the tool can and should be further developed to enhance these capabilities. In both cases, LayerIt removes visualization as a barrier to MIR research, allowing researchers to build domain-specific tools and workflows on top of this foundation.
+Our proposed solution intends to take into account different methods of producing visualizations, from the pure code-based methods to editing SVG's manually. LayerIt was developed with the intent for it to be adaptable enough to be included into any given workflow or integrated in future frameworks or GUI tools.
 
 \section{Developed Iterations}
 This thesis started with the proposed title ``Interactive Musical Beat Annotation GUI''. The initial thesis proposition was to evaluate modern GUI software solutions used for beat annotation (BA) (such as  SV), and build upon them with a focus in beat annotation practices.
@@ -49,12 +35,12 @@ The proposed goals included:
 
 \begin{enumerate}
     \item Either develop a web-based annotation system, or advancing the existing SV framework. Emphasizing collaborative features, real-time feedback and build on interaction mechanisms for beat annotation. 
-    \item Integration of ML self-supervised and human-in-the-loop features that provide intelligent annotation suggestions and improve user experience. System inspired on \citet{yamamotoHumanintheLoopAdaptationInteractive2021}.
+    \item Integration of ML self-supervised and human-in-the-loop features that provide intelligent annotation suggestions and improve user experience (e.g., Yamamoto et al., 2021 \cite{yamamotoHumanintheLoopAdaptationInteractive2021}).
     \item Validation through user studies.
     \item Publish the developed work as an Open Source Python library/framework. The purpose being, to contribute to MIR research community for further development and  integration with other existing frameworks.
 \end{enumerate}
 
-The motivation from this proposal came from mostly two identified flaws in this topic: The first is that, although the performance of beat tracking algorithms has been improving significantly in recent years, they mostly rely on deep learning based approaches. The issue with this, is that in order for these systems to be trained they need increasingly large and more complex datasets that, although not always directly (\citet{peterAutomaticNoteLevelScoretoPerformance2023}), need to some extent human made and/or verified beat annotations. The second one is related to human made beat annotation methods, that for the most part, still is a extensive and time consuming task. Besides that, although SV is a powerful tool, it presents a clear gap for beat annotation, where the integration of newer SOTA BT algorithms is difficult and there have been little to no new added features that improve BA task significantly. %\cite{yamamotoHumanintheLoopAdaptationInteractive2021}
+The motivation from this proposal came from mostly two identified flaws in this topic: The first is that, although the performance of beat tracking algorithms has been improving significantly in recent years, they mostly rely on deep learning based approaches. The issue with this, is that in order for these systems to be trained they need increasingly large and more complex datasets that, although not always directly \cite{peterAutomaticNoteLevelScoretoPerformance2023}, need to some extent human made and/or verified beat annotations. The second one is related to human made beat annotation methods, that for the most part, still is a extensive and time consuming task. Besides that, although SV is a powerful tool, it presents a clear gap for beat annotation, where the integration of newer SOTA BT algorithms is difficult and there have been little to no new added features that improve BA task significantly. %\cite{yamamotoHumanintheLoopAdaptationInteractive2021}
 
 Summarizing, the thesis came from a focus in BT, BA and interactive GUIs to, in the end, focusing on a purely MIR visualization problem. Next we will present different iterations the development phase undertook. This should contextualize the change in scope and motivation of the thesis.
 
@@ -62,6 +48,7 @@ Summarizing, the thesis came from a focus in BT, BA and interactive GUIs to, in 
 Developed from October 2025 until February 2026, BeatMapJS was our first attempt to create a GUI application for beat annotation. Our goal was to experiment and explore interactive BA features, libraries and frameworks while focusing on a web-based solution. Using JS/HTML, BeatThis, and Wavesurfer.JS, we successfully built an interactive spectrogram with a web-based interface that integrated the BeatThis algorithm. The application included beat annotation basic tools, region annotation capabilities, a table for editing tempo annotations and descriptions, and the ability to import and export beat annotations to .txt files (compatible with SV).
 
 Although the program was functional, it was ultimately abandoned. The main reason was that it provided no significant innovative BA features beyond BeatThis integration, and critically, no Python-based library was produced as the backbone of the project, which was an important goal for ensuring the work could be reused by the community.
+%acrescentar imagem
 
 \subsection{MEI-Basic-Edit}
 Running from February until March 2026, this project aimed to create a GUI ecosystem where users could manually adjust score elements while simultaneously viewing an audio visualization layer. We had identified an innovative BA feature, Audio-To-Score Alignment, and hypothesized it would greatly benefit both beat annotation and evaluation tasks. The project served as a learning opportunity to explore MEI and Verovio frameworks along with ScoreWarp.
@@ -69,23 +56,27 @@ Running from February until March 2026, this project aimed to create a GUI ecosy
 Implemented in JS/HTML using Verovio, MEI score format, and SVG, the application allowed users to upload a recording and its corresponding MEI score file. A static spectrogram would be generated with the score displayed horizontally below it. Users could interact with individual score elements by clicking and dragging them horizontally to manually align the score with the audio-visual representation. The system worked by rendering both the score and spectrogram into an SVG, allowing direct interaction with the SVG file. The GUI also included an integrated XML text editor for direct manipulation of the SVG score code.
 
 This experiment revealed significant complexity in creating interactive scores—both from UI/UX and technical perspectives. However, it provided invaluable insights into how Verovio and MEI function, as well as SVG structure, knowledge that would prove essential for the developed end solution. The project was ultimately abandoned as it did not produce a reusable Python library and the interaction design was functional enough to justify further development in this direction. 
+%acrescentar imagem
 
 \subsection{BeatPrecision, a PP fork}
 In March 2025, we explored building on the PP and SV frameworks to create a BA GUI tool. The rationale was straightforward: PP already provided an embedded score alignment feature and all SV functionality, so adding a few BA-focused improvements seemed like a viable path to developing a relevant annotation tool. Using Qt/C++, we integrated BeatThis and implemented automatic score follow-along in a horizontal manner to synchronize with SV's spectrogram and audio-visualizations.
 
 While functional, the project revealed significant challenges. The SV/PP codebase proved complex and difficult to manage. Long compile times and the sheer size of the codebase made each iteration increasingly challenging to implement, manage and debug. More importantly, this iteration taught us a critical lesson: we needed to distinguish between the interaction and visualization problems in BA. We realized we could not tackle both simultaneously and would need to choose a direction. Recognizing a clear gap in the field, we opted to focus on the visualization aspect, as we saw greater potential for the thesis to benefit the community in this area. 
+%acrescentar imagem
 
 \subsection{Score-Alignment.py}
 By the end of March 2025, we shifted our focus to creating a Python-based visualization tool with score-aligned spectrograms. Our motivation was to concentrate on score alignment in a Python based environment, while exploring the Modusa framework's capabilities. Using Python, Modusa, and matplotlib, we built an interactive spectrogram.
 
 However, this project was abandoned relatively quickly. Implementing a truly interactive and fluid spectrogram (with zoom, pan, timeline, and playback cursor) proved significantly more challenging than anticipated. While we managed to develop a functional interactive spectrogram, its implementation was clunky and unsatisfactory, leading us to discontinue the project in favor of other approaches. 
+%acrescentar imagem
 
 \subsection{Score-Alignment.js}
 In April 2026, we attempted to recreate the last iteration, this time implementing it in JS/HTML. Building on the experience from MEI-Basic-Edit and the initial BeatMapJS project, we aimed to create a comprehensive audio-to-score alignment with spectrogram visualization. Leveraging JS/HTML, Verovio/MEI, and Wavesurfer.js, we developed a system that displayed MEI scores horizontally alongside spectrograms. Timestamps—intended to represent beat annotations—could be directly stored in the MEI file using the \texttt{<when>} function, and notes in the score would highlight when hovered over, selected, or associated with a timestamp.
 
 While not fully functional, the application showed promise. However, we made a deliberate decision to shift direction once again. We recognized the need to develop a strictly visualization tool purely in python-based with an emphasis on an Object-Oriented approach that could be reused and extended by the community. This pivotal decision marked the beginning of LayerIt development.
+%acrescentar imagem
 
-
+\pagebreak
 \section{LayerIt!}
 % Purpose and Scope
 % What LayerIt is and what problem it solves.
@@ -106,14 +97,11 @@ It was only by mid April 2026 that LayerIt started being developed. LayerIt, is 
 
 \subsection{LayerIt Overview}
 % Core implementation overview.
-The project bases itself in librosa and matplotlib to generate audio-visualizations and data plots. The score used for the symbolic representation layer is rendered through ScoreWarp. The end result is an SVG file that overlays the audio-visualization, data layers and score.
-
-% BeatThis integration.TALVEZ ESTE N FAZ SENTIDO TAR NESTE CHAP. a razao pela qual BT foi integrado é pq serve de exmplo para visualização de um algoritmo de BT, podia ser outro qualquer, simplesmente foi o BT pq é o sota logo o melhor exemplo, mas podia ser outro qualquer.
-The codebase integrates BeatThis the as-of-now SOTA BT algorithm. Through its implementation we demonstrate how a given BT model can be integrated to our system in order to produce beat data visualizations.  
+The project bases itself in librosa \cite{mcfeeLibrosaLibrosa01102025}, matplotlib \cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026} and modusa \cite{modusa} to generate audio-visualizations and data plots. The score used for the symbolic representation layer is rendered through ScoreWarp. The end result is an SVG file that overlays the audio-visualization, data layers and score. The codebase also integrates BeatThis the as-of-now SOTA BT algorithm. Through its implementation we demonstrate how a given BT model can be integrated to our system in order to produce beat data visualizations.
 
 \subsection{Choices Made and Why}
 % SVG as the visualization backend.
-LayerIt relies on matplotlib for audio and data representations where, the SVG format is the end visual format. The reason, stems from the fact that Verovio (and subsequently ScoreWarp) render the score in SVG, and because matplotlib does provide seamless integration of SVG charts, it is more reliable to export matplotlib visuals into a SVG framework, then the other way around.
+LayerIt relies on matplotlib for audio and data representations where, the SVG format is the end visual format. The reason, stems from the fact that Verovio (and subsequently ScoreWarp) render the score in SVG, and because matplotlib does not provide seamless integration of SVG charts, it is more reliable to export matplotlib visuals into a SVG framework, then the other way around.
 
 % Vector output and rasterization trade-off.
 The SVG format, is a vector-based one, therefore, data that can be mathematically represented in cartesian plots (i.e., X/Y graphs) can be exported without losing resolution. This is the case for most of MIR algorithmic data visualizations i.e., continuous curves and time based annotations. However, some data types, cant be presented in this way noticeably, heatmap-based plots like spectrograms. For interaction proposes, these usually are rendered in real-time, allowing for seamless navigation (i.e., zooming and panning). This is not possible since SVG is an inherently static format, therefore plots like these need to be rasterized before being integrated into the SVG. To circumvent this, we employed a way to render plots as PNG's as well. This trade-off means that cartesian plots and the score can be zoomed-in infinitely while always preserving the highest level of fidelity and accuracy. On the other hand, rasterized layers are bound to lose quality with zooming while, at the same time, also requiring heavier processing and memory usage. 
@@ -124,3 +112,10 @@ That being said, because SVG is a text markup format, it can be easily accessed 
 Our main goal is that, this codebase may be easily integrated into other relevant projects to generate visualizations. Hence why we developed it as a Python Based 00 tool that is based on commonly used MIR libraries such as librosa and matplotlib. This way, community integration and development is eased. 
 
 \section{Chapter Summary}
+% AI generated section with prompt "Im trying to write a chapter summary can you provide me with a summary sugestion text?" com ligeira alteração.
+%Acho que compre bem o objetivo vou deixar assim para já pelo menos.
+In this chapter, we presented LayerIt, a Python-based OO tool designed to address a critical gap in the MIR community: the lack of a unified framework for generating time-aligned visualizations of audio, music scores, and algorithmic data. We began by identifying the core problem—that researchers face a disconnect between modern GUI tools like SV and programming-based workflows, forcing many to develop ad-hoc solutions for visualization tasks. 
+
+We traced the development journey of LayerIt through five distinct iterations, each providing valuable insights that shaped the final solution and thesis theme. From web-based beat annotation (BeatMapJS and Score-Alignment.js) and interactive score editing (MEI-Basic-Edit), to attempts at extending existing frameworks (BeatPrecision) and a Python-based approach (Score-Alignment.py), we learned critical lessons about the distinction between interaction design and visualization challenges. This iterative process led us to focus exclusively on the visualization aspect, resulting in a Python-based, modular architecture that prioritizes extensibility and community integration.
+
+We justified key design decisions, particularly the adoption of SVG as the primary output format, which balances the need for scalable vector graphics for score and analytical data with practical rasterization of spectrograms. Finally, we established LayerIt's value proposition: a reusable, object-oriented tool built on established MIR libraries (librosa, matplotlib, ScoreWarp) that can be seamlessly integrated into existing research workflows and future frameworks.

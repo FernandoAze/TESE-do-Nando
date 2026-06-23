@@ -1,3 +1,11 @@
+0. RUN (acrescentado por mim)
+
+pdflatex main.tex
+biber main
+pdflatex main.tex
+pdflatex main.tex
+
+
 1. Distributions
 
 The style file "feupteses.sty" defines setups for dissertations presented at FEUP.

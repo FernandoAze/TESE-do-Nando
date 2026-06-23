@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  18 JUN 2026 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  23 JUN 2026 01:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -851,265 +851,60 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
-\@crestbox=\box76
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-<figures/uporto-feup.pdf, id=4, 338.26375pt x 126.4725pt>
-File: figures/uporto-feup.pdf Graphic file (type pdf)
-<use figures/uporto-feup.pdf>
-Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 135.
-(pdftex.def)             Requested size: 204.85983pt x 76.59618pt.
- [-3
+\openout2 = `body/chapter4.aux'.
 
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./figures/uporto-feup.pdf>]
-\openout2 = `frontmatter/abstract.aux'.
-
- (./frontmatter/abstract.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
-) [1
-
-
-
-
-
-]
-\openout2 = `frontmatter/acknows.aux'.
-
- (./frontmatter/acknows.tex) [2
-
-
-
-
-]
-No file main.toc.
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
-[3
-
-
-
-
-]
-No file main.lof.
-\tf@lof=\write6
-\openout6 = `main.lof'.
-
-[4
-
-
-]
-No file main.lot.
-\tf@lot=\write7
-\openout7 = `main.lot'.
-
-[5
-
-
-]
-\openout2 = `frontmatter/abbrevs.aux'.
-
- (./frontmatter/abbrevs.tex) [6
-
-
-]
-\openout2 = `body/chapter1.aux'.
-
- (./body/chapter1.tex
+ (./body/chapter4.tex
 Chapter 1.
-) [1
+
+LaTeX Warning: Reference `fig:LayersWithinLayers' on page 1 undefined on input line 7.
+
+<figures/BlockDiagrams/LayersOnLayers.png, id=4, 787.94376pt x 908.39375pt>
+File: figures/BlockDiagrams/LayersOnLayers.png Graphic file (type png)
+<use figures/BlockDiagrams/LayersOnLayers.png>
+Package pdftex.def Info: figures/BlockDiagrams/LayersOnLayers.png  used on input line 11.
+(pdftex.def)             Requested size: 170.71393pt x 196.79784pt.
+[1
 
 
 
 
 
-]
-\openout2 = `body/chapter2.aux'.
-
- (./body/chapter2.tex
-Chapter 2.
-
-LaTeX Warning: Citation 'mullerFundamentalsMusicProcessing2015' on page 2 undefined on input line 5.
 
 
-LaTeX Warning: Citation 'mullerMusicRepresentations2015a' on page 2 undefined on input line 20.
-
-[2
-
-
-
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 40.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 31.
+ (/usr/share/texlive/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
+File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
 )
-
-LaTeX Warning: Citation 'MEI-Website' on page 3 undefined on input line 48.
-
-[3]
-./body/chapter2.tex:58: Undefined control sequence.
-l.58 ...oding through the user interface.'' \citep
-                                                  {repertoireinternationalde...
+LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 31.
+ [2 <./figures/BlockDiagrams/LayersOnLayers.png>]
+./body/chapter4.tex:48: Undefined control sequence.
+l.48 The first is the one described in \citet
+                                             {goeblLetsScoreWarpAgain2025a},...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./body/chapter2.tex:62: Undefined control sequence.
-l.62 ...ump to their playback positions. '' \citep
-                                                  {jiangPIANOPRECISIONADVANC...
+./body/chapter4.tex:48: Undefined control sequence.
+l.48 ... MIDI-to-MIDI matching algorithm by \citet
+                                                  {nakamuraPERFORMANCEERRORD...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[4]
-<figures/AudioVisualizations/Waveform.png, id=89, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/Waveform.png Graphic file (type png)
-<use figures/AudioVisualizations/Waveform.png>
-Package pdftex.def Info: figures/AudioVisualizations/Waveform.png  used on input line 75.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<figures/AudioVisualizations/Spectrum.png, id=91, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/Spectrum.png Graphic file (type png)
-<use figures/AudioVisualizations/Spectrum.png>
-Package pdftex.def Info: figures/AudioVisualizations/Spectrum.png  used on input line 84.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
- [5 <./figures/AudioVisualizations/Waveform.png>]
-<figures/AudioVisualizations/SpectogramLinear.png, id=98, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/SpectogramLinear.png Graphic file (type png)
-<use figures/AudioVisualizations/SpectogramLinear.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramLinear.png  used on input line 97.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
- [6 <./figures/AudioVisualizations/Spectrum.png>]
-<figures/AudioVisualizations/SpectogramLog.png, id=106, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/SpectogramLog.png Graphic file (type png)
-<use figures/AudioVisualizations/SpectogramLog.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramLog.png  used on input line 106.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<figures/AudioVisualizations/SpectogramMel.png, id=107, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/SpectogramMel.png Graphic file (type png)
-<use figures/AudioVisualizations/SpectogramMel.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramMel.png  used on input line 115.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
- [7 <./figures/AudioVisualizations/SpectogramLinear.png> <./figures/AudioVisualizations/SpectogramLog.png>]
-
-LaTeX Warning: Citation 'mullerFundamentalsMusicProcessing2015' on page 8 undefined on input line 123.
-
-
-LaTeX Warning: Citation 'valleVisualDisplayRetrieval' on page 8 undefined on input line 125.
-
-<figures/AudioVisualizations/SpectogramCQT.png, id=116, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/SpectogramCQT.png Graphic file (type png)
-<use figures/AudioVisualizations/SpectogramCQT.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramCQT.png  used on input line 129.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-[8 <./figures/AudioVisualizations/SpectogramMel.png>]
-<figures/AudioVisualizations/Chromagram.png, id=123, 867.24pt x 578.16pt>
-File: figures/AudioVisualizations/Chromagram.png Graphic file (type png)
-<use figures/AudioVisualizations/Chromagram.png>
-Package pdftex.def Info: figures/AudioVisualizations/Chromagram.png  used on input line 138.
-(pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-
-
-LaTeX Warning: Citation 'mullerFundamentalsMusicProcessing2015' on page 9 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'jungUnifiedCrossmodalTranslation2026a' on page 9 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'khodzhaevPracticalGuideSpectrogram' on page 9 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'valleVisualDisplayRetrieval' on page 9 undefined on input line 143.
-
-
-Overfull \hbox (178.58957pt too wide) in paragraph at lines 143--144
-[]\T1/ptm/m/n/10.95 [[], [], [],
- []
-
-[9 <./figures/AudioVisualizations/SpectogramCQT.png> <./figures/AudioVisualizations/Chromagram.png>]
-
-LaTeX Warning: Citation 'jiangPIANOPRECISIONADVANCING2025' on page 10 undefined on input line 155.
-
-./body/chapter2.tex:193: Undefined control sequence.
-l.193 ...the corresponding symbolic score'' \citep
-                                                  {carabias-ortiAUDIOSCOREAL...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[10]
-
-LaTeX Warning: Citation 'jiangPIANOPRECISIONADVANCING2025' on page 11 undefined on input line 207.
-
-./body/chapter2.tex:209: Undefined control sequence.
-l.209 ...formance. Early score aligners (ex.\citet
-                                                  {duanSoundprismOnlineSyste...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation 'peterAutomaticNoteLevelScoretoPerformance2023' on page 11 undefined on input line 209.
-
-[11]
-./body/chapter2.tex:211: Undefined control sequence.
-l.211 ... ``weak but musically meaningful'' \citep
-                                                  {jungUnifiedCrossmodalTran...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./body/chapter2.tex:217: Undefined control sequence.
-l.217 ... physical time of their sounding'' \citep
-                                                  {goeblLetsScoreWarpAgain20...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[12]) [13]
-\openout2 = `body/chapter3.aux'.
-
- (./body/chapter3.tex
-Chapter 3.
-[14
-
-
-
-
-] [15]
-./body/chapter3.tex:41: Undefined control sequence.
-l.41 ...user experience. System inspired on \citet
-                                                  {yamamotoHumanintheLoopAda...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./body/chapter3.tex:46: Undefined control sequence.
-l.46 ...that, although not always directly (\citet
+./body/chapter4.tex:48: Undefined control sequence.
+l.48 ...sing examples from the asap dataset \citep
                                                   {peterAutomaticNoteLevelSc...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1117,48 +912,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[16] [17]
-LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 73.
- (/usr/share/texlive/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
-File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
-)
-LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 73.
- [18]) [19]
-\openout2 = `body/chapter4.aux'.
-
- (./body/chapter4.tex
-Chapter 4.
-
-LaTeX Warning: Reference `fig:LayersWithinLayers' on page 20 undefined on input line 7.
-
-<figures/BlockDiagrams/LayersOnLayers.png, id=198, 787.94376pt x 908.39375pt>
-File: figures/BlockDiagrams/LayersOnLayers.png Graphic file (type png)
-<use figures/BlockDiagrams/LayersOnLayers.png>
-Package pdftex.def Info: figures/BlockDiagrams/LayersOnLayers.png  used on input line 11.
-(pdftex.def)             Requested size: 170.71393pt x 196.79784pt.
-[20
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 63.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [3]) [4] [5
 
 
 
 
-]) [21 <./figures/BlockDiagrams/LayersOnLayers.png>] [22]
-\openout2 = `body/chapter5.aux'.
 
- (./body/chapter5.tex
-Chapter 5.
-) [23
-
-
-
-
-]
-
-LaTeX Warning: Empty bibliography on input line 176.
-
-\openout2 = `backmatter/appendix1.aux'.
-
-(./backmatter/appendix1.tex) (./main.aux (./frontmatter/abstract.aux) (./frontmatter/acknows.aux) (./frontmatter/abbrevs.aux) (./body/chapter1.aux) (./body/chapter2.aux) (./body/chapter3.aux) (./body/chapter4.aux) (./body/chapter5.aux) (./backmatter/appendix1.aux))
+] (./main.aux (./body/chapter1.aux) (./body/chapter2.aux) (./body/chapter3.aux) (./body/chapter4.aux) (./body/chapter5.aux) (./backmatter/appendix1.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1177,7 +940,7 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  45FBCA324E42DC991821FB89B39CBE11;6957.
+(rerunfilecheck)             After:  2CB01223D800E256136329A93D41E7CF;1745.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -1188,18 +951,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27214 strings out of 474222
- 527031 string characters out of 5748734
- 1934975 words of memory out of 5000000
- 48990 multiletter control sequences out of 15000+600000
- 633143 words of font info for 135 fonts, out of 8000000 for 9000
+ 26952 strings out of 474222
+ 520740 string characters out of 5748734
+ 1933975 words of memory out of 5000000
+ 48846 multiletter control sequences out of 15000+600000
+ 610497 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,12n,95p,1380b,1829s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (30 pages, 968899 bytes).
+ 88i,12n,95p,2928b,1817s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (5 pages, 116066 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
