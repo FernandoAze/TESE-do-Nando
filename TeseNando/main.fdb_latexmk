@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1782173366.33416 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 0 -1
   "backmatter/bibliography.bib" 1782171096.49252 26353 55e7dee993510927bf2e8cc798098d37 ""
-  "main.bcf" 1782173366.2858 107912 6cb200b54577cd54b60accc47604321d "pdflatex"
+  "main.bcf" 1782176997.8108 107912 6cb200b54577cd54b60accc47604321d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782173365.58078 "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/TeseNando/main.tex" "main.pdf" "main" 1782173366.33439 2
+["pdflatex"] 1782176997.16827 "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/TeseNando/main.tex" "main.pdf" "main" 1782176997.87943 2
   "/etc/texmf/web2c/texmf.cnf" 1779723239.32264 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/TeseNando/main.tex" 1782173328.44132 6132 dbbbd015c1b71a272636f543d10636e4 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -164,16 +164,16 @@
   "body/chapter2.tex" 1781655247.56981 25001 16251d76d4ec92d4166a98141cca668e ""
   "body/chapter3.aux" 1782173269.63748 5841 7763dd7ac50dce050ec158d7039423c4 ""
   "body/chapter3.tex" 1782173364.58125 18183 2100f588c078730996591c1db71b7bb4 ""
-  "body/chapter4.aux" 1782173366.26058 5881 d5b7ac4e8b083b3c6d59de14049a0375 "pdflatex"
-  "body/chapter4.tex" 1782173268.86895 7756 2e166d1a1adc395ec55bb0c802dceda9 ""
+  "body/chapter4.aux" 1782176997.79031 6000 0e8621a82a56ad9df0a653f365e87f47 "pdflatex"
+  "body/chapter4.tex" 1782176996.20628 11769 bdbea9e1c633a68d25bd9798a4367909 ""
   "body/chapter5.aux" 1782153781.53554 4704 7b8df88aae59b164975298745ae04395 ""
   "body/chapter5.tex" 1781648583.17312 125 c4bcd5aa37b44fc61d1a54e07aff71e4 ""
   "config/meic.cfg" 1781642930 1585 7bc7088f40f3eb1005d0eb8f7e5398e4 ""
   "feupteses.sty" 1781642930 15765 358dbcadbfbb6c6cc5891fb984c4da2c ""
   "figures/BlockDiagrams/LayersOnLayers.png" 1781722167.05841 39584 4484fdee13e8c88ce644d48eeca4281e ""
-  "main.aux" 1782173366.28068 1110 2281ddd589555bb279fa8067077bb957 "pdflatex"
+  "main.aux" 1782176997.80728 1110 21772f01b9af47883fa5bb0c350c5749 "pdflatex"
   "main.bbl" 1782171097.15773 30778 eb5cf60cd0fc69e0191576217db0e1f0 "biber main"
-  "main.out" 1782173366.28449 1745 2cb01223d800e256136329a93d41e7cf "pdflatex"
+  "main.out" 1782176997.80989 1914 7f100591d6e43ea351d48aa4d019348c "pdflatex"
   "main.tex" 1782173328.44132 6132 dbbbd015c1b71a272636f543d10636e4 ""
   (generated)
   "body/chapter4.aux"
@@ -184,4 +184,3 @@
   "main.pdf"
   "main.run.xml"
   (rewritten before read)
-  "body/chapter4.aux"

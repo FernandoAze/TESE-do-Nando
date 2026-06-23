@@ -69,9 +69,44 @@ The MAPS file is at it's core a .json file, and for the purposes of the current 
 
 ScoreWarp performs best when MAPS contains dense onset annotations across the full performance. However, it can still align scores when annotations are sparse via interpolation between available onsets and their @xml.id anchor points. In practice, this allows different precision levels (i.e., downbeats, phrase boundaries, or measure-level anchors), trading annotation effort for alignment precision. Even minimal anchors (first and last onset) may be usable for short performances or segments, but intermediate alignment becomes less reliable due to interpolation error.
 
-\subsection{Layer Alignment Method}
-As of now, LayerIt provides tools for generating visualizations with BT and BA tasks in mind, however, this is not an exclusive application of the codebase. Layers (be it data, audio or scores) are simply either SVG or PNG elements that span the same or a proportional width to a given timeline, therefore, users can upload any SVG or PNG plots, given that they follow the same timeline length. 
+ For the examples that we provide in the making of our codebase we modified PP to obtain this data. PP's ``Piano Aligner'' plugin \citep{jiangPIANOPRECISIONADVANCING2025} matches performance onsets to score elements defined by the .mei file. In PP these are displayed in a regular SV time instance layer. We made a simple modification where, this layer, instead of displaying each onset with it's corresponding score position, ``\textit{measure + position\_in\_measure}'', it would display the @xml.id of each onset. With this we could then export the time instances as .txt files with ``\textit{obs\_mean\_onset}+\textit{xml\_id}'', then convert it into the MAPS format using ``\textit{TXT\_to\_Maps()}'' function in @src/functions/warp\_score.
+ 
+\subsection{Providing BT data}
+Since contemporary BT algorithms are ML based, they primarily function by generating a beat activation function, which is a continuous curve representing the probability of a beat occurring at any given frame. Visualizing this underlying probability curve, rather than just the discrete beat assessments, allows us to see the algorithm's internal confidence level, giving crucial insights on the inner workings of the model.
 
+In @src/functions/Beat\_Layers, the function ``\textit{Run\_BeatThis()}'' generates an .npz file that contains the required data for this to be later visualized. This particular function creates the .npz file generated through BeatThis. However, the .npz file format can serve as an intermediate for BT visual layers, as long as it is structured like it is described in ``\textit{Run\_BeatThis()}''. The .npz should contain five key components from the BT model:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\hline
+\textbf{Field} & \textbf{Purpose} \\
+\hline
+\texttt{beat\_times} & Time coordinates (seconds) aligned with probability frames \\
+\texttt{beat\_probs} & Continuous beat activation function values \\
+\texttt{downbeat\_probs} & Continuous downbeat activation function values \\
+\texttt{detected\_beats} & Discrete beat positions derived from peak detection \\
+\texttt{detected\_downbeats} & Discrete downbeat positions from peak detection \\
+\hline
+\end{tabular}
+\end{table}
+
+The probabilistic fields capture the algorithm's internal confidence across time, while the detected positions represent the final beat assessments. This separation enables visualization of both the continuous confidence landscape and discrete beat estimates.
+
+\section{Layer Alignment Method}
+As of now, LayerIt provides tools for generating visualizations with BT and BA tasks in mind, however, this is not an exclusive application of the codebase. Layers (be it data or audio representations) are simply either SVG or PNG elements that span the same or a proportional width to a given timeline, therefore, users can upload any SVG or PNG plots, given that they follow the same timeline length. 
+
+When the warped score is generated, ScoreWarp provides a functionality to add a visual timeline of the performance. This timeline will most likely span a wider length than the actual recorded performance length, possibly even getting out of bounds to the visual SVG canvas. Yet, since this timeline provides the time reference for positioning the score elements correctly, it is also used in LayerIt to align different visual layers to that same recording.
+
+The way LayerIt aligns the layers is by:
+\begin{enumerate}
+  \item Looking at the SVG file containing the Warped Score (rendered through Score Warp) and retrieving the full length of the generated timeline in pixels.
+  \item Getting the actual audio recording duration (in time) within that same timeline.
+  \item Using a simple rule of three, it calculates the recording length (in pixels) by comparing the recording's duration in time to the full timeline length in pixels.
+\end{enumerate} 
+In the codebase this is done through a single method ``\texttt{Visualizer().get\_Layers\_WidthHeight()}''. 
+
+Although LayerIt does not yet integrate methods to convert visualizations outside of what it already provides, the basic methodology within the layer creation is this. Image files only need to be placed in the same x position of the start of the related timeline and the method to get the length is already in the codebase. Any given image format, should just respect that same recording length and then scale it to the appropriate timeline length of the score generated through ScoreWarp.
 
 \section{Layer Creation Logic}
 
