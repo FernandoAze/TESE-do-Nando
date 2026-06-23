@@ -1,12 +1,67 @@
 \chapter{Conclusions and Future Work} \label{chap:concl}
-
+% ============================================================================
+%Paragrafos gerados AI com alterações minimas, tou com sono, para já vou deixalos, depois revejo. 
+This final chapter reflects on the thesis journey and the LayerIt framework developed throughout this work. We begin by reviewing the key achievements: how the identified gaps in MIR visualization have been addressed and what conceptual contributions this thesis makes to the field. We then outline realistic, community-oriented directions for future development that preserve LayerIt's architectural vision while expanding its scope and accessibility. Finally, we reflect on the broader significance of this work within the evolving MIR research landscape.
 
 \section{Achievements}
 
+This thesis set out to address a fundamental gap in the MIR community: the absence of a unified, extensible framework for generating time-aligned visualizations that integrate audio, scores, and algorithmic data. Through the development of LayerIt, we have successfully demonstrated a solution that bridges this gap and establishes a foundation for future work in MIR visualization.
+
+The key achievements of this thesis are:
+
+\begin{enumerate}
+
+\item \textbf{Bridged the GUI-to-Code Workflow Gap} — We identified and formalized a critical disconnect between GUI-based tools like SV and contemporary code-based research workflows. LayerIt provides a programmatic alternative that allows researchers to generate sophisticated multi-modal visualizations without relying on manual manipulation or the limitations of existing GUI frameworks. This directly addresses the problem outlined in \autoref{chap:chap3}.
+
+\item \textbf{Unified Multi-Modal Alignment} — LayerIt successfully integrates audio spectrograms, symbolic music representation (via ScoreWarp), and algorithmic beat tracking data into a single time-coherent visualization. By leveraging the warped score's timeline as a temporal anchor, we demonstrated a robust method for aligning diverse data modalities across different time domains.
+
+\item \textbf{Demonstrated Modular OO Architecture} — We developed and validated an architecture based on modular composability and abstract interfaces. This design enables visualization components to be self-contained, reusable, and freely composable without modification to the core orchestration logic. We showed that this same philosophy can be consistently applied across three levels: visual, SVG, and code, creating a coherent and intuitive system.
+
+\item \textbf{SVG-First Output Strategy} — By choosing SVG as the primary output format, we positioned LayerIt for seamless integration with other tools and workflows. SVG's text-based, language-agnostic nature enables direct manipulation, external editing, and integration into web-based or GUI frameworks developed in other languages.
+
+%Um bocado overstated mas ok...
+\item \textbf{Integrated Contemporary Beat Tracking} — We successfully demonstrated the integration of BeatThis, a state-of-the-art ML-based beat tracking algorithm, into LayerIt's visualization pipeline. Critically, we showed how visualizing both discrete beat estimates and continuous probabilistic outputs provides unprecedented insight into model behavior and confidence—revealing opportunities for improved evaluation and annotation workflows.
+
+\item \textbf{Established Community-Ready Foundation} — LayerIt is built on widely-adopted MIR libraries (librosa, matplotlib, ScoreWarp) using standard Python conventions, lowering the barrier for community adoption and extension. The modular design explicitly supports new visualization types and integration into existing research workflows.
+
+\item \textbf{Validated Iterative Development Approach} — Through five distinct project iterations (documented in \autoref{chap:chap3}), we identified core lessons about the distinction between interaction design and visualization challenges, ultimately focusing on the visualization problem where we could provide maximum value to the community.
+
+\end{enumerate}
+
+These achievements collectively demonstrate that the original thesis objective—developing a reusable, extensible framework for MIR visualization—has been met and validated through a working implementation.
 
 
 \section{Future Work}
 
+While LayerIt represents a significant step forward, the framework opens multiple avenues for future development. The following directions represent natural evolutionary extensions that preserve LayerIt's architectural vision while expanding scope, accessibility, and applicability:
 
+\begin{enumerate}
+%mheeee, n gosto, mas ok... percebo o objetivo
+\item \textbf{Interactive Visualization Interfaces} — LayerIt currently focuses on batch visualization and static SVG output. Future work should explore building interactive frontends leveraging LayerIt's SVG output—web-based viewers or desktop applications with graphical parameter controls. Such interfaces would complete the vision initiated in earlier thesis iterations (BeatMapJS, MEI-Basic-Edit) and provide researchers with fluid, exploratory visualization experiences.
+%Posso depois rever isto, mas parece me bem este ponto.
+\item \textbf{Expanded Visualization Coverage} — While LayerIt was developed with beat tracking and beat annotation tasks in mind, the underlying framework is task-agnostic. Future work should extend coverage to other MIR problems that benefit from aligned multi-modal visualization: onset detection, structural segmentation, instrument recognition, polyphonic transcription, and performance expressive analysis. Each would contribute new specialized layer types while reinforcing the generality of the core architecture.
 
+\item \textbf{Integration with Existing Ecosystems} — Tighter integration with established tools would accelerate adoption. Direct plugins or wrapper libraries for SV, PP, and Jupyter notebooks would reduce friction for researchers already embedded in these workflows. Similarly, standardized APIs for integration with librosa and other MIR libraries would enable LayerIt to become a natural component in larger analysis pipelines.
+
+\item \textbf{Collaborative Annotation Frameworks} — Extend LayerIt's visualization foundation into annotation and correction interfaces. Build on the layer-based architecture to create collaborative workflows where multiple annotators can provide beat annotations, corrections, or confidence assessments. Integrate human-in-the-loop machine learning approaches (as in \cite{yamamotoHumanintheLoopAdaptationInteractive2021}) to provide intelligent annotation suggestions and improve annotation efficiency.
+
+\item \textbf{Comparative Algorithm Visualization} — Currently LayerIt demonstrates BeatThis integration. Extend support to enable comparative visualization of multiple beat tracking algorithms on the same performance. This would allow researchers to directly compare algorithmic behavior, identify failure modes, and benchmark different approaches. Thus, addressing an important gap in contemporary BT evaluation practices.
+
+\item \textbf{Performance Optimization and Scalability} — Optimize LayerIt for large-scale datasets and real-time processing pipelines. Implement streaming visualization for long recordings, support GPU-accelerated spectrogram computation, and develop memory-efficient layer management. These enhancements would enable LayerIt to support production-scale research workflows and large-scale evaluation studies.
+
+%Overstated mas talvez possa fazer sentido dito de outra forma
+\item \textbf{Standardization and Community Standards} — Formalize and propose community standards for score-performance alignment metadata (building on the MAPS format), facilitating ecosystem interoperability. Collaborate with initiatives like TROMPA, the Music Information Retrieval Evaluation eXchange (MIREX )  to establish conventions that enable tool-agnostic data sharing across the research community.
+
+\end{enumerate}
+
+Each of these directions represents incremental progress toward a more comprehensive MIR visualization ecosystem, while maintaining fidelity to LayerIt's core design principles: modularity, composability, extensibility, and community integration.
+
+\section{Final Remarks}
+%Ok, não acho que esteja muito mal esta secção...
+This thesis began with the observation of a critical gap in the MIR research community: the absence of a unified framework for generating time-aligned, multi-modal visualizations suited to contemporary research workflows. Through an iterative development process and careful architectural design, we have delivered LayerIt, a Python-based, object-oriented tool that addresses this gap while explicitly supporting future extension and integration.
+
+LayerIt's value lies not merely in its immediate applicability to beat tracking and annotation tasks, but in its demonstration that visualization frameworks can be architected for extensibility, composability, and community adoption. By grounding the system in established conventions (OO design patterns, common MIR libraries, standardized formats), we have created a foundation upon which the community can build up on.
+
+As MIR research continues to evolve, driven by advances in machine learning, increasing dataset complexity, and growing interdisciplinary collaboration. The need for sophisticated, flexible visualization tools will only intensify. LayerIt is positioned to serve as a foundation for this future work, enabling researchers to focus on their core innovations rather than reimplementing visualization infrastructure from scratch.
+% ============================================================================
 \vspace*{12mm}

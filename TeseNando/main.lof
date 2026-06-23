@@ -1,0 +1,16 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of an audio waveform.}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of audio Spectrum.}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of Linear spectrogram.}}{7}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Logarithmic spectrogram.}}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of Mel spectrogram.}}{8}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a CQT.}}{9}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example a Chromagram.}}{9}{figure.caption.14}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Composition of LayerIt visualization system. Each colored box represents a distinct visual element that compose higher-level visualizations.}}{22}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LayerIt generated visualization example for comparing the end output of BeatThis (on top) and the probability layer (at the bottom). In blue downbeats, in red beats and the doted white lines show onsets.}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Simplified Block Diagram for generating \autoref {fig:VisualAlignedLayersExample}. Demonstrating the different levels for generating the combined aligned visuals, colored boxes show different levels of visualizations. Note that the beige boxes labeled "Matplot spectrogram visualization" refers to the same PNG element that is being called within the same script that is generating the whole visualization.}}{25}{figure.caption.19}%
+\addvspace {10\p@ }
