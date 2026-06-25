@@ -1,10 +1,10 @@
 \chapter{Literature Review} \label{chap:sota}
 \section{Introduction}
 
-Music Information Retrieval (MIR) is the field of research that focuses on the development of algorithms and systems to analyze, retrieve, and organize music data. MIR bridges a wide range of disciplines, including: musicology, signal processing, machine learning, and human-computer interaction. 
+\ac{MIR} is the field of research that focuses on the development of algorithms and systems to analyze, retrieve, and organize music data. \ac{MIR} bridges a wide range of disciplines, including: musicology, signal processing, machine learning, and human-computer interaction. 
 \cite{mullerFundamentalsMusicProcessing2015}
 
-\section{Visualization Types}\label{sec:dialecto}
+\section{Visualization Types}
 
 We can sum up all music related visualizations into three categories:
 \begin{enumerate}
@@ -21,7 +21,7 @@ Sheet music also comes in a variety of forms that vary throughout History and cu
 
 \subsection{Symbolic Representations}
 
-Symbolic Representations are machine-readable formats where musical events and expressions are explicitly encoded. These come in various formats, such as MIDI and MusicXML.
+Symbolic Representations are machine-readable formats where musical events and expressions are explicitly encoded. These come in various formats, such as \ac{MIDI} and MusicXML.
 
 Visually we can identify two main applications for this category, these include: piano-roll representations and digital score representations. 
 
@@ -29,9 +29,9 @@ Historically piano-roll representations come from so-called ``player pianos'', t
 
 This concept of a continuos and explicit representation of music performance would later prove useful for digital applications. Such is the case for the Piano-Roll.
 
-The \textbf{Piano-Roll} is a staple on any DAW as a visual and interactive tool to write and edit musical events in the form of MIDI notes and attributes (such as velocity and other expressive controls).
+The \textbf{Piano-Roll} is a staple on any \ac{DAW} as a visual and interactive tool to write and edit musical events in the form of \ac{MIDI} notes and attributes (such as velocity and other expressive controls).
 
-\textbf{MusicXML} refers to the XML-based language to transcribe score music into the digital domain. There are multiple sub-variants of the MusicXML format for specific applications, however all share an XML based language underneath. 
+\textbf{MusicXML} refers to the \ac{XML}-based language to transcribe score music into the digital domain. There are multiple sub-variants of the MusicXML format for specific applications, however all share an \ac{XML} based language underneath. 
 
 MusicXML was developed to serve as a universal format for storing and sharing music scores across different music notation applications. Music notation digital editors then employ proprietary variants of this format for addressing the program's specific characteristics. In some cases these may not even be xml based, but MusicXML format can be considered the universal format.
 % Será que preciso mesmo de mencionar isto?
@@ -40,18 +40,18 @@ These include, among others:
     \item \textbf{.mscz and .mscx}: These are Musescore specific formats named for "MuseScore Format" and  "Uncompressed MuseScore" format respectively. Both xml based.
     \item \textbf{.dora} - "Dorico" specific format (non xml based)
     \item \textbf{.sib}  - "Sibelius" proprietary format  of company Avid (also non xml based)
-    \item \textbf{.mei}  - The "Music Encoding Initiative" (MEI). XML based.
+    \item \textbf{.mei}  - The "Music Encoding Initiative" (\ac{MEI}). \ac{XML} based.
 \end{itemize}
 
-The .mei format is the one that is essential for this thesis and the most useful for MIR purposes. MEI stands for both the XML-based score format in itself (.mei), and the community that develops it. Citing from the MEI website's introduction:
+The .mei format is the one that is essential for this thesis and the most useful for \ac{MIR} purposes. \ac{MEI} stands for both the \ac{XML}-based score format in itself (.mei), and the community that develops it. Citing from the \ac{MEI} website's introduction:
 
-``The Music Encoding Initiative (MEI) is a community-driven, open-source effort to define a system for encoding musical documents in a machine-readable structure. MEI brings together specialists from various music research communities, (...) to define best practices for representing a broad range of musical documents and structures.''\cite{MEI-Website}
+``The Music Encoding Initiative (\ac{MEI}) is a community-driven, open-source effort to define a system for encoding musical documents in a machine-readable structure. \ac{MEI} brings together specialists from various music research communities, (...) to define best practices for representing a broad range of musical documents and structures.''\cite{MEI-Website}
 
-Important to note that MEI focuses on a "machine-readable structure". This structure relies on unique identifiers (@xml:id) that make every element in the score individually addressable, from individual noteheads to complex spanning elements like slurs and ties. However, more than a music score format, MEI also serves to keep various notation, performance and interpretation data not only stored but also linked to individual score elements. This is why the MEI format and it's community are so essential to MIR as a whole. 
+Important to note that \ac{MEI} focuses on a "machine-readable structure". This structure relies on unique identifiers (@xml:id) that make every element in the score individually addressable, from individual noteheads to complex spanning elements like slurs and ties. However, more than a music score format, \ac{MEI} also serves to keep various notation, performance and interpretation data not only stored but also linked to individual score elements. This is why the \ac{MEI} format and it's community are so essential to \ac{MIR} as a whole. 
 
-That being said, MEI is a purely data driven project, and thus in order for it to be visualized or interacted with it needs to be decoded into a "human-readable format". Thats where Verovio comes in. The MEI and Verovio projects are closely inter-linked for that reason. While MEI defines how musical information is stored, Verovio is the primary tool used to transform that data into interactive visualizations and performance-ready outputs. 
+That being said, \ac{MEI} is a purely data driven project, and thus in order for it to be visualized or interacted with it needs to be decoded into a "human-readable format". Thats where Verovio comes in. The \ac{MEI} and Verovio projects are closely inter-linked for that reason. While \ac{MEI} defines how musical information is stored, Verovio is the primary tool used to transform that data into interactive visualizations and performance-ready outputs. 
 
-Verovio is a comprehensive open-source library designed to serve as a native typesetting engine for the MEI format. Verovio's primary role is to engrave MEI data directly into SVG without losing rich metadata through intermediate format conversions. The choice for making it into an SVG is an essential one for multiple reasons, quoting from Verovio's reference book:
+Verovio is a comprehensive open-source library designed to serve as a native typesetting engine for the \ac{MEI} format. Verovio's primary role is to engrave \ac{MEI} data directly into \ac{SVG} without losing rich metadata through intermediate format conversions. The choice for making it into an \ac{SVG} is an essential one for multiple reasons, quoting from Verovio's reference book:
 
 ``In a web environment, the addressability can be used for highlighting graphical elements such as notes or any other music symbols. One additional characteristic of SVG is that its XML tree can be structured as desired, and an innovative design feature of Verovio was to go further in the structuring of the output by leveraging this characteristic. Since Verovio implements the MEI structure internally, this key feature of SVG made it possible to preserve the MEI structure in the design of the SVG output in Verovio. Preserving the MEI structure in the SVG output is a considerable overhead in the rendering process but makes it a unique feature of Verovio.
 

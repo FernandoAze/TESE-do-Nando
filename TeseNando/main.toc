@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {2.2}Visualization Types}{4}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Sheet Music and Score Images}{4}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Symbolic Representations}{5}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Audio Representations}{6}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Audio Representations}{7}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}MIR Visualization Tools}{12}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Audio-to-Score Alignment}{13}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Summary}{14}{section.2.5}%
@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {3.2}Developed Iterations}{16}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}BeatMapJS}{17}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}MEI-Basic-Edit}{17}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}BeatPrecision, a PP fork}{17}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}BeatPrecision, a \ac {PP} fork}{17}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Score-Alignment.py}{18}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Score-Alignment.js}{18}{subsection.3.2.5}%
 \contentsline {section}{\numberline {3.3}LayerIt!}{19}{section.3.3}%
@@ -40,4 +40,4 @@
 \contentsline {section}{\numberline {5.1}Achievements}{29}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Future Work}{30}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Final Remarks}{32}{section.5.3}%
-\contentsline {chapter}{References}{33}{section*.19}%
+\contentsline {chapter}{References}{33}{section*.40}%
