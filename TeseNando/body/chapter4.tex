@@ -19,7 +19,9 @@ LayerIt provides tools for visualizing BT/BA relevant data, therefore in it's cu
 \texttt{.npz} &  File with algorithmic BT data\\
 \hline
 \end{tabular}
-\end{table}
+\caption[Required files for LayerIt]{Files required by LayerIt to generate complete visuals.}
+\label{tab:required-files}
+\end{table} 
 
 \subsection{Getting the Warped Score}
 The warped score can be generated using the \href{https://iwk-digital.github.io/scorewarp/}{ScoreWarp online demo}.  In it, one needs to upload the score in .mei format and the MAPS file in order to download the score in svg format. 
@@ -33,13 +35,13 @@ The first is the one described in \cite{goeblLetsScoreWarpAgain2025a}, using the
 
 The MAPS file is at it's core a .json file, and for the purposes of the current LayerIt version, it needs to provide the score's and performance onset data in the following manner:
 
-\begin{verbatim}
+\begin{lstlisting}[caption={Minimal structure of the MAPS.json file to work with LayerIt and ScoreWarp},label={lst:simple-MAPS-example}]
 {
     "obs_mean_onset": 0.853333333,
     "xml_id": ["x1iw1eq1"],
     "obs_num": 1
 }
-\end{verbatim}
+\end{lstlisting}
 
 \noindent Where: 
 
@@ -73,7 +75,7 @@ In @src/functions/Beat\_Layers, the function ``\textit{Run\_BeatThis()}'' genera
 \texttt{detected\_downbeats} & Discrete downbeat positions from peak detection \\
 \hline
 \end{tabular}
-\end{table}
+\end{table} \label{tab:npzStructure}
 
 The probabilistic fields capture the algorithm's internal confidence across time, while the detected positions represent the final beat assessments. This separation enables visualization of both the continuous confidence landscape and discrete beat estimates.
 
@@ -125,9 +127,9 @@ In \autoref{fig:VisualAlignedLayersExample} we can see two distinct visualizatio
 Side note: \autoref{fig:VisualAlignedLayersExample} is a particularly good example that demonstrates the capability of this kind of visualization for annotation and evaluation for BT purposes. On the top example we can see that BeatThis misses some beats and downbeats. However, on the bottom one, we can see that the model actually shows probability peaks that widely correspond to the actual beat positions. This type of visualization shows a concrete example for evaluating (in this case) the BeatThis model that SV simply cant provide in this way. For annotation purposes we could use this kind of visualization to effectively see missing or wrongly annotated beats/downbeats.
 
 \subsection{SVG Level}
-This refers to the way LayerIt organizes the XML structure of the SVG. Where each layer (combined or individual layers) follow a structured and organized approach. The following example shows a simplified excerpt from the XML from the same SVG shown in  \autoref{fig:VisualAlignedLayersExample}:
+This refers to the way LayerIt organizes the XML structure of the SVG. Where each layer (combined or individual layers) follow a structured and organized approach. The following listing shows a simplified representation from the XML from the same SVG shown in  \autoref{fig:VisualAlignedLayersExample}:
 
-\begin{verbatim}
+\begin{lstlisting}[caption={Example structure of an SVG file},label={lst:svg-example}]
 <svg>
 |   <Top Visualization>
 |   |   <Layers>
@@ -144,27 +146,79 @@ This refers to the way LayerIt organizes the XML structure of the SVG. Where eac
 |   |   <Score>
 |   |   <timeAxis>
 </svg>
-\end{verbatim}
+\end{lstlisting}
 
 This kind of XML organization makes it easier to manipulate the SVG directly through it's embedded code. This allows for another level of visualization customization (through directly changing the XML text) and also should make it more simple to be accessed via code-based solutions, easing the integration with other projects while also maintaining the SVG readability.  Yet once again, we can see our layer based organization method in action, where elements are put inside each other at the XML level as well. 
 
 \subsection{Code Level}
-At this level we refer to the actual OO architecture of the codebase. \autoref{fig:OO_Aproach} shows a simplified block diagram of the code used to generate \autoref{fig:VisualAlignedLayersExample}. 
 
+At this level we refer to the actual OO architecture of the codebase. LayerIt's OO architecture is built on a principle of modular composability: each visualization component is a self-contained, reusable module that adheres to a consistent interface. This enables the same "layers within layers" philosophy that characterizes the visual and SVG levels to emerge naturally at the code level. The following snippets illustrate the code-level contract (base abstraction), the Visualizer composition API, and a short end-to-end workflow.
+
+Listing \ref{lst:layer-base} shows the `Layer` base-class interface (illustrative). For clarity the required imports are included.
+
+\begin{lstlisting}[caption={Layer interface (concise)},label={lst:layer-base}]
+class Layer(ABC):
+  def __init__(self, name: str = "Layer"):
+    self._data = None
+    self.name = name
+
+  @abstractmethod
+  def load_data(self, **kwargs) -> bool:
+    ...
+
+  @abstractmethod
+  def draw(self, ax, shared_data) -> tuple:
+    ...
+\end{lstlisting}
+
+At the base, a Visualizer instance composes multiple lower-level layers, which may represent data plots or audio representations, and a shared data dictionary is passed between them through load_all_layers(). The next listing (\ref{lst:visualizer-api}) shows how a Visualizer instance should be instantiated.
+
+\begin{lstlisting}[caption={Visualizer Instance Composition},label={lst:visualizer-api}]
+# Creating a visualizer and composing layers
+visual_layer1 = Visualizer()
+
+# Add multiple layers - they're composable
+visual_layer1.add_layer(BeatProbabilityLayer(color=(1, 0, 0)))
+visual_layer1.add_layer(DownbeatProbabilityLayer(color=(0, 0, 1)))
+# ... 
+
+# Load all data and render the combined layers
+visual_layer1.load_all_layers(audio_path="performance.wav", 
+              beat_file="beats.npz")
+fig, ax = visual_layer1.draw()
+\end{lstlisting}
+
+After this, each Visualizer instance can be rendered to an SVG. At this stage, Visualizer outputs are still Matplotlib figures and can be displayed directly with .show(). However, if they are to be combined with other Visualizer instances, they first need to be exported to SVG. This intermediate SVG layer allows the aligned score to be added on top of each visualization, producing a higher-level composite that can then be stacked with other rendered SVGs to create the final aligned view. The following listing shows exactly that. 
+
+\begin{lstlisting}
+# Turn the Visualizer into SVG and aligned it to the warped score
+SVGLayer1 = visual_layer1.turn_to_SVG("Output/Path/And/Filename", svg_warped_score)
+SVGLayer2 = visual_layer2.turn_to_SVG("Output/Path/And/Filename", svg_warped_score)
+
+# Add Score to a given SVG Layer
+SVGLayer1_withScore = visual_layer1.combine_layers_with_score(filename, svg_warped_score)
+
+# Create the final SVG with each SVGLayer Stacked and place their relative vertical positions.
+EndVisualization = Visualizer()
+svg_layers_to_combine = [(SVGLayer1_withScore, 50),(SVGLayer1, 200), (SVGLayer2, 350) ...]
+EndVisualization.create_final_SVG(width, height, (...), svg_layers_to_combine)
+
+\end{lstlisting}
+
+This methodology of employing ``svg_layers_to_combine=[]'' makes it so just like with the lower level, Visualizer() instances, layers can be overpositioned or stacked vertically, once again, employing a level of visualization costumization on top emphasizing yet again the "Layers within Layers" philpsophy that is so central to LayerIt. 
+
+ \autoref{fig:OO_Aproach} shows a simplified block diagram of the code used to generate \autoref{fig:VisualAlignedLayersExample}. 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{figures/LayerItExamples/OO Architecture.png}
   \caption{Simplified Block Diagram for generating \autoref{fig:VisualAlignedLayersExample}. Demonstrating the different levels for generating the combined aligned visuals, colored boxes show different levels of visualizations. Note that the beige boxes labeled "Matplot spectrogram visualization" refers to the same PNG element that is being called within the same script that is generating the whole visualization.}
   \label{fig:OO_Aproach}
 \end{figure} 
-% ============================================================================
-%Paragrafos gerados pela AI, tou com sono, para já vou deixalos, depois revejo. 
-LayerIt's OO architecture is built on a principle of modular composability: each visualization component is a self-contained, reusable module that adheres to a consistent interface. This enables the same "layers within layers" philosophy that characterizes the visual and SVG levels to emerge naturally at the code level.
 
 The architecture defines an abstraction that all visualization components must follow, ensuring they are interchangeable and can be freely composed together. A central orchestrator manages the composition of these components, handling their data loading, rendering, and integration into a unified visualization. This design allows developers to create new visualization types independently, following the same interface contract, without requiring changes to the core composition logic.
 
 The modular nature of this approach directly supports LayerIt's goal of being easily integrated into other MIR projects. New visualization types can be added without modifying existing code, and different combinations of layers can be composed to generate diverse visualizations from the same underlying data. This architecture therefore balances practical functionality with the extensibility requirements outlined in \autoref{chap:chap3}, ensuring that LayerIt can serve as a foundation for future MIR visualization frameworks.
-% ============================================================================
+
 \pagebreak
 \section{Chapter Conclusion}
 % One of the main arguments of this thesis is that LayerIt also provides a framework that can support modern MIR visualizations, while offering an architecture designed for future integration with other MIR applications.
@@ -172,7 +226,7 @@ The modular nature of this approach directly supports LayerIt's goal of being ea
 % ============================================================================
 %Paragrafos gerados pela AI, tou com sono, para já vou deixalos, depois revejo. 
 
-This chapter presented LayerIt, a system for generating time-aligned visualizations of audio recordings, music scores, and algorithmic data. We demonstrated how LayerIt addresses the core challenge of integrating multiple data modalities (i.e., audio, symbolic notation, and beat tracking outputs) into cohesive visualizations suitable for beat annotation and beat tracking evaluation tasks.
+This chapter presented LayerIt, a system for generating time-aligned visualizations of audio, music scores, and algorithmic data. We demonstrated how LayerIt addresses the core challenge of integrating multiple data modalities (i.e., audio, symbolic notation, and beat tracking outputs) into cohesive visualizations suitable for beat annotation and beat tracking evaluation tasks.
 
 A central contribution of this chapter is the articulation of LayerIt's design philosophy: the ``layers within layers'' approach, which manifests consistently across three complementary levels. At the \textbf{visual level}, independent visualization components are composed into higher-order visualizations. At the \textbf{SVG level}, this compositionality is preserved in the XML structure, enabling direct manipulation and external integration. Critically, at the \textbf{code level}, the same principle is realized through an object-oriented architecture based on modular abstraction and composability, where visualization components adhere to a shared interface and can be freely combined without modification to the core orchestration logic.
 

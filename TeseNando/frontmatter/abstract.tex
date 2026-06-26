@@ -1,30 +1,18 @@
-%% abstract.tex: abstract in PT and EN  (FEUP regulations)
-%% -------------------------------------------------------
-% \chapter*{Resumo}
-% ...Abstract in Portuguese...
-% \vspace{\fill}
-% \begin{flushleft}
-% {\Large \textbf{Palavras-chave}:} 
-% keyword1 \(\bullet\) 
-% keyword2 \(\bullet\)
-% keyword3 \(\bullet\)
-% keyword4
-% \end{flushleft}
-% \vspace*{24mm}
-
-% \acresetall %% to reset the acronym usage
 
 \chapter*{Abstract}
 
-\ac{MIR} visualization tools play a crucial role in music analysis, annotation, and interactive music applications. Accurate visual representation of audio and algorithmic outputs is essential for the evaluation, analysis, and annotation of \ac{MIR} tasks. This thesis develops LayerIt, a Python‑based object-oriented (\ac{OO}) tool that combines established \ac{MIR} resources. The developed project emphasize modularity and reusability, the design defines clear object boundaries for data sources, score aligned visualization layers, simplifying the addition of new data types and comparison modes. Visuals are exported as \ac{SVG} to allow further customization and future integration with web or interactive tools. As a validation case, we use LayerIt to visualize and compare beat tracking outputs, demonstrating how score aligned visualizations support analysis and evaluation of annotated and algorithmic \ac{MIR} data. The project is presented as a foundation for further development toward a mature framework for specialized \ac{MIR} visualizations.
+\ac{MIR} visualization tools play a crucial role in music analysis, annotation, and evaluation, but existing solutions often make it difficult to combine audio, symbolic scores, and algorithmic outputs in a single, time-aligned view. This thesis presents LayerIt, a Python-based object-oriented (\ac{OO}) framework for generating custom score-aligned \ac{MIR} visualizations by combining established libraries and tools, including librosa, matplotlib, Modusa, ScoreWarp, and BeatThis. LayerIt is built around a modular layer-composition model in which data sources, audio plots, score renderings, and algorithmic outputs are treated as independent components that can be assembled into tailored visualizations. The resulting figures are exported as \ac{SVG}, enabling resolution-independent output, post-processing, and future integration with web-based or interactive applications. As a validation case, LayerIt is used to visualize beat tracking results alongside aligned score and audio representations, showing how the framework supports both beat annotation and beat tracking evaluation through discrete beat estimates and continuous confidence curves. More broadly, the project demonstrates a reusable foundation for future specialized \ac{MIR} visualization workflows.
 
 \vspace{\fill}
 \begin{flushleft}
 {\Large \textbf{Keywords}:} 
-keyword1 \(\bullet\) 
-keyword2 \(\bullet\)
-keyword3 \(\bullet\)
-keyword4
+Music Information Retrieval \(\bullet\)
+Visualization \(\bullet\)
+Audio-to-Score Alignment \(\bullet\)
+Beat Tracking \(\bullet\)
+SVG \(\bullet\)
+Object-Oriented \(\bullet\)
+Python
 \end{flushleft}
 \vspace*{24mm}
 

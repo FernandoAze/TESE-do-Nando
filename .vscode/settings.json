@@ -2,5 +2,9 @@
     "cSpell.words": [
         "mscx",
         "mscz"
+    ],
+    "cSpell.ignoreWords": [
+        "abstractmethod",
+        "kwargs"
     ]
 }
