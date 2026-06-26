@@ -1,0 +1,16 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of an audio waveform.}}{7}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of audio Spectrum.}}{8}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of Linear spectrogram.}}{9}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Logarithmic spectrogram.}}{9}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of Mel spectrogram.}}{10}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a CQT.}}{11}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example a Chromagram.}}{11}{figure.caption.28}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Composition of LayerIt visualization system. Each colored box represents a distinct visual element that compose higher-level visualizations.}}{25}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LayerIt generated visualization example for comparing the end output of BeatThis (on top) and the probability layer (at the bottom). In blue downbeats, in red beats and the doted white lines show onsets.}}{26}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Complete LayerIt workflow: from Visualizer composition to final stacked SVG visualization. The diagram shows how multiple visualization layers are created independently, exported to SVG format, combined with the warped score, and finally stacked vertically with defined y-offsets to produce the final custom composite visualization.}}{29}{figure.caption.39}%
+\addvspace {10\p@ }

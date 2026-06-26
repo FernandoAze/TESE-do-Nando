@@ -1,16 +1,6 @@
 %Devia mudar o nome deste capitulo
 \chapter{Developed Solution}\label{chap:chap3}
-
-% Este capítulo deve começar por fazer uma apresentação detalhada do problema a resolver podendo mesmo, 
-% caso se justifique, constituir-se um capítulo separado só com essa finalidade.
-% Defining the problem
-% Defining the proposed solution
-% Developed solution: Tool for generating custom visualizations that present beat data, spectrogram and score all aligned. 
-% System Architecture: Python based tool, that employs a modular and Object Oriented architecture for generating the visualizations.
-
-% Choices made and why
-% \section{Introduction}
-This chapter is dedicated to presenting and contextualizing the problem we chose to tackle and the subsequent solution we developed to address it. %We'll lay out the different iterations we passed through, since each provided insights that led to the core conclusions and value proposition of the thesis.
+This chapter is dedicated to presenting and contextualizing the problem we chose to tackle and the subsequent solution we developed to address it. 
 
 The chapter begins by laying out the core problem and a brief presentation of the solution developed. After that, we'll present chronologically, the different project iterations we passed through, covering their motivations, achievements, why they were dropped and conclusions taken. Understanding where we came from provides essential context not only for this thesis, but also for understanding the core purpose and value statement of LayerIt.
 
@@ -78,19 +68,6 @@ While not fully functional, the application showed promise. However, we made a d
 
 \pagebreak
 \section{LayerIt!}
-% Purpose and Scope
-% What LayerIt is and what problem it solves.
-% System Overview
-% How the codebase works at a high level.
-% Visualization Pipeline
-% librosa, matplotlib, ScoreWarp, and SVG output.
-% Design Rationale
-% Why the architecture and format choices were made.
-% Extensibility
-% Why the codebase was designed for future integration.
-
-%N sei que fazer a isto mas n quero apagar para já...
-% Since this thesis started with a focus on beat annotation, we developed the tool with a beat visualization use case in mind. However, we think that the developed program could be useful to be integrated for other MIR purposes, beat annotation and visualization were just our starting points. By itself, the codebase also does not have any user interaction provided, we focused on the visualization task. Yet, the codebase was designed with future development/integration in mind. A GUI or a web-based solution being examples of possible future iterations or projects using LayerIt. 
 
 %Este paragrafo está a mais???
 It was only by mid April 2026 that LayerIt started being developed. LayerIt, is intended to be a Python \ac{OO} tool for visualizing recorded performances synchronized with the corresponding music score in a time-aligned manner. This tool allows for custom made visualizations of audio recordings where visual elements are treated as independent layers that can be copied, moved and combined in order to develop custom visualizations. 
@@ -112,8 +89,6 @@ That being said, because \ac{SVG} is a text markup format, it can be easily acce
 Our main goal is that, this codebase may be easily integrated into other relevant projects to generate visualizations. Hence why we developed it as a Python Based 00 tool that is based on commonly used \ac{MIR} libraries such as librosa and matplotlib. This way, community integration and development is eased. 
 
 \section{Chapter Summary}
-% AI generated section with prompt "Im trying to write a chapter summary can you provide me with a summary sugestion text?" com ligeira alteração.
-%Acho que compre bem o objetivo vou deixar assim para já pelo menos.
 In this chapter, we presented LayerIt, a Python-based OO tool designed to address a critical gap in the MIR community: the lack of a unified framework for generating time-aligned visualizations of audio, music scores, and algorithmic data. We began by identifying the core problem—that researchers face a disconnect between modern GUI tools like SV and programming-based workflows, forcing many to develop \textit{ad hoc} solutions for visualization tasks. 
 
 We traced the development journey of LayerIt through five distinct iterations, each providing valuable insights that shaped the final solution and thesis theme. From web-based beat annotation (BeatMapJS and Score-Alignment.js) and interactive score editing (MEI-Basic-Edit), to attempts at extending existing frameworks (BeatPrecision) and a Python-based approach (Score-Alignment.py), we learned critical lessons about the distinction between interaction design and visualization challenges. This iterative process led us to focus exclusively on the visualization aspect, resulting in a Python-based, modular architecture that prioritizes extensibility and community integration.
