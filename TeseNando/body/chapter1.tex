@@ -1,0 +1,69 @@
+\chapter{Introduction} \label{chap:intro}
+\section{Contextualization}
+%MIR intro
+MIR is a research field that develops computational methods to analyze, interpret, and retrieve musical information from performance recordings and symbolic representations. MIR bridges a wide range of disciplines, including musicology, signal processing, machine learning, and human-computer interaction. As a data-intensive field, visualization plays a crucial role in MIR research, the how and what is visualized, shapes the conclusions we draw and guides further progress.
+
+%The MIR visualization challenge
+The challenge of visualization in MIR is particularly significant because music is an inherently abstract and subjective medium. Translating music into the visual domain is a problem that spans millennia; throughout history, multiple systems of musical notation have been developed in attempts to capture sound in written form, yet this remains an evolving challenge. For MIR purposes, this means that musical data comes in a variety of forms: from audio recordings, to symbolic scores, to annotations of expressive qualities. Each of these require different visual approaches. An audio visualization such as a waveform or spectrogram reveals how a performance sounds, while a musical score conveys how a piece should be performed; both serve distinct and important purposes for different research tasks.
+
+\section{Motivation}
+% MIR Visualization Problem Motivation intro 
+MIR research increasingly demands visualizations that integrate multiple modalities simultaneously. MIR researchers often need to inspect algorithmic outputs alongside audio representations and symbolic scores in a time-coherent manner. This kind of multi-modal, time-aligned visualization is central to both the evaluation of MIR algorithms and the development of annotation workflows. Audio-to-Score Alignment (i.e., the task of synchronizing a performance recording with its corresponding symbolic score) is a key enabler of this type of visualization, as it provides the temporal anchor needed to align heterogeneous data sources into a unified view.
+
+% Focus on BT/BA
+This thesis was initiated by two closely related challenges within Beat Tracking (BT) and Beat Annotation (BA) research. Contemporary BT systems are predominantly deep learning-based thus, the field is deeply reliant on tools to enable better execution of annotation and evaluation tasks, these are essential for advancing BT research. 
+
+Annotation tasks, and more concretely BA itself, remain a laborious and time-consuming process. Existing Graphical User Interface (GUI) tools such as Sonic Visualizer present a clear gap in this area: integrating newer state-of-the-art BT algorithms is difficult, and BA specific features have seen little meaningful innovation. This disconnect between annotation workflows and the algorithms they are meant to support is a concrete obstacle to progress in both domains.
+
+% Evaluation Challenge
+For evaluation tasks, GUI tools suffer from a similar problem, where methods to visualize how developed algorithms perform on a deeper level are lacking. Providing better tools to evaluate and compare models between each other is also key to improving them.
+
+% Stating the SV problem
+Although solutions like Sonic Visualizer are powerful and widely used, their development cannot keep pace with the modern MIR research needs. Integrating new algorithms or producing specialized visualizations is often impractical within them. A particularly under served case is the visualization of score-aligned data: combining audio and data representations with a musical score typically involves manual image manipulation, with no unified methodology in the community. 
+
+Because of these reasons, researchers frequently resort to \textit{ad hoc} solutions that lack reproducibility and are difficult to share or extend, a fragmentation that represents a real obstacle to the collaboration which MIR research depends on. By contributing a flexible, extensible, and community-oriented visualization tool built on established libraries, this thesis aims to not only address an immediate practical gap, but also to establish a foundation for a framework that can support the growing complexity and interdisciplinarity of MIR research.
+
+%Bridge to RQ and objectives
+All of the concerns described in this section serve as a basis for the objectives and research questions we explicitly present in the following section.
+
+\section{Objectives, Research Questions and Contributions} %Acresntar texto a ir mais fundo sobre cada objetivo e RQ.
+This thesis is guided by three objectives, which in turn lead to three research questions and a set of concrete contributions.
+
+\begin{itemize}
+    \item \textbf{Objective 1}: Develop a reusable Python framework for composing score-aligned MIR visualizations based on an object-oriented layer-composition model.
+    
+    \item \textbf{Objective 2}: Demonstrate that the framework supports visualization workflows that are difficult or impractical with current MIR tools.
+    \item \textbf{Objective 3}: Assess the usefulness of the framework for beat annotation and beat-tracking evaluation workflows.
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{RQ1}: How can heterogeneous MIR visualizations be combined into a common score-aligned representation?
+    \item \textbf{RQ2}: To what extent does the proposed framework simplify the creation, modification, and extension of score-aligned visualizations compared with manual SVG editing, Sonic Visualizer, and Piano Precision?
+    \item \textbf{RQ3}: How can score-aligned visualizations support beat annotation and beat-tracking evaluation workflows, and under what conditions does that support break down?
+\end{itemize}
+
+The main contributions of this thesis are the following:
+\begin{itemize}
+    \item The LayerIt framework for composing score-aligned MIR visualizations through an object-oriented layer-composition model.
+    \item The release of LayerIt as an open-source, pip-installable Python library.
+    \item The open-source repository containing the five prototype visualizations developed as part of this work.
+    \item A Late-Breaking Demo paper submitted to ISMIR 2026.
+\end{itemize}
+
+The contribution is therefore the layer-composition framework and the figures it enables, rather than the alignment method itself, which is provided by ScoreWarp.
+
+\section{Developed Project} 
+To address the previously mentioned objectives and RQ, we developed LayerIt!, a Python-based object-oriented framework for composing score-aligned MIR visualizations. LayerIt integrates established MIR libraries and tools into an SVG-based workflow in which visual elements are treated as independent layers that can be composed, reordered, and combined into custom figures.
+
+At its core, LayerIt supports the integration of symbolic scores with audio and algorithmic data in a single view. By relying on ScoreWarp for temporal alignment, it makes it possible to overlay spectrograms, onset information, and beat-tracking outputs on top of score representations within the same visualization. The result is a flexible layer-composition model that supports the prototypes developed in this thesis and provides a foundation for future MIR visualization workflows.
+
+\section{Thesis Structure}
+
+The remainder of this thesis is organized as follows:
+\begin{itemize}
+    \item \textbf{Chapter~\ref{chap:sota}} provides a literature review covering the main audio visualization types, along with existing \ac{GUI} and code-based visualization tools, and the task of Audio-to-Score Alignment.
+    \item  \textbf{Chapter~\ref{chap:Methodology}} presents the adopted methodology in detail. Followed by a description of the five iterative phases the project took before culminating in the development of LayerIt!. 
+    \item \textbf{Chapter~\ref{chap:DesignAndImplementation}} describes the design and implementation of LayerIt, everything from a detailed description of the problem and solution we developed along side with some broad technical descriptions and the crucial ``layers within layers'' philosophy that underlines LayerIt!'s design and usage. %This one may become split into 2 chapters...
+    \item \textbf{Chapter~\ref{chap:Validation}} is dedicated to the describing the validation of this thesis and project. This chapter should give some closure to the RQ that are outlined in this introduction chapter.
+    \item  \textbf{Chapter~\ref{chap:conclusion}} reflects on the achievements of the thesis and outlines directions for future work.
+\end{itemize} 
