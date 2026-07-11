@@ -6,5 +6,8 @@
     "cSpell.ignoreWords": [
         "abstractmethod",
         "kwargs"
-    ]
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "gs": true
+    }
 }
