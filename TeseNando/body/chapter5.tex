@@ -2,6 +2,19 @@
 \section{Validation Approach}
 \section{Reproducing Composite Figure Types (RQ1)}
 \section{Workflow Comparison: Annotation and Evaluation (RQ2, RQ3)}
+\textbf{======= Section INCOMPLETE/UNREVISED =======}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{figures/LayerItExamples/AlignedSegmentExample.png}
+  \caption{LayerIt generated visualization example for comparing the end output of BeatThis (on top) and the probability layer (at the bottom). In blue downbeats, in red beats and the doted white lines show onsets.}
+  \label{fig:VisualAlignedLayersExample}
+\end{figure} 
+
+In \autoref{fig:VisualAlignedLayersExample} we can see two distinct visualizations of the same recording. Both have distinct data layers that compose the top and bottom visualizations of the same performance, the top one provides onset and BeatThis unaltered output. The bottom one, shows BeatThis assessment of a frame-by-frame curve with the beat positions probability. Visually we can identify multiple layers that compose the individual visualizations: the spectrogram layers, score layers and respective data layers, we can also identify the two upper-level aligned layers that compose the whole example image. 
+
+\autoref{fig:VisualAlignedLayersExample} is a particularly good example that demonstrates the capability of this kind of visualization for annotation and evaluation for BT purposes. On the top example we can see that BeatThis misses some beats and downbeats. However, on the bottom one, we can see that the model actually shows probability peaks that widely correspond to the actual beat positions. This type of visualization shows a concrete example for evaluating (in this case) the BeatThis model that SV simply cant provide in this way. For annotation purposes we could use this kind of visualization to effectively see missing or wrongly annotated beats/downbeats.
+}
+
 \section{Extensibility Probe (RQ2)}
 \section{Limitations and Difficult Cases (RQ2, RQ3)}
 \section{Summary}
