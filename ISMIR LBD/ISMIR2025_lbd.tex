@@ -26,7 +26,7 @@
 % Title. Please use IEEE-compliant title case when specifying the title here,
 % as it has implications for the copyright notice
 % ------
-\title{Paper template for ISMIR \conferenceyear\ LBD}
+\title{LayerIt: A Python Framework for Score-Aligned MIR Visualizations}
 
 % Note: Please do NOT use \thanks or a \footnote in any of the author markup
 
@@ -77,171 +77,44 @@
 \maketitle
 %
 \begin{abstract}
-The abstract should be placed at the top left column and should contain about 150-200 words. LBD submissions are submitted as extended abstracts and \textcolor{red}{should not be anonymized}. Please note that extended abstract is not a conference paper. Therefore, it will not be part of the official ISMIR \conferenceyear\ proceedings, and should not be cited as such.
+MIR visualization tools play a crucial role in music analysis, annotation, and evaluation, but existing solutions often make it difficult to combine audio, symbolic scores, and algorithmic outputs in a single, time-aligned view. This thesis presents LayerIt!, a Python-based object-oriented framework for generating custom score-aligned MIR visualizations by combining established libraries and tools, including librosa, matplotlib, Modusa, ScoreWarp, and BeatThis. LayerIt is built around a modular layer-composition model in which data sources, audio plots, score renderings, and algorithmic outputs are treated as independent components that can be assembled into tailored visualizations. The resulting figures are exported as SVG, enabling resolution-independent output, post-processing, and future integration with web-based or interactive applications. As a validation case, LayerIt is used to visualize beat tracking results alongside aligned score and audio representations, showing how the framework supports both beat annotation and beat tracking evaluation through discrete beat estimates and continuous confidence curves. More broadly, the project demonstrates a reusable foundation for future specialized MIR visualization workflows.
 \end{abstract}
 %
 \section{Introduction}\label{sec:introduction}
+MIR increasingly depends on visualizations that combine multiple modalities in a single time reference. Researchers often need to inspect symbolic scores, audio representations, and algorithmic output together, but existing workflows typically rely on \textit{ad hoc} image editing or GUI tools that are not designed for flexible figure composition. This is especially visible in audio-to-score alignment, where the value of the alignment is not only the algorithmic result itself, but also the ability to present it in a way that is readable, reproducible, and easy to revise.
 
-This template includes all the information about formatting Late-Breaking Demo manuscripts for the ISMIR \conferenceyear\ Conference. Please follow these guidelines to give the final proceedings a uniform look. Most of the required formatting is achieved automatically by using the supplied
-style file (\LaTeX) or template (Word).
-If you have any questions, please contact the Program Committee (\texttt{ismir\conferenceyear-papers@ismir.net}).
-This template can be downloaded from the ISMIR \conferenceyear\ web site (\texttt{http://ismir\conferenceyear.ismir.net}).
-%
-\section{Paper Length \& File Size}
-We adopt a ``(2+1)-page policy'' for Late-Breaking Demo (LBD) papers in ISMIR \conferenceyear. That is, LBD papers are extended abstracts that may have a maximum of 2 pages of technical content (including figures and tables) \textcolor{red}{with one optional page that contains only references and acknowledgments.}
+This Late-Breaking Demo presents LayerIt!, the visualization framework developed in my thesis. The project grew out of a broader investigation into beat tracking and beat annotation, but the final contribution is not a new alignment algorithm. Instead, it is a reusable visualization layer that makes score-aligned MIR figures easier to build and extend. The framework is meant to complement existing tools such as Piano Precision, which demonstrated the usefulness of score-aware GUI workflows, while shifting the emphasis toward programmable, publication-ready visual composition \cite{jiangPIANOPRECISIONADVANCING2025}.
 
-Paper should be submitted as PDFs and the \textcolor{red}{file size is limited to 10MB}. Please compress images and figures as necessary before submitting.
+\section{Motivation}
+MIR research increasingly depends on visualizations that integrate multiple modalities in a single time reference. Researchers often need to inspect algorithmic outputs alongside audio representations and symbolic scores in a time-coherent manner, and this kind of multi-modal visualization is central to both interpretation and analysis. Audio-to-Score Alignment provides the temporal anchor that makes this possible by synchronizing a performance recording with its corresponding symbolic score, allowing heterogeneous data sources to be aligned into one unified view.
 
-\section{Page Size}\label{sec:page_size}
+The challenge is that these visualizations are often assembled through manual editing or tool-specific workarounds. Static figures can be informative, but they are difficult to revise when the underlying data changes, and they rarely preserve a clear relationship between the different visual layers. Existing GUI tools are useful for inspection, yet they are not designed for flexible composition of score-aligned views that combine plots, score renderings, and derived data in a reusable way. As a result, researchers frequently rely on 	extit{ad hoc} methods that are hard to reproduce and hard to adapt.
 
-The proceedings will be printed on
- \underline{portrait A4-size paper} \underline{(21.0cm x 29.7cm)}.
-All material on each page should fit within a rectangle of 17.2cm x 25.2cm,
-centered on the page, beginning 2.0cm
-from the top of the page and ending with 2.5cm from the bottom.
-The left and right margins should be 1.9cm.
-The text should be in two 8.2cm columns with a 0.8cm gutter.
-All text must be in a two-column format.
-Text must be fully justified.
+LayerIt was developed to address this gap by making score-aligned MIR visualizations more composable, reusable, and easier to adapt to changing data and research needs. The goal is not to replace the underlying alignment or analysis methods, but to provide a visual framework that lets those methods be presented in a clearer and more maintainable way.
 
-\section{Typeset Text}\label{sec:typeset_text}
+\section{LayerIt Framework}
 
-\subsection{Normal or Body Text}\label{subsec:body}
+LayerIt is an object-oriented Python framework that treats each visualization component as a layer with a common interface. A layer can load its own data, draw itself, and be combined with other layers into a higher-level figure. In practice, the framework relies on Librosa and Matplotlib for audio and data visualizations, Modusa for additional MIR-related plots, and ScoreWarp for the warped score that provides the common time axis \cite{mcfeeLibrosaLibrosa01102025,thematplotlibdevelopmentteamMatplotlibVisualizationPython2026,modusa,goeblLetsScoreWarpAgain2025a}.
 
-Please use a 10pt (point) Times font. Sans-serif or non-proportional fonts
-can be used only for special purposes, such as distinguishing source code text.
+The key design choice is SVG composition. ScoreWarp already outputs the score as SVG, which preserves the semantic structure of the score while shifting note positions to the performance timeline. LayerIt uses that SVG timeline as the anchor for other visual layers. Raster layers, such as spectrograms, can be embedded when needed, while vector-based layers keep their resolution when the figure is scaled. This makes the framework suitable for publication figures, where reproducibility and visual fidelity both matter.
 
-The first paragraph in each section should not be indented, but all other paragraphs should be.
+The system was designed around a small set of practical inputs: a performance audio file, an MEI score, the alignment data that links score elements to time, and optional model output such as beat probabilities or detected beats. Those inputs are transformed into composable elements that can be stacked vertically, reordered, or combined into a single composite visualization. This makes the output more maintainable than a manually edited figure and more expressive than a single-purpose GUI screenshot.
 
-\subsection{Title and Authors}
+\section{Demo Workflow}
 
-The title is 14pt Times, bold, caps, upper case, centered.
-\textcolor{red}{Note that LBD screening process is single-blind, and the authors' names should not be anonymized.}
-Authors' names are centered.
-The lead author's name is to be listed first (left-most), and the co-authors' names after.
-If the addresses for all authors are the same, include the address only once, centered.
-If the authors have different addresses, put the addresses, evenly spaced, under each authors' name.
+The demo shows how LayerIt supports two related MIR workflows. First, it can generate beat annotation figures in which the score, audio-derived representations, and onset information are aligned in one view. Second, it can generate beat-tracking evaluation figures that expose both the discrete beat detections and the underlying confidence curve, so that model behavior can be inspected beyond a single accuracy score.
 
-\subsection{First Page Copyright Notice}
+In the thesis implementation, the workflow begins with a warped score produced from an MEI file and its alignment map. That score becomes the timeline reference for all additional layers. On top of it, LayerIt can place a spectrogram, beat activation curves, detected beats, downbeats, or other time-based annotations. Because the layer model is modular, the same framework can also accept externally produced SVG or PNG graphics when a workflow already exists in another tool.
 
-Please include the copyright notice exactly as it appears here in the lower left-hand corner of the page.
-It is set in 8pt Times. \textcolor{red}{Please ensure to insert the correct author names and paper title in the copyright notice when submitting the manuscript.} For \LaTeX users, this will be handled by the template automatically. For Word users, this has to be done manually.
+This is where the system becomes useful in practice. A beat-tracking result that is otherwise difficult to interpret as a sequence of timestamps can be shown together with the score, the waveform or spectrogram, and the confidence curve. For annotation tasks, the same view makes it easier to see where a human annotation and the model output diverge. For evaluation tasks, it makes the failure mode visible rather than hidden inside a summary metric. That visual context is valuable in the spirit of beat-tracking evaluation work that focuses on correction effort and interpretability, not only on final scores \cite{pintoShiftIfYoua}.
 
+\section{Conclusion}
 
-\subsection{Page Numbering, Headers and Footers}
+LayerIt is the result of moving from exploratory thesis prototypes to a focused visualization framework. Its contribution is a reusable way to compose score-aligned MIR figures in Python without depending on manual graphic editing for every new result. The framework is intentionally narrow: it does not replace alignment systems or GUI annotation software, but it provides the visual layer that lets those systems be presented, compared, and extended more effectively.
 
-Do not include headers, footers or page numbers in your submission.
-These will be added when the publications are assembled.
-
-\subsection{Line Numbers}
-
-\textcolor{red}{Line numbers should be removed} from your originally submitted manuscript. This can be done in \LaTeX by commenting out the command \verb|\linenumbers|. This can be done in Microsoft Word by selecting Layout > Line Numbers > None.
-
-\section{First Level Headings}
-
-First level headings are in Times 10pt bold,
-centered with 1 line of space above the section head, and 1/2 space below it.
-For a section header immediately followed by a subsection header, the space should be merged.
-
-\subsection{Second Level Headings}
-
-Second level headings are in Times 10pt bold, flush left,
-with 1 line of space above the section head, and 1/2 space below it.
-The first letter of each significant word is capitalized.
-
-\subsubsection{Third and Further Level Headings}
-
-Third level headings are in Times 10pt italic, flush left,
-with 1/2 line of space above the section head, and 1/2 space below it.
-The first letter of each significant word is capitalized.
-
-Using more than three levels of headings is highly discouraged.
-
-\section{Footnotes and Figures}
-
-\subsection{Footnotes}
-
-Indicate footnotes with a number in the text.\footnote{This is a footnote.}
-Use 8pt type for footnotes. Place the footnotes at the bottom of the page on which they appear.
-Precede the footnote with a 0.5pt horizontal rule.
-
-\subsection{Figures, Tables and Captions}
-
-All artwork must be centered, neat, clean, and legible.
-All lines should be very dark for purposes of reproduction and art work should not be hand-drawn.
-The proceedings are not in color, and therefore all figures must make sense in black-and-white form.
-Figure and table numbers and captions always appear below the figure.
-Leave 1 line space between the figure or table and the caption.
-Each figure or table is numbered consecutively. Captions should be Times 10pt.
-Place tables/figures in text as close to the reference as possible.
-References to tables and figures should be capitalized, for example:
-see \figref{fig:example} and \tabref{tab:example}.
-Figures and tables may extend across both columns to a maximum width of 17.2cm.
-
-\begin{table}
- \begin{center}
- \begin{tabular}{|l|l|}
-  \hline
-  String value & Numeric value \\
-  \hline
-  Hello ISMIR  & \conferenceyear \\
-  \hline
- \end{tabular}
-\end{center}
- \caption{Table captions should be placed below the table.}
- \label{tab:example}
-\end{table}
-
-\begin{figure}
- \centerline{\framebox{
- \includegraphics[alt={ISMIR 2025 LBD template test image},width=0.9\columnwidth]{example.png}}}
- \caption{Figure captions should be placed below the figure.}
- \label{fig:example}
-\end{figure}
-
-\section{Equations}
-
-Equations should be placed on separate lines and numbered.
-The number should be on the right side, in parentheses, as in \eqnref{relativity}.
-
-\begin{equation}\label{relativity}
-E=mc^{2}
-\end{equation}
-
-\section{Citations}
-
-All bibliographical references should be listed at the end of the submission, in a section named ``REFERENCES,''
-numbered and in the order that they first appear in the text. Formatting in the REFERENCES section must conform to the
-IEEE standard (\url{https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf}). Approved
-IEEE abbreviations (Proceedings $\rightarrow$ Proc.) may be used to shorten reference listings. All references listed
-should be cited in the text. When referring to documents, place the numbers in square brackets (e.g., \cite{ISMIR17Author:01}
-for a single reference, or \cite{JNMR10Someone:01,Book20Person:01,Chapter09Person:01} for a range).
-
+The current version is already useful for the beat annotation and beat-tracking evaluation scenarios that motivated the thesis, and it also serves as a basis for future MIR visualization work. In particular, the same layer-composition model can be extended to other score-aligned tasks, richer annotation types, or new alignment backends. That makes LayerIt less a single demo than a reusable framework for building clearer MIR figures.
 
 % For bibtex users:
-\bibliography{ISMIRtemplate}
-
-% For non bibtex users:
-%\begin{thebibliography}{citations}
-% \bibitem{Author:17}
-% E.~Author and B.~Authour, ``The title of the conference paper,'' in {\em Proc.
-% of the Int. Society for Music Information Retrieval Conf.}, (Suzhou, China),
-% pp.~111--117, 2017.
-%
-% \bibitem{Someone:10}
-% A.~Someone, B.~Someone, and C.~Someone, ``The title of the journal paper,''
-%  {\em Journal of New Music Research}, vol.~A, pp.~111--222, September 2010.
-%
-% \bibitem{Person:20}
-% O.~Person, {\em Title of the Book}.
-% \newblock Montr\'{e}al, Canada: McGill-Queen's University Press, 2021.
-%
-% \bibitem{Person:09}
-% F.~Person and S.~Person, ``Title of a chapter this book,'' in {\em A Book
-% Containing Delightful Chapters} (A.~G. Editor, ed.), pp.~58--102, Tokyo,
-% Japan: The Publisher, 2009.
-%
-%
-%\end{thebibliography}
+\bibliography{../TeseNando/backmatter/bibliography}
 
 \end{document}
