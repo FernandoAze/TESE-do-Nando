@@ -22,20 +22,22 @@ The fourth cycle was \textbf{Score-Alignment.py}. Its goal was to explore score-
 The fifth cycle was \textbf{Score-Alignment.js}. Its goal was to revisit the aligned-spectrogram idea using the lessons learned from the earlier MEI and beat-annotation prototypes. The prototype was built in JavaScript and HTML with Verovio, MEI, and Wavesurfer.js, and it displayed a MEI score alongside a spectrogram while storing beat timestamps in the MEI data and highlighting notes on interaction. The lesson from this final exploratory cycle was that the idea was promising, but it also confirmed the need for a tool that was strictly focused on visualization, written in Python, and organized in an object-oriented way so that it could be reused and extended more easily. The decision carried forward was that this combination of requirements defined what would then be LayerIt!.
 
 \begin{table}[H]
-	\centering
-	\caption{Summary of development iterations}
-	\label{tab:development_iterations}
-	\begin{tabular}{p{2.4cm} p{3.2cm} p{4.0cm} p{3.4cm} p{3.2cm}}
-		\hline
-		\textbf{Iteration} & \textbf{Goal} & \textbf{Tools Used} & \textbf{Lesson} & \textbf{Decision carried forward} \\
-		\hline
-		BeatMapJS & Explore web-based beat annotation & JS/HTML, BeatThis, Wavesurfer.js, interactive spectrogram, region annotation, tempo table, SV-compatible import/export & No new annotation feature beyond BeatThis; no reusable Python library & Reusable Python core is mandatory \\
-		MEI-Basic-Edit & Test manual score alignment against audio & JS/HTML, Verovio, MEI, SVG, drag-to-align score, XML editor & Interactive score editing is costly; gained MEI/Verovio/SVG familiarity & SVG as composition substrate; no interactive editing focus \\
-		BeatPrecision & Extend GUI beat annotation in an existing score-aligned tool & Qt/C++, BeatThis, horizontal score follow-along & Codebase was hard to extend; interaction and visualization must be separated & Focus on visualization, not the interaction problem \\
-		Score-Alignment.py & Explore score-aligned spectrograms in Python & Python, Modusa, matplotlib, interactive spectrogram & Fluid interactivity proved impractical & Prefer static, high-quality, reproducible output \\
-		Score-Alignment.js & Revisit aligned spectrograms with richer score interaction & JS/HTML, Verovio, MEI, Wavesurfer.js, beat timestamps in MEI, note highlighting & Promising, but confirmed need for a Python OO visualization tool & Define the LayerIt! conceptual baseline \\
-		\hline
-	\end{tabular}
+    \centering
+    \caption{Summary of development iterations}
+    \label{tab:development_iterations}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{p{2.4cm} p{3.2cm} p{4.0cm} p{3.4cm} p{3.2cm}}
+        \hline
+        \textbf{Iteration} & \textbf{Goal} & \textbf{Tools Used} & \textbf{Lesson} & \textbf{Conclusion} \\
+        \hline
+        BeatMapJS & Explore web-based beat annotation & JS/HTML, BeatThis, Wavesurfer.js, interactive spectrogram, region annotation, tempo table, SV-compatible import/export & No new annotation feature beyond BeatThis; no reusable Python library & Reusable Python core is mandatory \\
+        MEI-Basic-Edit & Test manual score alignment against audio & JS/HTML, Verovio, MEI, SVG, drag-to-align score, XML editor & Interactive score editing is costly; gained MEI/Verovio/SVG familiarity & SVG as composition substrate; no interactive editing focus \\
+        BeatPrecision & Extend GUI beat annotation in an existing score-aligned tool & Qt/C++, BeatThis, horizontal score follow-along & Codebase was hard to extend; interaction and visualization must be separated & Focus on visualization, not the interaction problem \\
+        Score-Alignment.py & Explore score-aligned spectrograms in Python & Python, Modusa, matplotlib, interactive spectrogram & Fluid interactivity proved impractical & Prefer static, high-quality, reproducible output \\
+        Score-Alignment.js & Revisit aligned spectrograms with richer score interaction & JS/HTML, Verovio, MEI, Wavesurfer.js, beat timestamps in MEI, note highlighting & Promising, but confirmed need for a Python OO visualization tool & Define the LayerIt! conceptual baseline \\
+        \hline
+    \end{tabular}%
+    }
 \end{table}
 
 Taken together, these five cycles show a deliberate narrowing of scope. The project moved from an interactive beat-annotation GUI toward a reusable, object-oriented visualisation framework. Each prototype clarified one part of the problem and ruled out another, so the final system could be built on a more stable understanding of what the thesis needed to solve.

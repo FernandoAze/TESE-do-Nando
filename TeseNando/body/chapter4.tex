@@ -1,4 +1,4 @@
-\chapter{LayerIt!: Design and Implementation}\label{chap:DesignAndImplementation}
+\chapter{LayerIt! \linebreak Design and Implementation}\label{chap:DesignAndImplementation}
 
 This chapter presents LayerIt as the concrete outcome of the research process described in the previous chapter. Its role is to show how the thesis moves from a problem statement and a set of methodological decisions to a working framework for composing score-aligned MIR visualizations. The chapter is organized from the problem definition to the system overview, then to the design choices that shaped the implementation, and finally to the mechanism used to combine the different visual layers into a single result.
 
@@ -19,12 +19,12 @@ The project bases itself in librosa \cite{mcfeeLibrosaLibrosa01102025}, matplotl
 LayerIt! relies on matplotlib for audio and data representations where, the SVG format is the end visual format. The reason, stems from the fact that Verovio (and subsequently ScoreWarp) render the score in SVG, and because matplotlib does not provide seamless integration of SVG charts, it is more reliable to export matplotlib visuals into an SVG framework, then the other way around.
 
 % Vector output and rasterization trade-off.
-The SVG format, is a vector-based one, therefore, data that can be mathematically represented in cartesian plots (i.e., X/Y graphs) can be exported without losing resolution. This is the case for most of MIR algorithmic data i.e., continuous curves and time based annotations. However, some data types, cant be presented in this way noticeably, heatmap-based plots like spectrograms. For interaction proposes, these usually are rendered in real-time, allowing for seamless navigation (i.e., zooming and panning). This is not possible since SVG is an inherently static format, therefore plots like these need to be rasterized before being integrated into a SVG visualization. To circumvent this, we employed a way to render plots as PNG's as well. This trade-off means that cartesian plots and the score can be zoomed-in infinitely while always preserving the highest level of fidelity and accuracy. On the other hand, rasterized layers are bound to lose quality with zooming while, at the same time, also requiring heavier processing and memory usage. 
+The SVG format, is a vector-based one, therefore, data that can be mathematically represented in cartesian plots (i.e., X/Y graphs) can be exported without losing resolution. This is the case for most of MIR algorithmic data i.e., continuous curves and time based annotations. However, some data types, cant be presented in this way noticeably, heatmap-based plots like spectrograms. For interaction proposes, these usually are rendered in real-time, allowing for seamless navigation (i.e., zooming and panning). This is not possible since SVG is an inherently static format, therefore plots like these need to be rasterized before being integrated into a SVG visualization. To circumvent this, we employed a way to render plots as PNG's as well. This trade-off means that cartesian plots and the score can be zoomed-in infinitely while always preserving the highest level of fidelity and accuracy. On the other hand, rasterized layers are bound tosss lose quality with zooming while, at the same time, also requiring heavier processing and memory usage. 
 
 % SVG as an editable intermediate format.
-That being said, because SVG is a text markup format, it can be easily accessed and modified, allowing it to be and intermediate format that can bridge different codebases independently of their base language (i.e., Python, \ac{JS}, C++ etc...). This also serves as a crucial value argument for this choice, it being: the development and integration of LayerIt into future \ac{MIR} applications.
+That being said, because SVG is a text markup format, it can be easily accessed and modified, allowing it to be and intermediate format that can bridge different codebases independently of their base language (i.e., Python, JS, C++ etc...). This also serves as a crucial value argument for this choice, it being: the development and integration of LayerIt into future MIR applications.
 
-Our main goal is that, this codebase may be easily integrated into other relevant projects to generate visualizations. Hence why we developed it as a Python Based 00 tool that is based on commonly used \ac{MIR} libraries such as librosa and matplotlib. This way, community integration and development is eased.
+Our main goal is that, this codebase may be easily integrated into other relevant projects to generate visualizations. Hence why we developed it as a Python Based 00 tool that is based on commonly used MIR libraries such as librosa and matplotlib. This way, community integration and development is eased.
 
 % FALTA FALAR DA RAZAO PELA QUAL SAO USADAS OUTRAS BIBLIOTECAS, mas eu já não explico isto antes?
 
@@ -104,8 +104,6 @@ In @src/functions/Beat\_Layers, the function ``\textit{Run\_BeatThis()}'' genera
 
 The probabilistic fields capture the algorithm's internal confidence across time, while the detected positions represent the final beat assessments. This separation enables visualization of both the continuous confidence landscape and discrete beat estimates.
 
-
-\section{Layer Alignment Method}
 \section{Layer Alignment Method}
 As of now, LayerIt provides tools for generating visualizations with BT and BA tasks in mind, however, this is not an exclusive application of the codebase. Layers (be it data or audio representations) are simply either SVG or PNG elements that span the same or a proportional width to a given timeline, therefore, users can upload any SVG or PNG plots, given that they follow the same timeline length. 
 
