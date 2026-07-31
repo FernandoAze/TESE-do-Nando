@@ -1,0 +1,97 @@
+% -----------------------------------------------
+% Template for ISMIR LBD Papers
+% 2026 version, based on previous ISMIR templates
+
+% Requirements :
+% * 2+n page length maximum
+% * 10MB maximum file size
+% * Copyright note must appear in the bottom left corner of first page
+% * Clearer statement about citing own work in anonymized submission
+% (see conference website for additional details)
+% -----------------------------------------------
+
+\documentclass{article}
+\usepackage[T1]{fontenc} % add special characters (e.g., umlaute)
+\usepackage[utf8]{inputenc} % set utf-8 as default input encoding
+\usepackage[lbd]{ismir}
+% \usepackage[lbd,submission]{ismir}
+\usepackage{amsmath,cite,url}
+\usepackage{graphicx}
+\usepackage{color}
+\def\lbd{}	% Flag to use correct LBD settings in the paper, please do not modify this line
+
+% Title. Please use IEEE-compliant title case when specifying the title here,
+% as it has implications for the copyright notice
+% ------
+\title{LayerIt! \linebreak Towards building a Framework for Time-Aligned Composable Audio Visualisations}
+
+% Note: Please do NOT use \thanks or a \footnote in any of the author markup
+
+% Two addresses
+% --------------
+% NOTE: please double-check the e-mail addresses below before submission.
+\twoauthors
+  {Fernando Azeredo} {Faculdade de Engenharia da Universidade do Porto \\ {\tt fernando.azeredo@fe.up.pt}}
+  {Ant\'onio S\'a Pinto} {Faculdade de Engenharia da Universidade do Porto \\ {\tt asp@fe.up.pt}}
+
+% For the author list in the Creative Common license and PDF metadata, please enter author names.
+% Please abbreviate the first names of authors and add 'and' between the second to last and last authors.
+\def\authorname{F. Azeredo and A. S\'a Pinto}
+
+% Optional: To use hyperref, uncomment the following.
+%\usepackage[bookmarks=false,pdfauthor={\authorname},pdfsubject={\papersubject},hidelinks]{hyperref}
+% Mind the bookmarks=false option; bookmarks are incompatible with ismir.sty.
+
+\sloppy % please retain sloppy command for improved formatting
+
+\begin{document}
+
+%
+\maketitle
+%
+\begin{abstract}
+Music Information Retrieval (MIR) research frequently requires figures that overlay audio representations, symbolic scores, and algorithmic outputs in a single, time-aligned view, yet such visualisations are typically produced through manual, non-reproducible image editing. In this Late Breaking Demo we present LayerIt!, a composable, layer-based Python framework in which heterogeneous visual elements share a common time axis provided by ScoreWarp. Layers are combined into a single, semantically structured SVG file, preserving each visual element as an independently identifiable component while also preserving MEI data and high image resolution. We demonstrate LayerIt! through a beat-tracking case study in which four heterogeneous layers, a time-warped score, a mel spectrogram, a chromagram, and a waveform, are composed and vertically aligned by time. LayerIt! is released as an open-source, pip-installable library, offering the MIR community a reusable and extensible foundation for score-aligned visualisation workflows.
+\end{abstract}
+%
+\section{Introduction}\label{sec:introduction}
+
+MIR workflows frequently call for figures that overlay audio representations, such as waveforms, spectrograms, or chromagrams, with symbolic score notation and algorithmic outputs (e.g., beat or onset data) in a single, time-coherent view. In practice, such figures are still produced through \textit{ad hoc}, non-reproducible processes: individual visualisations are exported separately from different tools and then manually aligned and composited using image editing software. This workflow is labour-intensive and impossible to reliably reproduce or re-run on new data.
+
+Existing tools only partially address this need. Sonic Visualiser supports audio analysis and annotation, but not composing multiple heterogeneous visualisations into a single, automatically aligned export. Piano Precision~\cite{jiangPIANOPRECISIONADVANCING2025}, a Sonic Visualiser fork, links a score to a performance through discrete anchor-based correspondences rather than a continuous time axis, a design suited to guided-listening interfaces but incompatible with producing static figures. Code-based alternatives such as Matplotlib~\cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026}, librosa~\cite{mcfeeLibrosaLibrosa01102025}, and Modusa~\cite{modusa} offer strong individual plotting capabilities, but composing score-aligned, multi-layer figures with them still requires lengthy custom integration code, often followed by manual image editing.
+
+This paper introduces LayerIt!, a framework that reframes this task as one of \textit{composition} rather than editing. LayerIt! represents audio, score, and algorithmic visualisations as reusable layers sharing a common time axis, and renders their composition into a single, semantically structured SVG file. The remainder of this paper describes the framework, demonstrates it with a beat-tracking case study, and concludes with directions for community-driven extensions.
+
+\section{The LayerIt! Framework}\label{sec:framework}
+At the core of LayerIt! is a simple design philosophy: every visual element, whether an audio representation, a symbolic score, or an algorithmic output, is treated as a reusable and composable \texttt{Layer} object. Each \texttt{Layer} subclass exposes a standard interface consisting of a \texttt{load\_data()} method, which ingests the raw data it needs, and a \texttt{draw()} method, which renders itself onto a shared canvas. A \texttt{Visualizer} object orchestrates a stack of such layers, coordinating them through a shared rendering context (\texttt{shared\_data}); the user only declares how layers are arranged, while the \texttt{Visualizer} handles the composition. The resulting output is a single SVG file in which each layer is preserved as a named \texttt{<g>} group element within the SVG's XML tree. Because layers are decoupled from one another behind this common interface, new layer types, backends, or rendering strategies can be added without modifying existing code.
+
+
+The framework builds on established libraries rather than reimplementing their functionality: librosa~\cite{mcfeeLibrosaLibrosa01102025} and Matplotlib~\cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026} handle general audio and data visualisation, Modusa~\cite{modusa} provides specialised plots, and BeatThis!~\cite{foscarinBeatThisAccurate2024a} supplies state-of-the-art Beat Tracking data. ScoreWarp~\cite{goeblLetsScoreWarpAgain2025a} is the time-alignment backbone of LayerIt!: beyond providing a time-warped rendering of the score itself, it establishes the continuous time axis onto which every other layer is scaled to.
+
+A distinguishing technical feature of LayerIt! is how it treats the SVG output as more than a picture. ScoreWarp uses Verovio to render scores as SVG while preserving Music Encoding Initiative (MEI) semantic metadata such as note identities, time signatures or MEI annotations etc. LayerIt! extends this by embedding every composed layer as its own named \texttt{<g>} group within the SVG's XML tree, maintaining this semantic hierarchy and keeping each layer independently identifiable and inspectable. In practice, this lets post-processing tools query, restyle, or animate individual layers without re-running the composition, and simplifies integration with web-based or interactive viewers, since the exported structure is already semantically rich. This bridges the gap between computational generation in Python and downstream interactive or exploratory analysis in the browser, a capability no purely raster-based export can offer.
+
+\section{Demonstration}\label{sec:demo}
+To ground these claims, we used LayerIt! to compose a time-aligned visualisation from a beat-tracking case study. The inputs were an audio recording (\texttt{.wav}) of a piano performance (BWV856 Fugue), the warped score rendered through ScoreWarp, the MAPS file providing onset data (used for the ScoreWarp rendering as-well) and an .npz file with BeatThis! data including the unaltered output and beat/downbeat activation curves (i.e., logits). From these inputs, four layers were composed and vertically stacked, from top to bottom: (1) the time-warped score rendered via ScoreWarp; (2) a mel spectrogram, colour-coded by energy; (3) a chromagram showing energy across the twelve pitch classes, with the BeatThis! beat activation curve overlaid; and (4) the raw waveform, with detected beats and downbeats overlaid as red and blue markers, respectively. The result, shown in Figure~\ref{fig:layerit_demo}, was generated entirely programmatically in approximately 70 lines of LayerIt! code, with each layer defined by 5--7 lines following the same standard pattern and with no manual image editing at any stage.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{LBD_Fig.png}
+\caption{A LayerIt! composition combining a time-warped score, mel spectrogram, chromagram with beat activation curve, and waveform with beat/downbeat markers, all aligned to a shared time axis and generated in $\sim$70 lines of code.}
+\label{fig:layerit_demo}
+\end{figure}
+
+% The composition in Figure~\ref{fig:layerit_demo} lets researchers directly inspect where beat detections fall relative to notated onsets and metric structure, something no single existing tool supports in one programmatic step: Sonic Visualiser lacks score integration, Piano Precision lacks a continuous time axis, and pure python/code based scripts require extensive custom alignment logic. The thin vertical onset markers running across all four layers make cross-layer correspondence directly visible: spectral energy peaks in the mel spectrogram line up with detected onsets, and chroma energy peaks correspond to notated pitches in the score, for instance a C in the score aligning with elevated C-class energy in the chromagram. The beat activation curve further reveals BeatThis!'s internal confidence, which, read alongside the spectrogram and chromagram, contextualises the detections overlaid on the waveform. Because the same script can be re-run unchanged on new recordings, scores, or algorithmic outputs, this kind of multi-layer inspection becomes reproducible rather than a one-off editing exercise, exemplifying how composing visualisations, rather than editing them after the fact, is a more suitable abstraction for MIR research.
+
+The composition in Figure~\ref{fig:layerit_demo} was produced as an example of application of LayerIt! capabilities for producing visualizations that combine multiple representations in a time-aligned manner, in this case providing Beat Tracking data on BeatThis! performance. The thin vertical onset markers running across all four layers make cross-layer correspondence directly visible: spectral energy peaks in the mel spectrogram line up with detected onsets, and chroma energy peaks correspond to notated pitches in the score, for instance a C in the score aligning with elevated C-class energy in the chromagram. The beat activation curve further reveals BeatThis!'s internal confidence, which, read alongside the spectrogram and chromagram, contextualises the detections overlaid on the waveform. Because the same script can be re-run unchanged on new recordings, scores, or algorithmic outputs, this kind of multi-layer inspection becomes reproducible rather than a one-off editing exercise, exemplifying how composing visualisations, rather than editing them after the fact, is a more suitable abstraction for MIR research.
+
+\section{Conclusion}\label{sec:conclusion}
+
+LayerIt! reframes multi-modal MIR visualisation from an image-editing problem, manual, \textit{ad hoc}, and non-reproducible, into a composition problem: programmatic, semantic, and extensible. Rather than aligning visual elements via \textit{ad hoc} or manual methods, researchers declare and compose layers in Python, and the resulting output is a structured SVG rather than a flattened raster image, one that preserves semantics and remains open to further analysis or modification. LayerIt! is early-stage but functional, with a stable core architecture; it is already open-source and pip-installable, and its immediate development focus is growing its library of pre-built layer types. Planned extensions include further layer types (e.g., tempograms, spectrogram derivatives), support for time-alignment backends beyond ScoreWarp, and annotation support that lets researchers export annotations alongside the visualisation. The same structured SVG output also opens the door to interactive, playback-synchronised viewers. By treating visualisation as composition rather than image editing, LayerIt! aims to make MIR research faster, more transparent, and more reproducible.
+
+\newpage
+\section{AI Usage Statement}
+
+Large language models (LLMs) were used in this work as a writing and code development aid. Specifically: (1)~LLMs were used to help structure and write this LBD paper, including organization, phrasing, and clarity improvements; (2)~LLMs were used to assist in the development of the LayerIt! codebase. The core research methodology, conceptual contributions, framework architecture, and scientific validation remain the work of the authors. All code, design decisions, and experimental results have been authored and verified by the authors themselves.
+
+% For bibtex users:
+\bibliography{ISMIRtemplate}
+
+\end{document}
