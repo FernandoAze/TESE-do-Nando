@@ -204,7 +204,7 @@ Layer1.load_all_layers(audio_path="performance.wav",
 fig, ax = Layer1.draw()
 \end{lstlisting}
 
-After this, each \texttt{Visualizer()} instance can be rendered to an SVG or PNG. At this stage, \textt{Visualizer()} outputs are still Matplotlib figures and can be displayed directly with \texttt{.show()}. However, if they are to be combined with other Visualizer() instances and a score, they need to be exported to SVG. This intermediate SVG layer allows the aligned score to be added on top of each visualization, producing a higher-level composite that can then be stacked with other rendered SVGs to create the final aligned view. The following listing shows exactly that. 
+After this, each \texttt{Visualizer()} instance can be rendered to an SVG or PNG. At this stage, \texttt{Visualizer()} outputs are still Matplotlib figures and can be displayed directly with \texttt{.show()}. However, if they are to be combined with other Visualizer() instances and a score, they need to be exported to SVG. This intermediate SVG layer allows the aligned score to be added on top of each visualization, producing a higher-level composite that can then be stacked with other rendered SVGs to create the final aligned view. The following listing shows exactly that. 
 
 \begin{lstlisting}[caption={Simplified workings for SVG layers.},label={lst:visualizer-api}]
 # Turn the Visualizer into SVG and aligned it to the warped score
