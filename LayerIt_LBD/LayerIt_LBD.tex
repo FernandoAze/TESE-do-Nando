@@ -13,8 +13,9 @@
 \documentclass{article}
 \usepackage[T1]{fontenc} % add special characters (e.g., umlaute)
 \usepackage[utf8]{inputenc} % set utf-8 as default input encoding
-% \usepackage[lbd]{ismir}
-\usepackage[lbd,submission]{ismir}
+\usepackage[lbd]{ismir}
+% !!!PARA VERSAO A SUBMETER USAR LINHA ABAIXO, REMOVER A ACIMA!!!
+% \usepackage[lbd,submission]{ismir} 
 \usepackage{amsmath,cite,url}
 \usepackage{graphicx}
 \usepackage{color}
@@ -31,7 +32,7 @@
 % --------------
 % NOTE: please double-check the e-mail addresses below before submission.
 \twoauthors
-  {Fernando Azeredo} {Faculdade de Engenharia da Universidade do Porto \\ {\tt fernando.azeredo@fe.up.pt}}
+  {Fernando Azeredo} {Faculdade de Engenharia da Universidade do Porto \\ {\tt up202308655@fe.up.pt}}
   {Ant\'onio S\'a Pinto} {Faculdade de Engenharia da Universidade do Porto \\ {\tt asapinto@fe.up.pt}}
 
 % For the author list in the Creative Common license and PDF metadata, please enter author names.
@@ -50,14 +51,14 @@
 \maketitle
 %
 \begin{abstract}
-Music Information Retrieval (MIR) research often requires figures that relate audio representations, symbolic scores, and algorithmic outputs on a common temporal basis. We present LayerIt!, a Python framework for generating such score-aligned visualisations from independent visual components. It uses ScoreWarp to place the score on the performance timeline and combines the score with audio-derived and algorithmic views in a structured SVG file. The SVG retains the score's MEI-derived structure and represents each added component as an identifiable group. In a beat-tracking case study, we generate a four-part figure comprising a time-warped score, mel spectrogram, chromagram with beat activations, and waveform with beat and downbeat markers. The example is specified in approximately 70 lines of Python without manual alignment. LayerIt! is available as an open-source Python package, providing a reusable basis for score-aligned MIR visualisation workflows.
+Music Information Retrieval (MIR) research often requires figures that relate audio representations, symbolic scores, and algorithmic outputs on a common temporal basis. We present LayerIt!, a Python framework for generating such score-aligned visualisations from independent visual components. It uses ScoreWarp to place the score on the performance timeline and combines the score with audio-derived and algorithmic views in a structured SVG file. The SVG retains the score's MEI-derived structure and represents each added component as an identifiable group. In a beat-tracking case study, we generate a four-part figure comprising a time-warped score, mel spectrogram, BeatThis! beat and downbeat logits, and waveform with BeatThis! output markers. The example is specified in approximately 60 lines of Python without manual alignment. LayerIt! is available as an open-source Python package, providing a reusable basis for score-aligned MIR visualisation workflows.
 \end{abstract}
 %
 \section{Introduction}\label{sec:introduction}
 
-MIR visualisations make audio features and algorithmic outputs available for inspection alongside musical context~\cite{valleVisualDisplayRetrieval,limaSurveyMusicVisualization2021}. For a figure that also includes score notation, the score and audio-derived representations must share a performance-time reference. Producing this type of figure from separately generated visual elements leaves the alignment and assembly steps to the individual workflow, making the result difficult to adapt when the data or visual design changes.
+MIR visualisations make audio features and algorithmic outputs available for inspection alongside musical context. For a figure that also includes score notation, the score and audio-derived representations must share a performance-time reference. Producing this type of figure from separately generated visual elements leaves the alignment and assembly steps to the individual workflow, making the result difficult to adapt when the data or visual design changes.
 
-Existing tools address parts of this workflow. Sonic Visualiser~\cite{cannamSonicVisualiser2010} supports audio analysis and annotation, whereas LayerIt! targets scriptable generation of static, score-aligned figures. Piano Precision~\cite{jiangPIANOPRECISIONADVANCING2025} links a score to a performance through discrete correspondences, an approach suited to guided listening and performance analysis. In code-based workflows, librosa~\cite{mcfeeLibrosaLibrosa01102025} provides audio analysis and feature extraction, while Matplotlib~\cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026} provides general-purpose plotting. LayerIt! builds on these capabilities with an abstraction for arranging symbolic, audio-derived, and algorithmic representations against a score-aligned horizontal coordinate system.
+Existing tools address parts of this workflow. Sonic Visualiser~\cite{cannamSonicVisualiser2010} supports audio analysis and annotation, whereas LayerIt! targets scriptable generation of static, score-aligned figures. Piano Precision~\cite{PianoPrecision} links a score to a performance through discrete correspondences, an approach suited to guided listening and performance analysis. In code-based workflows, librosa~\cite{mcfeeLibrosaAudioMusic2015} provides audio analysis and feature extraction, while Matplotlib~\cite{Hunter:2007} provides general-purpose plotting. LayerIt! builds on these capabilities with an abstraction for arranging symbolic, audio-derived, and algorithmic representations against a score-aligned horizontal coordinate system
 
 The recently published TimeToAlign!~\cite{hentschelTimeAlignModelling2026} provides a general model for representing timelines and alignment relationships across graphical, logical, and physical musical domains. Rather than representing or computing these relationships, LayerIt! uses an established performance-time alignment to compose heterogeneous representations into structured, inspectable SVG visualisations.
 
@@ -66,7 +67,7 @@ This paper presents the framework, describes its SVG-based output, and demonstra
 \section{The LayerIt! Framework}\label{sec:framework}
 LayerIt! treats each audio representation or algorithmic output as a reusable \texttt{Layer}. Each subclass implements \texttt{load\_data()}, which receives its input, and \texttt{draw()}, which renders it with a shared context. A \texttt{Visualizer} coordinates a set of layers through \texttt{shared\_data}; users declare the layer arrangement and the \texttt{Visualizer} renders the resulting figure. The output is a single SVG whose XML tree contains a named \texttt{<g>} element for each added component. This interface allows additional layer types or rendering backends to be introduced without changing existing layers.
 
-The framework builds on established libraries rather than reimplementing their functionality: librosa~\cite{mcfeeLibrosaLibrosa01102025} provides audio-analysis functionality, and Matplotlib~\cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026} provides general-purpose plotting. BeatThis!~\cite{foscarinBeatThisAccurate2024a} supplies the beat-tracking output used in the case study. ScoreWarp~\cite{goeblLetsScoreWarpAgain2025a} provides the performance-time mapping and the time-warped score rendering used to position the other components.
+The framework builds on established libraries rather than reimplementing their functionality: librosa~\cite{mcfeeLibrosaAudioMusic2015} provides audio-analysis functionality, and Matplotlib~\cite{Hunter:2007} provides general-purpose plotting. BeatThis!~\cite{foscarinBeatThisAccurate2024a} supplies the beat-tracking output used in the case study. ScoreWarp~\cite{goeblLetsScoreWarpAgain2025a} provides the performance-time mapping and the time-warped score rendering used to position the other components.
 
 The output retains the MEI-derived identifiers and semantic hierarchy of the score SVG, while each added component is embedded as a named \texttt{<g>} group~\cite{repertoireinternationaldessourcesmusicalesVerovioReferenceBook2021}. Waveforms, activation curves, and beat annotations remain vector graphics; heatmap-based representations may be embedded as raster images. The resulting structure keeps components independently identifiable for downstream querying, restyling, or animation.
 
@@ -81,7 +82,7 @@ We demonstrate LayerIt! with the beat-tracking figure in Figure~\ref{fig:layerit
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{LBD_Fig.png}
-\caption{A LayerIt! composition combining a time-warped score, mel spectrogram, chromagram with beat activation curve, and waveform with beat/downbeat markers, all aligned to a shared time axis and generated in $\sim$70 lines of code.}
+\caption{A LayerIt! composition combining a time-warped score, mel spectrogram, chromagram with beat activation curve, and waveform with beat/downbeat markers, all aligned to a shared time axis and generated in $\sim$60 lines of code.}
 \label{fig:layerit_demo}
 \end{figure}
 
@@ -92,6 +93,8 @@ Reading the BeatThis! activations alongside the waveform and score contextualise
 \section{Conclusion}\label{sec:conclusion}
 
 LayerIt! provides a programmatic workflow for generating score-aligned MIR figures from independently specified components. Its structured SVG output preserves the score's semantic information and the identity of added components, rather than flattening the figure into a single raster image. The current implementation is open source and provides a stable core for additional layer types. Planned extensions include tempograms and spectrogram derivatives, time-alignment backends beyond ScoreWarp, and annotation export. The structured SVG representation may also support interactive, playback-synchronised viewers. By making the figure specification re-runnable, LayerIt! supports transparent and reusable visualisation workflows.
+
+LayerIt's repository can be acessed via https://github.com/FernandoAze/LayerIt.
 
 \newpage
 

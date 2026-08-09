@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{MEI-Website}{online}{}{}
+  \datalist[entry]{nty/global//global/global}
+    \entry{MEI-Website}{online}{}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labeltitlesource}{title}
@@ -31,7 +31,7 @@
       \verb https://music-encoding.org/about/
       \endverb
     \endentry
-    \entry{carabias-ortiAUDIOSCOREALIGNMENTa}{article}{}{}
+    \entry{carabias-ortiAUDIOSCOREALIGNMENTa}{article}{}
       \name{author}{4}{}{%
         {{hash=1d9d6ea7b25d9dd3d9c79477f305d791}{%
            family={Carabias-Orti},
@@ -56,12 +56,10 @@
       }
       \strng{namehash}{0ad79daf2fcdb029c92abef79720d4d1}
       \strng{fullhash}{bf1cc403d41d014a06ce56b8629d1fec}
-      \strng{fullhashraw}{bf1cc403d41d014a06ce56b8629d1fec}
       \strng{bibnamehash}{0ad79daf2fcdb029c92abef79720d4d1}
       \strng{authorbibnamehash}{0ad79daf2fcdb029c92abef79720d4d1}
       \strng{authornamehash}{0ad79daf2fcdb029c92abef79720d4d1}
       \strng{authorfullhash}{bf1cc403d41d014a06ce56b8629d1fec}
-      \strng{authorfullhashraw}{bf1cc403d41d014a06ce56b8629d1fec}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -73,7 +71,7 @@
       \verb /home/macacomalandro/Zotero/storage/UJ9488RB/Carabias-Orti et al. - AN AUDIO TO SCORE ALIGNMENT FRAMEWORK USING SPECTRAL FACTORIZATION AND DYNAMIC TIME WARPING.pdf
       \endverb
     \endentry
-    \entry{duanSoundprismOnlineSystem2011}{article}{}{}
+    \entry{duanSoundprismOnlineSystem2011}{article}{}
       \name{author}{2}{}{%
         {{hash=67aa64f70405af0e3a1f0669b532bf33}{%
            family={Duan},
@@ -88,12 +86,10 @@
       }
       \strng{namehash}{7ecde6609a06e1e7a497286aeb7f24d3}
       \strng{fullhash}{7ecde6609a06e1e7a497286aeb7f24d3}
-      \strng{fullhashraw}{7ecde6609a06e1e7a497286aeb7f24d3}
       \strng{bibnamehash}{7ecde6609a06e1e7a497286aeb7f24d3}
       \strng{authorbibnamehash}{7ecde6609a06e1e7a497286aeb7f24d3}
       \strng{authornamehash}{7ecde6609a06e1e7a497286aeb7f24d3}
       \strng{authorfullhash}{7ecde6609a06e1e7a497286aeb7f24d3}
-      \strng{authorfullhashraw}{7ecde6609a06e1e7a497286aeb7f24d3}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -129,69 +125,155 @@
       \verb http://ieeexplore.ieee.org/document/5887382/
       \endverb
     \endentry
-    \entry{goeblLetsScoreWarpAgain2025a}{article}{}{}
-      \name{author}{1}{}{%
+    \entry{foscarinBeatThisAccurate2024a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=57e2d51ccee38929c55d3988ede65fb0}{%
+           family={Foscarin},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=5f49e590d3bb01f24f1c7c4da98041ba}{%
+           family={Schlüter},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e088c9a0fe005e8b63ad418e8d0d81d2}{%
+           family={Widmer},
+           familyi={W\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco, United States}%
+      }
+      \strng{namehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \strng{fullhash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \strng{bibnamehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \strng{authorbibnamehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \strng{authornamehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \strng{authorfullhash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 25th {{International Society}} for {{Music Information Retrieval Conference}} ({{ISMIR}} 2024)}
+      \field{title}{Beat This! {{Accurate}} Beat Tracking without {{DBN}} Postprocessing}
+      \field{year}{2024}
+      \field{dateera}{ce}
+    \endentry
+    \entry{goeblLetsScoreWarpAgain2025a}{inproceedings}{}
+      \name{author}{5}{}{%
         {{hash=0bc0a73ab186a0dc5df2c36b3255f24c}{%
            family={Goebl},
            familyi={G\bibinitperiod},
            given={Werner},
            giveni={W\bibinitperiod}}}%
+        {{hash=9cf85f6c703ba6b4b4353c7d2c2a1c10}{%
+           family={Weigl},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=987abb6adca7047e7c1fbaecfa4ef1af}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f658f6b70585b0630f51bb82fcb5b4b4}{%
+           family={Plaksin},
+           familyi={P\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4d93d33575d4cd53038f2ac3f2da5ee2}{%
+           family={Stremel},
+           familyi={S\bibinitperiod},
+           given={Solveig},
+           giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{fullhash}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{fullhashraw}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{bibnamehash}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{authorbibnamehash}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{authornamehash}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{authorfullhash}{0bc0a73ab186a0dc5df2c36b3255f24c}
-      \strng{authorfullhashraw}{0bc0a73ab186a0dc5df2c36b3255f24c}
+      \list{location}{1}{%
+        {London}%
+      }
+      \strng{namehash}{1681550c7b7460862067c8c04daa6cfb}
+      \strng{fullhash}{34f871baebad5554d5fe4999a988933c}
+      \strng{bibnamehash}{1681550c7b7460862067c8c04daa6cfb}
+      \strng{authorbibnamehash}{1681550c7b7460862067c8c04daa6cfb}
+      \strng{authornamehash}{1681550c7b7460862067c8c04daa6cfb}
+      \strng{authorfullhash}{34f871baebad5554d5fe4999a988933c}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the {{Music Encoding Conference}} 2025 ({{MEC}} 2025)}
       \field{langid}{english}
       \field{title}{Let’s Do the {{ScoreWarp}} Again! {{Shifting}} Notes to Performance Timelines}
       \field{year}{2025}
       \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.17613/gqd3b-w7c28
+      \endverb
       \verb{file}
       \verb /home/macacomalandro/Zotero/storage/HHTMCNLH/Goebl - 2025 - Let’s do the ScoreWarp again! Shifting notes to performance timelines.pdf
       \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.17613/gqd3b-w7c28
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.17613/gqd3b-w7c28
+      \endverb
     \endentry
-    \entry{jiangPIANOPRECISIONADVANCING2025}{article}{}{}
-      \name{author}{2}{}{%
+    \entry{jiangPIANOPRECISIONADVANCING2025}{inproceedings}{}
+      \name{author}{3}{}{%
         {{hash=d0dc604fad148ce5c5003d123633f019}{%
            family={Jiang},
            familyi={J\bibinitperiod},
            given={Yucong},
            giveni={Y\bibinitperiod}}}%
+        {{hash=9cf85f6c703ba6b4b4353c7d2c2a1c10}{%
+           family={Weigl},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=0bc0a73ab186a0dc5df2c36b3255f24c}{%
            family={Goebl},
            familyi={G\bibinitperiod},
            given={Werner},
            giveni={W\bibinitperiod}}}%
       }
-      \strng{namehash}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{fullhash}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{fullhashraw}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{bibnamehash}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{authorbibnamehash}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{authornamehash}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{authorfullhash}{8f7f7b92819279faccade6dbe281e9ae}
-      \strng{authorfullhashraw}{8f7f7b92819279faccade6dbe281e9ae}
+      \list{location}{1}{%
+        {Graz, Austria}%
+      }
+      \strng{namehash}{10c995cdde7055e5d775f2ead1de6af9}
+      \strng{fullhash}{10c995cdde7055e5d775f2ead1de6af9}
+      \strng{bibnamehash}{10c995cdde7055e5d775f2ead1de6af9}
+      \strng{authorbibnamehash}{10c995cdde7055e5d775f2ead1de6af9}
+      \strng{authornamehash}{10c995cdde7055e5d775f2ead1de6af9}
+      \strng{authorfullhash}{10c995cdde7055e5d775f2ead1de6af9}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Audio-to-score alignment is a core task in MIR, but its application to music performance analysis is underexplored and it has not been developed for prospective users. Moreover, there have been very few user studies to shed light on the software needs of performance researchers. To help fill this gap, we present an open-source software application with a graphical UI that integrates audio-to-score alignment, designed to facilitate performance analysis. Working with Vamp plugins, this tool can also serve as a suitable platform for developing and comparing new alignment algorithms. In addition, in this paper we offer a use-case example of this tool comparing multiple performances of the same piece. We have also evaluated this tool with 15 prospective real-world users and received highly positive responses. Our user study suggests that tools like this can help bridge disciplinary divides between MIR and performance research.}
+      \field{booktitle}{Proceedings of the 22nd {{Sound}} and {{Music Computing Conference}} ({{SMC}})}
       \field{langid}{english}
+      \field{month}{7}
       \field{title}{{{PIANO PRECISION}}: {{ADVANCING MUSIC PERFORMANCE ANALYSIS BY INTEGRATING USER-CORRECTABLE AUDIO-TO-SCORE ALIGNMENT}}}
       \field{year}{2025}
       \field{dateera}{ce}
+      \field{pages}{160\bibrangedash 167}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.5281/zenodo.15838699
+      \endverb
       \verb{file}
       \verb /home/macacomalandro/Zotero/storage/2EI4655C/Jiang and Goebl - 2025 - PIANO PRECISION ADVANCING MUSIC PERFORMANCE ANALYSIS BY INTEGRATING USER-CORRECTABLE AUDIO-TO-SCORE.pdf
       \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.15838699
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.15838699
+      \endverb
     \endentry
-    \entry{jungUnifiedCrossmodalTranslation2026a}{article}{}{}
+    \entry{jungUnifiedCrossmodalTranslation2026a}{article}{}
       \name{author}{8}{}{%
         {{hash=7a8d3e6277921bb223a1c67d0b43b127}{%
            family={Jung},
@@ -236,12 +318,10 @@
       }
       \strng{namehash}{0c955331afeac3607b22c8409c3e0470}
       \strng{fullhash}{afda52432c3f00deb5cf7df776877519}
-      \strng{fullhashraw}{afda52432c3f00deb5cf7df776877519}
       \strng{bibnamehash}{0c955331afeac3607b22c8409c3e0470}
       \strng{authorbibnamehash}{0c955331afeac3607b22c8409c3e0470}
       \strng{authornamehash}{0c955331afeac3607b22c8409c3e0470}
       \strng{authorfullhash}{afda52432c3f00deb5cf7df776877519}
-      \strng{authorfullhashraw}{afda52432c3f00deb5cf7df776877519}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
@@ -280,7 +360,7 @@
       \endverb
       \keyw{Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
     \endentry
-    \entry{khodzhaevPracticalGuideSpectrogram}{article}{}{}
+    \entry{khodzhaevPracticalGuideSpectrogram}{article}{}
       \name{author}{1}{}{%
         {{hash=ac8cb2aeb17605106bbd9e2c70764a01}{%
            family={Khodzhaev},
@@ -290,12 +370,10 @@
       }
       \strng{namehash}{ac8cb2aeb17605106bbd9e2c70764a01}
       \strng{fullhash}{ac8cb2aeb17605106bbd9e2c70764a01}
-      \strng{fullhashraw}{ac8cb2aeb17605106bbd9e2c70764a01}
       \strng{bibnamehash}{ac8cb2aeb17605106bbd9e2c70764a01}
       \strng{authorbibnamehash}{ac8cb2aeb17605106bbd9e2c70764a01}
       \strng{authornamehash}{ac8cb2aeb17605106bbd9e2c70764a01}
       \strng{authorfullhash}{ac8cb2aeb17605106bbd9e2c70764a01}
-      \strng{authorfullhashraw}{ac8cb2aeb17605106bbd9e2c70764a01}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -307,7 +385,7 @@
       \verb /home/macacomalandro/Zotero/storage/SII6EFSC/Khodzhaev - A Practical Guide to Spectrogram Analysis for Audio Signal Processing.pdf
       \endverb
     \endentry
-    \entry{mcfeeLibrosaLibrosa01102025}{software}{}{}
+    \entry{mcfeeLibrosaLibrosa01102025}{software}{}
       \name{author}{95}{}{%
         {{hash=fbacf84c1c114df8080fbb2784cef0f6}{%
            family={McFee},
@@ -782,12 +860,10 @@
       }
       \strng{namehash}{21463f2a3be661593f29bc72d0ff39e5}
       \strng{fullhash}{f362d0f6fe7519e0e63835a4bc231b84}
-      \strng{fullhashraw}{f362d0f6fe7519e0e63835a4bc231b84}
       \strng{bibnamehash}{21463f2a3be661593f29bc72d0ff39e5}
       \strng{authorbibnamehash}{21463f2a3be661593f29bc72d0ff39e5}
       \strng{authornamehash}{21463f2a3be661593f29bc72d0ff39e5}
       \strng{authorfullhash}{f362d0f6fe7519e0e63835a4bc231b84}
-      \strng{authorfullhashraw}{f362d0f6fe7519e0e63835a4bc231b84}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -814,7 +890,7 @@
       \verb https://zenodo.org/doi/10.5281/zenodo.15006942
       \endverb
     \endentry
-    \entry{modusa}{software}{}{}
+    \entry{modusa}{software}{}
       \name{author}{1}{}{%
         {{hash=7b886e77f0e3acc157dd2adbb51989fe}{%
            family={{meluron}},
@@ -822,12 +898,10 @@
       }
       \strng{namehash}{7b886e77f0e3acc157dd2adbb51989fe}
       \strng{fullhash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{fullhashraw}{7b886e77f0e3acc157dd2adbb51989fe}
       \strng{bibnamehash}{7b886e77f0e3acc157dd2adbb51989fe}
       \strng{authorbibnamehash}{7b886e77f0e3acc157dd2adbb51989fe}
       \strng{authornamehash}{7b886e77f0e3acc157dd2adbb51989fe}
       \strng{authorfullhash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{authorfullhashraw}{7b886e77f0e3acc157dd2adbb51989fe}
       \field{sortinit}{m}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -844,7 +918,7 @@
       \verb https://github.com/meluron/modusa
       \endverb
     \endentry
-    \entry{mullerFundamentalsMusicProcessing2015}{book}{}{}
+    \entry{mullerFundamentalsMusicProcessing2015}{book}{}
       \name{author}{1}{}{%
         {{hash=80b6d841b668c1c8aa2744a675afd39e}{%
            family={Müller},
@@ -860,12 +934,10 @@
       }
       \strng{namehash}{80b6d841b668c1c8aa2744a675afd39e}
       \strng{fullhash}{80b6d841b668c1c8aa2744a675afd39e}
-      \strng{fullhashraw}{80b6d841b668c1c8aa2744a675afd39e}
       \strng{bibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
       \strng{authorbibnamehash}{80b6d841b668c1c8aa2744a675afd39e}
       \strng{authornamehash}{80b6d841b668c1c8aa2744a675afd39e}
       \strng{authorfullhash}{80b6d841b668c1c8aa2744a675afd39e}
-      \strng{authorfullhashraw}{80b6d841b668c1c8aa2744a675afd39e}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -893,7 +965,7 @@
       \verb https://link.springer.com/10.1007/978-3-319-21945-5
       \endverb
     \endentry
-    \entry{nakamuraPERFORMANCEERRORDETECTION}{article}{}{}
+    \entry{nakamuraPERFORMANCEERRORDETECTION}{article}{}
       \name{author}{3}{}{%
         {{hash=71ecf9c0bbf93c7ff4ddadb646820f26}{%
            family={Nakamura},
@@ -913,12 +985,10 @@
       }
       \strng{namehash}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{fullhash}{c23ca6582c66ff32a52ad04a5de35383}
-      \strng{fullhashraw}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{bibnamehash}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{authorbibnamehash}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{authornamehash}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{authorfullhash}{c23ca6582c66ff32a52ad04a5de35383}
-      \strng{authorfullhashraw}{c23ca6582c66ff32a52ad04a5de35383}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
@@ -930,7 +1000,7 @@
       \verb /home/macacomalandro/Zotero/storage/F6RS3YUL/Nakamura et al. - PERFORMANCE ERROR DETECTION AND POST-PROCESSING FOR FAST AND ACCURATE SYMBOLIC MUSIC ALIGNMENT.pdf
       \endverb
     \endentry
-    \entry{peterAutomaticNoteLevelScoretoPerformance2023}{article}{}{}
+    \entry{peterAutomaticNoteLevelScoretoPerformance2023}{article}{}
       \name{author}{7}{}{%
         {{hash=135466a0992c3c0b66ad5949808ca977}{%
            family={Peter},
@@ -970,12 +1040,10 @@
       }
       \strng{namehash}{4a2858e41a02b5dd6d916640a47ffb0c}
       \strng{fullhash}{f8f0af73393282eb2143faa1ee6136da}
-      \strng{fullhashraw}{f8f0af73393282eb2143faa1ee6136da}
       \strng{bibnamehash}{4a2858e41a02b5dd6d916640a47ffb0c}
       \strng{authorbibnamehash}{4a2858e41a02b5dd6d916640a47ffb0c}
       \strng{authornamehash}{4a2858e41a02b5dd6d916640a47ffb0c}
       \strng{authorfullhash}{f8f0af73393282eb2143faa1ee6136da}
-      \strng{authorfullhashraw}{f8f0af73393282eb2143faa1ee6136da}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -1010,34 +1078,7 @@
       \verb http://transactions.ismir.net/articles/10.5334/tismir.149/
       \endverb
     \endentry
-    \entry{pintoShiftIfYoua}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=6504ae5aa8969ce78257f97b492c2bee}{%
-           family={Pinto},
-           familyi={P\bibinitperiod},
-           given={António},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{fullhash}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{fullhashraw}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{bibnamehash}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{authorbibnamehash}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{authornamehash}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{authorfullhash}{6504ae5aa8969ce78257f97b492c2bee}
-      \strng{authorfullhashraw}{6504ae5aa8969ce78257f97b492c2bee}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In this late-breaking abstract we propose a modified approach for beat tracking evaluation which poses the problem in terms of the effort required to transform a sequence of beat detections such that they maximise the well-known F-measure calculation when compared to a sequence of ground truth annotations. Central to our approach is the inclusion of a shifting operation conducted over an additional, larger, tolerance window, which can substitute the combination of insertions and deletions. We describe a straightforward calculation of annotation efficiency and combine this with an informative visualisation which can be of use for the qualitative evaluation of beat tracking systems. We make our implementation and visualisation code freely available in a GitHub repository.}
-      \field{langid}{english}
-      \field{title}{Shift If {{You Can}}: {{Counting}} and {{Visualising Correction Operations}} for {{Beat Tracking Evaluation}}}
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/WGLLUJTI/Pinto - Shift if You Can Counting and Visualising Correction Operations for Beat Tracking Evaluation.pdf
-      \endverb
-    \endentry
-    \entry{repertoireinternationaldessourcesmusicalesVerovioReferenceBook2021}{online}{}{}
+    \entry{repertoireinternationaldessourcesmusicalesVerovioReferenceBook2021}{online}{}
       \name{author}{1}{}{%
         {{hash=e6730e803ad61186e010b3d828dc08d6}{%
            family={{Répertoire International des Sources Musicales}},
@@ -1045,12 +1086,10 @@
       }
       \strng{namehash}{e6730e803ad61186e010b3d828dc08d6}
       \strng{fullhash}{e6730e803ad61186e010b3d828dc08d6}
-      \strng{fullhashraw}{e6730e803ad61186e010b3d828dc08d6}
       \strng{bibnamehash}{e6730e803ad61186e010b3d828dc08d6}
       \strng{authorbibnamehash}{e6730e803ad61186e010b3d828dc08d6}
       \strng{authornamehash}{e6730e803ad61186e010b3d828dc08d6}
       \strng{authorfullhash}{e6730e803ad61186e010b3d828dc08d6}
-      \strng{authorfullhashraw}{e6730e803ad61186e010b3d828dc08d6}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
@@ -1078,7 +1117,48 @@
       \verb https://book.verovio.org/
       \endverb
     \endentry
-    \entry{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026}{software}{}{}
+    \entry{pintoShiftIfYoua}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=9880a3b5fba4d3b7c05f3b11fc795e33}{%
+           family={Sá\bibnamedelima Pinto},
+           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={António},
+           giveni={A\bibinitperiod}}}%
+        {{hash=877feafa2c43a34404b6cf34b618f6b3}{%
+           family={Domingues},
+           familyi={D\bibinitperiod},
+           given={Inês},
+           giveni={I\bibinitperiod}}}%
+        {{hash=965c1d87fe9db49756b7b208a8e3a1d6}{%
+           family={Davies},
+           familyi={D\bibinitperiod},
+           given={Matthew\bibnamedelimb E.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d73cc02f44b09cdd41808b6d8234bb49}
+      \strng{fullhash}{d73cc02f44b09cdd41808b6d8234bb49}
+      \strng{bibnamehash}{d73cc02f44b09cdd41808b6d8234bb49}
+      \strng{authorbibnamehash}{d73cc02f44b09cdd41808b6d8234bb49}
+      \strng{authornamehash}{d73cc02f44b09cdd41808b6d8234bb49}
+      \strng{authorfullhash}{d73cc02f44b09cdd41808b6d8234bb49}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this late-breaking abstract we propose a modified approach for beat tracking evaluation which poses the problem in terms of the effort required to transform a sequence of beat detections such that they maximise the well-known F-measure calculation when compared to a sequence of ground truth annotations. Central to our approach is the inclusion of a shifting operation conducted over an additional, larger, tolerance window, which can substitute the combination of insertions and deletions. We describe a straightforward calculation of annotation efficiency and combine this with an informative visualisation which can be of use for the qualitative evaluation of beat tracking systems. We make our implementation and visualisation code freely available in a GitHub repository.}
+      \field{booktitle}{Late-Breaking Demo Session of the 21st {{International Society for Music Information Retrieval Conference}}}
+      \field{langid}{english}
+      \field{title}{Shift If {{You Can}}: {{Counting}} and {{Visualising Correction Operations}} for {{Beat Tracking Evaluation}}}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2011.01637
+      \endverb
+      \verb{file}
+      \verb /home/macacomalandro/Zotero/storage/WGLLUJTI/Pinto - Shift if You Can Counting and Visualising Correction Operations for Beat Tracking Evaluation.pdf
+      \endverb
+    \endentry
+    \entry{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026}{software}{}
       \name{author}{1}{}{%
         {{hash=649ee044a636c882945b3ede3c65584a}{%
            family={Team},
@@ -1091,12 +1171,10 @@
       }
       \strng{namehash}{649ee044a636c882945b3ede3c65584a}
       \strng{fullhash}{649ee044a636c882945b3ede3c65584a}
-      \strng{fullhashraw}{649ee044a636c882945b3ede3c65584a}
       \strng{bibnamehash}{649ee044a636c882945b3ede3c65584a}
       \strng{authorbibnamehash}{649ee044a636c882945b3ede3c65584a}
       \strng{authornamehash}{649ee044a636c882945b3ede3c65584a}
       \strng{authorfullhash}{649ee044a636c882945b3ede3c65584a}
-      \strng{authorfullhashraw}{649ee044a636c882945b3ede3c65584a}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
@@ -1123,7 +1201,7 @@
       \verb https://zenodo.org/doi/10.5281/zenodo.19716234
       \endverb
     \endentry
-    \entry{valleVisualDisplayRetrieval}{article}{}{}
+    \entry{valleVisualDisplayRetrieval}{article}{}
       \name{author}{1}{}{%
         {{hash=49e6a9a8496bdeefdeab7fbd48325913}{%
            family={Valle},
@@ -1133,12 +1211,10 @@
       }
       \strng{namehash}{49e6a9a8496bdeefdeab7fbd48325913}
       \strng{fullhash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{fullhashraw}{49e6a9a8496bdeefdeab7fbd48325913}
       \strng{bibnamehash}{49e6a9a8496bdeefdeab7fbd48325913}
       \strng{authorbibnamehash}{49e6a9a8496bdeefdeab7fbd48325913}
       \strng{authornamehash}{49e6a9a8496bdeefdeab7fbd48325913}
       \strng{authorfullhash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{authorfullhashraw}{49e6a9a8496bdeefdeab7fbd48325913}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}

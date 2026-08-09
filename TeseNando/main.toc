@@ -50,6 +50,6 @@
 \contentsline {section}{\numberline {5.6}Summary}{38}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Conclusions and Future Work}{40}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Achievements}{40}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Work}{40}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Final Remarks}{40}{section.6.3}%
-\contentsline {chapter}{References}{41}{section*.35}%
+\contentsline {section}{\numberline {6.2}Future Work}{41}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Final Remarks}{41}{section.6.3}%
+\contentsline {chapter}{References}{43}{section*.37}%
