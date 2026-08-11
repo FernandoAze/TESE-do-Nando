@@ -13,43 +13,42 @@
 \contentsline {section}{\numberline {2.2}MIR Visualisation Tools}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Audio-to-Score Alignment}{13}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Summary}{15}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Methodology}{16}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Research Approach}{16}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Iterative Development Process}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Scope Decision}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Evaluation Criteria}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {4}LayerIt! \linebreak Design and Implementation}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}The Problem and our Solution}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}LayerIt Overview}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Design Choices and Rationale}{22}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Generating Visuals}{23}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Getting the Warped Score}{23}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Getting the MAPS file}{23}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Providing BT data}{24}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Layer Alignment Method}{25}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Layers on Layers, within Layers}{26}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Visual Level}{26}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}SVG Level}{27}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Code Level}{27}{subsection.4.6.3}%
-\contentsline {section}{\numberline {4.7}Summary}{30}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Validation}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Validation Approach}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Reproducing Composite Figure Types (RQ1)}{32}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Score, audio, and chroma on a shared axis}{32}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Score-aligned BT analysis}{33}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Probability and position displays}{33}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Layered time-based display}{34}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Workflow Comparison: Annotation and Evaluation (RQ2, RQ3)}{35}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Evaluation workflow}{35}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Annotation workflow}{36}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Extensibility Probe (RQ2)}{37}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Limitations and Difficult Cases (RQ2, RQ3)}{37}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Expressive performances}{37}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Sparse onset annotation}{38}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Manual editing of the final SVG}{38}{subsection.5.5.3}%
-\contentsline {section}{\numberline {5.6}Summary}{38}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{40}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Achievements}{40}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Work}{41}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Final Remarks}{41}{section.6.3}%
-\contentsline {chapter}{References}{43}{section*.37}%
+\contentsline {chapter}{\numberline {3}Methodology}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Research Approach}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Iterative Development Process}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Scope Decision}{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Evaluation Criteria}{20}{section.3.4}%
+\contentsline {chapter}{\numberline {4}LayerIt! \linebreak Design and Implementation}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Problem and our Solution}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}LayerIt Overview}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Design Choices and Rationale}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Generating Visuals}{24}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Getting the Warped Score}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Getting the MAPS file}{24}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Providing BT data}{25}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Layer Alignment Method}{26}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Layers on Layers, within Layers}{27}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Visual Level}{28}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}SVG Level}{28}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Code Level}{28}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Summary}{31}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Validation}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Validation Approach}{32}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Reproducing Composite Figure Types (RQ1)}{33}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Score, audio, and chroma on a shared axis}{33}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Score-aligned BT analysis}{34}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Probability and position displays}{34}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Layered time-based display}{35}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Workflow Comparison: Annotation and Evaluation (RQ2, RQ3)}{36}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Evaluation workflow}{36}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Annotation workflow}{37}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Extensibility Probe (RQ2)}{38}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Difficult Cases (RQ2, RQ3)}{38}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Expressive performances}{38}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Sparse onset annotation}{39}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Manual editing of the final SVG}{39}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Summary}{39}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Achievements}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Work}{42}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Final Remarks}{42}{section.6.3}%
