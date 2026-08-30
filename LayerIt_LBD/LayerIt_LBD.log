@@ -1,32 +1,33 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  9 AUG 2026 22:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.27)  11 AUG 2026 19:11
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex
-(/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-22>
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**LayerIt_LBD.tex
+(./LayerIt_LBD.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
@@ -37,7 +38,7 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: sty)
 
 Enter file name: 
-/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex:19: Emergency stop.
+! Emergency stop.
 <read *> 
          
 l.19 \usepackage
@@ -46,11 +47,11 @@ l.19 \usepackage
 
  
 Here is how much of TeX's memory you used:
- 482 strings out of 474222
- 5547 string characters out of 5748734
- 1922975 words of memory out of 5000000
- 22819 multiletter control sequences out of 15000+600000
- 558832 words of font info for 37 fonts, out of 8000000 for 9000
+ 489 strings out of 473190
+ 5458 string characters out of 5715800
+ 391984 words of memory out of 5000000
+ 23826 multiletter control sequences out of 15000+600000
+ 559600 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,0n,38p,259b,38s stack positions out of 10000i,1000n,20000p,200000b,200000s
-/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex:19:  ==> Fatal error occurred, no output PDF file produced!
+ 35i,0n,38p,195b,38s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
