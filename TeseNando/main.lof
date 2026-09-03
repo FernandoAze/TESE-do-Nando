@@ -12,8 +12,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Composition of the LayerIt visualisation system. Each coloured box represents a distinct visual element that composes a higher-level visualisation.}}{27}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for BWV~856. The green dotted lines show shared onset positions across all layers.}}{31}{figure.caption.19}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces LayerIt score-aligned BT display for BWV~856. The spectrogram, beat (red) and downbeat (blue) estimates, onset markers (black dotted lines), and warped score share the same performance timeline.}}{32}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces LayerIt probability-and-position displays for BWV~856. The upper composition shows BeatThis beat and downbeat positions with their activation curves; the lower composition replaces the discrete positions with faded activation-threshold windows, set to $20\%$ for beats and $50\%$ for downbeats in this excerpt.}}{33}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces LayerIt waveform display for BWV~856, with BeatThis beat and downbeat positions aligned to the time-warped score.}}{33}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for BWV~856. The green dotted lines show shared onset positions across all layers.}}{33}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces LayerIt score-aligned BT display for BWV~856. The spectrogram, beat (red) and downbeat (blue) estimates, onset markers (black dotted lines), and warped score share the same performance timeline.}}{34}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces LayerIt probability-and-position displays for BWV~856. The upper composition shows BeatThis beat and downbeat positions with their activation curves; the lower composition replaces the discrete positions with faded activation-threshold windows, set to $20\%$ for beats and $50\%$ for downbeats in this excerpt.}}{35}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces LayerIt waveform display for BWV~856, with BeatThis beat and downbeat positions aligned to the time-warped score.}}{35}{figure.caption.21}%
 \addvspace {10\p@ }

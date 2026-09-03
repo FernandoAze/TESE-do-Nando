@@ -89,7 +89,7 @@ The time instances can then be exported as \texttt{.txt} files containing the mi
 \subsection{Providing BT data}
 Contemporary BT algorithms commonly produce a beat activation function: a continuous curve representing the estimated likelihood of a beat at each frame. Visualising this curve alongside the discrete beat estimates exposes the model output from which those estimates are derived and provides qualitative context for interpreting them.
 
-In \texttt{src/functions/Beat\_Layers}, the \texttt{Run\_BeatThis()} function generates an \texttt{.npz} file containing the data required for visualisation. Although this function uses BeatThis, the \texttt{.npz} format can also act as an intermediate format for BT visual layers when it follows the structure used by \texttt{Run\_BeatThis()}. The file should contain five key components:
+LayerIt does not run a BT algorithm itself; it consumes a pre-computed \texttt{.npz} file containing the algorithmic output. For the examples in this thesis, this file was produced by running BeatThis on the performance recording and saving its output with \texttt{numpy.savez}. Any other beat tracker can supply this data, provided the \texttt{.npz} file follows the structure expected by the beat layers in \texttt{src/functions/Beat\_Layers.py}. The file should contain five key components:
 
 \begin{table}[h]
 \centering
@@ -98,12 +98,13 @@ In \texttt{src/functions/Beat\_Layers}, the \texttt{Run\_BeatThis()} function ge
 \textbf{Field} & \textbf{Purpose} \\
 \hline
 \texttt{beat\_times} & Time coordinates (seconds) aligned with probability frames \\
-\texttt{beat\_probs} & Continuous beat activation function values \\
-\texttt{downbeat\_probs} & Continuous downbeat activation function values \\
+\texttt{beat\_activation} & Continuous beat activation function values \\
+\texttt{downbeat\_activation} & Continuous downbeat activation function values \\
 \texttt{detected\_beats} & Discrete beat positions derived from peak detection \\
 \texttt{detected\_downbeats} & Discrete downbeat positions from peak detection \\
 \hline
 \end{tabular}
+\caption[Required .npz fields]{Fields required in the \texttt{.npz} file for BT visualisation.}
 \label{tab:npzStructure}
 \end{table}
 
@@ -123,9 +124,7 @@ LayerIt aligns layers as follows:
 
 \noindent In the codebase this is done through a single method: 
 
-\begin{itemize}
-  \item \texttt{Visualizer().get\_Layers\_WidthHeight()}
-\end{itemize}
+\texttt{Visualizer().get\_Layers\_WidthHeight()}
 
 \noindent LayerIt does not yet provide conversion methods for arbitrary external visualisations. However, the alignment procedure can be applied to an external image by placing its left edge at the start of the relevant timeline and scaling it to the recording length calculated by the framework. The image can then be scaled to the timeline length of the score generated through ScoreWarp.
 
@@ -149,6 +148,8 @@ At the visual level, layers are output elements aligned to a shared timeline. Th
 
 \subsection{SVG Level}
 At the SVG level, LayerIt organizes the XML structure of the output so that individual and combined layers remain identifiable. The following listing shows a simplified representation of the XML structure produced for a composed SVG file:
+
+\pagebreak
 
 \begin{lstlisting}[caption={Example structure of an SVG file},label={lst:svg-example}]
 <svg>
@@ -175,6 +176,8 @@ At the code level, LayerIt's OO architecture organizes each visualisation compon
 
 Listing \ref{lst:layer-base} shows an illustrative \texttt{Layer} base-class interface. The omitted imports are not relevant to the interface.
 
+\pagebreak
+
 \begin{lstlisting}[caption={Layer interface (concise)},label={lst:layer-base}]
 class Layer(ABC):
   def __init__(self, name: str = "Layer"):
@@ -196,7 +199,7 @@ class Layer(ABC):
     return None
 \end{lstlisting}
 
-In LayerIt, a \texttt{Visualizer} instance orchestrates the composition of multiple layers through a panel-based workflow. Layers are grouped into panels using \texttt{add_panel()}, which allows multiple layers to be rendered together on the same axis. The \texttt{Visualizer} maintains a shared data dictionary that all layers access during rendering via \texttt{load_all_layers()} and \texttt{draw()}. The \texttt{compose()} method then renders all panels and combines them with the warped score into a final multi-panel SVG. The next listing (\ref{lst:visualizer-api}) illustrates this composition workflow.
+In LayerIt, a \texttt{Visualizer} instance orchestrates the composition of multiple layers through a panel-based workflow. Layers are grouped into panels using \texttt{add\_panel()}, which allows multiple layers to be rendered together on the same axis. The \texttt{Visualizer} maintains a shared data dictionary that all layers access during rendering via \texttt{load\_all\_layers()} and \texttt{draw()}. The \texttt{compose()} method then renders all panels and combines them with the warped score into a final multi-panel SVG. The next listing (\ref{lst:visualizer-api}) illustrates this composition workflow.
 
 \begin{lstlisting}[caption={Visualizer Panel Composition},label={lst:visualizer-api}]
 # Create a visualizer with shared data paths
@@ -214,12 +217,10 @@ visualizer.add_panel(
 )
 
 # Compose all panels into final figure
-visualizer.compose("output.svg", 
-                   gap=20,
-                   score_position=0)
+visualizer.compose("output.svg", score_position=0)
 \end{lstlisting}
 
-In the composition workflow, the \texttt{Visualizer.compose()} method orchestrates the rendering of all panels and their combination with the warped score. Internally, each panel is rendered to SVG through \texttt{turn_to_SVG()}, which preserves each layer as a named SVG group. These panel SVGs are then combined with the warped score SVG using \texttt{create_final_SVG()}, which stacks them vertically at defined y-offsets while preserving the temporal alignment through the common timeline. The following illustrative listing shows this internal composition workflow.
+In the composition workflow, the \texttt{Visualizer.compose()} method orchestrates the rendering of all panels and their combination with the warped score. Internally, each panel is rendered to SVG through \texttt{turn\_to\_SVG()}, which preserves each layer as a named SVG group. These individual panel SVGs are then combined with the warped score SVG using \texttt{create\_final\_SVG()}, which stacks them vertically at defined y-offsets while preserving the temporal alignment through the common timeline. The following listing shows this internal composition workflow.
 
 \begin{lstlisting}[caption={SVG Composition Workflow},label={lst:svg-layers-example}]
 # Internal workflow (called by compose())
@@ -233,28 +234,18 @@ panel_viz.load_all_layers(audio_path=audio,
 fig, ax = panel_viz.draw()
 panel_svg = panel_viz.turn_to_SVG(
   filename="panel.svg",
-  svg_warped_score=score
-)
+  svg_warped_score=score)
 
 # Stack panels with score using create_final_SVG()
 composer = Visualizer(audio=audio, score=score,
                       maps=maps, beats=beats)
 composer.create_final_SVG(
-  width=1200, height=1600,
   svg_layers=[(panel_svg, 50),
               (score_svg, 300)],
-  output_file="final.svg"
-)
+  output_file="final.svg")
 \end{lstlisting}
 
 The example shows that higher-level SVG outputs can be positioned or stacked vertically, while lower-level Matplotlib layers can be composed into them. This compositional behaviour implements the ``layers within layers'' design of LayerIt.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\textwidth]{figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png}
-  \caption{Complete LayerIt workflow: from Visualizer() composition to final stacked SVG visualisation. The diagram shows how multiple visualisation layers are created independently, exported to SVG format, combined with the warped score, and finally stacked vertically with defined y-offsets to produce the final custom composite visualisation.}
-  \label{LayerIt_Workflow}
-\end{figure} 
 
 LayerIt supports a workflow from matplotlib-based visualisation generation to SVG or PNG composition. The final composition stage can include externally produced graphics, allowing code-generated visualisations to be combined with images created outside the codebase.
 
