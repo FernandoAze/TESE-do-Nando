@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1786311521.65538 "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex" "LayerIt_LBD.pdf" "LayerIt_LBD" 1786311521.7973 2
+["pdflatex"] 1788448582.35924 "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex" "LayerIt_LBD.pdf" "LayerIt_LBD" 1788448582.53298 2
   "/etc/texmf/web2c/texmf.cnf" 1779723239.32264 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex" 1786311521.31561 10126 6baf17203f743da2103fd94940e9c1a1 ""
+  "/home/macacomalandro/Documents/GitHub/TESE-do-Nando/LayerIt_LBD/LayerIt_LBD.tex" 1788448579.60044 11909 26624aa6f130ffadb3118eeea0d63109 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1705352648 20144 147463a6a579f4597269ef9565205cfe ""
@@ -11,8 +11,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1780329972 8214874 db026521c981f7d6e5682a2110353374 ""
-  "LayerIt_LBD.aux" 1786311521.65505 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "LayerIt_LBD.tex" 1786311521.31561 10126 6baf17203f743da2103fd94940e9c1a1 ""
+  "LayerIt_LBD.aux" 1788448582.35888 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "LayerIt_LBD.tex" 1788448579.60044 11909 26624aa6f130ffadb3118eeea0d63109 ""
   "ismir.sty" 0 -1 0 ""
   (generated)
   "LayerIt_LBD.aux"

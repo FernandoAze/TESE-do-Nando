@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  30 AUG 2026 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  3 SEP 2026 16:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -859,7 +859,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
-<figures/uporto-feup.pdf, id=233, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=237, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
 Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 136.
@@ -872,8 +872,6 @@ Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 136.
 
  (./frontmatter/abstract.tex
 Package acronym Info: Label `acro:MIR' newly defined as it shall be overridden
-although it is yet undefined on input line 4.
-Package acronym Info: Label `acro:OO' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
 Package acronym Info: Label `acro:SVG' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
@@ -953,41 +951,41 @@ Chapter 2.
 
 
 ] [6] [7]
-<figures/AudioVisualizations/Waveform.png, id=436, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/Waveform.png, id=435, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/Waveform.png Graphic file (type png)
 <use figures/AudioVisualizations/Waveform.png>
 Package pdftex.def Info: figures/AudioVisualizations/Waveform.png  used on input line 74.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [8 <./figures/AudioVisualizations/Waveform.png>]
-<figures/AudioVisualizations/Spectrum.png, id=444, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/Spectrum.png, id=443, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/Spectrum.png Graphic file (type png)
 <use figures/AudioVisualizations/Spectrum.png>
 Package pdftex.def Info: figures/AudioVisualizations/Spectrum.png  used on input line 84.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<figures/AudioVisualizations/SpectogramLinear.png, id=445, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramLinear.png, id=444, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramLinear.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramLinear.png>
 Package pdftex.def Info: figures/AudioVisualizations/SpectogramLinear.png  used on input line 97.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [9 <./figures/AudioVisualizations/Spectrum.png>]
-<figures/AudioVisualizations/SpectogramLog.png, id=451, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramLog.png, id=450, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramLog.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramLog.png>
 Package pdftex.def Info: figures/AudioVisualizations/SpectogramLog.png  used on input line 106.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [10 <./figures/AudioVisualizations/SpectogramLinear.png> <./figures/AudioVisualizations/SpectogramLog.png>]
-<figures/AudioVisualizations/SpectogramMel.png, id=459, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramMel.png, id=457, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramMel.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramMel.png>
 Package pdftex.def Info: figures/AudioVisualizations/SpectogramMel.png  used on input line 115.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<figures/AudioVisualizations/SpectogramCQT.png, id=462, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramCQT.png, id=460, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramCQT.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramCQT.png>
 Package pdftex.def Info: figures/AudioVisualizations/SpectogramCQT.png  used on input line 130.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [11 <./figures/AudioVisualizations/SpectogramMel.png>]
-<figures/AudioVisualizations/Chromagram.png, id=470, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/Chromagram.png, id=469, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/Chromagram.png Graphic file (type png)
 <use figures/AudioVisualizations/Chromagram.png>
 Package pdftex.def Info: figures/AudioVisualizations/Chromagram.png  used on input line 139.
@@ -1177,7 +1175,7 @@ Overfull \hbox (44.24086pt too wide) in paragraph at lines 85--86
  []
 
 [25]
-<figures/BlockDiagrams/LayersOnLayers.png, id=584, 787.94376pt x 908.39375pt>
+<figures/BlockDiagrams/LayersOnLayers.png, id=582, 787.94376pt x 908.39375pt>
 File: figures/BlockDiagrams/LayersOnLayers.png Graphic file (type png)
 <use figures/BlockDiagrams/LayersOnLayers.png>
 Package pdftex.def Info: figures/BlockDiagrams/LayersOnLayers.png  used on input line 138.
@@ -1201,7 +1199,7 @@ Package fancyhdr Warning: \headheight is too small (15.5pt):
 [28]
 LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 (Font)              scaled to size 8.54997pt on input line 196.
-<figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png, id=634, 3106.60625pt x 2112.89375pt>
+<figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png, id=633, 3106.60625pt x 2112.89375pt>
 File: figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png Graphic file (type png)
 <use figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png>
 Package pdftex.def Info: figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png  used on input line 230.
@@ -1225,24 +1223,24 @@ Chapter 5.
 
 
 ]
-<figures/LayerItExamples/1 FIG_521_sel.png, id=680, 1734.48pt x 1375.1375pt>
+<figures/LayerItExamples/1 FIG_521_sel.png, id=679, 1734.48pt x 1375.1375pt>
 File: figures/LayerItExamples/1 FIG_521_sel.png Graphic file (type png)
 <use figures/LayerItExamples/1 FIG_521_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/1 FIG_521_sel.png  used on input line 23.
 (pdftex.def)             Requested size: 426.79135pt x 338.36995pt.
  [33 <./figures/LayerItExamples/1 FIG_521_sel.png>]
-<figures/LayerItExamples/2 FIG_522_sel.png, id=688, 2666.96375pt x 1098.1025pt>
+<figures/LayerItExamples/2 FIG_522_sel.png, id=686, 2666.96375pt x 1098.1025pt>
 File: figures/LayerItExamples/2 FIG_522_sel.png Graphic file (type png)
 <use figures/LayerItExamples/2 FIG_522_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/2 FIG_522_sel.png  used on input line 36.
 (pdftex.def)             Requested size: 426.79135pt x 175.71674pt.
  [34 <./figures/LayerItExamples/2 FIG_522_sel.png>]
-<figures/LayerItExamples/3 FIG_523_sel.png, id=696, 1912.14375pt x 1093.08376pt>
+<figures/LayerItExamples/3 FIG_523_sel.png, id=695, 1912.14375pt x 1093.08376pt>
 File: figures/LayerItExamples/3 FIG_523_sel.png Graphic file (type png)
 <use figures/LayerItExamples/3 FIG_523_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/3 FIG_523_sel.png  used on input line 49.
 (pdftex.def)             Requested size: 426.79135pt x 243.9651pt.
-<figures/LayerItExamples/4 FIG_524_sel.png, id=697, 1819.79875pt x 498.86375pt>
+<figures/LayerItExamples/4 FIG_524_sel.png, id=696, 1819.79875pt x 498.86375pt>
 File: figures/LayerItExamples/4 FIG_524_sel.png Graphic file (type png)
 <use figures/LayerItExamples/4 FIG_524_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/4 FIG_524_sel.png  used on input line 60.
@@ -1455,38 +1453,25 @@ Overfull \hbox (1.93373pt too wide) in paragraph at lines 176--176
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: BF51DA8540C64E18E20C9443E7ACA5B2;10905
-(rerunfilecheck)             After:  BF0344097D295E2A88FAC54162C0886D;11001.
-
-Package biblatex Warning: Please rerun LaTeX.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 664057C1135C1FEBB805D75F6B4E5A6F;11001.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28194 strings out of 474222
- 544692 string characters out of 5748734
+ 28189 strings out of 474222
+ 544645 string characters out of 5748734
  2065975 words of memory out of 5000000
- 49797 multiletter control sequences out of 15000+600000
+ 49794 multiletter control sequences out of 15000+600000
  636226 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,12n,95p,2928b,2962s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,12n,95p,2928b,2961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (53 pages, 4970687 bytes).
+Output written on main.pdf (53 pages, 4970617 bytes).
 PDF statistics:
- 894 PDF objects out of 1000 (max. 8388607)
- 787 compressed objects within 8 object streams
- 232 named destinations out of 1000 (max. 500000)
- 527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 892 PDF objects out of 1000 (max. 8388607)
+ 785 compressed objects within 8 object streams
+ 230 named destinations out of 1000 (max. 500000)
+ 535 words of extra memory for PDF output out of 10000 (max. 10000000)
 
