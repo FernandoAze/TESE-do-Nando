@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  3 SEP 2026 19:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  3 SEP 2026 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1201,24 +1201,24 @@ Chapter 5.
 
 
 ]
-<figures/LayerItExamples/1 FIG_521_sel.png, id=685, 1734.48pt x 1375.1375pt>
+<figures/LayerItExamples/1 FIG_521_sel.png, id=686, 1734.48pt x 1375.1375pt>
 File: figures/LayerItExamples/1 FIG_521_sel.png Graphic file (type png)
 <use figures/LayerItExamples/1 FIG_521_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/1 FIG_521_sel.png  used on input line 23.
 (pdftex.def)             Requested size: 426.79135pt x 338.36995pt.
  [33 <./figures/LayerItExamples/1 FIG_521_sel.png>]
-<figures/LayerItExamples/2 FIG_522_sel.png, id=692, 2666.96375pt x 1098.1025pt>
+<figures/LayerItExamples/2 FIG_522_sel.png, id=693, 2666.96375pt x 1098.1025pt>
 File: figures/LayerItExamples/2 FIG_522_sel.png Graphic file (type png)
 <use figures/LayerItExamples/2 FIG_522_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/2 FIG_522_sel.png  used on input line 36.
 (pdftex.def)             Requested size: 426.79135pt x 175.71674pt.
  [34 <./figures/LayerItExamples/2 FIG_522_sel.png>]
-<figures/LayerItExamples/3 FIG_523_sel.png, id=700, 1912.14375pt x 1093.08376pt>
+<figures/LayerItExamples/3 FIG_523_sel.png, id=701, 1912.14375pt x 1093.08376pt>
 File: figures/LayerItExamples/3 FIG_523_sel.png Graphic file (type png)
 <use figures/LayerItExamples/3 FIG_523_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/3 FIG_523_sel.png  used on input line 49.
 (pdftex.def)             Requested size: 426.79135pt x 243.9651pt.
-<figures/LayerItExamples/4 FIG_524_sel.png, id=701, 1819.79875pt x 498.86375pt>
+<figures/LayerItExamples/4 FIG_524_sel.png, id=702, 1819.79875pt x 498.86375pt>
 File: figures/LayerItExamples/4 FIG_524_sel.png Graphic file (type png)
 <use figures/LayerItExamples/4 FIG_524_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/4 FIG_524_sel.png  used on input line 60.
@@ -1264,192 +1264,4 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 80--80
-[]|\T1/ptm/m/n/10.95 Beat and down-beat prob-a-bil-i-ties,
- []
-
-
-Underfull \hbox (badness 3989) in paragraph at lines 80--80
-\T1/ptm/m/n/10.95 po-si-tions or thresh-old win-dows,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]|\T1/ptm/m/n/10.95 Continuous con-fi-
- []
-
-
-Underfull \hbox (badness 1107) in paragraph at lines 80--80
-\T1/ptm/m/n/10.95 dence and dis-crete
- []
-
-
-Underfull \hbox (badness 4366) in paragraph at lines 80--80
-[]|\T1/ptm/m/n/10.95 A min-i-mal score-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-\T1/ptm/m/n/10.95 aligned an-a-lyt-i-cal
- []
-
-[35 <./figures/LayerItExamples/3 FIG_523_sel.png> <./figures/LayerItExamples/4 FIG_524_sel.png>]
-Overfull \hbox (7.63867pt too wide) in paragraph at lines 85--85
-[]\T1/ptm/b/n/14.4 Workflow Ca-pa-bil-i-ties for An-no-ta-tion and Eval-u-a-tion (RQ2, RQ3) 
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/b/n/10.95 Manual SVG
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Link-based score
- []
-
-
-Underfull \hbox (badness 5787) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Possible through
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Arbitrary al-go-rith-mic
- []
-
-
-Underfull \hbox (badness 5847) in paragraph at lines 117--117
-\T1/ptm/m/n/10.95 able lay-er-s/-plu-g-
- []
-
-
-Underfull \hbox (badness 5787) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Possible through
- []
-
-
-Underfull \hbox (badness 1389) in paragraph at lines 117--117
-\T1/ptm/m/n/10.95 man-ual con-struc-
- []
-
-
-Underfull \hbox (badness 4013) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Scriptable fig-ure gen-er-a-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Depends on a
- []
-
-
-Underfull \hbox (badness 7704) in paragraph at lines 117--117
-\T1/ptm/m/n/10.95 sep-a-rately main-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-\T1/ptm/m/n/10.95 the com-po-si-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Regeneration af-ter data
- []
-
-
-Underfull \hbox (badness 1389) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Manual re-con-fig-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Manual view
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Repeat man-ual
- []
-
-
-Underfull \hbox (badness 2582) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Re-run with up-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Plugin de-vel-op-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Plugin de-vel-op-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[]|\T1/ptm/m/n/10.95 Implement or
- []
-
-[37] [38]) [39] [40]
-\openout2 = `body/chapter6.aux'.
-
- (./body/chapter6.tex
-Chapter 6.
-[41
-
-
-
-
-] [42]) [43]
-Overfull \hbox (6.54376pt too wide) in paragraph at lines 176--176
-\T1/ptm/m/n/10.95 and Per-for-mances^^Q. In: \T1/ptm/m/it/10.95 Pro-ceed-ings of the Mu-sic En-cod-ing Con-fer-ence\T1/ptm/m/n/10.95 . Hal-i-fax, NS, Canada,
- []
-
-
-Overfull \hbox (19.35216pt too wide) in paragraph at lines 176--176
-\T1/ptm/m/n/10.95 MU-SIC PER-FOR-MANCE ANAL-Y-SIS BY IN-TE-GRAT-ING USER-CORRECTABLE AUDIO-
- []
-
-[44
-
-
-
-
-]
-Overfull \hbox (1.93373pt too wide) in paragraph at lines 176--176
-\T1/ptm/m/n/10.95 In: \T1/ptm/m/it/10.95 Mul-ti-modal Mu-sic Pro-cess-ing\T1/ptm/m/n/10.95 . Vol. 3. Dagstuhl Follow-Ups. Schloss Dagstuhl -- Leibniz-
- []
-
-[45]
-\openout2 = `backmatter/appendix1.aux'.
-
- (./backmatter/appendix1.tex) (./main.aux (./frontmatter/abstract.aux) (./frontmatter/acknows.aux) (./frontmatter/abbrevs.aux) (./body/chapter1.aux) (./body/chapter2.aux) (./body/chapter3.aux) (./body/chapter4.aux) (./body/chapter5.aux) (./body/chapter6.aux) (./backmatter/appendix1.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-22>
- ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6419DD9BE3E984FBD80CD45C4EE4ED22;11001.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 28164 strings out of 474222
- 543896 string characters out of 5748734
- 2072975 words of memory out of 5000000
- 49755 multiletter control sequences out of 15000+600000
- 642736 words of font info for 139 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 88i,12n,95p,1814b,2955s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (53 pages, 4544786 bytes).
-PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 788 compressed objects within 8 object streams
- 242 named destinations out of 1000 (max. 500000)
- 530 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Underfull \hbox (badness 166

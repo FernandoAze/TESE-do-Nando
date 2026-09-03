@@ -6,22 +6,22 @@ This chapter evaluates LayerIt against the criteria defined in \autoref{chap:Met
 
 The validation considers whether the framework can express the score-aligned, multi-modal figures that motivated the thesis, and whether its composition model supports their creation, modification, and regeneration once a score-performance alignment is available. The objective is not to claim that LayerIt replaces interactive annotation software, reduces annotation effort, or establishes the accuracy of an alignment algorithm. Instead, it assesses the framework as a reproducible means of composing visual material from modular layers.
 
-All figures in this chapter are original outputs generated locally from the same case study: J.S. Bach the fuge from BWV~856. The inputs are the audio recording, its MEI score, a MAPS file, the ScoreWarp-generated SVG score, and BeatThis output. The figures are therefore not reproductions of published images. Published work is referenced only to motivate the figure types and the workflow gap addressed by the framework.
+Three of the four figures in this chapter are original outputs generated locally from the same case study: J.S. Bach's fugue from BWV~856, performed by Andr\'as Schiff. The inputs are the audio recording, its MEI score, a MAPS file, the ScoreWarp-generated SVG score, and BeatThis output. The remaining figure (\autoref{fig:validation-score-audio-chroma}) uses a second case study, the opening bars of Debussy's \textit{Clair de Lune} performed by Maria Jo\~ao Pires, to demonstrate the framework's audio-representation layers independently of BT data. The figures are therefore not reproductions of published images. Published work is referenced only to motivate the figure types and the workflow gap addressed by the framework.
 
 The evaluation distinguishes one-time preparation from per-figure work. Producing a score-aligned figure requires preparing the MEI score, MAPS annotations, warped score, and, where relevant, algorithmic output. These are substantial prerequisites shared by all LayerIt figures. Once they are available, the scripts supplied with this thesis define and compose the desired layers, and can be re-run when the input data or visual parameters change.
 
 \section{Reproducing Composite Figure Types (RQ1)}
 
-RQ1 asks how heterogeneous MIR visualisations can be combined in a common score-aligned representation. The four examples in this section address this question by composing symbolic notation, audio-derived representations, onset annotations, and BT output around the same warped score timeline. They cover both dense, multi-layer views and a time-based display.
+RQ1 asks how heterogeneous MIR visualisations can be combined in a common score-aligned representation. The four examples in this section address this question by composing symbolic notation, audio-derived representations, onset annotations, and BT output around a warped score timeline. They cover both dense, multi-layer views and a time-based display.
 
 \subsection{Score, audio, and chroma on a shared axis}
 
-The first example combines a waveform, a time-warped score, a spectrogram, and a chromagram. Green dotted onset markers are repeated across the layers, making their common time reference visible. The figure demonstrates that the layer model is not limited to beat tracking: it can combine a symbolic score with multiple complementary audio representations in one vertically aligned view. This is the type of multimodal display used to relate score information to time-frequency and pitch-class information in MIR workflows \cite{mullerFundamentalsMusicProcessing2015}.
+The first example combines a waveform, a time-warped score, a spectrogram, and a chromagram, using the Clair de Lune excerpt to isolate the audio-representation layers from BT output. Green dotted onset markers are repeated across the layers, making their common time reference visible. The figure demonstrates that the layer model is not limited to beat tracking: it can combine a symbolic score with multiple complementary audio representations in one vertically aligned view. This is the type of multimodal display used to relate score information to time-frequency and pitch-class information in MIR workflows \cite{mullerFundamentalsMusicProcessing2015}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{LayerItExamples/1 FIG_521_sel.png}
-	\caption{LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for BWV~856. The green dotted lines show shared onset positions across all layers.}
+	\caption{LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for the opening bars of Debussy's \textit{Clair de Lune}. The green dotted lines show shared onset positions across all layers.}
 	\label{fig:validation-score-audio-chroma}
 \end{figure}
 
@@ -121,7 +121,7 @@ No controlled count of manual operations or wall-clock time was recorded for the
 
 \section{Modular Composition Evidence (RQ2)}
 
-The architecture described in \autoref{chap:DesignAndImplementation} defines a common \texttt{Layer} interface and composes layers through \texttt{Visualizer}. The examples in this chapter exercise that interface with several independent layer types including: spectrogram, chromagram, waveform, onsets layer, BT output layers, beat/downbeat activation curves. Each is added through the same \texttt{.add\_layer()} operation and loaded through the common \texttt{.create\_final\_SVG()} workflow.
+The architecture described in \autoref{chap:DesignAndImplementation} defines a common \texttt{Layer} interface and composes layers through \texttt{Visualizer}. The examples in this chapter exercise that interface with several independent layer types including: spectrogram, chromagram, waveform, onsets layer, BT output layers, beat/downbeat activation curves. Each is added through the same \texttt{add\_panel()} operation and rendered through the common \texttt{compose()} workflow.
 
 The scripts provide practical evidence of composability: \autoref{fig:validation-score-audio-chroma} adds waveform, chromagram, and onset layers to the same output, while \autoref{fig:validation-probability-position} substitutes discrete position layers with probability-window layers without changing the composition mechanism. This is consistent with the modular claim of Chapter~4.
 
