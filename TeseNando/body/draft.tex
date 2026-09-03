@@ -1,0 +1,10 @@
+# Create a visualizer and compose layers
+visualizer = Visualizer(audio_path="performance.wav", 
+                        beat_file="beats.npz")
+
+# Add multiple composable layers inside a given panel.
+visualizer.add_panel(Waveform,
+                     BeatProbabilityLayer(color=(1, 0, 0)),
+                     DownbeatProbabilityLayer(color=(0, 0, 1)))
+
+visualizer.compose("figure.svg")

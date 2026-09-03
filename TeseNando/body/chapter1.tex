@@ -8,10 +8,10 @@ The challenge of visualization in MIR is particularly significant because music 
 
 \section{Motivation}
 % MIR Visualization Problem Motivation intro 
-MIR research increasingly demands visualizations that integrate multiple modalities simultaneously. MIR researchers often need to inspect algorithmic outputs alongside audio representations and symbolic scores in a time-coherent manner. This kind of multi-modal, time-aligned visualization is central to both the evaluation of MIR algorithms and the development of annotation workflows. Audio-to-score alignment, the task of synchronizing a performance recording with its corresponding symbolic score, is a key enabler of this type of visualization, as it provides the temporal anchor needed to align heterogeneous data sources into a unified view.
+MIR researchers often need to inspect algorithmic outputs alongside audio representations and symbolic scores in a time-coherent manner. This kind of multi-modal, time-aligned visualization is central to both the evaluation of MIR algorithms and the development of annotation workflows. Audio-to-score alignment, the  task of synchronizing a performance recording with its corresponding symbolic score, is a key enabler of this type of visualization, as it provides the temporal anchor needed to align heterogeneous data sources into a unified view.
 
 % Focus on BT/BA
-This thesis was initiated by two closely related challenges within BT and BA research. Contemporary BT systems are predominantly deep learning-based thus, the field is deeply reliant on tools to enable better execution of annotation and evaluation tasks, these are essential for advancing BT research. 
+This thesis was initiated by two closely related challenges within Beat Tracking (BT) and Beat Annotation (BA) research. Contemporary BT systems are predominantly deep learning-based thus, the field is deeply reliant on tools to enable better execution of annotation and evaluation tasks, these are essential for advancing BT research. 
 
 Annotation tasks, and more concretely BA itself, remain a laborious and time-consuming process. Existing Graphical User Interface (GUI) tools such as Sonic Visualiser present a clear gap in this area: integrating newer state-of-the-art BT algorithms is difficult, and BA specific features have seen little meaningful innovation. This disconnect between annotation workflows and the algorithms they are meant to support is a concrete obstacle to progress in both domains.
 
@@ -19,7 +19,7 @@ Annotation tasks, and more concretely BA itself, remain a laborious and time-con
 For evaluation tasks, GUI tools suffer from a similar problem, where methods to visualise how developed algorithms perform on a deeper level are lacking. Providing better tools to evaluate and compare models between each other is also key to improving them.
 
 % Stating the SV problem
-Although solutions like Sonic Visualiser are powerful and widely used, their development cannot keep pace with the modern MIR research needs. Integrating new algorithms or producing specialized visualizations is often impractical within them. A particularly under served case is the visualization of score-aligned data: combining audio and data representations with a musical score typically involves manual image manipulation, with no unified methodology in the community. 
+Although solutions like Sonic Visualiser \cite{cannam2010SonicVisualiserOpen} are powerful and widely used, their development cannot keep pace with the modern MIR research needs. Integrating new algorithms or producing specialized visualizations is often impractical within them. A particularly under served case is the visualization of score-aligned data: combining audio and data representations with a musical score typically involves manual image manipulation, with no unified methodology in the community. 
 
 Because of these reasons, researchers frequently resort to \textit{ad hoc} solutions that lack reproducibility and are difficult to share or extend, a fragmentation that represents a real obstacle to the collaboration which MIR research depends on. By contributing a flexible, extensible, and community-oriented visualization tool built on established libraries, this thesis aims to not only address an immediate practical gap, but also to establish a foundation for a framework that can support the growing complexity and interdisciplinarity of MIR research.
 
@@ -31,7 +31,6 @@ This thesis is guided by three objectives, which in turn lead to three research 
 
 \begin{itemize}
     \item \textbf{Objective 1}: Develop a reusable Python framework for composing score-aligned MIR visualizations based on an OO layer-composition model.
-    
     \item \textbf{Objective 2}: Demonstrate that the framework can generate and regenerate score-aligned visualization compositions from modular layers.
     \item \textbf{Objective 3}: Demonstrate how score-aligned visualizations can provide qualitative visual context for beat annotation and BT evaluation workflows.
 \end{itemize}
@@ -46,11 +45,11 @@ The main contributions of this thesis are the following:
 \begin{itemize}
     \item The LayerIt framework for composing score-aligned MIR visualizations through an OO layer-composition model.
     \item The release of LayerIt as an open-source, pip-installable Python library.
-    \item The open-source repository containing the five prototype visualizations developed as part of this work.
+    \item The open-source repository containing example for visualizations developed as part of this work.
     \item A Late-Breaking Demo paper submitted to ISMIR 2026.
 \end{itemize}
 
-The contribution is therefore the layer-composition framework and the figures it enables, rather than the alignment method itself, which is provided by ScoreWarp.
+The contribution is therefore the layer-composition framework and the figures it enables, rather than the alignment method itself, which is provided by ScoreWarp \cite{goeblLetsScoreWarpAgain2025a}.
 
 \section{Developed Project} 
 To address the previously mentioned objectives and research questions, we developed LayerIt, a Python-based OO framework for composing score-aligned MIR visualizations. LayerIt integrates established MIR libraries and tools into an SVG-based workflow in which visual elements are treated as independent layers that can be composed, reordered, and combined into custom figures.

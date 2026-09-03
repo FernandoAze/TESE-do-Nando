@@ -31,6 +31,49 @@
       \verb https://music-encoding.org/about/
       \endverb
     \endentry
+    \entry{cannam2010SonicVisualiserOpen}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2f5601a645ec93b1afbc464c7fe67978}{%
+           family={Cannam},
+           familyi={C\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f41bf234b3cbae0d743136373f9fec43}{%
+           family={Landone},
+           familyi={L\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8f90fd131c2bbfde4d0e9fdd7ed4ea8b}{%
+           family={Sandler},
+           familyi={S\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florence, Italy}%
+      }
+      \list{publisher}{1}{%
+        {ACM Press}%
+      }
+      \strng{namehash}{329638f8fe745457339ec8c8b935b5ec}
+      \strng{fullhash}{329638f8fe745457339ec8c8b935b5ec}
+      \strng{bibnamehash}{329638f8fe745457339ec8c8b935b5ec}
+      \strng{authorbibnamehash}{329638f8fe745457339ec8c8b935b5ec}
+      \strng{authornamehash}{329638f8fe745457339ec8c8b935b5ec}
+      \strng{authorfullhash}{329638f8fe745457339ec8c8b935b5ec}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 18th {{ACM International Conference}} on {{Multimedia}} ({{MM}} '10)}
+      \field{title}{{Sonic Visualiser: An Open Source Application for Viewing, Analysing, and Annotating Music Audio Files}}
+      \field{year}{2010}
+      \field{pages}{1467\bibrangedash 1468}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/1873951.1874248
+      \endverb
+    \endentry
     \entry{carabias-ortiAUDIOSCOREALIGNMENTa}{article}{}
       \name{author}{4}{}{%
         {{hash=1d9d6ea7b25d9dd3d9c79477f305d791}{%
@@ -127,39 +170,47 @@
     \endentry
     \entry{foscarinBeatThisAccurate2024a}{inproceedings}{}
       \name{author}{3}{}{%
-        {{hash=57e2d51ccee38929c55d3988ede65fb0}{%
+        {{hash=ec6820c032aa807100377aba17e7741c}{%
            family={Foscarin},
            familyi={F\bibinitperiod},
-           given={F.},
+           given={Francesco},
            giveni={F\bibinitperiod}}}%
-        {{hash=5f49e590d3bb01f24f1c7c4da98041ba}{%
+        {{hash=9f118d3582197497a9715d900638f1bc}{%
            family={Schlüter},
            familyi={S\bibinitperiod},
-           given={J.},
+           given={Jan},
            giveni={J\bibinitperiod}}}%
-        {{hash=e088c9a0fe005e8b63ad418e8d0d81d2}{%
+        {{hash=8296a6d278bcf9dc9f972c25929ae2d0}{%
            family={Widmer},
            familyi={W\bibinitperiod},
-           given={G.},
+           given={Gerhard},
            giveni={G\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {San Francisco, United States}%
+        {San Francisco, CA, USA}%
       }
-      \strng{namehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
-      \strng{fullhash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
-      \strng{bibnamehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
-      \strng{authorbibnamehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
-      \strng{authornamehash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
-      \strng{authorfullhash}{0ec8b75aa9008acd9cd38d96ece1ce6e}
+      \strng{namehash}{0f9dd9d32169c04fb8e803942af1022d}
+      \strng{fullhash}{0f9dd9d32169c04fb8e803942af1022d}
+      \strng{bibnamehash}{0f9dd9d32169c04fb8e803942af1022d}
+      \strng{authorbibnamehash}{0f9dd9d32169c04fb8e803942af1022d}
+      \strng{authornamehash}{0f9dd9d32169c04fb8e803942af1022d}
+      \strng{authorfullhash}{0f9dd9d32169c04fb8e803942af1022d}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 25th {{International Society}} for {{Music Information Retrieval Conference}} ({{ISMIR}} 2024)}
-      \field{title}{Beat This! {{Accurate}} Beat Tracking without {{DBN}} Postprocessing}
+      \field{booktitle}{Proceedings of the 25th {{International Society}} for {{Music Information Retrieval Conference}} ({{ISMIR}})}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{title}{{Beat This! Accurate Beat Tracking without DBN Postprocessing}}
+      \field{urlday}{4}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
       \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2407.21658
+      \endverb
     \endentry
     \entry{foscarinMatchFileFormat2022}{inproceedings}{}
       \name{author}{6}{}{%
@@ -178,11 +229,11 @@
            familyi={P\bibinitperiod},
            given={Silvan\bibnamedelima David},
            giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=8ccdb4842b665491aa6e941abaed585a}{%
-           family={Cancino-Chacón},
-           familyi={C\bibinithyphendelim C\bibinitperiod},
-           given={Carlos\bibnamedelima E.},
-           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7b0f9cacb18ce2f730e7b67b51120a89}{%
+           family={{Cancino-Chacón}},
+           familyi={C\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
         {{hash=7abe642e55ea080371bc61242003467d}{%
            family={Grachten},
            familyi={G\bibinitperiod},
@@ -198,21 +249,30 @@
         {Halifax, NS, Canada}%
       }
       \strng{namehash}{fec11b511592c6457b273469860c7839}
-      \strng{fullhash}{de2a5109a144f1f10d0d51c51c472dcd}
+      \strng{fullhash}{9b621fd72cb40e8d22e04a8bcd8b40cc}
       \strng{bibnamehash}{fec11b511592c6457b273469860c7839}
       \strng{authorbibnamehash}{fec11b511592c6457b273469860c7839}
       \strng{authornamehash}{fec11b511592c6457b273469860c7839}
-      \strng{authorfullhash}{de2a5109a144f1f10d0d51c51c472dcd}
+      \strng{authorfullhash}{9b621fd72cb40e8d22e04a8bcd8b40cc}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the Music Encoding Conference}
-      \field{title}{The Match File Format: Encoding Alignments Between Scores and Performances}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{Proceedings of the {{Music Encoding Conference}}}
+      \field{eprintclass}{cs.SD}
+      \field{eprinttype}{arXiv}
+      \field{shorttitle}{The Match File Format}
+      \field{title}{The Match File Format: {{Encoding Alignments}} between {{Scores}} and {{Performances}}}
+      \field{urlday}{19}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
       \field{year}{2022}
-      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{52\bibrangedash 60}
       \range{pages}{9}
+      \verb{doi}
+      \verb 10.48550/arXiv.2206.01104
+      \endverb
     \endentry
     \entry{fremereyHandlingRepeats2010}{inproceedings}{}
       \name{author}{3}{}{%
@@ -271,41 +331,35 @@
            familyi={P\bibinitperiod},
            given={Anna},
            giveni={A\bibinitperiod}}}%
-        {{hash=4d93d33575d4cd53038f2ac3f2da5ee2}{%
+        {{hash=69cd9e73fa00dd96727b2a25475bbb33}{%
            family={Stremel},
            familyi={S\bibinitperiod},
-           given={Solveig},
+           given={Sophie},
            giveni={S\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {London}%
+        {London, United Kingdom}%
       }
       \strng{namehash}{1681550c7b7460862067c8c04daa6cfb}
-      \strng{fullhash}{34f871baebad5554d5fe4999a988933c}
+      \strng{fullhash}{9a99276561a2317e10af2ec4c1593902}
       \strng{bibnamehash}{1681550c7b7460862067c8c04daa6cfb}
       \strng{authorbibnamehash}{1681550c7b7460862067c8c04daa6cfb}
       \strng{authornamehash}{1681550c7b7460862067c8c04daa6cfb}
-      \strng{authorfullhash}{34f871baebad5554d5fe4999a988933c}
+      \strng{authorfullhash}{9a99276561a2317e10af2ec4c1593902}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the {{Music Encoding Conference}} 2025 ({{MEC}} 2025)}
+      \field{booktitle}{Proceedings of the {{Music Encoding Conference}}}
       \field{langid}{english}
-      \field{title}{Let’s Do the {{ScoreWarp}} Again! {{Shifting}} Notes to Performance Timelines}
+      \field{title}{{Let's Do the ScoreWarp Again! Shifting Notes to Performance Timelines}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2025}
-      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.17613/gqd3b-w7c28
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/HHTMCNLH/Goebl - 2025 - Let’s do the ScoreWarp again! Shifting notes to performance timelines.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.17613/gqd3b-w7c28
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.17613/gqd3b-w7c28
       \endverb
     \endentry
     \entry{hentschelTimeAlignModelling2026}{article}{}
@@ -315,14 +369,14 @@
            familyi={H\bibinitperiod},
            given={Johannes},
            giveni={J\bibinitperiod}}}%
-        {{hash=f36a276be96e3461a87af7b85449df80}{%
+        {{hash=883bca376ce7ba9950832e3011256964}{%
            family={Berndt},
            familyi={B\bibinitperiod},
-           given={Anna},
+           given={Axel},
            giveni={A\bibinitperiod}}}%
         {{hash=7b0f9cacb18ce2f730e7b67b51120a89}{%
-           family={Cancino-Chacón},
-           familyi={C\bibinithyphendelim C\bibinitperiod},
+           family={{Cancino-Chacón}},
+           familyi={C\bibinitperiod},
            given={Carlos},
            giveni={C\bibinitperiod}}}%
         {{hash=a9aae0a8ca29e8a3ecc7d2bbf3f6c76e}{%
@@ -330,30 +384,30 @@
            familyi={D\bibinitperiod},
            given={Simon},
            giveni={S\bibinitperiod}}}%
-        {{hash=1e0bbc44d3760afc28ae35dd791c9667}{%
+        {{hash=518578429d7366975088ff1257085e2e}{%
            family={Foo},
            familyi={F\bibinitperiod},
-           given={Adrian},
+           given={Anne},
            giveni={A\bibinitperiod}}}%
         {{hash=179e580289c8c4225a95bd4e52ca2285}{%
            family={Gotham},
            familyi={G\bibinitperiod},
            given={Mark},
            giveni={M\bibinitperiod}}}%
-        {{hash=9c0dba50e81fde0609d5931f82906b31}{%
+        {{hash=9e4b7024de3e924d8a67d323a9759d19}{%
            family={Hu},
            familyi={H\bibinitperiod},
-           given={Ping},
+           given={Patricia},
            giveni={P\bibinitperiod}}}%
-        {{hash=80139cca97f6ee62a21d154d7195a328}{%
+        {{hash=309da3fec8ccbf6a41dc1704bb8097fc}{%
            family={Köster},
            familyi={K\bibinitperiod},
-           given={Matthias},
+           given={Maik},
            giveni={M\bibinitperiod}}}%
-        {{hash=e4a4fee4d600db27f6e0a82534733950}{%
+        {{hash=e8af493533df48eec47c39e04a7fa1fd}{%
            family={Martins},
            familyi={M\bibinitperiod},
-           given={Francisco\bibnamedelima D.},
+           given={Felipe\bibnamedelima D.},
            giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
         {{hash=f7f99d84ff3bb1dac132b58d629a8a37}{%
            family={Mauro},
@@ -385,10 +439,10 @@
            familyi={P\bibinitperiod},
            given={Silvan},
            giveni={S\bibinitperiod}}}%
-        {{hash=1633633a07eb51df55fbf14d8340d3ed}{%
+        {{hash=b14b657dadd76cf7bfbd8afc60e296b3}{%
            family={Polyakov},
            familyi={P\bibinitperiod},
-           given={Elena},
+           given={Egor},
            giveni={E\bibinitperiod}}}%
         {{hash=a7a369936b5ad6f5101cd8ae447667e2}{%
            family={Pugin},
@@ -400,10 +454,10 @@
            familyi={W\bibinitperiod},
            given={David\bibnamedelima M.},
            giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=e8b83019d28fecbdb73996dfcc999285}{%
+        {{hash=97b0e527db12fb8971ed5bf72980a35e}{%
            family={Wei{ß}},
            familyi={W\bibinitperiod},
-           given={Christoph},
+           given={Christof},
            giveni={C\bibinitperiod}}}%
         {{hash=8296a6d278bcf9dc9f972c25929ae2d0}{%
            family={Widmer},
@@ -412,31 +466,29 @@
            giveni={G\bibinitperiod}}}%
       }
       \strng{namehash}{6f2097b8c92c18656bf14d98fb44f014}
-      \strng{fullhash}{ca2b0ac2f3c4d273c4177b97caee5d97}
+      \strng{fullhash}{d815078d56ae4ea1125e182b7d024838}
       \strng{bibnamehash}{6f2097b8c92c18656bf14d98fb44f014}
       \strng{authorbibnamehash}{6f2097b8c92c18656bf14d98fb44f014}
       \strng{authornamehash}{6f2097b8c92c18656bf14d98fb44f014}
-      \strng{authorfullhash}{ca2b0ac2f3c4d273c4177b97caee5d97}
+      \strng{authorfullhash}{d815078d56ae4ea1125e182b7d024838}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Transactions of the International Society for Music Information Retrieval}
+      \field{langid}{english}
       \field{number}{1}
-      \field{title}{Time to {{Align}}! {{Modelling}} Musical Timelines for {{Music Information Retrieval}} and {{Digital Musicology}}}
+      \field{title}{Time to {{Align}}! {{Modelling Musical Timelines}} for {{Music Information Retrieval}} and {{Digital Musicology}}}
+      \field{urlday}{19}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
       \field{volume}{9}
       \field{year}{2026}
-      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{384\bibrangedash 404}
       \range{pages}{21}
       \verb{doi}
       \verb 10.5334/tismir.296
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.5334/tismir.296
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.5334/tismir.296
       \endverb
     \endentry
     \entry{jiangPIANOPRECISIONADVANCING2025}{inproceedings}{}
@@ -605,537 +657,61 @@
       \endverb
     \endentry
     \entry{mcfeeLibrosaLibrosa01102025}{software}{}
-      \name{author}{95}{}{%
+      \name{author}{7}{}{%
         {{hash=fbacf84c1c114df8080fbb2784cef0f6}{%
            family={McFee},
            familyi={M\bibinitperiod},
            given={Brian},
            giveni={B\bibinitperiod}}}%
-        {{hash=e55bc012e5c63807a917f4d802948858}{%
-           family={McVicar},
-           familyi={M\bibinitperiod},
-           given={Matt},
-           giveni={M\bibinitperiod}}}%
-        {{hash=51673ff30740d046fb356960c5f91702}{%
-           family={Faronbi},
-           familyi={F\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=af9720a48470ffb8c60fd98ade260774}{%
-           family={Roman},
-           familyi={R\bibinitperiod},
-           given={Iran},
-           giveni={I\bibinitperiod}}}%
-        {{hash=c5aa5a134e2b441ac3a7574e4177f58a}{%
-           family={Gover},
-           familyi={G\bibinitperiod},
-           given={Matan},
-           giveni={M\bibinitperiod}}}%
-        {{hash=c7cab9e687f4f58cc664f96a10b63223}{%
-           family={Balke},
-           familyi={B\bibinitperiod},
-           given={Stefan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=9dee29b2d619a7f1b2f46c31a60132e3}{%
-           family={Seyfarth},
-           familyi={S\bibinitperiod},
-           given={Scott},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b3fbbc46a36df1c20230393d9e461b41}{%
-           family={Malek},
-           familyi={M\bibinitperiod},
-           given={Ayoub},
-           giveni={A\bibinitperiod}}}%
         {{hash=81a5a94e2388c149a73a86381db45e07}{%
            family={Raffel},
            familyi={R\bibinitperiod},
            given={Colin},
            giveni={C\bibinitperiod}}}%
-        {{hash=fe1cce7a348327c06c814574cbd6d5ec}{%
-           family={Lostanlen},
+        {{hash=015d43a5e0332e107ccf47bfc37b25ca}{%
+           family={Liang},
            familyi={L\bibinitperiod},
-           given={Vincent},
-           giveni={V\bibinitperiod}}}%
-        {{hash=678b0c1a3df65c497821369268cc59a1}{%
-           family={Niekirk},
-           familyi={N\bibinitperiod},
-           given={Benjamin},
-           giveni={B\bibinitperiod},
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
-        {{hash=3b59b9f4d0d943035462082b4d7a9877}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Dana},
+           given={Dawen},
            giveni={D\bibinitperiod}}}%
-        {{hash=df7844c363337ec24ca344cd4241dc72}{%
-           family={Cwitkowitz},
-           familyi={C\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=b4143f2bdc7f68931b94007aa127d2c2}{%
-           family={Zalkow},
-           familyi={Z\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=548333a70204f142843d7db6c8e059da}{%
-           family={Nieto},
-           familyi={N\bibinitperiod},
-           given={Oriol},
-           giveni={O\bibinitperiod}}}%
-        {{hash=036e0eb02fc58b1712db6826565759ed}{%
+        {{hash=8c2dba7002458c6a90760f98d2e441f1}{%
            family={Ellis},
            familyi={E\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod}}}%
-        {{hash=2ff42a8740ea1b8d0627c78909ef20cf}{%
-           family={Mason},
+           given={Daniel\bibnamedelimb P\bibnamedelima W},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e55bc012e5c63807a917f4d802948858}{%
+           family={McVicar},
            familyi={M\bibinitperiod},
-           given={Jack},
-           giveni={J\bibinitperiod}}}%
-        {{hash=39d4f27f7c1ed71b0364e6b52c328e22}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Kyungyun},
-           giveni={K\bibinitperiod}}}%
-        {{hash=c3ad0d63b5fb9b831ccffbd9e7bedc7d}{%
-           family={Steers},
-           familyi={S\bibinitperiod},
-           given={Bea},
-           giveni={B\bibinitperiod}}}%
-        {{hash=26522c6e325416d2783970a9c76712d0}{%
-           family={Halvachs},
-           familyi={H\bibinitperiod},
-           given={Emily},
-           giveni={E\bibinitperiod}}}%
-        {{hash=176f02b41edae24c422070459905af14}{%
-           family={Thomé},
-           familyi={T\bibinitperiod},
-           given={Carl},
-           giveni={C\bibinitperiod}}}%
-        {{hash=68b00ff7a1afb0342e69d2d74efefd9f}{%
-           family={Robert-Stöter},
-           familyi={R\bibinithyphendelim S\bibinitperiod},
-           given={Fabian},
-           giveni={F\bibinitperiod}}}%
-        {{hash=809f6c15915b8e65d6359f31ade32491}{%
-           family={Bittner},
-           familyi={B\bibinitperiod},
-           given={Rachel},
-           giveni={R\bibinitperiod}}}%
-        {{hash=3304f8bef46689e23472cd4c1f8b2d3a}{%
-           family={Wei},
-           familyi={W\bibinitperiod},
-           given={Ziyao},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=4013e7fecee2b1c55a503e420e321a53}{%
-           family={Weiss},
-           familyi={W\bibinitperiod},
-           given={Adam},
-           giveni={A\bibinitperiod}}}%
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
         {{hash=88df80421f33af7bf1ba5d0a84245c68}{%
            family={Battenberg},
            familyi={B\bibinitperiod},
            given={Eric},
            giveni={E\bibinitperiod}}}%
-        {{hash=b606b90e18ab45578516e45e09262612}{%
-           family={Choi},
-           familyi={C\bibinitperiod},
-           given={Keunwoo},
-           giveni={K\bibinitperiod}}}%
-        {{hash=d041256806edee13f942f8790029e506}{%
-           family={Yamamoto},
-           familyi={Y\bibinitperiod},
-           given={Ryuichi},
-           giveni={R\bibinitperiod}}}%
-        {{hash=cb903dfbc927197d691400664efa87c2}{%
-           family={Carr},
-           familyi={C\bibinitperiod},
-           given={CJ},
-           giveni={C\bibinitperiod}}}%
-        {{hash=7459e20179575a33dac685a53610dbfd}{%
-           family={Metsai},
-           familyi={M\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod}}}%
-        {{hash=f37bfb8cd03df9c5cec76e3df8e40f30}{%
-           family={Sullivan},
-           familyi={S\bibinitperiod},
-           given={Stefan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=c67907c0ce91c7540c3d15a2f0a8587e}{%
-           family={Friesch},
-           familyi={F\bibinitperiod},
-           given={Pius},
-           giveni={P\bibinitperiod}}}%
-        {{hash=b90fe53adb889f6bead9419cadeaeb61}{%
-           family={Krishnakumar},
-           familyi={K\bibinitperiod},
-           given={Asmitha},
-           giveni={A\bibinitperiod}}}%
-        {{hash=44f75e32518e7cccbc03f6c6313dfd2f}{%
-           family={Hidaka},
-           familyi={H\bibinitperiod},
-           given={Shunsuke},
-           giveni={S\bibinitperiod}}}%
-        {{hash=847bae0c7fb1e116c2ace9ca0617db9d}{%
-           family={Kowalik},
-           familyi={K\bibinitperiod},
-           given={Steve},
-           giveni={S\bibinitperiod}}}%
-        {{hash=514c5dc07c0c4ffd4662497c33bd4b37}{%
-           family={Keller},
-           familyi={K\bibinitperiod},
-           given={Fabian},
-           giveni={F\bibinitperiod}}}%
-        {{hash=2e0384ec0988921dd1cd29e04df4e5df}{%
-           family={Mazur},
-           familyi={M\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod}}}%
-        {{hash=80ad4ec3bb44ebb38d2934cd851ca79c}{%
-           family={Chabot-Leclerc},
-           familyi={C\bibinithyphendelim L\bibinitperiod},
-           given={Alexandre},
-           giveni={A\bibinitperiod}}}%
-        {{hash=4102bf268c4922002c51584dbb63c959}{%
-           family={Hawthorne},
-           familyi={H\bibinitperiod},
-           given={Curtis},
-           giveni={C\bibinitperiod}}}%
-        {{hash=e7944455d37920eac3b74bad832fc3ab}{%
-           family={Ramaprasad},
-           familyi={R\bibinitperiod},
-           given={Chandrashekhar},
-           giveni={C\bibinitperiod}}}%
-        {{hash=ed71e24eea90eb4a86ccfe8891da385b}{%
-           family={Keum},
-           familyi={K\bibinitperiod},
-           given={Myungchul},
-           giveni={M\bibinitperiod}}}%
-        {{hash=661586465c37870a6f6eb7931e3cc2a7}{%
-           family={Gomez},
-           familyi={G\bibinitperiod},
-           given={Juanita},
-           giveni={J\bibinitperiod}}}%
-        {{hash=af4e7fdbdccc11aa8a2243afc04916e2}{%
-           family={Monroe},
-           familyi={M\bibinitperiod},
-           given={Will},
-           giveni={W\bibinitperiod}}}%
-        {{hash=6ed26a82fe803e4e7eeda6a4dec0beff}{%
-           family={Morozov},
-           familyi={M\bibinitperiod},
-           given={Viktor\bibnamedelima Andreevitch},
-           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=907603da7f97682b2f0a871b60f4ab7b}{%
-           family={Eliasi},
-           familyi={E\bibinitperiod},
-           given={Kian},
-           giveni={K\bibinitperiod}}}%
-        {{hash=48db9bef598988f848d19360f405f127}{%
-           family={{nullmightybofo}},
-           familyi={n\bibinitperiod}}}%
-        {{hash=17c89ce45eefb0074f072c5f8f4229ad}{%
-           family={Biberstein},
-           familyi={B\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod}}}%
-        {{hash=e534e6b616e5b4f465d99162d84234fa}{%
-           family={Sergin},
-           familyi={S\bibinitperiod},
-           given={N.\bibnamedelimi Dorukhan},
-           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=7f2e58a393831e531ef1f4bd84eeedfc}{%
-           family={Hennequin},
-           familyi={H\bibinitperiod},
-           given={Romain},
-           giveni={R\bibinitperiod}}}%
-        {{hash=64bfd01537a3654085898ac719a36998}{%
-           family={Naktinis},
+        {{hash=548333a70204f142843d7db6c8e059da}{%
+           family={Nieto},
            familyi={N\bibinitperiod},
-           given={Rimvydas},
-           giveni={R\bibinitperiod}}}%
-        {{hash=a918fe882e8c1acedb90deed89720fa4}{%
-           family={{beantowel}},
-           familyi={b\bibinitperiod}}}%
-        {{hash=541ab277cbd1a415c50700e39142c080}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Taewoon},
-           giveni={T\bibinitperiod}}}%
-        {{hash=815c282c862829588210b45c1af43e11}{%
-           family={Åsen},
-           familyi={Å\bibinitperiod},
-           given={Jon\bibnamedelima Petter},
-           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=199d02296c51617f79244c3cf0934392}{%
-           family={Lim},
-           familyi={L\bibinitperiod},
-           given={Joon},
-           giveni={J\bibinitperiod}}}%
-        {{hash=172e29fcc362e2cadeeb8f065129f870}{%
-           family={Malins},
-           familyi={M\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod}}}%
-        {{hash=625ce2ebf8a5056894ab6d61d6642dbd}{%
-           family={Hereñú},
-           familyi={H\bibinitperiod},
-           given={Darío},
-           giveni={D\bibinitperiod}}}%
-        {{hash=b25abfb223878ebbb1bda2c6eab2c83f}{%
-           family={Struijk},
-           familyi={S\bibinitperiod},
-           given={Stef},
-           giveni={S\bibinitperiod},
-           prefix={van\bibnamedelima der},
-           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
-        {{hash=530002d64867144ff50aa5c8f68b26a8}{%
-           family={Nickel},
-           familyi={N\bibinitperiod},
-           given={Lorenz},
-           giveni={L\bibinitperiod}}}%
-        {{hash=a556b98fa2734844568fab43bbd5b7ef}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Jackie},
-           giveni={J\bibinitperiod}}}%
-        {{hash=d23f8780b31a9738eb2ec5f9c954bcb4}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Zhen},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=8e2521e420ce75f45388d5b391c9cc3a}{%
-           family={Gates},
-           familyi={G\bibinitperiod},
-           given={Tim},
-           giveni={T\bibinitperiod}}}%
-        {{hash=d16d1ed7ab229d0b35a7c836ada60f32}{%
-           family={Vollrath},
-           familyi={V\bibinitperiod},
-           given={Matt},
-           giveni={M\bibinitperiod}}}%
-        {{hash=770b50ae0df5776d09e32dd9dc7bbace}{%
-           family={Sarroff},
-           familyi={S\bibinitperiod},
-           given={Andy},
-           giveni={A\bibinitperiod}}}%
-        {{hash=b09bf3753938ba82b98486201f21fd64}{%
-           family={Xiao-Ming},
-           familyi={X\bibinithyphendelim M\bibinitperiod}}}%
-        {{hash=ee5bc53a7f69f1ecc5d21d77fccbd50b}{%
-           family={Porter},
-           familyi={P\bibinitperiod},
-           given={Alastair},
-           giveni={A\bibinitperiod}}}%
-        {{hash=68c0199dba258f8949b7dace268a2866}{%
-           family={Kranzler},
-           familyi={K\bibinitperiod},
-           given={Seth},
-           giveni={S\bibinitperiod}}}%
-        {{hash=3240991beb88320046d1c2cca7456417}{%
-           family={Voodoohop},
-           familyi={V\bibinitperiod}}}%
-        {{hash=587df9707179cb17a54ef44b98f20c69}{%
-           family={Gangi},
-           familyi={G\bibinitperiod},
-           given={Mattia\bibnamedelima Di},
-           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=f145b27d32364c65e16c0e7590d68fc3}{%
-           family={Jinoz},
-           familyi={J\bibinitperiod},
-           given={Helmi},
-           giveni={H\bibinitperiod}}}%
-        {{hash=700fca60df589c9102f6d0a4a2321e94}{%
-           family={Guerrero},
-           familyi={G\bibinitperiod},
-           given={Connor},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d6404c55c9778f47d227f9d3995aa8f0}{%
-           family={Mazhar},
-           familyi={M\bibinitperiod},
-           given={Abduttayyeb},
-           giveni={A\bibinitperiod}}}%
-        {{hash=5410d1378d28387ee03f8af0d69caa92}{%
-           family={{toddrme2178}},
-           familyi={t\bibinitperiod}}}%
-        {{hash=72a3a112c357eb38377384ea8e767c11}{%
-           family={Baratz},
-           familyi={B\bibinitperiod},
-           given={Zvi},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=a5e30425b471e579d012e72ef46d7a2c}{%
-           family={Kostin},
-           familyi={K\bibinitperiod},
-           given={Anton},
-           giveni={A\bibinitperiod}}}%
-        {{hash=32a3790fb1371b64ba4adfd039985566}{%
-           family={Zhuang},
-           familyi={Z\bibinitperiod},
-           given={Xinlu},
-           giveni={X\bibinitperiod}}}%
-        {{hash=27f8589390851519f95db7e89467e87e}{%
-           family={Lo},
-           familyi={L\bibinitperiod},
-           given={Cash\bibnamedelima TingHin},
-           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=b420c0e6acfe92644182256543385ba2}{%
-           family={Campr},
-           familyi={C\bibinitperiod},
-           given={Pavel},
-           giveni={P\bibinitperiod}}}%
-        {{hash=5b2af2279655ec1340768aedd68696fb}{%
-           family={Semeniuc},
-           familyi={S\bibinitperiod},
-           given={Eric},
-           giveni={E\bibinitperiod}}}%
-        {{hash=da7cea6cc7a55ad31caec4e5309f121c}{%
-           family={Biswal},
-           familyi={B\bibinitperiod},
-           given={Monsij},
-           giveni={M\bibinitperiod}}}%
-        {{hash=34a6c6f5083bbc8bbb7561bde7e4effa}{%
-           family={Moura},
-           familyi={M\bibinitperiod},
-           given={Shayenne},
-           giveni={S\bibinitperiod}}}%
-        {{hash=11c78b5da9a3d2be654bb67c894be9bb}{%
-           family={Brossier},
-           familyi={B\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod}}}%
-        {{hash=ac5d1f224907dff781b44fd37e6828d1}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Hojin},
-           giveni={H\bibinitperiod}}}%
-        {{hash=21c961b6d04f06e255c6b81545f9d81c}{%
-           family={Pimenta},
-           familyi={P\bibinitperiod},
-           given={Waldir},
-           giveni={W\bibinitperiod}}}%
-        {{hash=b701f3fa84deab22c8698ef9bf13e691}{%
-           family={Hyun},
-           familyi={H\bibinitperiod},
-           given={Shin},
-           giveni={S\bibinitperiod}}}%
-        {{hash=16798f4c4d02f615d7e9e05104d2b049}{%
-           family={S},
-           familyi={S\bibinitperiod},
-           given={Iliya},
-           giveni={I\bibinitperiod}}}%
-        {{hash=fe67be57362f5be5f65b21d18eabe2ee}{%
-           family={Rabinovich},
-           familyi={R\bibinitperiod},
-           given={Eugene},
-           giveni={E\bibinitperiod}}}%
-        {{hash=451c969f56549dabc01f523a9fec1d10}{%
-           family={Lei},
-           familyi={L\bibinitperiod},
-           given={Geo},
-           giveni={G\bibinitperiod}}}%
-        {{hash=dd940fd1cead96980093f7052b18d182}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={Jize},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8044caad5e1a5e70902207780cd3f632}{%
-           family={Skelton},
-           familyi={S\bibinitperiod},
-           given={Phillip\bibnamedelimb S.\bibnamedelimi M.},
-           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=c02f208dc70977256060ed882f49aaa7}{%
-           family={Pitkin},
-           familyi={P\bibinitperiod},
-           given={Matt},
-           giveni={M\bibinitperiod}}}%
-        {{hash=28c2293c3cbcd3cc38e25c6a223cdf6a}{%
-           family={Mishra},
-           familyi={M\bibinitperiod},
-           given={Anmol},
-           giveni={A\bibinitperiod}}}%
-        {{hash=e8667f92cfa5caa92b03988ffd6c140f}{%
-           family={Chaunin},
-           familyi={C\bibinitperiod},
-           given={Slava},
-           giveni={S\bibinitperiod}}}%
-        {{hash=c7dabdc3218d1da83c246425dfdbe4cd}{%
-           family={BenedictSt},
-           familyi={B\bibinitperiod}}}%
-        {{hash=2f5fe2c0f0cefcc2ea83f2482317adb9}{%
-           family={VanRavenswaay},
-           familyi={V\bibinitperiod},
-           given={Scott},
-           giveni={S\bibinitperiod}}}%
-        {{hash=998de5aaea4978569b34b4dd1e7a8112}{%
-           family={Südholt},
-           familyi={S\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
+           given={Oriol},
+           giveni={O\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {Zenodo}%
+      \list{location}{1}{%
+        {Austin, Texas, USA}%
       }
       \strng{namehash}{21463f2a3be661593f29bc72d0ff39e5}
-      \strng{fullhash}{f362d0f6fe7519e0e63835a4bc231b84}
+      \strng{fullhash}{742e206fd3d16ef76a726ca96b86348c}
       \strng{bibnamehash}{21463f2a3be661593f29bc72d0ff39e5}
       \strng{authorbibnamehash}{21463f2a3be661593f29bc72d0ff39e5}
       \strng{authornamehash}{21463f2a3be661593f29bc72d0ff39e5}
-      \strng{authorfullhash}{f362d0f6fe7519e0e63835a4bc231b84}
+      \strng{authorfullhash}{742e206fd3d16ef76a726ca96b86348c}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{What's Changed Bump minimum matplotlib to 3.5.0 by @bmcfee in https://github.com/librosa/librosa/pull/1839 Fix name collision for norm argument in mfcc by @ssslakter in https://github.com/librosa/librosa/pull/1844 Remove .H for conjugate().T by @bmcfee in https://github.com/librosa/librosa/pull/1851 [documentation][Issue \#1855] Update Fast Mellin Transform doc example by @dhunstack in https://github.com/librosa/librosa/pull/1856 fix onset documentation specshow samplerate by @BenedictSt in https://github.com/librosa/librosa/pull/1858 Updating github issue templates by @bmcfee in https://github.com/librosa/librosa/pull/1860 Faster abs2 on real inputs by @bmcfee in https://github.com/librosa/librosa/pull/1864 Revised dtw docstring, fixes \#1741 by @bmcfee in https://github.com/librosa/librosa/pull/1866 Various doc updates 0.11 by @bmcfee in https://github.com/librosa/librosa/pull/1878 Improved CMND implementation for YIN / pYIN by @dsuedholt in https://github.com/librosa/librosa/pull/1882 Update effects.py by @scottvr in https://github.com/librosa/librosa/pull/1891 bump codecov action to v5 by @bmcfee in https://github.com/librosa/librosa/pull/1898 declare numba requirement before numpy by @dsuedholt in https://github.com/librosa/librosa/pull/1897 allow skipping linkchecks on \textasciitilde dpwe by @bmcfee in https://github.com/librosa/librosa/pull/1899 fixed pooch registry regression from \#1829 by @bmcfee in https://github.com/librosa/librosa/pull/1900 Modernize for 2024/5 by @bmcfee in https://github.com/librosa/librosa/pull/1903 implemented testing with network isolation by @bmcfee in https://github.com/librosa/librosa/pull/1911 0.11.0rc0 release prep by @bmcfee in https://github.com/librosa/librosa/pull/1907 Deprecate set\_fftlib, update fftpack uses by @bmcfee in https://github.com/librosa/librosa/pull/1916 PR for 0.11.0rc1 by @bmcfee in https://github.com/librosa/librosa/pull/1913 Get samplerate installing from source on windows for python 3.13 by @bmcfee in https://github.com/librosa/librosa/pull/1919 Trying on the new linux-arm64 runners by @bmcfee in https://github.com/librosa/librosa/pull/1921 0.11.0 final by @bmcfee in https://github.com/librosa/librosa/pull/1922 New Contributors @ssslakter made their first contribution in https://github.com/librosa/librosa/pull/1844 @dhunstack made their first contribution in https://github.com/librosa/librosa/pull/1856 @BenedictSt made their first contribution in https://github.com/librosa/librosa/pull/1858 @dsuedholt made their first contribution in https://github.com/librosa/librosa/pull/1882 @scottvr made their first contribution in https://github.com/librosa/librosa/pull/1891 Full Changelog: https://github.com/librosa/librosa/compare/0.10.2...0.11.0}
-      \field{day}{11}
-      \field{month}{3}
-      \field{shorttitle}{Librosa/Librosa}
-      \field{title}{Librosa/Librosa: 0.11.0}
-      \field{urlday}{22}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
-      \field{version}{0.11.0}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.5281/ZENODO.15006942
-      \endverb
-      \verb{urlraw}
-      \verb https://zenodo.org/doi/10.5281/zenodo.15006942
-      \endverb
-      \verb{url}
-      \verb https://zenodo.org/doi/10.5281/zenodo.15006942
-      \endverb
-    \endentry
-    \entry{modusa}{software}{}
-      \name{author}{1}{}{%
-        {{hash=7b886e77f0e3acc157dd2adbb51989fe}{%
-           family={{meluron}},
-           familyi={m\bibinitperiod}}}%
-      }
-      \strng{namehash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{fullhash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{bibnamehash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{authorbibnamehash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{authornamehash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \strng{authorfullhash}{7b886e77f0e3acc157dd2adbb51989fe}
-      \field{sortinit}{m}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{2}
-      \field{title}{Modusa}
-      \field{version}{6.3.7}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://github.com/meluron/modusa
-      \endverb
-      \verb{url}
-      \verb https://github.com/meluron/modusa
-      \endverb
+      \field{booktitle}{Proceedings of the 14th {{Python}} in {{Science Conference}}}
+      \field{title}{Librosa: {{Audio}} and {{Music Signal Analysis}} in {{Python}}}
+      \field{year}{2015}
+      \field{pages}{18\bibrangedash 25}
+      \range{pages}{8}
     \endentry
     \entry{mullerFundamentalsMusicProcessing2015}{book}{}
       \name{author}{1}{}{%
@@ -1221,23 +797,22 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
+      \field{labeltitlesource}{shorttitle}
       \field{journaltitle}{Journal of Open Source Software}
+      \field{langid}{english}
       \field{number}{64}
-      \field{title}{Sync Toolbox: A Python Package for Efficient, Robust, and Accurate Music Synchronization}
+      \field{shorttitle}{Sync {{Toolbox}}}
+      \field{title}{Sync {{Toolbox}}: {{A Python Package}} for {{Efficient}}, {{Robust}}, and {{Accurate Music Synchronization}}}
+      \field{urlday}{19}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
       \field{volume}{6}
       \field{year}{2021}
-      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{3434}
       \range{pages}{1}
       \verb{doi}
       \verb 10.21105/joss.03434
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.21105/joss.03434
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.21105/joss.03434
       \endverb
     \endentry
     \entry{nakamuraPERFORMANCEERRORDETECTION}{article}{}
@@ -1528,31 +1103,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.4230/DFU.Vol3.11041.1
-      \endverb
-    \endentry
-    \entry{valleVisualDisplayRetrieval}{article}{}
-      \name{author}{1}{}{%
-        {{hash=49e6a9a8496bdeefdeab7fbd48325913}{%
-           family={Valle},
-           familyi={V\bibinitperiod},
-           given={Rafael},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{fullhash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{bibnamehash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{authorbibnamehash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{authornamehash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \strng{authorfullhash}{49e6a9a8496bdeefdeab7fbd48325913}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper describes computational methods for the visual display and analysis of music information. We provide a concise description of software, music descriptors and data visualization techniques commonly used in music information retrieval. Finally, we provide use cases where the described software, descriptors and visualizations are showcased.}
-      \field{langid}{english}
-      \field{title}{Visual {{Display}} and {{Retrieval}} of {{Music Information}}}
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/XRL2I9EV/Valle - Visual Display and Retrieval of Music Information.pdf
       \endverb
     \endentry
   \enddatalist

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  3 SEP 2026 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.1)  3 SEP 2026 18:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -716,7 +716,7 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 79.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (./main.aux (./frontmatter/abstract.aux) (./frontmatter/acknows.aux) (./frontmatter/abbrevs.aux) (./body/chapter1.aux) (./body/chapter2.aux) (./body/chapter3.aux) (./body/chapter4.aux) (./body/chapter5.aux) (./body/chapter6.aux) (./backmatter/appendix1.aux))
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
@@ -821,7 +821,6 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 79.
 Package biblatex Info: Reference segment=0 on input line 79.
 Package hyperref Info: Link coloring ON on input line 79.
- (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -859,7 +858,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
-<figures/uporto-feup.pdf, id=237, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=4, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
 Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 136.
@@ -871,10 +870,6 @@ Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 136.
 \openout2 = `frontmatter/abstract.aux'.
 
  (./frontmatter/abstract.tex
-Package acronym Info: Label `acro:MIR' newly defined as it shall be overridden
-although it is yet undefined on input line 4.
-Package acronym Info: Label `acro:SVG' newly defined as it shall be overridden
-although it is yet undefined on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 ) [1
@@ -891,38 +886,36 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 
 
-] (./main.toc
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
- [] []\T1/ptm/b/n/10.95 LayerIt 
- []
+]
+No file main.toc.
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
 [3
 
 
 
 
-])
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
- [4] (./main.lof)
+]
+No file main.lof.
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [5
+[4
 
 
-] (./main.lot)
+]
+No file main.lot.
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [6
+[5
 
 
 ]
 \openout2 = `frontmatter/abbrevs.aux'.
 
- (./frontmatter/abbrevs.tex) [7
+ (./frontmatter/abbrevs.tex) [6
 
 
 ]
@@ -940,7 +933,23 @@ Chapter 1.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [2] [3]) [4]
+) [2]
+
+LaTeX Warning: Reference `chap:sota' on page 3 undefined on input line 63.
+
+
+LaTeX Warning: Reference `chap:Methodology' on page 3 undefined on input line 64.
+
+
+LaTeX Warning: Reference `chap:DesignAndImplementation' on page 3 undefined on input line 65.
+
+
+LaTeX Warning: Reference `chap:Validation' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Reference `chap:conclusion' on page 3 undefined on input line 67.
+
+[3]) [4]
 \openout2 = `body/chapter2.aux'.
 
  (./body/chapter2.tex
@@ -951,44 +960,44 @@ Chapter 2.
 
 
 ] [6] [7]
-<figures/AudioVisualizations/Waveform.png, id=435, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/Waveform.png, id=111, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/Waveform.png Graphic file (type png)
 <use figures/AudioVisualizations/Waveform.png>
-Package pdftex.def Info: figures/AudioVisualizations/Waveform.png  used on input line 74.
+Package pdftex.def Info: figures/AudioVisualizations/Waveform.png  used on input line 73.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [8 <./figures/AudioVisualizations/Waveform.png>]
-<figures/AudioVisualizations/Spectrum.png, id=443, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/Spectrum.png, id=121, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/Spectrum.png Graphic file (type png)
 <use figures/AudioVisualizations/Spectrum.png>
-Package pdftex.def Info: figures/AudioVisualizations/Spectrum.png  used on input line 84.
+Package pdftex.def Info: figures/AudioVisualizations/Spectrum.png  used on input line 83.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<figures/AudioVisualizations/SpectogramLinear.png, id=444, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramLinear.png, id=122, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramLinear.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramLinear.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramLinear.png  used on input line 97.
+Package pdftex.def Info: figures/AudioVisualizations/SpectogramLinear.png  used on input line 96.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [9 <./figures/AudioVisualizations/Spectrum.png>]
-<figures/AudioVisualizations/SpectogramLog.png, id=450, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramLog.png, id=129, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramLog.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramLog.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramLog.png  used on input line 106.
+Package pdftex.def Info: figures/AudioVisualizations/SpectogramLog.png  used on input line 105.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [10 <./figures/AudioVisualizations/SpectogramLinear.png> <./figures/AudioVisualizations/SpectogramLog.png>]
-<figures/AudioVisualizations/SpectogramMel.png, id=457, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramMel.png, id=138, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramMel.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramMel.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramMel.png  used on input line 115.
+Package pdftex.def Info: figures/AudioVisualizations/SpectogramMel.png  used on input line 114.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
-<figures/AudioVisualizations/SpectogramCQT.png, id=460, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/SpectogramCQT.png, id=140, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/SpectogramCQT.png Graphic file (type png)
 <use figures/AudioVisualizations/SpectogramCQT.png>
-Package pdftex.def Info: figures/AudioVisualizations/SpectogramCQT.png  used on input line 130.
+Package pdftex.def Info: figures/AudioVisualizations/SpectogramCQT.png  used on input line 129.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [11 <./figures/AudioVisualizations/SpectogramMel.png>]
-<figures/AudioVisualizations/Chromagram.png, id=469, 867.24pt x 578.16pt>
+<figures/AudioVisualizations/Chromagram.png, id=147, 867.24pt x 578.16pt>
 File: figures/AudioVisualizations/Chromagram.png Graphic file (type png)
 <use figures/AudioVisualizations/Chromagram.png>
-Package pdftex.def Info: figures/AudioVisualizations/Chromagram.png  used on input line 139.
+Package pdftex.def Info: figures/AudioVisualizations/Chromagram.png  used on input line 138.
 (pdftex.def)             Requested size: 341.43437pt x 227.62523pt.
  [12 <./figures/AudioVisualizations/SpectogramCQT.png> <./figures/AudioVisualizations/Chromagram.png>] [13] [14] [15]) [16]
 \openout2 = `body/chapter3.aux'.
@@ -1129,16 +1138,20 @@ Chapter 4.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\kernel@ifnextchar' on input line 1.
 
-[22
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 3.
+(/usr/share/texlive/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
+File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
+)
+LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 3.
+ [22
 
 
 
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 40.
- (/usr/share/texlive/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
-File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
-)
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 40.
 
@@ -1147,8 +1160,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 63.
-LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 63.
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
 (Font)              scaled to size 7.59998pt on input line 64.
 
@@ -1159,28 +1170,15 @@ Package fancyhdr Warning: \headheight is too small (15.5pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-9.30835pt}.
 
-[24]
-Overfull \hbox (53.17584pt too wide) in paragraph at lines 85--86
-\T1/ptm/m/n/10.95 the \T1/pcrs/m/n/10.95 xml:id \T1/ptm/m/n/10.95 of each on-set rather than its score po-si-tion, ex-pressed as \T1/pcrs/m/n/10.95 measure + position_in_measure\T1/ptm/m/n/10.95 .
- []
+[24] [25]
 
+LaTeX Warning: Reference `fig:LayersWithinLayers' on page 26 undefined on input line 136.
 
-Overfull \hbox (1.38274pt too wide) in paragraph at lines 85--86
-\T1/ptm/m/n/10.95 The time in-stances can then be ex-ported as \T1/pcrs/m/n/10.95 .txt \T1/ptm/m/n/10.95 files con-tain-ing \T1/pcrs/m/n/10.95 obs_mean_onset \T1/ptm/m/n/10.95 and \T1/pcrs/m/n/10.95 xml_id\T1/ptm/m/n/10.95 ,
- []
-
-
-Overfull \hbox (44.24086pt too wide) in paragraph at lines 85--86
-\T1/ptm/m/n/10.95 and con-verted into MAPS for-mat us-ing the \T1/pcrs/m/n/10.95 TXT_to_Maps() \T1/ptm/m/n/10.95 func-tion in \T1/pcrs/m/n/10.95 src/functions/warp_score\T1/ptm/m/n/10.95 . 
- []
-
-[25]
-<figures/BlockDiagrams/LayersOnLayers.png, id=582, 787.94376pt x 908.39375pt>
+<figures/BlockDiagrams/LayersOnLayers.png, id=281, 787.94376pt x 908.39375pt>
 File: figures/BlockDiagrams/LayersOnLayers.png Graphic file (type png)
 <use figures/BlockDiagrams/LayersOnLayers.png>
-Package pdftex.def Info: figures/BlockDiagrams/LayersOnLayers.png  used on input line 138.
+Package pdftex.def Info: figures/BlockDiagrams/LayersOnLayers.png  used on input line 140.
 (pdftex.def)             Requested size: 170.71393pt x 196.79784pt.
-
 
 Package fancyhdr Warning: \headheight is too small (15.5pt): 
 (fancyhdr)                Make it at least 24.80835pt, for example:
@@ -1190,21 +1188,973 @@ Package fancyhdr Warning: \headheight is too small (15.5pt):
 
 [26] [27 <./figures/BlockDiagrams/LayersOnLayers.png>]
 
-Package fancyhdr Warning: \headheight is too small (15.5pt): 
-(fancyhdr)                Make it at least 24.80835pt, for example:
-(fancyhdr)                \setlength{\headheight}{24.80835pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-9.30835pt}.
+LaTeX Warning: Reference `lst:layer-base' on page 28 undefined on input line 176.
 
-[28]
 LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 (Font)              scaled to size 8.54997pt on input line 196.
-<figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png, id=633, 3106.60625pt x 2112.89375pt>
+./body/chapter4.tex:199: Missing $ inserted.
+<inserted text> 
+                $
+l.199 ...ed into panels using \texttt{add_panel()}
+                                                  , which allows multiple la...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.199 ...ed into panels using \texttt{add_panel()}
+                                                  , which allows multiple la...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
+(Font)              scaled to size 5.69998pt on input line 199.
+./body/chapter4.tex:199: Missing $ inserted.
+<inserted text> 
+                $
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Missing $ inserted.
+<inserted text> 
+                $
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Missing $ inserted.
+<inserted text> 
+                $
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Missing $ inserted.
+<inserted text> 
+                $
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:199: Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.199 ... rendering via \texttt{load_all_layers()}
+                                                   and \texttt{draw()}. The ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:200: Missing $ inserted.
+<inserted text> 
+                $
+l.200 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...red to SVG through \texttt{turn_to_SVG()}
+                                                  , which preserves each lay...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.222 ...red to SVG through \texttt{turn_to_SVG()}
+                                                  , which preserves each lay...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:222: Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.222 ...ore SVG using \texttt{create_final_SVG()}
+                                                  , which stacks them vertic...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./body/chapter4.tex:223: Missing $ inserted.
+<inserted text> 
+                $
+l.223 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png, id=308, 3106.60625pt x 2112.89375pt>
 File: figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png Graphic file (type png)
 <use figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png>
-Package pdftex.def Info: figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png  used on input line 230.
-(pdftex.def)             Requested size: 426.79135pt x 290.25781pt.
- [29]
+./body/chapter4.tex:257: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing { inserted.
+<to be read again> 
+                   $
+l.257 \end{figure}
+                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing { inserted.
+<to be read again> 
+                   $
+l.257 \end{figure}
+                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing { inserted.
+<to be read again> 
+                   $
+l.257 \end{figure}
+                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \end{figure}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing { inserted.
+<to be read again> 
+                   $
+l.257 \end{figure}
+                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing { inserted.
+<to be read again> 
+                   $
+l.257 \end{figure}
+                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing { inserted.
+<to be read again> 
+                   $
+l.257 \end{figure}
+                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (577.15411pt too wide) in paragraph at lines 199--257
+\T1/ptm/m/n/10.95 panel-based work-flow. Lay-ers are grouped into pan-els us-ing \T1/pcrs/m/n/10.95 add$[]\OML/ztmcm/m/it/10.95 anel\OT1/ztmcm/m/n/10.95 ()\OML/ztmcm/m/it/10.95 ; whichallowsmultiplelayerstoberenderedtogetheronthesameaxis:The[]maintainsashareddatadictionarythatalllayersaccessduringrenderingvia[]$ 
+ []
+
+./body/chapter4.tex:257: Undefined control sequence.
+\endfigure ...box \columnwidth \fi \box \@currbox 
+                                                  \vskip \intextsep \relax 
+l.257 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./body/chapter4.tex:257: Missing number, treated as zero.
+<to be read again> 
+                   \vskip 
+l.257 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+./body/chapter4.tex:257: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./body/chapter4.tex:257: Missing } inserted.
+<inserted text> 
+                }
+l.257 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./body/chapter4.tex:257: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.257 \end{figure}
+                  
+Things are pretty mixed up, but I think the worst is over.
+
 
 Package fancyhdr Warning: \headheight is too small (15.5pt): 
 (fancyhdr)                Make it at least 24.80835pt, for example:
@@ -1212,35 +2162,42 @@ Package fancyhdr Warning: \headheight is too small (15.5pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-9.30835pt}.
 
-[30 <./figures/BlockDiagrams/Plot_ToSVG_to_SVGofSVG.png>]) [31]
+[28]) [29]
 \openout2 = `body/chapter5.aux'.
 
  (./body/chapter5.tex
 Chapter 5.
-[32
+
+LaTeX Warning: Reference `chap:Methodology' on page 30 undefined on input line 3.
+
+[30
 
 
 
 
 ]
-<figures/LayerItExamples/1 FIG_521_sel.png, id=679, 1734.48pt x 1375.1375pt>
+<figures/LayerItExamples/1 FIG_521_sel.png, id=355, 1734.48pt x 1375.1375pt>
 File: figures/LayerItExamples/1 FIG_521_sel.png Graphic file (type png)
 <use figures/LayerItExamples/1 FIG_521_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/1 FIG_521_sel.png  used on input line 23.
 (pdftex.def)             Requested size: 426.79135pt x 338.36995pt.
- [33 <./figures/LayerItExamples/1 FIG_521_sel.png>]
-<figures/LayerItExamples/2 FIG_522_sel.png, id=686, 2666.96375pt x 1098.1025pt>
+ [31 <./figures/LayerItExamples/1 FIG_521_sel.png>]
+<figures/LayerItExamples/2 FIG_522_sel.png, id=365, 2666.96375pt x 1098.1025pt>
 File: figures/LayerItExamples/2 FIG_522_sel.png Graphic file (type png)
 <use figures/LayerItExamples/2 FIG_522_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/2 FIG_522_sel.png  used on input line 36.
 (pdftex.def)             Requested size: 426.79135pt x 175.71674pt.
- [34 <./figures/LayerItExamples/2 FIG_522_sel.png>]
-<figures/LayerItExamples/3 FIG_523_sel.png, id=695, 1912.14375pt x 1093.08376pt>
+
+
+LaTeX Warning: Reference `fig:validation-probability-position' on page 32 undefined on input line 43.
+
+<figures/LayerItExamples/3 FIG_523_sel.png, id=366, 1912.14375pt x 1093.08376pt>
 File: figures/LayerItExamples/3 FIG_523_sel.png Graphic file (type png)
 <use figures/LayerItExamples/3 FIG_523_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/3 FIG_523_sel.png  used on input line 49.
 (pdftex.def)             Requested size: 426.79135pt x 243.9651pt.
-<figures/LayerItExamples/4 FIG_524_sel.png, id=696, 1819.79875pt x 498.86375pt>
+[32 <./figures/LayerItExamples/2 FIG_522_sel.png>]
+<figures/LayerItExamples/4 FIG_524_sel.png, id=376, 1819.79875pt x 498.86375pt>
 File: figures/LayerItExamples/4 FIG_524_sel.png Graphic file (type png)
 <use figures/LayerItExamples/4 FIG_524_sel.png>
 Package pdftex.def Info: figures/LayerItExamples/4 FIG_524_sel.png  used on input line 60.
@@ -1315,12 +2272,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
 \T1/ptm/m/n/10.95 aligned an-a-lyt-i-cal
  []
 
-[35 <./figures/LayerItExamples/3 FIG_523_sel.png> <./figures/LayerItExamples/4 FIG_524_sel.png>]
+[33 <./figures/LayerItExamples/3 FIG_523_sel.png> <./figures/LayerItExamples/4 FIG_524_sel.png>]
 Overfull \hbox (7.63867pt too wide) in paragraph at lines 85--85
 []\T1/ptm/b/n/14.4 Workflow Ca-pa-bil-i-ties for An-no-ta-tion and Eval-u-a-tion (RQ2, RQ3) 
  []
 
-[36]
+
+LaTeX Warning: Reference `fig:validation-probability-position' on page 34 undefined on input line 91.
+
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
 []|\T1/ptm/b/n/10.95 Manual SVG
  []
@@ -1415,17 +2375,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--117
 []|\T1/ptm/m/n/10.95 Implement or
  []
 
-[37] [38]) [39] [40]
+
+LaTeX Warning: Reference `chap:DesignAndImplementation' on page 35 undefined on input line 124.
+
+[35]
+
+LaTeX Warning: Reference `fig:validation-score-audio-chroma' on page 36 undefined on input line 126.
+
+
+LaTeX Warning: Reference `fig:validation-probability-position' on page 36 undefined on input line 126.
+
+[36]
+
+LaTeX Warning: Reference `chap:DesignAndImplementation' on page 37 undefined on input line 144.
+
+) [37]
 \openout2 = `body/chapter6.aux'.
 
  (./body/chapter6.tex
 Chapter 6.
-[41
+
+LaTeX Warning: Reference `chap:intro' on page 38 undefined on input line 4.
+
+
+LaTeX Warning: Reference `chap:DesignAndImplementation' on page 38 undefined on input line 7.
+
+
+LaTeX Warning: Reference `chap:Methodology' on page 38 undefined on input line 14.
+
+[38
 
 
 
 
-] [42]) [43]
+]
+
+LaTeX Warning: Reference `chap:Validation' on page 39 undefined on input line 18.
+
+
+LaTeX Warning: Reference `chap:Methodology' on page 39 undefined on input line 20.
+
+[39]) [40]
 Overfull \hbox (6.54376pt too wide) in paragraph at lines 176--176
 \T1/ptm/m/n/10.95 and Per-for-mances^^Q. In: \T1/ptm/m/it/10.95 Pro-ceed-ings of the Mu-sic En-cod-ing Con-fer-ence\T1/ptm/m/n/10.95 . Hal-i-fax, NS, Canada,
  []
@@ -1435,7 +2425,7 @@ Overfull \hbox (19.35216pt too wide) in paragraph at lines 176--176
 \T1/ptm/m/n/10.95 MU-SIC PER-FOR-MANCE ANAL-Y-SIS BY IN-TE-GRAT-ING USER-CORRECTABLE AUDIO-
  []
 
-[44
+[41
 
 
 
@@ -1445,7 +2435,7 @@ Overfull \hbox (1.93373pt too wide) in paragraph at lines 176--176
 \T1/ptm/m/n/10.95 In: \T1/ptm/m/it/10.95 Mul-ti-modal Mu-sic Pro-cess-ing\T1/ptm/m/n/10.95 . Vol. 3. Dagstuhl Follow-Ups. Schloss Dagstuhl -- Leibniz-
  []
 
-[45]
+[42]
 \openout2 = `backmatter/appendix1.aux'.
 
  (./backmatter/appendix1.tex) (./main.aux (./frontmatter/abstract.aux) (./frontmatter/acknows.aux) (./frontmatter/abbrevs.aux) (./body/chapter1.aux) (./body/chapter2.aux) (./body/chapter3.aux) (./body/chapter4.aux) (./body/chapter5.aux) (./body/chapter6.aux) (./backmatter/appendix1.aux))
@@ -1453,25 +2443,43 @@ Overfull \hbox (1.93373pt too wide) in paragraph at lines 176--176
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 664057C1135C1FEBB805D75F6B4E5A6F;11001.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  4F30EFFD834DBCAF503965D3A505FBF7;11001.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28189 strings out of 474222
- 544645 string characters out of 5748734
- 2065975 words of memory out of 5000000
- 49794 multiletter control sequences out of 15000+600000
- 636226 words of font info for 130 fonts, out of 8000000 for 9000
+ 28037 strings out of 474222
+ 542157 string characters out of 5748734
+ 2073975 words of memory out of 5000000
+ 49697 multiletter control sequences out of 15000+600000
+ 648584 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,12n,95p,2928b,2961s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (53 pages, 4970617 bytes).
+ 88i,33n,95p,1814b,2575s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (49 pages, 4538365 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 785 compressed objects within 8 object streams
- 230 named destinations out of 1000 (max. 500000)
- 535 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 566 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

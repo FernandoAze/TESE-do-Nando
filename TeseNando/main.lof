@@ -1,20 +1,19 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of an audio waveform.}}{8}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of audio Spectrum.}}{9}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of Linear spectrogram.}}{10}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Logarithmic spectrogram.}}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of Mel spectrogram.}}{11}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a CQT.}}{12}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Example a Chromagram.}}{12}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of an audio waveform.}}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of audio Spectrum.}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of Linear spectrogram.}}{10}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Logarithmic spectrogram.}}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of Mel spectrogram.}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a CQT.}}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example a Chromagram.}}{12}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Composition of the LayerIt visualisation system. Each coloured box represents a distinct visual element that composes a higher-level visualisation.}}{27}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Complete LayerIt workflow: from Visualizer() composition to final stacked SVG visualisation. The diagram shows how multiple visualisation layers are created independently, exported to SVG format, combined with the warped score, and finally stacked vertically with defined y-offsets to produce the final custom composite visualisation.}}{30}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Composition of the LayerIt visualisation system. Each coloured box represents a distinct visual element that composes a higher-level visualisation.}}{27}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for BWV~856. The green dotted lines show shared onset positions across all layers.}}{33}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces LayerIt score-aligned BT display for BWV~856. The spectrogram, beat (red) and downbeat (blue) estimates, onset markers (black dotted lines), and warped score share the same performance timeline.}}{34}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces LayerIt probability-and-position displays for BWV~856. The upper composition shows BeatThis beat and downbeat positions with their activation curves; the lower composition replaces the discrete positions with faded activation-threshold windows, set to $20\%$ for beats and $50\%$ for downbeats in this excerpt.}}{35}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces LayerIt waveform display for BWV~856, with BeatThis beat and downbeat positions aligned to the time-warped score.}}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for BWV~856. The green dotted lines show shared onset positions across all layers.}}{31}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces LayerIt score-aligned BT display for BWV~856. The spectrogram, beat (red) and downbeat (blue) estimates, onset markers (black dotted lines), and warped score share the same performance timeline.}}{32}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces LayerIt probability-and-position displays for BWV~856. The upper composition shows BeatThis beat and downbeat positions with their activation curves; the lower composition replaces the discrete positions with faded activation-threshold windows, set to $20\%$ for beats and $50\%$ for downbeats in this excerpt.}}{33}{figure.caption.21}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces LayerIt waveform display for BWV~856, with BeatThis beat and downbeat positions aligned to the time-warped score.}}{33}{figure.caption.22}%
 \addvspace {10\p@ }

@@ -1,6 +1,6 @@
 \chapter{LayerIt \linebreak Design and Implementation}\label{chap:DesignAndImplementation}
 
-This chapter presents LayerIt as the concrete outcome of the research process described in the previous chapter. Its role is to show how the thesis moves from a problem statement and a set of methodological decisions to a working framework for composing score-aligned MIR visualisations. The chapter is organised from the problem definition to the system overview, then to the design choices that shaped the implementation, and finally to the mechanism used to combine the different visual layers into a single result.
+This chapter presents LayerIt \footnote{\url{https://github.com/FernandoAze/LayerIt_WIP}} as the concrete outcome of the research process described in the previous chapter. Its role is to show how the thesis moves from a problem statement and a set of methodological decisions to a working framework for composing score-aligned MIR visualisations. The chapter is organised from the problem definition to the system overview, then to the design choices that shaped the implementation, and finally to the mechanism used to combine the different visual layers into a single result.
 
 \section{The Problem and Our Solution}
 The central problem addressed by LayerIt is that score-aligned MIR figures are often created through a mixture of manual editing, \textit{ad hoc} scripting, and tool-specific workarounds. In practice, this makes it difficult to produce figures that are reusable, reproducible, and easy to adapt when the underlying data changes. Existing GUI tools are useful for inspection and annotation, but they are not designed to support the kind of compositional, publication-oriented visual output required by this thesis.
@@ -12,7 +12,7 @@ LayerIt is a Python framework designed to compose score-aligned MIR visualisatio
 
 The framework is modular: the same base structure can support different combinations of score material, spectrograms, annotations, beat information, and other derived data. These combinations can be modified and regenerated through scripts rather than reconstructed manually in an image editor.
 
-The project uses librosa \cite{mcfeeLibrosaLibrosa01102025}, matplotlib \cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026}, and Modusa \cite{modusa} to generate audio and data visualisations. The score layer is rendered through ScoreWarp. The final output is an SVG file that combines the score with audio and data layers. The codebase also integrates BeatThis \cite{foscarinBeatThisAccurate2024a}, illustrating how precomputed BT output can be incorporated to produce beat-data visualisations.
+The project uses librosa \cite{mcfeeLibrosaLibrosa01102025} and matplotlib \cite{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026} to generate audio and data visualisations. The score layer is rendered through ScoreWarp. The final output is an SVG file that combines the score with audio and data layers. The BT examples we are going to present were produced with BeatThis \cite{foscarinBeatThisAccurate2024a}, in order to illustrate how precomputed BT outputs can be incorporated to produce beat-data visualisations.
 
 \section{Design Choices and Rationale}
 % SVG as the visualisation backend.
@@ -24,7 +24,7 @@ SVG is a vector format, so representations that can be expressed as Cartesian pl
 % SVG as an editable intermediate format.
 Because SVG is a text-based markup format, it can also be inspected and modified directly. It can therefore serve as an intermediate representation between codebases written in different languages, such as Python, JavaScript, or C++. This property supports the potential integration of LayerIt into future MIR applications.
 
-LayerIt was developed as a Python-based OO tool using established MIR libraries, including librosa and matplotlib. This choice keeps the framework compatible with common Python-based research workflows.
+LayerIt was developed as a Python-based OOP tool using established MIR libraries, including librosa and matplotlib. This choice keeps the framework compatible with common Python-based research workflows.
 
 % FALTA FALAR DA RAZAO PELA QUAL SAO USADAS OUTRAS BIBLIOTECAS, mas eu já não explico isto antes?
 
@@ -82,7 +82,9 @@ MAPS is a purpose-specific alignment representation for this workflow. More gene
 
 ScoreWarp performs best when MAPS contains dense onset annotations across the full performance. However, it can still align scores when annotations are sparse via interpolation between available onsets and their @xml.id anchor points. In practice, this allows different precision levels (i.e., downbeats, phrase boundaries, or measure-level anchors), trading annotation effort for alignment precision. Even minimal anchors (first and last onset) may be usable for short performances or segments, but intermediate alignment becomes less reliable due to interpolation error.
 
-For the examples provided with LayerIt, PP was modified to obtain this data. PP's Piano Aligner plugin \cite{jiangPIANOPRECISIONADVANCING2025} matches performance onsets to score elements defined by the \texttt{.mei} file. PP displays these correspondences in a Sonic Visualiser time-instance layer. The modified layer displays the \texttt{xml:id} of each onset rather than its score position, expressed as \texttt{measure + position\_in\_measure}. The time instances can then be exported as \texttt{.txt} files containing \texttt{obs\_mean\_onset} and \texttt{xml\_id}, and converted into MAPS format using the \texttt{TXT\_to\_Maps()} function in \texttt{src/functions/warp\_score}.
+For the examples provided with LayerIt, Piano Precision was modified to obtain this data. Piano Precision's Piano Aligner plugin \cite{jiangPIANOPRECISIONADVANCING2025} matches performance onsets to score elements defined by the \texttt{.mei} file. Piano Precision displays these correspondences in a Sonic Visualiser time-instance layer. The modified layer displays the \texttt{xml:id} of each onset rather than its score position.
+
+The time instances can then be exported as \texttt{.txt} files containing the minimum required MAPS data using the \texttt{TXT\_to\_Maps()} function in \texttt{src/functions/warp\_score}.
  
 \subsection{Providing BT data}
 Contemporary BT algorithms commonly produce a beat activation function: a continuous curve representing the estimated likelihood of a beat at each frame. Visualising this curve alongside the discrete beat estimates exposes the model output from which those estimates are derived and provides qualitative context for interpreting them.
@@ -159,11 +161,9 @@ At the SVG level, LayerIt organizes the XML structure of the output so that indi
 |   |   <timeAxis>
 |   <Bottom Visualisation>
 |   |   <Layers>
-|   |   |   <image spectrogram.png>
+|   |   |   <Waveform>
 |   |   |   <Beat Probability>
 |   |   |   <Downbeat Probability>
-|   |   <Score>
-|   |   <timeAxis>
 </svg>
 \end{lstlisting}
 
@@ -183,44 +183,68 @@ class Layer(ABC):
 
   @abstractmethod
   def load_data(self, **kwargs) -> bool:
-    ...
+    pass
 
   @abstractmethod
-  def draw(self, ax, shared_data) -> tuple:
-    ...
+  def draw(self, ax: Axes, shared_data: Dict[str, Any]) \
+           -> Tuple[List, List]:
+    pass
+
+  def to_svg_group(self, shared_data: Dict[str, Any]) \
+                   -> Optional[str]:
+    '''Optional SVG export for subclasses'''
+    return None
 \end{lstlisting}
 
-In LayerIt, a \texttt{Visualizer} instance composes multiple lower-level layers, which may represent data plots or audio representations, and provides them with a shared data dictionary through \texttt{load\_all\_layers()}. The next listing (\ref{lst:visualizer-api}) illustrates this composition.
+In LayerIt, a \texttt{Visualizer} instance orchestrates the composition of multiple layers through a panel-based workflow. Layers are grouped into panels using \texttt{add_panel()}, which allows multiple layers to be rendered together on the same axis. The \texttt{Visualizer} maintains a shared data dictionary that all layers access during rendering via \texttt{load_all_layers()} and \texttt{draw()}. The \texttt{compose()} method then renders all panels and combines them with the warped score into a final multi-panel SVG. The next listing (\ref{lst:visualizer-api}) illustrates this composition workflow.
 
-\begin{lstlisting}[caption={Visualizer Instance Composition},label={lst:visualizer-api}]
-# Create a visualizer and compose layers
-visualizer = Visualizer()
+\begin{lstlisting}[caption={Visualizer Panel Composition},label={lst:visualizer-api}]
+# Create a visualizer with shared data paths
+visualizer = Visualizer(audio="performance.wav",
+                        score="score.svg",
+                        maps="alignment.maps.json",
+                        beats="beats.npz")
 
-# Add multiple composable layers
-visualizer.add_layer(BeatProbabilityLayer(color=(1, 0, 0)))
-visualizer.add_layer(DownbeatProbabilityLayer(color=(0, 0, 1)))
-# ... 
+# Add a panel (group of layers on same axis)
+visualizer.add_panel(
+  BeatLogits(color='red'),
+  DownbeatLogits(color='blue'),
+  show_axes=True,
+  height_scale=0.5
+)
 
-# Load all data and render the combined layers
-visualizer.load_all_layers(audio_path="performance.wav", 
-                           beat_file="beats.npz")
-fig, ax = visualizer.draw()
+# Compose all panels into final figure
+visualizer.compose("output.svg", 
+                   gap=20,
+                   score_position=0)
 \end{lstlisting}
 
-Each \texttt{Visualizer} instance can be rendered to SVG or PNG. At this stage, the outputs are Matplotlib figures and can be displayed directly with \texttt{show()}. To combine them with other \texttt{Visualizer} instances and a score, they are exported to SVG. The intermediate SVG layer allows the aligned score to be added to each visualisation, producing a higher-level composite that can then be stacked with other rendered SVGs to create the final aligned view. The following illustrative listing shows this process.
+In the composition workflow, the \texttt{Visualizer.compose()} method orchestrates the rendering of all panels and their combination with the warped score. Internally, each panel is rendered to SVG through \texttt{turn_to_SVG()}, which preserves each layer as a named SVG group. These panel SVGs are then combined with the warped score SVG using \texttt{create_final_SVG()}, which stacks them vertically at defined y-offsets while preserving the temporal alignment through the common timeline. The following illustrative listing shows this internal composition workflow.
 
-\begin{lstlisting}[caption={Simplified workings for SVG layers.},label={lst:svg-layers-example}]
-# Export visualizers to SVG and align them to the warped score
-SVG_Layer1 = Layer1.turn_to_SVG("Output/Path/And/Filename", svg_warped_score)
-SVG_Layer2 = Layer2.turn_to_SVG("Output/Path/And/Filename", svg_warped_score)
+\begin{lstlisting}[caption={SVG Composition Workflow},label={lst:svg-layers-example}]
+# Internal workflow (called by compose())
 
-# Add the score to an SVG layer
-SVGLayer1_withScore = Layer1.combine_layers_with_score(filename, svg_warped_score)
+# For each panel: render layers, export to SVG
+panel_viz = Visualizer(audio=audio, score=score,
+                       maps=maps, beats=beats)
+panel_viz.add_panel(MelSpec(), BeatLogits())
+panel_viz.load_all_layers(audio_path=audio, 
+                          beat_file=beats)
+fig, ax = panel_viz.draw()
+panel_svg = panel_viz.turn_to_SVG(
+  filename="panel.svg",
+  svg_warped_score=score
+)
 
-# Stack SVG layers at defined vertical positions
-EndVisualization = Visualizer()
-svg_layers = [(SVG_Layer1_withScore, 50),(SVG_Layer1, 200), (SVG_Layer2, 350) ...]
-EndVisualization.create_final_SVG(width, height, (...), svg_layers)
+# Stack panels with score using create_final_SVG()
+composer = Visualizer(audio=audio, score=score,
+                      maps=maps, beats=beats)
+composer.create_final_SVG(
+  width=1200, height=1600,
+  svg_layers=[(panel_svg, 50),
+              (score_svg, 300)],
+  output_file="final.svg"
+)
 \end{lstlisting}
 
 The example shows that higher-level SVG outputs can be positioned or stacked vertically, while lower-level Matplotlib layers can be composed into them. This compositional behaviour implements the ``layers within layers'' design of LayerIt.
