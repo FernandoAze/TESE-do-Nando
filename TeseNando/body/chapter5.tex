@@ -16,49 +16,51 @@ RQ1 asks how heterogeneous MIR visualisations can be combined in a common score-
 
 \subsection{Score, audio, and chroma on a shared axis}
 
-The first example combines a waveform, a time-warped score, a spectrogram, and a chromagram, using the Clair de Lune excerpt to isolate the audio-representation layers from BT output. Green dotted onset markers are repeated across the layers, making their common time reference visible. The figure demonstrates that the layer model is not limited to beat tracking: it can combine a symbolic score with multiple complementary audio representations in one vertically aligned view. This is the type of multimodal display used to relate score information to time-frequency and pitch-class information in MIR workflows \cite{mullerFundamentalsMusicProcessing2015}.
+The first example combines a time-warped score, a waveform, a mel spectrogram, and a chromagram for the opening six bars of Debussy's \textit{Clair de Lune}, performed by Maria Jo\~ao Pires. Cyan dotted onset markers are repeated across the spectrogram and waveform, making their common performance-time reference visible. The warped score allows for the notation and the audio representations to be read against the same time axis allowing for a more contextualized and informed visualization. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{LayerItExamples/1 FIG_521_sel.png}
-	\caption{LayerIt composition of waveform, time-warped score, spectrogram, and chromagram for the opening bars of Debussy's \textit{Clair de Lune}. The green dotted lines show shared onset positions across all layers.}
+	\includegraphics[width=\textwidth]{LayerItExamples/FIG521.png}
+	\caption{LayerIt composition for the opening six bars of Debussy's \textit{Clair de Lune}, performed by Maria Jo\~ao Pires. From top to bottom: time-warped score, waveform, mel spectrogram, and chromagram. Cyan dotted lines mark score aligned onsets.}
 	\label{fig:validation-score-audio-chroma}
 \end{figure}
 
 \subsection{Score-aligned BT analysis}
 
-The second example places a spectrogram, BeatThis beat and downbeat estimates, onset markers, and the time-warped score in a single composition. The score provides musical context directly beneath the time-based data. This is valuable when interpreting a BT result because the reader can relate an estimated beat to the notated event, this provides a more accurate evaluation on the BT performance.
+The second example places a time-warped score, a spectrogram, BeatThis beat estimates and on-
+set markers in a single composition. The score provides musical context directly beneath the
+time-based data. This is valuable when interpreting a BT result because the reader can relate an
 
-The figure type is motivated by the visualisation in Sá Pinto's BT evaluation work \cite{pintoShiftIfYoua}, where musical context and time-based analysis are complementary but not physically aligned. LayerIt does not change the evaluation procedure proposed in that work; it provides a way to present the relevant score, spectral, and beat information on a shared axis.
+The figure type is motivated by the visualisation in Sá Pinto's BT evaluation work \cite{pintoShiftIfYoua} where musical context and time-based analysis are complementary but not physically aligned. LayerIt does not change the evaluation procedure proposed in that work; it provides a way to present the relevant score, spectral, and beat information on a shared axis.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{LayerItExamples/2 FIG_522_sel.png}
-	\caption{LayerIt score-aligned BT display for BWV~856. The spectrogram, beat (red) and downbeat (blue) estimates, onset markers (black dotted lines), and warped score share the same performance timeline.}
+	\includegraphics[width=\textwidth]{LayerItExamples/FIG522.png}
+	\caption{LayerIt score-aligned BT display for BWV 856, performed by András Schiff. From top to bottom: time-warped score, mel spectrogram, and normalized waveform with BeatThis beat and downbeat markers. All panels share the performance-time axis.}
 	\label{fig:validation-score-beat-tracking}
 \end{figure}
 
-\subsection{Probability and position displays}
+\subsection{Logits and position displays}
 
-BT analysis benefits from retaining both the discrete output of an algorithm and its frame-wise activation functions. \autoref{fig:validation-probability-position} presents two such views. In the upper view, detected beat and downbeat positions are displayed together with the corresponding probability curves. In the lower view, faded vertical windows indicate intervals in which the activation exceeds a configurable threshold. For this excerpt, the beat threshold is set to $20\%$ and the downbeat threshold to $50\%$. In both cases, the curves, positions or threshold windows, and score remain tied to the same horizontal axis.
+BT analysis benefits from retaining both the discrete output of an algorithm and its frame-wise activation/logits functions. \autoref{fig:validation-probability-position} presents two such views. In the upper view, detected beat positions are displayed together with the corresponding activation curve. In the lower view we see the same data this time for downbeat estimates and their respective logits. In both cases, the score, the logits curves and beat/downbeat estimates, remain tied to the same horizontal axis.
 
-The thresholds were selected through iterative visual inspection to make the beat subdivision visible in this excerpt. The resulting windows agree with the expected subdivision shown by the score, illustrating how a researcher can tune the visualisation to inspect the behaviour of a BT system. More generally, varying the thresholds makes it possible to examine activation regions, compare them with selected positions and notated events, and diagnose whether a change in the visualised output reflects a meaningful pattern or a weak activation. The visualisation supports qualitative analysis; the selected thresholds are presentation parameters for this case study and do not, by themselves, establish ground-truth correctness.
-
+This type of visualization can help BT researchers better understand and relay how their algorithms perform. In this case we can visualize how the estimates for beat and downbeat differ.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{LayerItExamples/3 FIG_523_sel.png}
-	\caption{LayerIt probability-and-position displays for BWV~856. The upper composition shows BeatThis beat and downbeat positions with their activation curves; the lower composition replaces the discrete positions with faded activation-threshold windows, set to $20\%$ for beats and $50\%$ for downbeats in this excerpt.}
+	\includegraphics[width=\textwidth]{LayerItExamples/FIG523.png}
+	\caption{LayerIt activation-and-position display for BWV~856. The upper panel shows BeatThis beat logits and selected beat estimates; the time-warped score occupies the middle panel; and the lower panel shows downbeat logits and estimated downbeat positions.}
 	\label{fig:validation-probability-position}
 \end{figure}
 
 \subsection{Layered time-based display}
 
-The final example demonstrates the lightweight end of the composition model. It overlays a normalized waveform with BeatThis beat and downbeat positions, then places the warped score below it. Although it contains fewer layers than the previous examples, it uses the same composition process and preserves the same time relationship. This supports rapid inspection of how detected beats relate to both acoustic events and notated musical material.
+The final example demonstrates the lightweight end of the composition model. It overlays a normalized waveform with BeatThis beat estimated positions, then places the warped score above it. Although it contains fewer layers than the previous examples, it uses the same composition process and preserves the same time relationship. This supports rapid inspection of how detected beats relate to both acoustic events and notated musical material.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{LayerItExamples/4 FIG_524_sel.png}
-	\caption{LayerIt waveform display for BWV~856, with BeatThis beat and downbeat positions aligned to the time-warped score.}
+	\includegraphics[width=\textwidth]{LayerItExamples/FIG524.png}
+	\caption{LayerIt waveform display an excerpt for BWV 856 by András Schiff, with BeatThis
+beat positions aligned to the time-warped score.}
 	\label{fig:validation-waveform}
 \end{figure}
 
@@ -71,10 +73,10 @@ The final example demonstrates the lightweight end of the composition model. It 
 			\hline
 			\textbf{Figure type} & \textbf{Motivating context} & \textbf{LayerIt layers} & \textbf{Composition result} \\
 			\hline
-			Score, audio, and chroma & Multimodal music representations \cite{mullerFundamentalsMusicProcessing2015} & Waveform, onset markers, warped score, spectrogram, chromagram & Multiple audio representations aligned to the score \\
-			Score-aligned BT analysis & BT evaluation \cite{pintoShiftIfYoua} & Spectrogram, beat and downbeat positions, onset markers, warped score & Musical context and algorithmic output in one view \\
-			Probability and position display & Qualitative inspection of BT output & Beat and downbeat probabilities, positions or threshold windows, warped score & Continuous confidence and discrete output compared on one axis \\
-			Layered time-based display & Compact BT inspection & Waveform, beat and downbeat positions, warped score & A minimal score-aligned analytical display \\
+			Score, audio, and chroma & Multimodal music representations \cite{mullerFundamentalsMusicProcessing2015} & Warped score, waveform, onset markers, mel spectrogram, chromagram & Multiple audio representations aligned to the score \\
+			Score-aligned BT analysis & BT evaluation \cite{pintoShiftIfYoua} & Warped score, mel spectrogram, waveform, beat and downbeat positions & Musical context, acoustic evidence, and algorithmic output in one view \\
+			Activation and position display & Qualitative inspection of BT output & Beat and downbeat logits, selected positions, warped score & Continuous activations and discrete output compared on one axis \\
+			Layered time-based display & Compact BT inspection & Warped score, waveform, beat positions & A minimal score-aligned analytical display \\
 			\hline
 		\end{tabular}%
 	}
@@ -108,9 +110,13 @@ In this workflow, the score is physically positioned on the same axis as the dat
 			\textbf{Dimension} & \textbf{Sonic Visualiser} & \textbf{Piano Precision} & \textbf{Manual SVG editing} & \textbf{LayerIt} \\
 			\hline
 					Shared score time axis in the workflow considered & Not provided & Link-based score view & Possible through manual placement & Provided through ScoreWarp \\
+			\hline
 					Arbitrary algorithmic curves & Limited by available layers/plugins & Outside the workflow considered & Possible through manual construction & Provided through Layer subclasses \\
-					Scriptable figure generation & Not assessed & Not demonstrated in this study & Depends on a separately maintained procedure & Provided through the composition script \\
+			\hline
+					Scriptable figure generation & Not assessed & Not possible & Depends on a separately maintained procedure & Provided through the composition script \\
+			\hline
 					Regeneration after data change & Manual reconfiguration & Manual view recreation & Repeat manual editing & Re-run with updated inputs \\
+			\hline
 					Adding a visualisation type & Plugin development & Plugin development & Manual construction & Implement or configure a Layer \\
 			\hline
 		\end{tabular}%
@@ -123,7 +129,7 @@ No controlled count of manual operations or wall-clock time was recorded for the
 
 The architecture described in \autoref{chap:DesignAndImplementation} defines a common \texttt{Layer} interface and composes layers through \texttt{Visualizer}. The examples in this chapter exercise that interface with several independent layer types including: spectrogram, chromagram, waveform, onsets layer, BT output layers, beat/downbeat activation curves. Each is added through the same \texttt{add\_panel()} operation and rendered through the common \texttt{compose()} workflow.
 
-The scripts provide practical evidence of composability: \autoref{fig:validation-score-audio-chroma} adds waveform, chromagram, and onset layers to the same output, while \autoref{fig:validation-probability-position} substitutes discrete position layers with probability-window layers without changing the composition mechanism. This is consistent with the modular claim of Chapter~4.
+The scripts provide practical evidence of composability: \autoref{fig:validation-score-audio-chroma} combines four different representation types, while \autoref{fig:validation-probability-position} combines separate beat and downbeat activation and event layers around the same score. These substitutions require no change to the composition mechanism, which is consistent with the modular claim of Chapter~4.
 
 The current evidence supports the claim that existing layer types can be composed and exchanged through a common interface. It does not quantify the implementation cost of adding a completely new visualisation type, because no new layer was introduced solely for this evaluation with a measured line count and a documented change to the framework core. Such a probe should be added in future work by implementing one new layer and documenting whether any change outside that layer is required.
 
@@ -151,6 +157,6 @@ When an existing layer does not provide the required behaviour, the OO architect
 
 \section{Summary}
 
-This chapter provides a qualitative answer to the three research questions. For RQ1, the four figures demonstrate that LayerIt can compose symbolic score material, audio representations, onset annotations, and BT output into common score-aligned views. For RQ2, the generated examples and composition workflow show that existing layers can be created, modified, exchanged, and regenerated through a common scriptable interface.
+This chapter provides a qualitative answer to the three research questions. For RQ1, the four figures demonstrate that LayerIt can compose symbolic score material, audio representations, onset annotations, beat and downbeat activations, and BT output into common score-aligned views. For RQ2, the generated examples and composition workflow show that existing layers can be created, modified, exchanged, and regenerated through a common scriptable interface.
 
 For RQ3, the examples show how a shared-axis visualisation can support qualitative inspection of BT results and can serve as a diagnostic reference for annotation. LayerIt is not itself an interactive annotation tool, and no user-study claim is made. Its usefulness is also conditioned by the quality of the score-performance alignment: expressive performances and sparse annotation anchors remain important limitations that require dedicated empirical evaluation.

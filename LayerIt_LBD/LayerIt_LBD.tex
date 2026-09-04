@@ -13,36 +13,66 @@
 \documentclass{article}
 \usepackage[T1]{fontenc} % add special characters (e.g., umlaute)
 \usepackage[utf8]{inputenc} % set utf-8 as default input encoding
-\usepackage[lbd]{ismir}
+%\usepackage[lbd]{ismir}
 % !!!PARA VERSAO A SUBMETER USAR LINHA ABAIXO, REMOVER A ACIMA!!!
-% \usepackage[lbd,submission]{ismir} 
+\usepackage[lbd,submission]{ismir} 
 \usepackage{amsmath,cite,url}
 \usepackage{graphicx}
 \usepackage{color}
 \def\lbd{}	% Flag to use correct LBD settings in the paper, please do not modify this line
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{comment}
+\definecolor{cmtgray}{gray}{0.42}
+\lstdefinestyle{layerit}{%
+  language=Python,
+  %basicstyle=\ttfamily\scriptsize,      % 7 pt Courier: 55 characters fit one ISMIR column
+  %basicstyle=\fontsize{7}{8.4}\selectfont,
+  basicstyle=\fontfamily{zi4}\fontsize{8}{9.4}\selectfont,
+  %basicstyle=\fontfamily{zi4}\fontsize{6.9}{7.6}\selectfont,
+  %basicstyle=\fontfamily{cmtt}\fontsize{7}{8.4}\selectfont,
+  commentstyle=\color{cmtgray}\itshape,
+  keywordstyle=\bfseries,
+  showstringspaces=false,
+  columns=fullflexible, keepspaces=true,
+  breaklines=false,                     % every line is short enough that it never has to break
+  aboveskip=0pt, belowskip=0pt, xleftmargin=0pt, numbers=none}
+\lstset{style=layerit}
+\usepackage{musicography}
+
+\lstdefinestyle{layeritinline}{style=layerit,
+   %basicstyle=\ttfamily\fontsize{7}{8.4}\selectfont,
+   basicstyle=\ttfamily\scriptsize,
+   aboveskip=6pt, belowskip=4pt, xleftmargin=12pt}
+
 
 % Title. Please use IEEE-compliant title case when specifying the title here,
 % as it has implications for the copyright notice
 % ------
-\title{LayerIt: \linebreak Towards a Framework for Time-Aligned, Composable Audio Visualisations}
+\title{LayerIt: Towards a Framework for Time-Aligned, Composable Music Visualizations}
 
 % Note: Please do NOT use \thanks or a \footnote in any of the author markup
 
-% Two addresses
-% --------------
-% NOTE: please double-check the e-mail addresses below before submission.
-\twoauthors
-  {Fernando Azeredo} {Faculdade de Engenharia da Universidade do Porto \\ {\tt up202308655@fe.up.pt}}
-  {Ant\'onio S\'a Pinto} {Faculdade de Engenharia da Universidade do Porto \\ {\tt asapinto@fe.up.pt}}
+% Single address
+% To use with only one author or several with the same address
+% ---------------
+\oneauthor
+  {Fernando Azeredo \hspace{1cm} Ant\'onio S\'a Pinto}
+  {Faculdade de Engenharia da Universidade do Porto, Portugal \\
+   INESC TEC, Porto, Portugal \\
+   {\tt up202308655@fe.up.pt}}
 
 % For the author list in the Creative Common license and PDF metadata, please enter author names.
 % Please abbreviate the first names of authors and add 'and' between the second to last and last authors.
 \def\authorname{F. Azeredo and A. S\'a Pinto}
 
 % Optional: To use hyperref, uncomment the following.
-%\usepackage[bookmarks=false,pdfauthor={\authorname},pdfsubject={\papersubject},hidelinks]{hyperref}
-% Mind the bookmarks=false option; bookmarks are incompatible with ismir.sty.
+\usepackage[bookmarks=false,pdfauthor={\authorname},hidelinks,pdftitle={LayerIt: Towards a Framework for Time-Aligned, Composable Music Visualizations}]{hyperref}
 
+% Mind the bookmarks=false option; bookmarks are incompatible with ismir.sty.
+%\hypersetup{
+%    pdftitle={LayerIt: Towards a Framework for Time-Aligned, Composable Music Visualizations}
+%}
 \sloppy % please retain sloppy command for improved formatting
 
 \begin{document}
@@ -51,60 +81,94 @@
 \maketitle
 %
 \begin{abstract}
-Music Information Retrieval (MIR) research often requires figures that relate audio representations, symbolic scores, and algorithmic outputs on a common temporal basis. We present LayerIt, a Python framework for generating score-aligned visualisations from independent visual components. It aligns audio, algorithmic data, and symbolic scores on a shared timeline using time-warped scores rendered through \textit{ScoreWarp}, combining them into a structured SVG file. The SVG retains the score's MEI-derived structure and represents each added component as an identifiable group. In a beat-tracking case study, we generate a four-part figure comprising a time-warped score, mel spectrogram, \textit{BeatThis!} beat and downbeat logits, and waveform with the \textit{BeatThis!} output. The example is specified in approximately 60 lines of Python without manual alignment. LayerIt is available as an open-source Python package, providing a reusable basis for score-aligned MIR visualisation workflows.
+Music information retrieval often relates signal-derived, algorithmic, and symbolic information across different coordinate systems. Existing visualizations typically leave notation separate from physical time, while composites that combine them are assembled by hand. We present LayerIt, an open-source Python library for composing independent representations with notation on a shared performance-time axis. Given a score warped into performance time and a note-level alignment, LayerIt emits a single SVG that preserves the score’s MEI structure and keeps added components identifiable and restylable. We demonstrate this through a challenging beat-tracking analysis, in which tracker output, signal representations, and notation can be inspected together to locate metrical disagreement and other errors against both notated structure and performed time.
 \end{abstract}
 %
 \section{Introduction}\label{sec:introduction}
 
-MIR visualisations make audio features and algorithmic outputs available for inspection alongside musical context. For a figure that also includes score notation, the score and audio-derived representations must share a performance-time reference. Producing this type of figure from separately generated visual elements leaves the alignment and assembly steps to the individual workflow, making the result difficult to adapt when the data or visual design changes.
+Music can be represented in many ways: as engraved notation, symbolic encodings, or audio recordings of performances. These representations, however, live in different notions of time. Recordings unfold in physical time, measured in seconds or samples; symbolic encodings organize it in abstract units such as beats and measures; and engraved notation renders it in space, in pixels or millimetres. Establishing correspondences between them, a task known as alignment or synchronization, is central to both music information retrieval (MIR) and digital musicology.
 
-Existing tools address parts of this workflow. \textit{Sonic Visualiser}~\cite{cannamSonicVisualiser2010} supports audio analysis and annotation, whereas LayerIt targets scriptable generation of static, score-aligned figures. \textit{Piano Precision}~\cite{PianoPrecision} links a score to a performance through discrete correspondences, an approach suited to guided listening and performance analysis. In code-based workflows, \textit{librosa}~\cite{mcfeeLibrosaAudioMusic2015} provides audio analysis and feature extraction, while \textit{Matplotlib}~\cite{Hunter:2007} provides general-purpose plotting. LayerIt builds on these capabilities with an abstraction for arranging symbolic, audio-derived, and algorithmic representations against a score-aligned horizontal coordinate system.
+Alignment algorithms, notably those matching audio to score, must balance accuracy against computational cost and robustness \cite{muller2021SyncToolboxPython}. The latter takes several forms, such as tolerance to performance errors \cite{nakamura2017PerformanceErrorDetection} or to structural mismatches between score and performance \cite{fremerey2010HandlingRepeatsJumps}. Two further distinctions cut across that balance: matching may happen within the audio or symbolic domain, or across the two \cite{mueller2019CrossModalMusicRetrieval}, and may rely on classical signal-processing features or on learned representations \cite{zeitler2025RobustAccurateAudio}.
 
-The recently published \textit{TimeToAlign!}~\cite{hentschelTimeAlignModelling2026} formalises musical timelines and the alignments between them as reusable, storable artefacts, distinguishing graphical, logical, and physical temporal domains and recording the provenance of each correspondence; its scope is the representation and interchange of alignment data, independently of any particular renderer. LayerIt addresses a narrower, complementary problem: given an existing score-performance alignment, it positions independently generated representations --- audio-derived plots, algorithmic outputs, and the score itself --- along a shared time axis and composes them into a single structured SVG figure. Where \textit{TimeToAlign!} models and stores the alignment relationship itself, LayerIt treats an existing alignment as an input to layer composition and rendering; the two operate at different stages of the same pipeline, and a \textit{TimeToAlign!}-encoded alignment could in principle serve as an input to LayerIt in future work.
+An alignment, once computed, can be put to work in more than one way. One concern is representation. Alignments are often stored in ad hoc, single-use formats, and recent modelling relates musical timelines across the graphical, logical, and physical domains so that positions and annotations move between them and the alignment can be reused \cite{hentschel2026TimeAlignModelling}. A separate concern, which this work takes up, is visualization. The prevailing strategy fixes the score's layout and links its elements to instants on a physical timeline through drawn connectors \cite{thomas2012LinkingSheetMusic}, as do interactive tools that track a performance with a moving score cursor \cite{jiang2025PianoPrecisionAdvancing}. Score and physical time thus stay in separate coordinate systems, leaving the user to bridge them mentally.
 
-Score--audio links provide the basis for accessing multimodal music sources in a common framework~\cite{thomasLinkingSheetMusic2012}. Their quality remains important for LayerIt, particularly when structural discontinuities such as repeats and jumps make score-performance synchronisation difficult~\cite{fremereyHandlingRepeats2010}. LayerIt does not implement a synchronisation algorithm: toolkits such as \textit{Sync Toolbox} provide dynamic-time-warping-based pipelines that can supply an upstream alignment~\cite{mullerSyncToolbox2021}. LayerIt currently consumes the MAPS alignment format used by \textit{ScoreWarp}~\cite{weiglMultimodalMusicInformation2020}, typically populated using a symbolic alignment algorithm such as that of Nakamura et al.~\cite{nakamuraPerformanceErrorDetection2017}, while richer note-level correspondence formats such as the match file format~\cite{foscarinMatchFileFormat2022} remain a target for future interchange support.
+An alternative dispenses with anchors altogether. The notation itself is laid out in performance time, each element repositioned according to its performed onset, so that the score stays fully readable as notation while doubling as a visual index into physical time \cite{goebl2025LetsScoreWarpAgain}. The possibility that motivates the present work is a shared performance-time axis onto which further material can be layered, from waveforms and feature curves to other time-aligned information~\cite{pinto2020ShiftIfYou}. Annotations such as beat positions and metre are of particular interest here, since they are explicit in musical notation yet recoverable from audio only by estimation.
 
-This paper presents the framework, describes its SVG-based output, and demonstrates the approach in a beat-tracking case study.
-
+No simple, programmatic way to compose these layers reproducibly exists. Such composites are assembled by hand, score and audio matched by eye and ear, so nothing ties the match to the signal and nothing survives a change of recording or algorithm.
+We present LayerIt\footnote{\url{https://github.com/FernandoAze/LayerIt}}: given a score--performance alignment, it places independently generated components onto this shared axis and merges them into a single, self-contained visualization. Each is handled as an independent layer that can be added, combined, or removed, making such composites straightforward to build and adapt. The library is open-source and composes the figure in Python, where the material is already being produced, so that no export to a separate drawing tool is required.
+%Its contribution is therefore twofold: compact, reproducible composition in code, and direct joint inspection of signal-derived, algorithmic, and score-based information on the same temporal reference.
+%
 \section{The LayerIt Framework}\label{sec:framework}
-LayerIt treats each audio representation or algorithmic output as a reusable \texttt{Layer}. Each subclass implements \texttt{load\_data()}, which receives its input, and \texttt{draw()}, which renders it with a shared context. A \texttt{Visualizer} coordinates a set of layers through \texttt{shared\_data}; users declare the layer arrangement and the \texttt{Visualizer} renders the resulting figure. The output is a single SVG whose XML tree contains a named \texttt{<g>} element for each added component. This interface allows additional layer types or rendering backends to be introduced without changing existing layers.
+A LayerIt figure is a stack of panels that share one performance-time axis.
+Four inputs define it: a performance recording, read with librosa \cite{mcfee2015LibrosaAudioMusic}; a score already warped onto that axis by ScoreWarp \cite{goebl2025LetsScoreWarpAgain}; a note-level alignment of onsets to score elements \cite{weigl2020MultimodalMusicInformation}, which LayerIt consumes rather than computes; and additional data representations.
+The output is a single SVG document.
 
-The framework builds on established libraries rather than reimplementing their functionality: \textit{librosa}~\cite{mcfeeLibrosaAudioMusic2015} provides audio-analysis functionality, and \textit{Matplotlib}~\cite{Hunter:2007} provides general-purpose plotting. \textit{BeatThis!}~\cite{foscarinBeatThisAccurate2024a} supplies the beat-tracking output used in the case study. \textit{ScoreWarp}~\cite{goeblLetsScoreWarpAgain2025a} provides the performance-time mapping and the time-warped score rendering used to position the other components.
+%All horizontal placement derives from two numbers read from the warped score's time axis: the span it covers in seconds and its length in pixels.
+%Their ratio is the only scale factor, applied identically to every layer, each of which converts its native units (e.g.\ samples, frames) into seconds as it loads. Each layer decides its own vertical placement; the horizontal is decided for it.
 
-The output retains the MEI-derived identifiers and semantic hierarchy of the score SVG, while each added component is embedded as a named \texttt{<g>} group~\cite{Pugin_2014}. Waveforms, activation curves, and beat annotations remain vector graphics; heatmap-based representations may be embedded as raster images. The resulting structure keeps components independently identifiable for downstream querying, restyling, or animation.
+Two numbers from the score's time axis, its span in seconds and its length in pixels, yield the system's only scale factor. Nothing else is warped: each layer converts its native units (e.g.\ samples, frames) into seconds where needed, and is drawn at that scale. A layer therefore sets neither placement; the horizontal follows from the scale, the vertical from the composition.
 
-\section{Demonstration}\label{Demo}
-We demonstrate LayerIt with the beat-tracking figure in Figure~\ref{fig:layerit_demo}, generated without manual image alignment. Each component is declared in 5--7 lines using the same interface, as summarised by the script diagram in Figure~\ref{fig:layerit_script}.
+A representation is a class with two methods: one loads and validates its data, the other draws it into a Matplotlib\,\texttt{Axes}~\cite{hunter2007Matplotlib2DGraphics}, so that existing plotting knowledge transfers unchanged. Placed in a panel it becomes a layer, and an optional third method lets it emit its own SVG group. Ten representations are implemented on this interface, based on four shapes, an initial, extensible set documented in the repository: \texttt{Curve} (any function of time), \texttt{Events} (instants), \texttt{Intervals} (time spans), and \texttt{Field} (a dense time--frequency/pitch array). No representation touches the aligning machinery.
+
+The score is copied into the composite rather than redrawn from its Verovio rendering \cite{pugin2014VerovioLibraryEngraving}, thereby preserving its Music Encoding Initiative (MEI) identifiers and hierarchy.
+Each added component is emitted as its own named group, with identifiers rewritten per panel so that repeated layers stay distinguishable; the vector shapes remain native SVG primitives, selectable and restylable, while a field embeds a raster image inside its group.
+
+\section{Demonstration}\label{sec:demonstration}
+
+We demonstrate LayerIt on the figure a beat-tracking analysis calls for: a recording, a score, and a tracker's frame-level output.
+The example uses the first six bars of Debussy's \emph{Clair de Lune} performed by Maria João Pires, the MEI score to which its onsets were aligned in Piano Precision~\cite{jiang2025PianoPrecisionAdvancing}, and the beat and downbeat activations and estimates from Beat This!~\cite{foscarin2024BeatThisAccurate}.
+
+The abridged script (with styling arguments omitted) that produces \figref{fig:composite} requires only five statements:
+\begin{lstlisting}[style=layeritinline]
+fig = Visualizer(audio, score, maps, beats)
+fig.add_panel(Onset(), BeatLogits(), 
+    DownbeatLogits(), height_scale=.5)
+fig.add_panel(Waveform(), BeatsLayer(), 
+    DownbeatsLayer(), height_scale=.5)
+fig.add_panel(MelSpec(freq_window=(100, 1500)))
+fig.compose("LBD_FIG.svg")
+\end{lstlisting}
+
 
 \begin{figure}
-\includegraphics[width=\columnwidth]{LBD Script.png}
-\caption{Diagram simplifying the composition and script that generated Figure~\ref{fig:layerit_demo}.}
-\label{fig:layerit_script}
+\includegraphics[alt={Four panels share one horizontal time axis of about 33
+seconds. Top: the opening six bars of the piano score in 9/8, marked Andante
+très expressif, thus spaced unevenly in time (as played). Second: two activation curves, mostly low with sharp peaks, crossed by
+dashed vertical lines at the notated onsets. Third: the audio waveform overlaid
+with a sparse set of downbeat markers and a much denser set of beat markers,
+several falling within a single notated beat. Bottom: a mel spectrogram from
+100 to 1500 Hz. The beat estimates greatly outnumber the beats notated above
+them, and many are incorrectly identified as downbeats.},width=.9\columnwidth]{LBD_FIG 1.png}
+\caption{LayerIt composition, top to bottom: 1) warped score;
+2) beat/downbeat logits with score onsets dashed;
+3) waveform in pink with beat/downbeat estimates;
+4) mel spectrogram. Beats dotted orange, downbeats solid blue.}
+\label{fig:composite}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{LBD_Fig.png}
-\caption{A LayerIt composition combining, from top to bottom: (1) the \textit{ScoreWarp}-rendered score; (2) a mel spectrogram, colour-coded by energy; (3) a chromagram across twelve pitch classes with the \textit{BeatThis!} activation curve; and (4) the waveform with detected beats and downbeats shown as red and blue markers. All components are aligned to a shared time axis and the figure is generated in $\sim$60 lines of Python.}
-\label{fig:layerit_demo}
-\end{figure}
-
-Thin dotted lines mark score-aligned onsets and provide reference points for comparing the representations. The arrangement lets readers inspect the relationship between spectral energy, the beat/downbeat logits and output from \textit{BeatThis!}, and the corresponding score events.
-
-Reading the \textit{BeatThis!} activations alongside the waveform and score contextualises the displayed beat and downbeat detections. This piece-level inspection follows visual approaches to beat-tracking evaluation~\cite{pintoShiftIfYouCan2020}, which expose detections and correction operations on a common time axis. LayerIt extends this perspective by placing beat activations and detections alongside audio representations and score events. Re-running the same script with different recordings, scores, or algorithmic outputs produces an equivalent figure without manual alignment.
-
+Most downbeats are correctly placed, but the many false positives---several of them quaver onsets taken as beats---show that the metrical structure is misread.
+Two conditions known to trouble beat trackers hold here: compound triple metre (given its scarcity in training datasets) and highly expressive interpretations~\cite{pinto2021TappingDifficultOnes}.
+Both are apparent in the figure: compound triple metre in its 9/8 time signature, expressive playing in its \emph{très expressif} marking. The performer stretches and compresses the beat~(\musQuarter.), as the warped score's spacing shows.
+The estimates, read against the notation, become an account of the difficulties behind them, not a list of errors. Each false positive carries a musical address, the bar it falls in and the figure that produced it, so the passage can be found in the score and heard in the recording. A signal-derived view shows only where they fall.
+%The aligned composite therefore changes the analysis itself. Audio-derived representations, tracker output, and symbolic structure can be read together, without reconstructing their correspondence across separate displays.
 \section{Conclusion}\label{sec:conclusion}
 
-LayerIt provides a programmatic workflow for generating score-aligned MIR figures from independently specified components. Its structured SVG output preserves the score's semantic information and the identity of added components, rather than flattening the figure into a single raster image. The current implementation is open source and provides a stable core for additional layer types. Planned extensions include tempograms and spectrogram derivatives, time-alignment backends beyond \textit{ScoreWarp}, and annotation export. Integrating an upstream synchronisation toolkit such as \textit{Sync Toolbox}, and supporting interchange data such as match files, would broaden the set of alignment inputs available to the framework. The structured SVG representation may also support interactive, playback-synchronised viewers. By making the figure specification re-runnable, LayerIt supports transparent and reusable visualisation workflows.
+LayerIt replaces the hand assembly of score-aligned MIR figures with a programmatic specification. Beat-tracking output is ordinarily examined against the signal (e.g.\ in Sonic Visualiser~\cite{cannam2010SonicVisualiserOpen}), while the score, if consulted, is read separately and the correspondence reconstructed by the user.
+LayerIt instead puts both on the same performance-time axis, where the tracker’s inferred metrical structure can be read against the score’s, and seen to diverge. Neither carries what the other does. Beat positions and their metrical organization are notated but only inferable from the signal; performed timing is in the recording alone. The comparison needs both, aligned. Beat tracking is one instance of a broader case: any analysis that must relate algorithmic or signal-derived output to notated structure in performance time.
 
-LayerIt's repository can be accessed via https://github.com/FernandoAze/LayerIt.
+Two limitations bear on use. The framework depends on an MEI score and an externally computed alignment, inheriting errors in both, and the warped layout may carry artefacts absent from conventional engraving. More narrowly, dense time--frequency/pitch fields are rasterized and cannot be restyled like the vector components.
+%As LayerIt operates on a precomputed score–performance alignment, any errors in that alignment propagate directly to the resulting visualization. Such errors remain a known issue in score–audio alignment and transcription, particularly for structurally complex performances, difficult recording conditions, and polyphonic or orchestral material.
 
-\newpage
+The most immediate of the open directions concerns alignment input. LayerIt reads the onset-level format consumed by ScoreWarp; integration with the Sync Toolbox~\cite{muller2021SyncToolboxPython} or Time to Align!~\cite{hentschel2026TimeAlignModelling} would do more than widen it. The former could add automatic synchronization, while the latter could retain provenance and domain information absent from an onset list. A further direction concerns annotation: aligned symbolic structure and signal-based evidence may support interactive workflows that a divided view makes difficult.
 
-\section{AI Usage Statement}
 
-Large language models (LLMs) were used in this work as a writing and code development aid. Specifically: (1)~LLMs were used to help structure and write this LBD paper, including organization, phrasing, and clarity improvements; (2)~LLMs were used to assist in the development of the LayerIt codebase. The core research methodology, conceptual contributions, framework architecture, and scientific validation remain the work of the authors. All code, design decisions, and experimental results have been authored and verified by the authors themselves.
+%\newpage
+
+%\section{AI Usage Statement}
+
+%Large language models (LLMs) were used in this work as a writing and code development aid. Specifically: (1)~LLMs were used to help structure and write this LBD paper, including organization, phrasing, and clarity improvements; (2)~LLMs were used to assist in the development of the LayerIt codebase. The core research methodology, conceptual contributions, framework architecture, and scientific validation remain the work of the authors. All code, design decisions, and experimental results have been authored and verified by the authors themselves.
 
 % For bibtex users:
-\bibliography{ISMIRtemplate}
+\bibliography{ISMIRtemplate_ASP_v2}
 
 \end{document}

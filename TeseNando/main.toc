@@ -1,0 +1,55 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contextualization}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivation}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objectives, Research Questions and Contributions}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Developed Project}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Thesis Structure}{3}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Visualisation Types}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Sheet Music and Score Images}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Symbolic Representations}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Audio Representations}{8}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}MIR Visualisation Tools}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Audio-to-score alignment}{13}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Summary}{15}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Methodology}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Research Approach}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Iterative Development Process}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Scope Decision}{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Evaluation Criteria}{20}{section.3.4}%
+\contentsline {chapter}{\numberline {4}LayerIt \linebreak Design and Implementation}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Problem and Our Solution}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}LayerIt Overview}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Design Choices and Rationale}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Generating Visuals}{23}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Getting the Warped Score}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Getting the MAPS file}{24}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Providing BT data}{25}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Layer Alignment Method}{26}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Layers on Layers, within Layers}{26}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Visual Level}{27}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}SVG Level}{27}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Code Level}{28}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Summary}{31}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Validation}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Validation Approach}{32}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Reproducing Composite Figure Types (RQ1)}{33}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Score, audio, and chroma on a shared axis}{33}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Score-aligned BT analysis}{33}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Logits and position displays}{34}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Layered time-based display}{35}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Workflow Capabilities for Annotation and Evaluation (RQ2, RQ3)}{36}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Evaluation workflow}{36}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Annotation workflow}{37}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Modular Composition Evidence (RQ2)}{38}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Difficult Cases (RQ3)}{38}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Expressive performances}{38}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Sparse onset annotation}{39}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Manual editing of the final SVG}{39}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Summary}{39}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Achievements}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Work}{42}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Final Remarks}{43}{section.6.3}%
+\contentsline {chapter}{References}{44}{section*.23}%

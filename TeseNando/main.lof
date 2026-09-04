@@ -1,0 +1,19 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of an audio waveform.}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of audio Spectrum.}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of Linear spectrogram.}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Logarithmic spectrogram.}}{10}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of Mel spectrogram.}}{11}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a CQT.}}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example a Chromagram.}}{12}{figure.caption.12}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Composition of the LayerIt visualisation system. Each coloured box represents a distinct visual element that composes a higher-level visualisation.}}{27}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces LayerIt composition for the opening six bars of Debussy's \textit {Clair de Lune}, performed by Maria Jo\~ao Pires. From top to bottom: time-warped score, waveform, mel spectrogram, and chromagram. Cyan dotted lines mark score aligned onsets.}}{33}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces LayerIt score-aligned BT display for BWV 856, performed by András Schiff. From top to bottom: time-warped score, mel spectrogram, and normalized waveform with BeatThis beat and downbeat markers. All panels share the performance-time axis.}}{34}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces LayerIt activation-and-position display for BWV~856. The upper panel shows BeatThis beat logits and selected beat estimates; the time-warped score occupies the middle panel; and the lower panel shows downbeat logits and estimated downbeat positions.}}{35}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces LayerIt waveform display an excerpt for BWV 856 by András Schiff, with BeatThis beat positions aligned to the time-warped score.}}{35}{figure.caption.20}%
+\addvspace {10\p@ }

@@ -75,44 +75,47 @@
       \endverb
     \endentry
     \entry{carabias-ortiAUDIOSCOREALIGNMENTa}{article}{}
-      \name{author}{4}{}{%
-        {{hash=1d9d6ea7b25d9dd3d9c79477f305d791}{%
-           family={Carabias-Orti},
-           familyi={C\bibinithyphendelim O\bibinitperiod},
-           given={J\bibnamedelima J},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=5c4a687143a167642615f32fd820686a}{%
-           family={Rodriguez-Serrano},
+      \name{author}{5}{}{%
+        {{hash=f1b1c20892c2f00555b4f174bac34daa}{%
+           family={Carabias},
+           familyi={C\bibinitperiod},
+           given={J.J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0da892b87d027d5a155771a613996af4}{%
+           family={Rodríguez-Serrano},
            familyi={R\bibinithyphendelim S\bibinitperiod},
-           given={F\bibnamedelima J},
-           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=f6310387c1b2c86e52288210e2daa8af}{%
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=300b837125e5ba4d27d5bc086e71916d}{%
            family={Vera-Candeas},
            familyi={V\bibinithyphendelim C\bibinitperiod},
-           given={P},
+           given={Pedro},
            giveni={P\bibinitperiod}}}%
-        {{hash=cab3a99cc0f76c9e1692ec362b328091}{%
-           family={Ruiz-Reyes},
-           familyi={R\bibinithyphendelim R\bibinitperiod},
-           given={N},
+        {{hash=e065e22e65e7a1df2febeabc88b3ba6e}{%
+           family={Ruiz\bibnamedelima Reyes},
+           familyi={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Nicolas},
            giveni={N\bibinitperiod}}}%
+        {{hash=78784d1a033a6f8db0f791beea1dcf0f}{%
+           family={Canadas\bibnamedelima Quesada},
+           familyi={C\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
       }
-      \strng{namehash}{0ad79daf2fcdb029c92abef79720d4d1}
-      \strng{fullhash}{bf1cc403d41d014a06ce56b8629d1fec}
-      \strng{bibnamehash}{0ad79daf2fcdb029c92abef79720d4d1}
-      \strng{authorbibnamehash}{0ad79daf2fcdb029c92abef79720d4d1}
-      \strng{authornamehash}{0ad79daf2fcdb029c92abef79720d4d1}
-      \strng{authorfullhash}{bf1cc403d41d014a06ce56b8629d1fec}
+      \strng{namehash}{0cce750fd1814cf7d075093a81cd1c45}
+      \strng{fullhash}{bef246ed9feed93982b959470d0f5a5a}
+      \strng{bibnamehash}{0cce750fd1814cf7d075093a81cd1c45}
+      \strng{authorbibnamehash}{0cce750fd1814cf7d075093a81cd1c45}
+      \strng{authornamehash}{0cce750fd1814cf7d075093a81cd1c45}
+      \strng{authorfullhash}{bef246ed9feed93982b959470d0f5a5a}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In this paper, we present an audio to score alignment framework based on spectral factorization and online Dynamic Time Warping (DTW). The proposed framework has two separated stages: preprocessing and alignment. In the first stage, we use Non-negative Matrix Factorization (NMF) to learn spectral patterns (i.e. basis functions) associated to each combination of concurrent notes in the score. In the second stage, a low latency signal decomposition method with fixed spectral patterns per combination of notes is used over the magnitude spectrogram of the input signal resulting in a divergence matrix that can be interpreted as the cost of the matching for each combination of notes at each frame. Finally, a Dynamic Time Warping (DTW) approach has been used to find the path with the minimum cost and then determine the relation between the performance and the musical score times. Our framework have been evaluated using a dataset of baroque-era pieces and compared to other systems, yielding solid results and performance.}
       \field{langid}{english}
-      \field{title}{{{AN AUDIO TO SCORE ALIGNMENT FRAMEWORK USING SPECTRAL FACTORIZATION AND DYNAMIC TIME WARPING}}}
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/UJ9488RB/Carabias-Orti et al. - AN AUDIO TO SCORE ALIGNMENT FRAMEWORK USING SPECTRAL FACTORIZATION AND DYNAMIC TIME WARPING.pdf
-      \endverb
+      \field{month}{10}
+      \field{title}{An Audio Score Alignment Framework Using Spectral Factorization And Dynamic Time Warping}
+      \field{year}{2015}
     \endentry
     \entry{duanSoundprismOnlineSystem2011}{article}{}
       \name{author}{2}{}{%
@@ -157,9 +160,6 @@
       \range{pages}{11}
       \verb{doi}
       \verb 10.1109/JSTSP.2011.2159701
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/P5SZAMYT/Duan and Pardo - 2011 - Soundprism An Online System for Score-Informed Source Separation of Music Audio.pdf
       \endverb
       \verb{urlraw}
       \verb http://ieeexplore.ieee.org/document/5887382/
@@ -526,16 +526,13 @@
       \field{booktitle}{Proceedings of the 22nd {{Sound}} and {{Music Computing Conference}} ({{SMC}})}
       \field{langid}{english}
       \field{month}{7}
-      \field{title}{{{PIANO PRECISION}}: {{ADVANCING MUSIC PERFORMANCE ANALYSIS BY INTEGRATING USER-CORRECTABLE AUDIO-TO-SCORE ALIGNMENT}}}
+      \field{title}{{Piano Precision}: Advancing Music Performance Analysis by Integrating User-Correctable Audio-to-Score Alignment}
       \field{year}{2025}
       \field{dateera}{ce}
       \field{pages}{160\bibrangedash 167}
       \range{pages}{8}
       \verb{doi}
       \verb 10.5281/zenodo.15838699
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/2EI4655C/Jiang and Goebl - 2025 - PIANO PRECISION ADVANCING MUSIC PERFORMANCE ANALYSIS BY INTEGRATING USER-CORRECTABLE AUDIO-TO-SCORE.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.5281/zenodo.15838699
@@ -600,7 +597,6 @@
       \field{abstract}{Music exists in various modalities, such as score images, symbolic scores, MIDI, and audio. Translations between each modality are established as core tasks of music information retrieval, such as automatic music transcription (audio-to-MIDI) and optical music recognition (score image to symbolic score). However, most past work on multimodal translation trains specialized models on individual translation tasks. In this paper, we propose a unified approach, where we train a general-purpose model on many translation tasks simultaneously. Two key factors make this unified approach viable: a new large-scale dataset and the tokenization of each modality. Firstly, we propose a new dataset that consists of more than 1,300 hours of paired audio-score image data collected from YouTube videos, which is an order of magnitude larger than any existing music modal translation datasets. Secondly, our unified tokenization framework discretizes score images, audio, MIDI, and MusicXML into a sequence of tokens, enabling a single encoder–decoder Transformer to tackle multiple cross-modal translation as one coherent sequence-to-sequence task. Experimental results confirm that our unified multitask model improves upon singletask baselines in several key areas, notably reducing the symbol error rate for optical music recognition from 24.58\% to a state-of-the-art 13.67\%, while similarly substantial improvements are observed across the other translation tasks. Notably, our approach achieves the first successful score-image-conditioned audio generation, marking a significant breakthrough in crossmodal music generation.}
       \field{eprintclass}{cs.SD}
       \field{eprinttype}{arXiv}
-      \field{issn}{2998-4173}
       \field{journaltitle}{IEEE Transactions on Audio, Speech and Language Processing}
       \field{langid}{english}
       \field{shortjournal}{IEEE Trans. Audio, Speech Lang. Process.}
@@ -614,14 +610,8 @@
       \field{urldateera}{ce}
       \field{pages}{1876\bibrangedash 1891}
       \range{pages}{16}
-      \verb{doi}
-      \verb 10.1109/TASLPRO.2025.3648794
-      \endverb
       \verb{eprint}
       \verb 2505.12863
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/IXRJ3ZKJ/Jung et al. - 2026 - Unified Cross-modal Translation of Score Images, Symbolic Music, and Performance Audio.pdf
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2505.12863
@@ -649,12 +639,10 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The paper summarizes spectrogram and gives practical application of spectrogram in signal processing. For analysis, finger-snapping is recorded with a sampling rate of 441000 Hz and 96000 Hz. The effects of the number of segments on the Power Spectral Density (PSD) and spectrogram are analyzed and visualized.}
+      \field{journaltitle}{arXiv preprint arXiv:2403.09321}
       \field{langid}{english}
-      \field{title}{A {{Practical Guide}} to {{Spectrogram Analysis}} for {{Audio Signal Processing}}}
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/SII6EFSC/Khodzhaev - A Practical Guide to Spectrogram Analysis for Audio Signal Processing.pdf
-      \endverb
+      \field{title}{A practical guide to spectrogram analysis for audio signal processing}
+      \field{year}{2024}
     \endentry
     \entry{mcfeeLibrosaLibrosa01102025}{software}{}
       \name{author}{7}{}{%
@@ -721,11 +709,8 @@
            given={Meinard},
            giveni={M\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Cham}%
-      }
       \list{publisher}{1}{%
-        {Springer International Publishing}%
+        {Springer}%
       }
       \strng{namehash}{80b6d841b668c1c8aa2744a675afd39e}
       \strng{fullhash}{80b6d841b668c1c8aa2744a675afd39e}
@@ -736,29 +721,11 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{isbn}{978-3-319-21944-8 978-3-319-21945-5}
+      \field{labeltitlesource}{title}
       \field{langid}{english}
-      \field{shorttitle}{Fundamentals of {{Music Processing}}}
-      \field{title}{Fundamentals of {{Music Processing}}: {{Audio}}, {{Analysis}}, {{Algorithms}}, {{Applications}}}
-      \field{urlday}{2}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
+      \field{title}{Fundamentals of music processing: Audio, analysis, algorithms, applications}
+      \field{volume}{5}
       \field{year}{2015}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-319-21945-5
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/TT6E9LPJ/Müller - 2015 - Fundamentals of Music Processing Audio, Analysis, Algorithms, Applications.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-319-21945-5
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-319-21945-5
-      \endverb
     \endentry
     \entry{mullerSyncToolbox2021}{article}{}
       \name{author}{5}{}{%
@@ -833,6 +800,9 @@
            given={Haruhiro},
            giveni={H\bibinitperiod}}}%
       }
+      \list{organization}{1}{%
+        {Suzhou}%
+      }
       \strng{namehash}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{fullhash}{c23ca6582c66ff32a52ad04a5de35383}
       \strng{bibnamehash}{c23ca6582c66ff32a52ad04a5de35383}
@@ -843,12 +813,12 @@
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This paper presents a fast and accurate alignment method for polyphonic symbolic music signals. It is known that to accurately align piano performances, methods using the voice structure are needed. However, such methods typically have high computational cost and they are applicable only when prior voice information is given. It is pointed out that alignment errors are typically accompanied by performance errors in the aligned signal. This suggests the possibility of correcting (or realigning) preliminary results by a fast (but not-so-accurate) alignment method with a refined method applied to limited segments of aligned signals, to save the computational cost. To realise this, we develop a method for detecting performance errors and a realignment method that works fast and accurately in local regions around performance errors. To remove the dependence on prior voice information, voice separation is performed to the reference signal in the local regions. By applying our method to results obtained by previously proposed hidden Markov models, the highest accuracies are achieved with short computation time. Our source code is published in the accompanying web page, together with a user interface to examine and correct alignment results.}
+      \field{booktitle}{ISMIR}
       \field{langid}{english}
-      \field{title}{{{PERFORMANCE ERROR DETECTION AND POST-PROCESSING FOR FAST AND ACCURATE SYMBOLIC MUSIC ALIGNMENT}}}
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/F6RS3YUL/Nakamura et al. - PERFORMANCE ERROR DETECTION AND POST-PROCESSING FOR FAST AND ACCURATE SYMBOLIC MUSIC ALIGNMENT.pdf
-      \endverb
+      \field{title}{Performance Error Detection and Post-Processing for Fast and Accurate Symbolic Music Alignment.}
+      \field{year}{2017}
+      \field{pages}{347\bibrangedash 353}
+      \range{pages}{7}
     \endentry
     \entry{peterAutomaticNoteLevelScoretoPerformance2023}{article}{}
       \name{author}{7}{}{%
@@ -918,9 +888,6 @@
       \verb{doi}
       \verb 10.5334/tismir.149
       \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/VR5MFF2H/Peter et al. - 2023 - Automatic Note-Level Score-to-Performance Alignments in the ASAP Dataset.pdf
-      \endverb
       \verb{urlraw}
       \verb http://transactions.ismir.net/articles/10.5334/tismir.149/
       \endverb
@@ -956,9 +923,6 @@
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5448/7EM6-MY23
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/XU6MWRG3/Répertoire International des Sources Musicales - 2021 - Verovio Reference Book.pdf
       \endverb
       \verb{urlraw}
       \verb https://book.verovio.org/
@@ -1003,9 +967,6 @@
       \field{dateera}{ce}
       \verb{doi}
       \verb 10.48550/arXiv.2011.01637
-      \endverb
-      \verb{file}
-      \verb /home/macacomalandro/Zotero/storage/WGLLUJTI/Pinto - Shift if You Can Counting and Visualising Correction Operations for Beat Tracking Evaluation.pdf
       \endverb
     \endentry
     \entry{thematplotlibdevelopmentteamMatplotlibVisualizationPython2026}{software}{}
