@@ -30,8 +30,6 @@ find . -type f \( \
   -name "*.synctex.gz" -o \
   -name "*.toc" \
 \) -delete
-
-find . -type f \( -name "*.aux" -o -name "*.log" -o -name "*.bbl" -o -name "*.bcf" -o -name "*.blg" -o -name "*.fdb"-latexmk" -o -name "*.fls" -o -name "*.lof" -o -name "*.lot" -o -name "*.out" -o -name "*.run.xml" -o -name "*.synctex.gz" -o -name "*.toc" \) -delete
 ===========
 
 1. Distributions
