@@ -131,7 +131,18 @@ The architecture described in \autoref{chap:DesignAndImplementation} defines a c
 
 The scripts provide practical evidence of composability: \autoref{fig:validation-score-audio-chroma} combines four different representation types, while \autoref{fig:validation-probability-position} combines separate beat and downbeat activation and event layers around the same score. These substitutions require no change to the composition mechanism, which is consistent with the modular claim of Chapter~4.
 
-The current evidence supports the claim that existing layer types can be composed and exchanged through a common interface. It does not quantify the implementation cost of adding a completely new visualisation type, because no new layer was introduced solely for this evaluation with a measured line count and a documented change to the framework core. Such a probe should be added in future work by implementing one new layer and documenting whether any change outside that layer is required.
+The evaluation also included a small extensibility probe. A new \texttt{OnsetNovelty} layer was implemented as a \texttt{Curve} subclass in a standalone module. The class contains approximately 60 lines of Python code. In it, the layer loads an audio file, computes its onset-strength envelope with \texttt{librosa}, converts the frame positions to seconds, and supplies the resulting curve to the inherited rendering machinery. The implementation provides the required data and rendering hooks through \texttt{load\_data()}, \texttt{\_get\_xy()}, and a small \texttt{draw()} override for axis presentation and limits.
+
+Nothing outside the new class was changed in the LayerIt framework or in any existing layer implementation: \texttt{Visualizer}, the base \texttt{Layer} and shape classes, and the existing audio and beat layers remained unchanged. Two supporting additions were made only to expose and demonstrate the class: its public export in \texttt{__init__.py} and the separate \texttt{OnsetNoveltyDemo.py} example script. The result is shown in \ref{fig:onset-novelty-demo}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{LayerItExamples/OnsetNoveltyDemo.png}
+\caption{Demonstration of the new \texttt{OnsetNovelty} layer composed through LayerIt's existing workflow. The onset-strength curve is rendered as a time-based layer for the \textit{Clair de Lune} example.}
+\label{fig:onset-novelty-demo}
+\end{figure}
+
+This probe provides focused evidence that at least one new time-based visualisation type can be added without modifying the composition mechanism or the core layer and shape abstractions. It does not establish that all future layer types will require the same implementation effort, nor that broader extensions can be made without changes to package exports or example scripts.
 
 \section{Limitations and Difficult Cases (RQ3)}
 
@@ -166,6 +177,6 @@ When an existing layer does not provide the required behaviour, the OO architect
 
 \section{Summary}
 
-This chapter provides a qualitative answer to the three research questions. For RQ1, the four figures demonstrate that LayerIt can compose symbolic score material, audio representations, onset annotations, beat and downbeat activations, and BT output into common score-aligned views. For RQ2, the generated examples and composition workflow show that existing layers can be created, modified, exchanged, and regenerated through a common scriptable interface.
+This chapter provides a qualitative answer to the three research questions. For RQ1, the four main figures demonstrate that LayerIt can compose symbolic score material, audio representations, onset annotations, beat and downbeat activations, and BT output into common score-aligned views. For RQ2, the generated examples and composition workflow show that existing layers can be created, modified, exchanged, and regenerated through a common scriptable interface; the \texttt{OnsetNovelty} probe additionally provides focused evidence that a new time-based layer can use that interface without changes to the composition core.
 
 For RQ3, the examples show how a shared-axis visualisation can support qualitative inspection of BT results and can serve as a diagnostic reference for annotation. LayerIt is not itself an interactive annotation tool, and no user-study claim is made. Its usefulness is also conditioned by the quality of the score-performance alignment: expressive performances and sparse annotation anchors remain important limitations that require dedicated empirical evaluation.
