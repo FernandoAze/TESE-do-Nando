@@ -147,7 +147,16 @@ No dedicated expressive-performance stress test was completed for this thesis. T
 
 Sparse MAPS annotations present a related limitation. ScoreWarp can interpolate between available anchors, reducing the human effort required to prepare a score-performance alignment. However, the temporal position between widely separated anchors is then an interpolation rather than a directly supported observation. The resulting score placement may be sufficient for an overview, but it is less appropriate for detailed beat-level inspection in passages with tempo variation.
 
-The current case study uses the available MAPS data and does not include a controlled dense-versus-sparse comparison. Thus, the trade-off is identified from the operating assumptions of the pipeline, as described in \autoref{chap:DesignAndImplementation}, rather than quantified here. A future evaluation should generate dense and sparse MAPS versions of the same excerpt and compare the resulting score positions directly.
+Figure~\ref{fig:sparse-dense-alignment} reports this comparison for an excerpt of BWV~865 performed by Andr\'as Schiff. The upper pair of panels uses a sparse MAPS file that retains the first and last onsets and every fiftieth onset between them. The lower pair uses the complete onset file. In both cases, the red vertical lines show the BeatThis beat estimates, while the black dotted lines show the onsets retained by the corresponding MAPS file.
+
+The sparse alignment preserves the broad placement of the excerpt and remains most useful near the retained anchors. Between anchors, however, the score position is determined by interpolation rather than by a directly observed onset, so local spacing becomes less reliable. The dense alignment supplies onset references throughout the passage and keeps the score and waveform correspondence more stable, including around passages with several closely spaced notes. This comparison supports the expected trade-off: sparse anchors reduce preparation effort but provide weaker evidence for detailed beat-level inspection, whereas dense anchors support more reliable local placement at the cost of additional annotation data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{LayerItExamples/SparseVsDense.png}
+	\caption{Comparison of sparse and dense score--performance alignment for an excerpt of BWV~865 performed by Andr\'as Schiff. From top to bottom: score warped using sparse onsets, waveform with BeatThis beat estimates in red and retained sparse onsets as black dotted lines, score warped using all onsets, and the same waveform with the complete onset set. The sparse MAPS file retains the first and last onsets and every fiftieth onset between them.}
+	\label{fig:sparse-dense-alignment}
+\end{figure}
 
 \subsection{Manual editing of the final SVG}
 
