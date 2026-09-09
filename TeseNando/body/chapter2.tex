@@ -1,5 +1,5 @@
 \chapter{Literature Review} \label{chap:sota}
-In this chapter, we present the background required for this thesis. We begin by exploring the landscape of music visualisation methods, categorising them into three main types: sheet music representations, symbolic machine-readable formats, and audio-based visualisations. This foundation is essential for understanding how different types of musical information can be represented visually and interacted with computationally. We then examine contemporary MIR visualisation tools, distinguishing between GUI-based solutions and code-based workflows to highlight the gap that motivates our work. Finally, we introduce audio-to-score alignment and explore relevant tools and approaches that have informed our solution.
+In this chapter, we present the background required for this thesis. We begin by exploring the landscape of music visualisation methods, categorizing them into three main types: sheet music representations, symbolic machine-readable formats, and audio-based visualisations. This foundation is essential for understanding how different types of musical information can be represented visually and interacted with computationally. We then examine contemporary MIR visualisation tools, distinguishing between GUI-based solutions and code-based workflows to highlight the gap that motivates our work. Finally, we introduce audio-to-score alignment and explore relevant tools and approaches that have informed our solution.
 
 \section{Visualisation Types}
 We can sum up all music related visualisations into three categories:
@@ -11,9 +11,9 @@ We can sum up all music related visualisations into three categories:
 
 \subsection{Sheet Music and Score Images}
 
-Sheet music describes musical works using a formal language based on musical symbols and letters. Thus, this kind of musical representation always requires a level of musical literacy from the performer. Furthermore, sheet music usually does not convey explicit information about how a given piece should be performed; it is intended to allow the musician a certain degree of interpretative freedom. This can include variations in tempo, articulation, and dynamics, among others.
+Sheet music describes musical work using a formal language based on musical symbols and letters, thus, this kind of music representations always require  a level of music literacy from the performing musician. Furthermore, sheet music usually does not induce explicit information on how a given piece should be performed, it is intended for the musician to have a certain level of interpretation liberty. This can include the variance of tempo, articulation and dynamics among others.
 
-Sheet music also comes in a variety of forms that vary throughout history and across cultures. For our purposes, we focus on the Western standard of musical notation. Still, within Western music, there can be vastly different forms of notation; however, most are based on a staff consisting of five horizontal lines and four spaces, each representing a different musical pitch. Musically relevant symbols are placed on the staff to denote pitch, temporal, and expressive indications. \cite{mullerFundamentalsMusicProcessing2015}
+Sheet music also comes in a variety of forms that vary throughout History and cultures. For our purposes we are going to focus on the western standard of music notation. Still, within western music, there can be vastly different forms of notation, however, most are based on a staff which sets five horizontal lines and four spaces, each representing a different musical pitch. Musical relevant symbols are put inside the staff to denote pitch, temporal and expressive indications. \cite{mullerFundamentalsMusicProcessing2015}
 
 \subsection{Symbolic Representations}
 
@@ -27,14 +27,14 @@ This concept of a continuous and explicit representation of music performance wo
 
 Today the \textbf{Piano-Roll} is a staple feature in any DAW as a visual and interactive tool to write and edit musical events in the form of Musical Instrument Digital Interface (MIDI) notes and attributes such as velocity and other expressive controls.
 
-\textbf{MusicXML} refers to the XML-based language used to transcribe musical scores into the digital domain. There are multiple sub-variants of the MusicXML format for specific applications and there are other formats for digital scores, but MusicXML can be considered a ``universal'' format accepted by most digital score editors.
+\textbf{MusicXML} refers to the XML based language to transcribe score music into the digital domain. There are multiple sub-variants of the MusicXML format for specific applications and there are other formats for digital scores, but MusicXML can be considered as a "universal" format accepted in most digital score editors. 
 
-MusicXML was developed to serve as a universal format for storing and sharing music scores across different music notation applications. Digital music-notation editors then employ proprietary variants of this format to address each program's specific characteristics. In some cases, these may not even be XML-based, but the MusicXML format can be considered a universal format that is generally accepted and exportable across virtually all such applications.
+MusicXML was developed to serve as a universal format for storing and sharing music scores across different music notation applications. Music notation digital editors then employ proprietary variants of this format for addressing the program's specific characteristics. In some cases these may not even be xml based, but MusicXML format can be considered the universal format, generally accepted and exportable across virtually all of them.
 % Será que preciso mesmo de mencionar isto?
 These include, among others:
 \begin{itemize}
-    \item \textbf{.mscz and .mscx}: These are MuseScore-specific formats named for ``MuseScore Format'' and ``Uncompressed MuseScore'', respectively. Both are XML-based.
-    \item \textbf{.sib}  - ``Sibelius'', a proprietary format of Avid (also non-XML-based)
+    \item \textbf{.mscz and .mscx}: These are Musescore specific formats named for "MuseScore Format" and  "Uncompressed MuseScore" formats respectively. Both xml based.
+    \item \textbf{.sib}  - "Sibelius" proprietary format  of company Avid (also non xml based)
     \item \textbf{.mei}  - The MEI format, XML based.
 \end{itemize}
 
@@ -42,9 +42,9 @@ The .mei format is the one that is essential for this thesis and the most useful
 
 ``The Music Encoding Initiative (MEI) is a community-driven, open-source effort to define a system for encoding musical documents in a machine-readable structure. MEI brings together specialists from various music research communities, (...) to define best practices for representing a broad range of musical documents and structures.''\cite{MEI-Website}
 
-It is important to note that MEI focuses on a ``machine-readable structure''. This structure relies on unique identifiers (@xml:id) that make every element in the score individually addressable, from individual noteheads to complex spanning elements like slurs and ties. However, more than a music score format, MEI also serves to keep various notation, performance, and interpretation data not only stored but also linked to individual score elements. This is why the MEI format and its community are so essential to MIR as a whole.
+Important to note that MEI focuses on a "machine-readable structure". This structure relies on unique identifiers (@xml:id) that make every element in the score individually addressable, from individual noteheads to complex spanning elements like slurs and ties. However, more than a music score format, MEI also serves to keep various notation, performance and interpretation data not only stored but also linked to individual score elements. This is why the MEI format and it's community are so essential to MIR as a whole. 
 
-That being said, MEI is a purely data-driven project, and thus, in order for it to be visualised or interacted with, it needs to be decoded into a ``human-readable format''. That is where Verovio comes in. The MEI and Verovio projects are closely interlinked for that reason. While MEI defines how musical information is stored, Verovio is the primary tool used to transform that data into interactive visualisations and performance-ready outputs.
+That being said, MEI is a purely data driven project, and thus in order for it to be visualised or interacted with it needs to be decoded into a "human-readable format". Thats where Verovio comes in. The MEI and Verovio projects are closely inter-linked for that reason. While MEI defines how musical information is stored, Verovio is the primary tool used to transform that data into interactive visualisations and performance-ready outputs. 
 
 Verovio is a comprehensive open-source library designed to serve as a native typesetting engine for the MEI format. Verovio's primary role is to engrave MEI data directly into SVG without losing rich metadata through intermediate format conversions. The usage of the SVG format is an essential one for multiple reasons, quoting from Verovio's reference book:
 
@@ -54,7 +54,7 @@ Verovio is a comprehensive open-source library designed to serve as a native typ
 As a result, Verovio output in SVG is not the end of a unidirectional rendering process. Quite on the contrary, it should instead be seen as an intermediate layer standing between the MEI encoding and its rendering that can act as the cornerstone for a bi-directional interaction: from the encoding to the notation, but also from the notation to the encoding through the user interface.''  \cite{repertoireinternationaldessourcesmusicalesVerovioReferenceBook2021}
 \end{quote} 
 
-To further demonstrate the usefulness of MEI and Verovio, we next present a quotation from the article about Piano Precision, a GUI software tool for audio-to-score visualisation. We explore this tool further below; for now, the importance of this quotation lies in its demonstration of a practical application of MEI and Verovio.
+To further demonstrate the usefulness of MEI and Verovio, we'll present next a quote from the article relative to Piano Precision: a GUI software for audio-to-score visualisation. We will later explore this tool further, for now the importance of this quote comes from demonstrating a practical application of MEI and Verovio.
 
 \begin{quotation}
 ``Technically, what makes MEI especially useful is that it can be rendered to graphical SVG output while retaining its semantically meaningful XML hierarchy and unique identifiers for every score element (e.g., ties, notes). Piano Precision renders the scores into SVG output using Verovio, an open-source toolkit for visualising MEI data. This makes it easy to locate interesting objects in a score and, e.g., highlight them in the rendering. The result is interactive images in which users can flip pages, zoom in and out of a score, and click on elements in a score to jump to their playback positions. '' \cite{jiangPIANOPRECISIONADVANCING2025}
@@ -62,11 +62,11 @@ To further demonstrate the usefulness of MEI and Verovio, we next present a quot
 
 \subsection{Audio Representations}
 
-Audio representations are graphs and/or plots that are intended to represent sound. They are not strictly for representing music; their purpose is to translate sound from the audible to the visual domain. Audio is a term that refers to an acoustic sound that is turned into an electrical signal. Most audio representations are therefore digitally generated by applying mathematical operations to the audio signal, such as the Fourier transform.
+Audio representations are graphs and/or plots that intend to represent sound. These may not be for strictly representing music, the intent is to translate sound from the audible to the visual domain. Audio is a term that refers to an acoustic sound that is turned into an electrical signal. Most audio representations, are thus digitally generated through applying mathematical equations to the audio signal, such as the Fourier Transform. 
 
-We can identify at least three components that define a given audio signal: time, frequency, and amplitude or energy. An audio visualisation will present explicit information about at least two of these.
+We can infer at least 3 components that define a given audio. These are, time, frequency and amplitude/energy. An audio visualisation will present explicit information of at least 2 of these.
 
-Waveforms are among the most common and simplest ways to represent audio. A waveform consists of a single line in a two-dimensional plot, with amplitude on the y-axis and time on the x-axis. This representation does not provide frequency information; it only shows how the amplitude of the audio changes over time.
+Waveforms are the most common and one of the simplest ways to represent audio. It consists of a single line on a graph in a 2D plot where amplitude is the y-axis and time is in the x-axis. This representation does not provide frequency information, it only shows how amplitude of the audio changes through time.
 
 \begin{figure}[H]
   \centering
@@ -81,15 +81,15 @@ A spectral visualisation, or a spectrum, refers to a graph with only frequency a
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/AudioVisualizations/Spectrum.png}
-  \caption{Example of an audio spectrum.}
+  \caption{Example of audio Spectrum.}
   \label{fig:Spectrum}
 \end{figure}
 
-To display the three sound components, the plot needs to represent three distinct dimensions. The spectrogram achieves this by placing frequency on the y-axis, time on the x-axis, and colour in place of the third axis (amplitude), thereby displaying all three parameters in a single two-dimensional visual plot. There are multiple variants of the spectrogram, each with different applications.
+For displaying the three sound components the plot needs to represent three distinct dimensions. The spectrogram achieves this by having on the y axis the frequency, time on the x-axis and color as substitute for the third axis (amplitude), and in this way displaying all three parameters in a single 2D visual plot. There are multiple weights and variances of the spectrogram that have different applications.
 
-The way frequencies are displayed in a given spectrogram can help us understand audio in particular situations. There is a wide variety of spectrogram representations that can vary in how their contents are displayed.
+The way frequencies are displayed in a given spectrogram can help understanding audio better for certain situations. There can be a wide variety of spectrogram representations, that can vary in how it's contents are displayed.
 
-The linear spectrogram is the most basic form of spectrogram, in which frequencies are displayed on a linear scale. This means that frequencies are equally spaced on the y-axis. For musical applications, this kind of representation tends to be less useful, as it does not reflect the way humans perceive sound.
+The linear spectrogram is the most basic form of spectrogram, where frequencies are displayed in a linear scale. Meaning, frequencies are equally spaced on the y-axis. For music applications, this kind of representation tends to be less useful, as it does not reflect the way humans perceive sound.
 
 \begin{figure}[H]
   \centering
@@ -107,7 +107,7 @@ The logarithmic spectrogram displays frequencies in a logarithmic scale. This mi
   \label{fig:spectrogram_log}
 \end{figure}
 \pagebreak
-The Mel spectrogram also displays frequencies while taking the human hearing curve into account. The difference is that the logarithmic spectrogram simply organises frequencies logarithmically, whereas the Mel spectrogram organises frequencies according to the Mel scale. This is a perceptual scale of pitches judged by listeners to be equal in distance from one another. For music-related applications, this type of spectrogram is more useful, since it allows us to distinguish more clearly between musical pitches.
+The Mel spectrogram also displays frequencies taking into account the human hearing curve. The difference being, that the logarithmic spectrogram simply organizes frequencies logarithmically, whilst the Mel spectrogram organizes frequencies according to the Mel scale. This is a perceptual scale of pitches judged by listeners to be equal in distance from one another. For music related applications this type of spectrogram is much more useful, since we can more clearly distinguish in between musical pitches.
 
 \begin{figure}[H]
   \centering
@@ -122,7 +122,7 @@ The Constant-Q Transform (CQT) and chromagram are visual representations that de
 \cite{mullerFundamentalsMusicProcessing2015}
 \end{quotation}
 
-The CQT organises its frequency content using geometrically spaced frequency bins. This is done to resemble the equal-tempered system.
+The CQT organizes its frequency content using geometrically spaced frequency bins. This is made in order to resemble the equal-tempered system.
 
 \begin{figure}[H]
   \centering
@@ -131,12 +131,12 @@ The CQT organises its frequency content using geometrically spaced frequency bin
   \label{fig:spectrogram_cqt}
 \end{figure}
 
-While the CQT can distil the frequency spectrum into bins that correlate with individual notes, the chromagram takes this a step further by visually summing the energy of each note across all octaves. Thus, in the end, we obtain a plot divided into 12 lines, each representing a given note. In its essence, this type of visualisation shows the use of the same notes across the recording. A chromagram can be useful for determining harmonic and scale-related information.
+While the CQT can distill the frequency spectrum into bins that correlate to individual notes, the chromagram takes this a step further by visually summing the energy of each note across all octaves. Thus in the end we get a plot divided into 12 lines, each representing a give note. In it's essence this type of visualisation serves to see the usage of the same notes across the recording. A chromagram can be useful for determining harmonic and scale related data. 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/AudioVisualizations/Chromagram.png}
-  \caption{Example of a chromagram.}
+  \caption{Example a Chromagram.}
   \label{fig:Chromagram}
 \end{figure}
 
@@ -145,13 +145,13 @@ While the CQT can distil the frequency spectrum into bins that correlate with in
 \section{MIR Visualisation Tools}\label{sec:dialecto}
 Within MIR, visualisation workflows typically fall into two broad categories: GUI-based tools and programming-based workflows. For this thesis, the most relevant comparison is between Sonic Visualiser as a representative GUI tool and code-based workflows used for custom MIR analysis.
 
-Sonic Visualiser \cite{cannam2010SonicVisualiserOpen} is a dedicated program for audio visualisation and analysis, and it is one of the most common tools in MIR practice. It is well-suited to inspection, annotation, and exploratory analysis, making it a strong baseline for research-oriented visual work. A particularly relevant example is Piano Precision, a Sonic Visualiser-based GUI tool for visualising score-aligned spectrograms.
+Sonic Visualiser \cite{cannam2010SonicVisualiserOpen} is a dedicated program for audio visualisation and analysis, and it is one of the most common tools in MIR practice. It is well suited to inspection, annotation, and exploratory analysis, making it a strong baseline for research-oriented visual work. A particularly relevant example is Piano Precision, a Sonic Visualiser based GUI tool for visualising score-aligned spectrograms.
 
 \begin{quotation}
 ``The Piano Precision UI is adapted from Sonic Visualizer, with an additional area displaying a score (...) The interface is designed to help streamline the processes of loading a digital score and a performance recording, editing and visualising annotations (...), and exporting score-aware annotations.''\cite{jiangPIANOPRECISIONADVANCING2025}
 \end{quotation}
 
-While modern GUI-based tools such as Sonic Visualiser are powerful, they do not always provide the flexibility required for state-of-the-art MIR research. Many research questions demand highly specialised visualisations that are not available in pre-built software, especially when multiple data types such as audio, scores, annotations, and computational outputs must be combined in a single figure. In these cases, programming-based methods are often necessary.
+While modern GUI-based tools such as Sonic Visualiser are powerful, they do not always provide the flexibility required for state-of-the-art MIR research. Many research questions demand highly specialized visualisations that are not available in pre-built software, especially when multiple data types such as audio, scores, annotations, and computational outputs must be combined in a single figure. In these cases, programming-based methods are often necessary.
 
 Code-based workflows are also attractive because they can be versioned, shared, and included directly in publications, which improves reproducibility. This is especially important in academic research, where results must be inspectable and repeatable. In addition, MIR increasingly overlaps with machine learning and large-scale data analysis, which naturally favours scripted workflows for feature extraction, training, evaluation, and custom visualisation.
 
@@ -174,7 +174,7 @@ Alignment systems can also be classified by when the matching is performed. \tex
 
 Beyond this temporal distinction, alignments may be carried out at different levels of granularity. The three most common are \textbf{note-level}, \textbf{beat-level}, and \textbf{segment-level} alignment.
 
-\textbf{Note-level} alignments are score matching processes that aim to synchronise at the individual note level. At its core, note-level alignment is based on note and onset/offset detection. In MIR literature it can also be referred to as ``fine-grained alignment'' because of the precision it requires. Contemporary audio-to-score alignment research focuses on this type of alignment not only because of its precision but also because it can retrieve data relevant to other MIR fields and tasks. However, pure note-level alignments might falter if the performance deviates from the score, for example if the performer skips, repeats, or adds notes or score sections. Repeats and jumps are a well-established source of difficulty in score-performance synchronisation \cite{fremereyHandlingRepeats2010}. For this reason, some score-matching solutions combine fine-grained alignment with other methods.
+\textbf{Note-level} alignments are score matching processes that aim to synchronize at the individual note level. At its core, note-level alignment is based on note and onset/offset detection. In MIR literature it can also be referred to as ``fine-grained alignment'' because of the precision it requires. Contemporary audio-to-score alignment research focuses on this type of alignment not only because of its precision but also because it can retrieve data relevant to other MIR fields and tasks. However, pure note-level alignments might falter if the performance deviates from the score, for example if the performer skips, repeats, or adds notes or score sections. Repeats and jumps are a well-established source of difficulty in score-performance synchronization \cite{fremereyHandlingRepeats2010}. For this reason, some score-matching solutions combine fine-grained alignment with other methods.
 
 Piano Precision is an example of an application of a link-based note-level score-alignment method. While the recording is playing Piano Precision shows a spectrogram and waveform that follow along a conventional playback cursor while, on a side window that contains the score, highlighting the corresponding elements being played in the score, note by note. This enables annotations to be mapped to both the audio and individual score elements simultaneously. The authors note the usefulness of this tool for performance researchers \cite{jiangPIANOPRECISIONADVANCING2025} however, we will make the case that such feature is useful for BT and MIR research more broadly.
 
@@ -187,8 +187,8 @@ Among the visual alignment tools relevant to this thesis, ScoreWarp is especiall
 \section{Summary}
 This chapter provided a comprehensive overview of MIR visualisation techniques and tools, establishing the foundation for understanding audio-to-score alignment. 
 
-We began by categorising music visualisations into three main types: traditional sheet music representations, symbolic machine-readable formats, and audio-based representations. This established the importance of MEI and Verovio, as well as the use of SVG in this context.
+We began by categorizing music visualisations into three main types: traditional sheet music representations, symbolic machine-readable formats, and audio-based representations. This established the importance of MEI and Verovio, as well as the use of SVG in this context.
 
-We then examined the contemporary landscape of MIR visualisation tools, distinguishing between GUI-based solutions such as Sonic Visualiser and Piano Precision, which provide user interfaces for audio analysis, and code-based workflows that afford researchers greater flexibility to develop specialised visualisations tailored to specific research questions. Python-based approaches using libraries such as Librosa and Matplotlib have become widely used in MIR research, particularly because of their integration with machine-learning pipelines and reproducibility requirements.
+We then examined the contemporary landscape of MIR visualisation tools, distinguishing between GUI-based solutions such as Sonic Visualiser and Piano Precision, which provide user interfaces for audio analysis, and code-based workflows that afford researchers greater flexibility to develop specialized visualisations tailored to specific research questions. Python-based approaches using libraries such as Librosa and Matplotlib have become widely used in MIR research, particularly because of their integration with machine-learning pipelines and reproducibility requirements.
 
 Finally, we introduced one of the core tasks of this thesis: audio-to-score alignment. This process synchronizes musical performances with their corresponding symbolic scores. ScoreWarp emerged as a particularly relevant tool, demonstrating how MEI and Verovio can be leveraged to create visually warped scores that maintain semantic integrity while aligning with performance time.
