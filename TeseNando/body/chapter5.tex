@@ -43,10 +43,11 @@ time-based data. This is valuable when interpreting a BT result because the read
 
 The figure type is motivated by the visualisation in Sá Pinto's BT evaluation work \cite{pintoShiftIfYoua} where musical context and time-based analysis are complementary but not physically aligned. LayerIt does not change the evaluation procedure proposed in that work; it provides a way to present the relevant score, spectral, and beat information on a shared axis.
 
+% TODO: Regenerate Figure 5.2 with the same colormap and normalization as Figure 5.1; the mel spectrogram currently appears washed out by comparison.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{LayerItExamples/FIG522_NEW.png}
-	\caption{LayerIt score-aligned BT display for BWV 856, performed by András Schiff. From top to bottom: time-warped score, mel spectrogram, and normalized waveform with BeatThis beat and downbeat markers. All panels share the performance-time axis.}
+	\caption{LayerIt score-aligned BT display for BWV~856, performed by András Schiff. From top to bottom: time-warped score, mel spectrogram, and waveform with BeatThis beat estimates shown as red vertical lines, and onsets from Piano Aligner shown as black dotted vertical lines. All panels share the performance-time axis.}
 	\label{fig:validation-score-beat-tracking}
 \end{figure}
 
@@ -58,7 +59,7 @@ This type of visualization can help BT researchers better understand and relay h
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{LayerItExamples/FIG523_NEW.png}
-	\caption{LayerIt activation-and-position display for BWV~856. The upper panel shows BeatThis beat logits and selected beat estimates; the time-warped score occupies the middle panel; and the lower panel shows downbeat logits and estimated downbeat positions.}
+	\caption{LayerIt activation-and-position display for BWV~856. The upper panel shows BeatThis beat logits as a red curve, with beat estimates overlaid as vertical black dotted lines; the time-warped score occupies the middle panel; and the lower panel shows downbeat logits as a blue curve, with estimated downbeat positions overlaid as vertical black dotted lines.}
 	\label{fig:validation-probability-position}
 \end{figure}
 
@@ -69,8 +70,7 @@ The final example demonstrates the lightweight end of the composition model. It 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{LayerItExamples/FIG524_NEW.png}
-	\caption{LayerIt waveform display an excerpt for BWV 856 by András Schiff, with BeatThis
-beat positions aligned to the time-warped score.}
+	\caption{LayerIt display of an excerpt from BWV~856 performed by Andr\'as Schiff. The time-warped score is shown above the waveform, with BeatThis beat estimates overlaid as red vertical lines aligned with the score.}
 	\label{fig:validation-waveform}
 \end{figure}
 
@@ -140,9 +140,9 @@ In this workflow, the score is physically positioned on the same axis as the dat
 			\hline
 					Shared score time axis in the workflow considered & Not provided & Link-based score view & Possible through manual placement & Provided through ScoreWarp \\
 			\hline
-					Arbitrary algorithmic curves & Limited by available layers/plugins & Outside the workflow considered & Possible through manual construction & Provided through Layer subclasses \\
+					Arbitrary algorithmic curves & Limited by available layers/plugins & Limited by available layers/plugins & Possible through manual construction & Provided through Layer subclasses \\
 			\hline
-					Scriptable figure generation & Not assessed & Not possible & Depends on a separately maintained procedure & Provided through the composition script \\
+					Scriptable figure generation & Not possible & Not possible & Depends on a separately maintained procedure & Provided through the composition script \\
 			\hline
 					Regeneration after data change & Manual reconfiguration & Manual view recreation & Repeat manual editing & Re-run with updated inputs \\
 			\hline
