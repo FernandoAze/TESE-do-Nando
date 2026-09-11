@@ -111,23 +111,7 @@ LayerIt does not run a BT algorithm itself; it consumes a pre-computed \texttt{.
 The activation fields capture continuous model outputs across time, while the detected positions represent the final beat estimates. This separation enables the visualisation of both the continuous activations and the discrete estimates.
 
 \section{Layer Alignment Method}
-LayerIt currently provides tools for generating visualisations for BT and BA tasks, but the framework is not limited to these applications. Layers can be SVG or PNG elements that span the same, or a proportional, width as a given timeline. Other SVG or PNG plots can therefore be incorporated when they use the same temporal extent.
-
-When the warped score is generated, ScoreWarp can add a visual timeline for the performance. This timeline may span a greater width than the recorded performance and can extend beyond the visible SVG canvas. Because it provides the reference used to position score elements, LayerIt also uses it to align the visual layers with the recording.
-
-LayerIt aligns layers as follows:
-\begin{enumerate}
-  \item It reads the SVG containing the warped score, rendered by ScoreWarp, and retrieves the full length of the generated timeline in pixels.
-  \item It obtains the duration of the audio recording on that timeline.
-  \item It calculates the recording length in pixels by proportional scaling from the recording duration and the full timeline length.
-\end{enumerate} 
-
-\noindent In the codebase this is done through a single method: 
-
-\texttt{Visualizer().get\_Layers\_WidthHeight()}
-
-\noindent LayerIt does not yet provide conversion methods for arbitrary external visualisations. However, the alignment procedure can be applied to an external image by placing its left edge at the start of the relevant timeline and scaling it to the recording length calculated by the framework. The image can then be scaled to the timeline length of the score generated through ScoreWarp.
-
+LayerIt aligns each visual layer with the performance-time reference established by the warped score. ScoreWarp can include a visual timeline whose span may be greater than the recorded performance; its time span and pixel length provide the single scale factor used by LayerIt. Each layer converts its native coordinates, such as samples or frames, to seconds where necessary and is drawn at that scale. Horizontal alignment therefore follows the shared timeline, while vertical placement is determined by the composition. In the codebase, this calculation is performed by \texttt{Visualizer().get\_Layers\_WidthHeight()}.
 
 \section{Layers on Layers, within Layers}
 LayerIt combines aligned visualisations of algorithmic data, audio, and symbolic music representations, such as scores, that share a common timeline. Its Python OO architecture represents these visualisations as layers that can be composed into larger outputs. This organisation supports the modification and regeneration of the visual compositions described in Chapter 5.
