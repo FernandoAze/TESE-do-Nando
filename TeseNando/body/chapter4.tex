@@ -146,6 +146,17 @@ This ``layers within layers'' design is applied at three levels of the project: 
 \subsection{Visual Level}
 At the visual level, layers are output elements aligned to a shared timeline. They can be arranged vertically in a composite view while retaining the temporal correspondence between the score, audio-derived representations, annotations, and BT output.
 
+The concrete layer implementations are built on four shape abstractions. Each shape inherits from \texttt{Layer} and supplies the rendering behaviour for a particular kind of data; a concrete layer provides the data through the corresponding hook and configures its visual properties. The four shapes are:
+
+\begin{itemize}
+  \item \texttt{Curve}: represents a sampled two-dimensional signal as a line. It is suitable for continuous time-series data such as waveforms, activation curves, and onset-strength envelopes. A curve can use the panel's primary axis or a shared secondary axis.
+  \item \texttt{Events}: represents a set of instantaneous time positions as vertical markers. It is used for discrete events such as onsets, beats, and downbeats.
+  \item \texttt{Intervals}: represents contiguous regions selected from an activation signal after applying a threshold. These regions are rendered as highlighted windows, making periods of elevated activation visible across a panel.
+  \item \texttt{Field}: represents a dense two-dimensional matrix, such as a time-frequency or time-pitch representation. The matrix is normalized and rendered as an embedded raster image, while its axes are added to the SVG group.
+\end{itemize}
+
+These abstractions separate the representation of data from the common rendering and SVG-export mechanisms. They are therefore the basis for implementing different layer types without requiring each layer to reimplement the complete drawing pipeline. The distinction also clarifies the intended visual encoding: curves show values over time, events show isolated time positions, intervals show selected time regions, and fields show values distributed over two dimensions.
+
 \subsection{SVG Level}
 At the SVG level, LayerIt organizes the XML structure of the output so that individual and combined layers remain identifiable. The following listing shows a simplified representation of the XML structure produced for a composed SVG file:
 
