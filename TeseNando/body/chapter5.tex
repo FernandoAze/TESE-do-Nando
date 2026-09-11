@@ -1,6 +1,6 @@
 \chapter{Validation} \label{chap:Validation}
 
-This chapter evaluates LayerIt against the five criteria defined in \autoref{chap:Methodology}. Each criterion is considered through the following evidence:
+This chapter validates LayerIt against the five criteria defined in \autoref{chap:Methodology}. Each criterion is considered through the following evidence:
 
 \begin{itemize}
 	\item \textbf{Coverage}: examined through the reproduced score-aligned figure types and their combinations of symbolic, audio-derived, and annotation-derived representations.
@@ -10,7 +10,7 @@ This chapter evaluates LayerIt against the five criteria defined in \autoref{cha
 	\item \textbf{Fidelity and limits}: examined through the discussion of alignment quality, rendering behaviour, representation fidelity, and the boundaries of the available evidence.
 \end{itemize}
 
-Since a controlled user study was outside the scope of this work, the evaluation is qualitative. It combines a capability demonstration based on figures generated with LayerIt, a contextual comparison with existing workflows, and an explicit discussion of the evidence that remains to be collected.
+Since a controlled user study was outside the scope of this work, the validation is qualitative. It combines a capability demonstration based on figures generated with LayerIt, a contextual comparison with existing workflows, and an explicit discussion of the evidence that remains to be collected.
 
 \section{Validation Approach}
 
@@ -18,7 +18,7 @@ The validation considers whether the framework can express the score-aligned, mu
 
 Three of the four figures in this chapter are original outputs generated locally from the same case study: J.S. Bach's fugue from BWV~856, performed by Andr\'as Schiff. The inputs are the audio recording, its MEI score, a MAPS file, the ScoreWarp-generated SVG score, and BeatThis output. The remaining figure (\autoref{fig:validation-score-audio-chroma}) uses a second case study, the opening bars of Debussy's \textit{Clair de Lune} performed by Maria Jo\~ao Pires, to demonstrate the framework's audio-representation layers independently of BT data. The figures are therefore not reproductions of published images. Published work is referenced only to motivate the figure types and the workflow gap addressed by the framework.
 
-The evaluation distinguishes one-time preparation from per-figure work. Producing a score-aligned figure requires preparing the MEI score, MAPS annotations, warped score, and, where relevant, algorithmic output. These are substantial prerequisites shared by all LayerIt figures. Once they are available, the scripts supplied with this thesis define and compose the desired layers, and can be re-run when the input data or visual parameters change.
+The validation distinguishes one-time preparation from per-figure work. Producing a score-aligned figure requires preparing the MEI score, MAPS annotations, warped score, and, where relevant, algorithmic output. These are substantial prerequisites shared by all LayerIt figures. Once they are available, the scripts supplied with this thesis define and compose the desired layers, and can be re-run when the input data or visual parameters change.
 
 \section{Reproducing Composite Figure Types (RQ1)}
 
@@ -160,7 +160,7 @@ The architecture described in \autoref{chap:DesignAndImplementation} defines a c
 
 The scripts provide practical evidence of composability: \autoref{fig:validation-score-audio-chroma} combines four different representation types, while \autoref{fig:validation-probability-position} combines separate beat and downbeat activation and event layers around the same score. These substitutions require no change to the composition mechanism, which is consistent with the modular claim of Chapter~4.
 
-The evaluation also included a small extensibility probe. A new \texttt{OnsetNovelty} layer was implemented as a \texttt{Curve} subclass in a standalone module. The class contains approximately 60 lines of Python code. In it, the layer loads an audio file, computes its onset-strength envelope with \texttt{librosa}, converts the frame positions to seconds, and supplies the resulting curve to the inherited rendering machinery. The implementation provides the required data and rendering hooks through \texttt{load\_data()}, \texttt{\_get\_xy()}, and a small \texttt{draw()} override for axis presentation and limits.
+The validation also included a small extensibility probe. A new \texttt{OnsetNovelty} layer was implemented as a \texttt{Curve} subclass in a standalone module. The class contains approximately 60 lines of Python code. In it, the layer loads an audio file, computes its onset-strength envelope with \texttt{librosa}, converts the frame positions to seconds, and supplies the resulting curve to the inherited rendering machinery. The implementation provides the required data and rendering hooks through \texttt{load\_data()}, \texttt{\_get\_xy()}, and a small \texttt{draw()} override for axis presentation and limits.
 
 Nothing outside the new class was changed in the LayerIt framework or in any existing layer implementation: \texttt{Visualizer}, the base \texttt{Layer} and shape classes, and the existing audio and beat layers remained unchanged. Two supporting additions were made only to expose and demonstrate the class: its public export in \texttt{\_\_init\_\_.py}and the separate \texttt{OnsetNoveltyDemo.py} example script. The result is shown in \ref{fig:onset-novelty-demo}.
 
@@ -181,7 +181,7 @@ The examples in this chapter depend on a reasonably faithful correspondence betw
 
 Highly expressive performances, including substantial rubato, skipped material, repetitions, or departures from the notated score, can make the relationship between score position and performance time difficult to represent with a simple warped timeline. Structural discontinuities such as repeats and jumps are a recognised challenge for score-performance synchronization \cite{thomasLinkingSheetMusic2012,fremereyHandlingRepeats2010}. In such cases, a score element may be placed at a time that does not adequately describe the local musical event, and the misalignment then propagates visually to every layer that uses the same reference.
 
-No dedicated expressive-performance stress test was completed for this thesis. The present evidence therefore establishes this as a boundary of the approach rather than measuring a specific degradation pattern. A suitable follow-up evaluation would compare dense and manually verified MAPS annotations for an expressive performance with a less expressive reference performance, then report where the warped score remains informative and where it ceases to be reliable.
+No dedicated expressive-performance stress test was completed for this thesis. The present evidence therefore establishes this as a boundary of the approach rather than measuring a specific degradation pattern. A suitable follow-up validation would compare dense and manually verified MAPS annotations for an expressive performance with a less expressive reference performance, then report where the warped score remains informative and where it ceases to be reliable.
 
 \subsection{Sparse onset annotation}
 

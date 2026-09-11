@@ -1,10 +1,10 @@
 \chapter{Methodology} \label{chap:Methodology}
-This chapter presents the methodological choices that guided the development of this thesis. It explains the overall research approach, the iterative process used to build and refine the work, the scope boundaries that define what the project does and does not cover, and the criteria used to evaluate the end result.
+This chapter presents the methodological choices that guided the development of this thesis. It explains the overall research approach, the iterative process used to build and refine the work, the scope boundaries that define what the project does and does not cover, and the criteria used to validate the end result.
 
 \section{Research Approach}
 This thesis follows a design-oriented and implementation-driven research approach, supported by iterative prototyping. Rather than treating the problem as a purely theoretical exercise, the work focuses on building and refining a practical framework for time-aligned music visualisation that responds to the needs identified in the literature review and in the reference tools analysed in the previous chapter. The research process is therefore grounded in making, testing, and adjusting concrete visual and interaction decisions as the project evolves.
 
-The methodology combines conceptual analysis with software development. First, the problem space was studied through the comparison of existing tools, visualisation strategies, and alignment workflows. That understanding was then used to define a focused system design that could support layered, time-aligned representations of musical data. From that point onward, implementation and evaluation proceeded together: each prototype was used to verify whether the proposed interaction model, visual structure, and alignment logic were adequate for the thesis goals.
+The methodology combines conceptual analysis with software development. First, the problem space was studied through the comparison of existing tools, visualisation strategies, and alignment workflows. That understanding was then used to define a focused system design that could support layered, time-aligned representations of musical data. From that point onward, implementation and validation proceeded together: each prototype was used to verify whether the proposed interaction model, visual structure, and alignment logic were adequate for the thesis goals.
 
 This approach is appropriate because the main contribution of the thesis is not only to describe a concept, but to demonstrate how such a concept can be materialised into a workable framework. As a result, the methodology emphasizes practical feasibility, visual clarity, and alignment consistency, while still remaining informed by the academic context established in the literature review.
 
@@ -47,10 +47,10 @@ The development process described above led to an important scope decision. At t
 
 For that reason, the project deliberately narrowed its focus from an interactive BA/BT GUI to an OO visualisation framework. The interaction problem proved too broad to address properly alongside the visualisation problem, while the visualisation side revealed a clearer and more relevant gap: the lack of a reusable, flexible, and well-structured Python tool for producing layered time-aligned musical data visualisations. By focusing on this gap, the thesis could concentrate on a contribution that was both feasible and valuable.
 
-As a result, this thesis does not attempt to provide a complete BA/BT annotation environment, nor does it seek to solve the broader interaction problem in full. Instead, it focuses on the visualisation dimension, with particular emphasis on clarity, modularity, and alignment consistency. This narrower scope makes it possible to develop a more coherent contribution and to evaluate it against well-defined criteria.
+As a result, this thesis does not attempt to provide a complete BA/BT annotation environment, nor does it seek to solve the broader interaction problem in full. Instead, it focuses on the visualisation dimension, with particular emphasis on clarity, modularity, and alignment consistency. This narrower scope makes it possible to develop a more coherent contribution and to validate it against well-defined criteria.
 
-\section{Evaluation Criteria}
-The evaluation of this thesis is guided by five criteria chosen to reflect the actual purpose of the framework. Since the goal is not to produce a general-purpose MIR platform, but rather a reusable visualisation tool, the evaluation focuses on whether the final system succeeds in covering the visualisation cases that motivated its development, while keeping the implementation manageable and the output reliable. The criteria are:
+\section{Validation Criteria}
+The validation of this thesis is guided by five criteria chosen to reflect the actual purpose of the framework. Since the goal is not to produce a general-purpose MIR platform, but rather a reusable visualisation tool, the validation focuses on whether the final system succeeds in covering the visualisation cases that motivated its development, while keeping the implementation manageable and the output reliable. The criteria are:
 
 \begin{itemize}
     \item \textbf{Coverage}: the ability to represent the score-aligned visualisations required by the thesis, including layered combinations of symbolic score data with audio-derived and annotation-derived information.
@@ -60,4 +60,4 @@ The evaluation of this thesis is guided by five criteria chosen to reflect the a
     \item \textbf{Fidelity and limits}: the extent to which the resulting figures preserve the musical and temporal relationships they are intended to represent, while making clear where the visual abstraction becomes less precise, less general, or less appropriate.
 \end{itemize}
 
-Defining these criteria makes the evaluation of the thesis a deliberate design assessment rather than a mere presentation of the implemented tool.
+Defining these criteria makes the validation of the thesis a deliberate design assessment rather than a mere presentation of the implemented tool.
