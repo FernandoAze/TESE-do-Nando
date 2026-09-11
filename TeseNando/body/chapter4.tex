@@ -210,53 +210,17 @@ class Layer(ABC):
     return None
 \end{lstlisting}
 
-In LayerIt, a \texttt{Visualizer} instance orchestrates the composition of multiple layers through a panel-based workflow. Layers are grouped into panels using \texttt{add\_panel()}, which allows multiple layers to be rendered together on the same axis. The \texttt{Visualizer} maintains a shared data dictionary that all layers access during rendering via \texttt{load\_all\_layers()} and \texttt{draw()}. The \texttt{compose()} method then renders all panels and combines them with the warped score into a final multi-panel SVG. The next listing (\ref{lst:visualizer-api}) illustrates this composition workflow.
+In LayerIt, a \texttt{Visualizer} instance orchestrates the composition of multiple layers through a panel-based workflow. Layers are grouped into panels using \texttt{add\_panel()}, which allows multiple layers to be rendered together on the same axis. The \texttt{Visualizer} maintains a shared data dictionary that all layers access during rendering via \texttt{load\_all\_layers()} and \texttt{draw()}. The \texttt{compose()} method then renders all panels and combines them with the warped score into a final multi-panel SVG. Listing~\ref{lst:visualizer-api} shows the concise composition script used for the LBD figure.
 
-\begin{lstlisting}[caption={Visualizer Panel Composition},label={lst:visualizer-api}]
-# Create a visualizer with shared data paths
-visualizer = Visualizer(audio="performance.wav",
-                        score="score.svg",
-                        maps="alignment.maps.json",
-                        beats="beats.npz")
-
-# Add a panel (group of layers on same axis)
-visualizer.add_panel(
-  BeatLogits(color='red'),
-  DownbeatLogits(color='blue'),
-  show_axes=True,
-  height_scale=0.5
-)
-
-# Compose all panels into final figure
-visualizer.compose("output.svg", score_position=0)
+\begin{lstlisting}[caption={Concise LayerIt composition script},label={lst:visualizer-api}]
+fig = Visualizer(audio, score, maps, beats)
+fig.add_panel(Onset(), BeatLogits(), DownbeatLogits(), height_scale=.5)
+fig.add_panel(Waveform(), BeatsLayer(), DownbeatsLayer(), height_scale=.5)
+fig.add_panel(MelSpec(freq_window=(100, 1500)))
+fig.compose("LBD_FIG.svg")
 \end{lstlisting}
 
-In the composition workflow, the \texttt{Visualizer.compose()} method orchestrates the rendering of all panels and their combination with the warped score. Internally, each panel is rendered to SVG through \texttt{turn\_to\_SVG()}, which preserves each layer as a named SVG group. These individual panel SVGs are then combined with the warped score SVG using \texttt{create\_final\_SVG()}, which stacks them vertically at defined y-offsets while preserving the temporal alignment through the common timeline. The following listing shows this internal composition workflow.
-
-\begin{lstlisting}[caption={SVG Composition Workflow},label={lst:svg-layers-example}]
-# Internal workflow (called by compose())
-
-# For each panel: render layers, export to SVG
-panel_viz = Visualizer(audio=audio, score=score,
-                       maps=maps, beats=beats)
-panel_viz.add_panel(MelSpec(), BeatLogits())
-panel_viz.load_all_layers(audio_path=audio, 
-                          beat_file=beats)
-fig, ax = panel_viz.draw()
-panel_svg = panel_viz.turn_to_SVG(
-  filename="panel.svg",
-  svg_warped_score=score)
-
-# Stack panels with score using create_final_SVG()
-composer = Visualizer(audio=audio, score=score,
-                      maps=maps, beats=beats)
-composer.create_final_SVG(
-  svg_layers=[(panel_svg, 50),
-              (score_svg, 300)],
-  output_file="final.svg")
-\end{lstlisting}
-
-The example shows that higher-level SVG outputs can be positioned or stacked vertically, while lower-level Matplotlib layers can be composed into them. This compositional behaviour implements the ``layers within layers'' design of LayerIt.
+The script initializes the shared inputs, groups layers into three panels, and delegates rendering and SVG assembly to \texttt{compose()}. The first two panels combine curves and event markers on shared axes, while the third adds a mel-spectrogram field. The lower-level panel rendering and SVG stacking operations are shown in Appendix~\ref{appendix:code-listings}.
 
 LayerIt supports a workflow from matplotlib-based visualisation generation to SVG or PNG composition. The final composition stage can include externally produced graphics, allowing code-generated visualisations to be combined with images created outside the codebase.
 
