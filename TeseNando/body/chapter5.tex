@@ -152,7 +152,7 @@ The scripts provide practical evidence of composability: \autoref{fig:validation
 
 The evaluation also included a small extensibility probe. A new \texttt{OnsetNovelty} layer was implemented as a \texttt{Curve} subclass in a standalone module. The class contains approximately 60 lines of Python code. In it, the layer loads an audio file, computes its onset-strength envelope with \texttt{librosa}, converts the frame positions to seconds, and supplies the resulting curve to the inherited rendering machinery. The implementation provides the required data and rendering hooks through \texttt{load\_data()}, \texttt{\_get\_xy()}, and a small \texttt{draw()} override for axis presentation and limits.
 
-Nothing outside the new class was changed in the LayerIt framework or in any existing layer implementation: \texttt{Visualizer}, the base \texttt{Layer} and shape classes, and the existing audio and beat layers remained unchanged. Two supporting additions were made only to expose and demonstrate the class: its public export in \texttt{__init__.py} and the separate \texttt{OnsetNoveltyDemo.py} example script. The result is shown in \ref{fig:onset-novelty-demo}.
+Nothing outside the new class was changed in the LayerIt framework or in any existing layer implementation: \texttt{Visualizer}, the base \texttt{Layer} and shape classes, and the existing audio and beat layers remained unchanged. Two supporting additions were made only to expose and demonstrate the class: its public export in \texttt{\_\_init\_\_.py}and the separate \texttt{OnsetNoveltyDemo.py} example script. The result is shown in \ref{fig:onset-novelty-demo}.
 
 \begin{figure}[H]
 \centering
